@@ -80,61 +80,65 @@ Since there is only 1 copy of a ``static`` variable or method, static variables 
   ~~~~
   public class Person
   {
-     // instance variables
-     private String name;
-     private String email;
-     private String phoneNumber;
+      // instance variables
+      private String name;
+      private String email;
+      private String phoneNumber;
 
-     // Static counter variable
-     public static int personCounter = 0;
+      // Static counter variable
+      public static int personCounter = 0;
 
-     // static method to print out counter
-     public static void printPersonCounter() {
+      // static method to print out counter
+      public static void printPersonCounter()
+      {
           System.out.println("Person counter: " + personCounter);
-     }
+      }
 
-     // constructor: construct a Person copying in the data into the instance variables
-     public Person(String initName, String initEmail, String initPhone)
-     {
-        name = initName;
-        email = initEmail;
-        phoneNumber = initPhone;
-        personCounter++;
-     }
+      // constructor: construct a Person copying in the data into the instance
+      // variables
+      public Person(String initName, String initEmail, String initPhone)
+      {
+          name = initName;
+          email = initEmail;
+          phoneNumber = initPhone;
+          personCounter++;
+      }
 
-     // toString() method
-     public String toString()
-     {
-       return  name + ": " + email + " " + phoneNumber;
-     }
+      // toString() method
+      public String toString()
+      {
+          return name + ": " + email + " " + phoneNumber;
+      }
 
-     // main method for testing
-     public static void main(String[] args)
-     {
-         // call the constructor to create a new person
-         Person p1 = new Person("Sana", "sana@gmail.com", "123-456-7890");
-         Person p2 = new Person("Jean", "jean@gmail.com", "404 899-9955");
+      // main method for testing
+      public static void main(String[] args)
+      {
+          // call the constructor to create a new person
+          Person p1 = new Person("Sana", "sana@gmail.com", "123-456-7890");
+          Person p2 = new Person("Jean", "jean@gmail.com", "404 899-9955");
 
-         Person.printPersonCounter();
-     }
+          Person.printPersonCounter();
+      }
   }
+
   ====
   import static org.junit.Assert.*;
-    import org.junit.*;;
-    import java.io.*;
 
-    public class RunestoneTests extends CodeTestHelper
-    {
+  import org.junit.*;
+
+  import java.io.*;
+
+  public class RunestoneTests extends CodeTestHelper
+  {
       @Test
-        public void testMain() throws IOException
-        {
-            String output = getMethodOutput("main");
-            String expect = "Person counter: 2";
-            boolean passed = getResults(expect, output, "Expected output from main", true);
-            assertTrue(passed);
-        }
-    }
-
+      public void testMain() throws IOException
+      {
+          String output = getMethodOutput("main");
+          String expect = "Person counter: 2";
+          boolean passed = getResults(expect, output, "Expected output from main", true);
+          assertTrue(passed);
+      }
+  }
 
 Another common use for static variables is the keep track of a minimum or maximum value or an average of the values in a collection of objects.
 
@@ -149,24 +153,23 @@ Another common use for static variables is the keep track of a minimum or maximu
 
        public class Temperature
        {
-          private double temperature;
-          public static double maxTemp = 0;
+           private double temperature;
+           public static double maxTemp = 0;
 
-          public Temperature(double t)
-          {
+           public Temperature(double t)
+           {
                temperature = t;
-               if (t > maxTemp)
-                   maxTemp = t;
-          }
+               if (t > maxTemp) maxTemp = t;
+           }
 
-          public static void main(String[] args)
-          {
+           public static void main(String[] args)
+           {
                Temperature t1 = new Temperature(75);
                Temperature t2 = new Temperature(100);
                Temperature t3 = new Temperature(65);
                System.out.println("Max Temp: " + Temperature.maxTemp);
-          }
-        }
+           }
+       }
 
    - Max Temp: 0
 
@@ -206,62 +209,66 @@ You can see this code in action in the |visualizer2|.
   ~~~~
   public class Temperature
   {
-    private double temperature;
-    public static double maxTemp = 0;
+      private double temperature;
+      public static double maxTemp = 0;
 
-    public Temperature(double t)
-    {
-        temperature = t;
-        if (t > maxTemp)
-           maxTemp = t;
-    }
+      public Temperature(double t)
+      {
+          temperature = t;
+          if (t > maxTemp) maxTemp = t;
+      }
 
-    public static printMax()
-    {
-       System.out.println(temperature);
-    }
+      public static printMax()
+      {
+          System.out.println(temperature);
+      }
 
-    public static void main(String[] args)
-    {
-       Temperature t1 = new Temperature(75);
-       Temperature t2 = new Temperature(100);
-       Temperature.printMax();
-    }
-   }
+      public static void main(String[] args)
+      {
+          Temperature t1 = new Temperature(75);
+          Temperature t2 = new Temperature(100);
+          Temperature.printMax();
+      }
+  }
+
    ====
    import static org.junit.Assert.*;
-    import org.junit.*;;
-    import java.io.*;
 
-    public class RunestoneTests extends CodeTestHelper
-    {
-        @Test
-        public void testCodeContains1()
-        {
+   import org.junit.*;
 
-            boolean passed = checkCodeContains("static printMax() header", "public static void printMax()");
-            assertTrue(passed);
-        }
+   import java.io.*;
 
-         @Test
-        public void testCodeContains2()
-        {
-            String code = getCode();
-            boolean passed = code.contains("System.out.println(maxTemp);") ||       code.contains("System.out.println(Temperature.maxTemp);");
-            getResults("true",""+passed, "printMax method returns the right value",passed);
-            assertTrue(passed);
-        }
+   public class RunestoneTests extends CodeTestHelper
+   {
+       @Test
+       public void testCodeContains1()
+       {
 
-        @Test
-        public void testMain() throws IOException
-        {
-            String output = getMethodOutput("main");
-            String expect = "100.0";
-            boolean passed = getResults(expect, output, "Expected output from main", true);
-            assertTrue(passed);
-        }
-    }
+           boolean passed =
+                   checkCodeContains("static printMax() header", "public static void printMax()");
+           assertTrue(passed);
+       }
 
+       @Test
+       public void testCodeContains2()
+       {
+           String code = getCode();
+           boolean passed =
+                   code.contains("System.out.println(maxTemp);")
+                           || code.contains("System.out.println(Temperature.maxTemp);");
+           getResults("true", "" + passed, "printMax method returns the right value", passed);
+           assertTrue(passed);
+       }
+
+       @Test
+       public void testMain() throws IOException
+       {
+           String output = getMethodOutput("main");
+           String expect = "100.0";
+           boolean passed = getResults(expect, output, "Expected output from main", true);
+           assertTrue(passed);
+       }
+   }
 
 |Groupwork| Programming Challenge : Static Song and counter
 ------------------------------------------------------------
@@ -286,173 +293,186 @@ In the |last lesson|, we wrote a class with methods to print out the song |The A
 
   public class Song
   {
-    // Add a public static variable called numVerses
+      // Add a public static variable called numVerses
 
+      // Change the method(s) to be static
 
-    // Change the method(s) to be static
+      public static void main(String args[])
+      {
+          // Call the static method(s) to print out the Song
+          // Print out the static variable numVerses
 
-
-
-    public static void main(String args[])
-    {
-      // Call the static method(s) to print out the Song
-      // Print out the static variable numVerses
-
-    }
+      }
   }
+
   ====
   import static org.junit.Assert.*;
-   import org.junit.*;;
-   import java.io.*;
-   
-   /* Do NOT change Main or CodeTestHelper.java.
-      Put the active code exercise in a file like ForLoop.java.
-      Put your Junit test in the file RunestoneTests.java.
-      Run. Test by changing ForLoop.java (student code).
-      */
-   public class RunestoneTests extends CodeTestHelper {
-       @After
-       public void tearDown() {
-           super.tearDown();
-          //Song.numVerses = 0;
-   
-       }
-   
-       @Test
-       public void checkCodeContains1() {
-           // check verse 1
-           boolean passed = checkCodeContains(
-                   "verse(...) method header with two String parameters",
-                   "public static void verse(String *, String *)");
-   
-           assertTrue(passed);
-   
-       }
-   
-       @Test
-       public void checkCodeContains2() {
-           // check static
-           String code = getCode();
-           int actual = countOccurences(code, "Song.verse(");
-           String expected = "3";
-   
-           boolean passed = actual >= 3;
-           getResults(expected, "" + actual,
-                   "Checking that code contains three calls to verse(...) method using ClassName.staticMethod(...) syntax",
-                   passed);
-           assertTrue(passed);
-       }
-   
-       @Test
-       public void checkCodeContains3() {
-           // check static
-           String code = getCode();
-           int actual = countOccurences(code, "public static int numVerses = 0");
-           String expected = "1";
-   
-           boolean passed = actual >= 1;
-           getResults(expected, "" + actual,
-                   "Checking that code declares variable numVerses according to instructions and sets it to zero", passed);
-   
-           assertTrue(passed);
-   
-       }
-   
-       @Test
-       public void checkCodeContains4() {
-           // check static
-           String code = getCode();
-           boolean increment = code.contains("numVerses++");
-           String expected = "increments: true\n";
-           String actual = "increments: " + increment + "\n";
-   
-           String anytext = "[\\s\\S]*";
-           String regex = "System.out.print[ln]*\\([\"a-zA-Z0-9 +]*numVerses[\"a-zA-Z0-9 +]*\\);";
-           boolean printed = code.matches(anytext + regex + anytext);
-           expected += "prints: true";
-           actual += "prints: " + printed;
-   
-           boolean passed = increment && printed;
-           getResults(expected, actual, "Checking that code increments and prints numVerses", passed);
-   
-           assertTrue(passed);
-   
-       }
-   
-       @Test
-       public void testVerses() throws IOException {
-           String output = getMethodOutput("main").replaceAll(" his ", " a ").replaceAll("\n\n", "\n");
-           String[] actualArray = output.split("\n");
-   
-           boolean passed = true;
-           String error = "";
-           String expect = "No errors";
-           String actual = "No errors";
-   
-           int j = 0;
-   
-           for (int i = 0; i < actualArray.length; i++) {
-               while (j < expectedArray.length && expectedArray[j].length() < 2)
-                   j++;
-               while (i < expectedArray.length && actualArray[i].length() < 2)
-                   i++;
-   
-               if (j < expectedArray.length && actualArray[i].length() > 1) {
-                   /*
-                    * System.out.println(expectedArray[j]);
-                    * System.out.println(actualArray[i]);
-                    * System.out.println();
-                    */
-                   if(actualArray[i].matches("[\\s\\S]*[0-9]+[\\s\\S]*")) {
-                       continue;
-                   }
-                       
-                   String compAct = removeSpaces(actualArray[i].toLowerCase());
-                   String compExp = removeSpaces(expectedArray[j].toLowerCase());
-   
-                   if (!compAct.equals(compExp)) {
-                       expect = expectedArray[j].trim();
-                       actual = actualArray[i].trim() + "\n(Error on line " + (i + 1)
-                               + " of output)";
-                       passed = false;
-                       error = "\nThere may be more than one error! Did you forget a line?\n(check spelling, new lines, and punctuation carefully)";
-                       break;
-                   }
-               }
-   
-               j++;
-           }
-   
-           getResults(expect, actual, "Checking output from main" + error, passed);
-           assertTrue(passed);
-       }
-   
-       private static String expectedOutput = "The ants go marching one by one, hurrah, hurrah\n"
-               + "The ants go marching one by one, hurrah, hurrah\n"
-               + "The ants go marching one by one\n"
-               + "The little one stops to suck a thumb\n"
-               + "And they all go marching down to the ground\n"
-               + "To get out of the rain, BOOM! BOOM! BOOM! BOOM!\n"
-               + "\n"
-               + "The ants go marching two by two, hurrah, hurrah\n"
-               + "The ants go marching two by two, hurrah, hurrah\n"
-               + "The ants go marching two by two\n"
-               + "The little one stops to tie a shoe\n"
-               + "And they all go marching down to the ground\n"
-               + "To get out of the rain, BOOM! BOOM! BOOM! BOOM!\n"
-               + "\n"
-               + "The ants go marching three by three, hurrah, hurrah\n"
-               + "The ants go marching three by three, hurrah, hurrah\n"
-               + "The ants go marching three by three\n"
-               + "The little one stops to climb a tree\n"
-               + "And they all go marching down to the ground\n"
-               + "To get out of the rain, BOOM! BOOM! BOOM! BOOM!";
-       private static String[] expectedArray = expectedOutput.replaceAll("\n\n", "\n").split("\n");
-   }
 
+  import org.junit.*;
 
+  import java.io.*;
 
+  /* Do NOT change Main or CodeTestHelper.java.
+  Put the active code exercise in a file like ForLoop.java.
+  Put your Junit test in the file RunestoneTests.java.
+  Run. Test by changing ForLoop.java (student code).
+  */
+  public class RunestoneTests extends CodeTestHelper
+  {
+      @After
+      public void tearDown()
+      {
+          super.tearDown();
+          // Song.numVerses = 0;
 
+      }
+
+      @Test
+      public void checkCodeContains1()
+      {
+          // check verse 1
+          boolean passed =
+                  checkCodeContains(
+                          "verse(...) method header with two String parameters",
+                          "public static void verse(String *, String *)");
+
+          assertTrue(passed);
+      }
+
+      @Test
+      public void checkCodeContains2()
+      {
+          // check static
+          String code = getCode();
+          int actual = countOccurences(code, "Song.verse(");
+          String expected = "3";
+
+          boolean passed = actual >= 3;
+          getResults(
+                  expected,
+                  "" + actual,
+                  "Checking that code contains three calls to verse(...) method using"
+                      + " ClassName.staticMethod(...) syntax",
+                  passed);
+          assertTrue(passed);
+      }
+
+      @Test
+      public void checkCodeContains3()
+      {
+          // check static
+          String code = getCode();
+          int actual = countOccurences(code, "public static int numVerses = 0");
+          String expected = "1";
+
+          boolean passed = actual >= 1;
+          getResults(
+                  expected,
+                  "" + actual,
+                  "Checking that code declares variable numVerses according to instructions and sets"
+                      + " it to zero",
+                  passed);
+
+          assertTrue(passed);
+      }
+
+      @Test
+      public void checkCodeContains4()
+      {
+          // check static
+          String code = getCode();
+          boolean increment = code.contains("numVerses++");
+          String expected = "increments: true\n";
+          String actual = "increments: " + increment + "\n";
+
+          String anytext = "[\\s\\S]*";
+          String regex = "System.out.print[ln]*\\([\"a-zA-Z0-9 +]*numVerses[\"a-zA-Z0-9 +]*\\);";
+          boolean printed = code.matches(anytext + regex + anytext);
+          expected += "prints: true";
+          actual += "prints: " + printed;
+
+          boolean passed = increment && printed;
+          getResults(expected, actual, "Checking that code increments and prints numVerses", passed);
+
+          assertTrue(passed);
+      }
+
+      @Test
+      public void testVerses() throws IOException
+      {
+          String output = getMethodOutput("main").replaceAll(" his ", " a ").replaceAll("\n\n", "\n");
+          String[] actualArray = output.split("\n");
+
+          boolean passed = true;
+          String error = "";
+          String expect = "No errors";
+          String actual = "No errors";
+
+          int j = 0;
+
+          for (int i = 0; i < actualArray.length; i++)
+          {
+              while (j < expectedArray.length && expectedArray[j].length() < 2) j++;
+              while (i < expectedArray.length && actualArray[i].length() < 2) i++;
+
+              if (j < expectedArray.length && actualArray[i].length() > 1)
+              {
+                  /*
+                   * System.out.println(expectedArray[j]);
+                   * System.out.println(actualArray[i]);
+                   * System.out.println();
+                   */
+                  if (actualArray[i].matches("[\\s\\S]*[0-9]+[\\s\\S]*"))
+                  {
+                      continue;
+                  }
+
+                  String compAct = removeSpaces(actualArray[i].toLowerCase());
+                  String compExp = removeSpaces(expectedArray[j].toLowerCase());
+
+                  if (!compAct.equals(compExp))
+                  {
+                      expect = expectedArray[j].trim();
+                      actual = actualArray[i].trim() + "\n(Error on line " + (i + 1) + " of output)";
+                      passed = false;
+                      error =
+                              "\n"
+                                  + "There may be more than one error! Did you forget a line?\n"
+                                  + "(check spelling, new lines, and punctuation carefully)";
+                      break;
+                  }
+              }
+
+              j++;
+          }
+
+          getResults(expect, actual, "Checking output from main" + error, passed);
+          assertTrue(passed);
+      }
+
+      private static String expectedOutput =
+              "The ants go marching one by one, hurrah, hurrah\n"
+                      + "The ants go marching one by one, hurrah, hurrah\n"
+                      + "The ants go marching one by one\n"
+                      + "The little one stops to suck a thumb\n"
+                      + "And they all go marching down to the ground\n"
+                      + "To get out of the rain, BOOM! BOOM! BOOM! BOOM!\n"
+                      + "\n"
+                      + "The ants go marching two by two, hurrah, hurrah\n"
+                      + "The ants go marching two by two, hurrah, hurrah\n"
+                      + "The ants go marching two by two\n"
+                      + "The little one stops to tie a shoe\n"
+                      + "And they all go marching down to the ground\n"
+                      + "To get out of the rain, BOOM! BOOM! BOOM! BOOM!\n"
+                      + "\n"
+                      + "The ants go marching three by three, hurrah, hurrah\n"
+                      + "The ants go marching three by three, hurrah, hurrah\n"
+                      + "The ants go marching three by three\n"
+                      + "The little one stops to climb a tree\n"
+                      + "And they all go marching down to the ground\n"
+                      + "To get out of the rain, BOOM! BOOM! BOOM! BOOM!";
+      private static String[] expectedArray = expectedOutput.replaceAll("\n\n", "\n").split("\n");
+  }
 
 Summary
 -------

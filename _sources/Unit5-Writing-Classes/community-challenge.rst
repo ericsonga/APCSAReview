@@ -104,115 +104,123 @@ Code your Class
   }
   ====
   import static org.junit.Assert.*;
+
   import org.junit.*;
+
   import java.io.*;
 
   public class RunestoneTests extends CodeTestHelper
   {
-        @Test
-        public void testPrivateVariables()
-        {
-            String expect = "3 Private";
-            String output = testPrivateInstanceVariables();
-            boolean passed = false;
-            if (Integer.parseInt(expect.substring(0,1)) <= Integer.parseInt(output.substring(0,1)))
-               passed = true;
-            passed = getResults(expect, output, "Checking private instance variable(s)", passed);
-            assertTrue(passed);
-        }
+      @Test
+      public void testPrivateVariables()
+      {
+          String expect = "3 Private";
+          String output = testPrivateInstanceVariables();
+          boolean passed = false;
+          if (Integer.parseInt(expect.substring(0, 1)) <= Integer.parseInt(output.substring(0, 1)))
+              passed = true;
+          passed = getResults(expect, output, "Checking private instance variable(s)", passed);
+          assertTrue(passed);
+      }
 
-        /* No longer required
-        @Test
-        public void testDefaultConstructor()
-        {
-            String output = checkDefaultConstructor();
-            String expect = "pass";
+      /* No longer required
+      @Test
+      public void testDefaultConstructor()
+      {
+          String output = checkDefaultConstructor();
+          String expect = "pass";
 
-            boolean passed = getResults(expect, output, "Checking default constructor");
-            assertTrue(passed);
-        } */
+          boolean passed = getResults(expect, output, "Checking default constructor");
+          assertTrue(passed);
+      } */
 
-        @Test
-        public void testConstructor3()
-        {
-            String output = checkConstructor(3);
-            String expect = "pass";
+      @Test
+      public void testConstructor3()
+      {
+          String output = checkConstructor(3);
+          String expect = "pass";
 
-            boolean passed = getResults(expect, output, "Checking constructor with 3 parameters");
-            assertTrue(passed);
-        }
+          boolean passed = getResults(expect, output, "Checking constructor with 3 parameters");
+          assertTrue(passed);
+      }
 
-        @Test
-        public void testPrint()
-        {
-            String output = getMethodOutput("print");
-            String expect = "More than 15 characters";
-            String actual = " than 15 characters";
+      @Test
+      public void testPrint()
+      {
+          String output = getMethodOutput("print");
+          String expect = "More than 15 characters";
+          String actual = " than 15 characters";
 
-            if (output.length() < 15) {
-                actual = "Less" + actual;
-            } else {
-                actual = "More" + actual;
-            }
-            boolean passed = getResults(expect, actual, "Checking print method");
-            assertTrue(passed);
-        }
+          if (output.length() < 15)
+          {
+              actual = "Less" + actual;
+          }
+          else
+          {
+              actual = "More" + actual;
+          }
+          boolean passed = getResults(expect, actual, "Checking print method");
+          assertTrue(passed);
+      }
 
-        @Test
-        public void testMain() throws IOException
-        {
-            String output = getMethodOutput("main");//.split("\n");
-            String expect = "3+ line(s) of text";
-            String actual = " line(s) of text";
-            int len = output.split("\n").length;
+      @Test
+      public void testMain() throws IOException
+      {
+          String output = getMethodOutput("main"); // .split("\n");
+          String expect = "3+ line(s) of text";
+          String actual = " line(s) of text";
+          int len = output.split("\n").length;
 
-            if (output.length() > 0) {
-                actual = len + actual;
-            } else {
-                actual = output.length() + actual;
-            }
-            boolean passed = len >= 3;
+          if (output.length() > 0)
+          {
+              actual = len + actual;
+          }
+          else
+          {
+              actual = output.length() + actual;
+          }
+          boolean passed = len >= 3;
 
-            getResults(expect, actual, "Checking output", passed);
-            assertTrue(passed);
-        }
+          getResults(expect, actual, "Checking output", passed);
+          assertTrue(passed);
+      }
 
-        @Test
-        public void test1()
-        {
-            String code = getCode();
-            String target = "public * get*()";
+      @Test
+      public void test1()
+      {
+          String code = getCode();
+          String target = "public * get*()";
 
-            int num = countOccurencesRegex(code, target);
+          int num = countOccurencesRegex(code, target);
 
-            boolean passed = num >= 3;
+          boolean passed = num >= 3;
 
-            getResults("3", ""+num, "Checking accessor (get) methods for each variable", passed);
-            assertTrue(passed);
-        }
+          getResults("3", "" + num, "Checking accessor (get) methods for each variable", passed);
+          assertTrue(passed);
+      }
 
-        @Test
-        public void test2()
-        {
-            String code = getCode();
-            String target = "public void set*(*)";
+      @Test
+      public void test2()
+      {
+          String code = getCode();
+          String target = "public void set*(*)";
 
-            int num = countOccurencesRegex(code, target);
+          int num = countOccurencesRegex(code, target);
 
-            boolean passed = num >= 3;
+          boolean passed = num >= 3;
 
-            getResults("3", ""+num, "Checking mutator (set) methods for each variable", passed);
-            assertTrue(passed);
-        }
+          getResults("3", "" + num, "Checking mutator (set) methods for each variable", passed);
+          assertTrue(passed);
+      }
 
-        @Test
-        public void test3()
-        {
-            String target = "public String toString()";
-            boolean passed = checkCodeContains("toString() method", target);
-            assertTrue(passed);
-        }
-    }
+      @Test
+      public void test3()
+      {
+          String target = "public String toString()";
+          boolean passed = checkCodeContains("toString() method", target);
+          assertTrue(passed);
+      }
+  }
 
 You will continue this project in Unit 6 in lessons 6.1-6.3 to create an array of objects using your class.
 

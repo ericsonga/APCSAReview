@@ -366,7 +366,6 @@ Multiple-Choice Exercises
             }
         }
 
-
 .. mchoice:: AP5-4-3
    :practice: T
    :random:
@@ -430,7 +429,7 @@ Multiple-Choice Exercises
 
             public int getTemp()
             {
-              return currentTemp;
+                return currentTemp;
             }
 
             public void resetTemp(int new_temp)
@@ -487,7 +486,7 @@ Multiple-Choice Exercises
             }
 
             public void raiseTemperature(int increase) // Line 10
-            {
+                    {
                 return currentTemp + increase; // Line 12
             }
         }
@@ -537,21 +536,19 @@ Multiple-Choice Exercises
 
         public class Party
         {
-            private int numOfPeople; //number of people at the party
+            private int numOfPeople; // number of people at the party
 
             public Party(int people)
             {
                 numOfPeople = people;
             }
 
-            public double calculatePizzaCostPerPerson(int numOfBoxes, double priceOfOnePizzaBox)
-            {
+            public double calculatePizzaCostPerPerson(
+                    int numOfBoxes, double priceOfOnePizzaBox)
+                    {
                 /* missing code */
             }
         }
-
-
-
 
 .. mchoice:: AP5-6-4
    :practice: T
@@ -574,8 +571,8 @@ Multiple-Choice Exercises
 
         public class Party
         {
-            private int numOfPeople; //number of people at the party
-            private int capacity;    //total capacity of people at party
+            private int numOfPeople; // number of people at the party
+            private int capacity; // total capacity of people at party
 
             public Party(int people, int cap)
             {
@@ -647,7 +644,6 @@ Multiple-Choice Exercises
             {
                 currentTemp = newTemp + howMuch;
             }
-
         }
 
     Which of the following best explains why the class will not compile?
@@ -741,7 +737,7 @@ Multiple-Choice Exercises
             private int monthOfParty;
             private int partyStartTime;
 
-            public Party (String h, int month, int startTime)
+            public Party(String h, int month, int startTime)
             {
                 partyHost = h;
                 monthOfParty = month;
@@ -791,7 +787,6 @@ Multiple-Choice Exercises
                 }
             }
         }
-
 
     Consider the following code segment, which appears in a class other than Party or PartyOptions.
 

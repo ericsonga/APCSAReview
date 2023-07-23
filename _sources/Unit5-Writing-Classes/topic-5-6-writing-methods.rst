@@ -131,62 +131,101 @@ For example, here is a chorus() method definition that we could write for the "T
   ~~~~
   public class Song
   {
-    // The chorus method
-    public void chorus()
-    {
-       System.out.println("With a knick knack paddy whack, give a dog a bone.");
-       System.out.println("This old man came rolling home.");
-    }
+      // The chorus method
+      public void chorus()
+      {
+          System.out.println("With a knick knack paddy whack, give a dog a bone.");
+          System.out.println("This old man came rolling home.");
+      }
 
-    public static void main(String args[])
-    {
-        Song mySong = new Song();
-        System.out.println("This old man, he played one.");
-        System.out.println("He played knick knack on my thumb. ");
-        mySong.chorus();
+      public static void main(String args[])
+      {
+          Song mySong = new Song();
+          System.out.println("This old man, he played one.");
+          System.out.println("He played knick knack on my thumb. ");
+          mySong.chorus();
 
-        System.out.println("This old man, he played two.");
-        System.out.println("He played knick knack on my shoe. ");
-        // Can you replace these 2 lines with a method call to chorus()?
-        System.out.println("With a knick knack paddy whack, give a dog a bone.");
-        System.out.println("This old man came rolling home.");
-    }
+          System.out.println("This old man, he played two.");
+          System.out.println("He played knick knack on my shoe. ");
+          // Can you replace these 2 lines with a method call to chorus()?
+          System.out.println("With a knick knack paddy whack, give a dog a bone.");
+          System.out.println("This old man came rolling home.");
+      }
   }
+
   ====
   import static org.junit.Assert.*;
-    import org.junit.*;;
-    import java.io.*;
 
-    public class RunestoneTests extends CodeTestHelper
-    {
-        @Test
-        public void testMain() throws IOException
-        {
-            String output = getMethodOutput("main");
-            String expect = "This old man, he played one.\nHe played knick knack on my thumb.  \nWith a knick knack paddy whack, give a dog a bone.\nThis old man came rolling home.\nThis old man, he played two.\nHe played knick knack on my shoe. \nWith a knick knack paddy whack, give a dog a bone.\nThis old man came rolling home.";
-            boolean passed = getResults(expect, output, "Expected output from main");
-            assertTrue(passed);
-        }
+  import org.junit.*;
 
-        @Test
-        public void testChangedCode() {
-             String origCode = "public class Song\n{\n  // The chorus method\n  public void chorus()\n  {\n     System.out.println(\"With a knick knack paddy whack, give a dog a bone.\");\n     System.out.println(\"This old man came rolling home.\");\n  }\n\n  public static void main(String args[])\n  {\n    Song mySong = new Song();\n    System.out.println(\"This old man, he played one.\");\n    System.out.println(\"He played knick knack on my thumb. \");\n    mySong.chorus();\n\n    System.out.println(\"This old man, he played two.\");\n    System.out.println(\"He played knick knack on my shoe. \");\n    // Can you replace these 2 lines with a method call to chorus()?\n    System.out.println(\"With a knick knack paddy whack, give a dog a bone.\");\n    System.out.println(\"This old man came rolling home.\");\n  }\n}\n";
+  import java.io.*;
 
-            boolean changed = codeChanged(origCode);
-
-            assertTrue(changed);
-
-        }
-
-        @Test
-        public void testcodeContains(){
-          int count = countOccurences(getCode(),"mySong.chorus();");
-          boolean passed = count > 1;
-          passed = getResults("> 1 chorus call",  count  + " chorus call(s)", "Added a call to chorus?", passed);
+  public class RunestoneTests extends CodeTestHelper
+  {
+      @Test
+      public void testMain() throws IOException
+      {
+          String output = getMethodOutput("main");
+          String expect =
+                  "This old man, he played one.\n"
+                      + "He played knick knack on my thumb.  \n"
+                      + "With a knick knack paddy whack, give a dog a bone.\n"
+                      + "This old man came rolling home.\n"
+                      + "This old man, he played two.\n"
+                      + "He played knick knack on my shoe. \n"
+                      + "With a knick knack paddy whack, give a dog a bone.\n"
+                      + "This old man came rolling home.";
+          boolean passed = getResults(expect, output, "Expected output from main");
           assertTrue(passed);
-        }
+      }
 
-    }
+      @Test
+      public void testChangedCode()
+      {
+          String origCode =
+                  "public class Song\n"
+                      + "{\n"
+                      + "  // The chorus method\n"
+                      + "  public void chorus()\n"
+                      + "  {\n"
+                      + "     System.out.println(\"With a knick knack paddy whack, give a dog a"
+                      + " bone.\");\n"
+                      + "     System.out.println(\"This old man came rolling home.\");\n"
+                      + "  }\n\n"
+                      + "  public static void main(String args[])\n"
+                      + "  {\n"
+                      + "    Song mySong = new Song();\n"
+                      + "    System.out.println(\"This old man, he played one.\");\n"
+                      + "    System.out.println(\"He played knick knack on my thumb. \");\n"
+                      + "    mySong.chorus();\n\n"
+                      + "    System.out.println(\"This old man, he played two.\");\n"
+                      + "    System.out.println(\"He played knick knack on my shoe. \");\n"
+                      + "    // Can you replace these 2 lines with a method call to chorus()?\n"
+                      + "    System.out.println(\"With a knick knack paddy whack, give a dog a"
+                      + " bone.\");\n"
+                      + "    System.out.println(\"This old man came rolling home.\");\n"
+                      + "  }\n"
+                      + "}\n";
+
+          boolean changed = codeChanged(origCode);
+
+          assertTrue(changed);
+      }
+
+      @Test
+      public void testcodeContains()
+      {
+          int count = countOccurences(getCode(), "mySong.chorus();");
+          boolean passed = count > 1;
+          passed =
+                  getResults(
+                          "> 1 chorus call",
+                          count + " chorus call(s)",
+                          "Added a call to chorus?",
+                          passed);
+          assertTrue(passed);
+      }
+  }
 
 Parameters
 -----------
@@ -230,53 +269,58 @@ We can make methods even more powerful and more abstract by giving them paramete
   public class Song
   {
 
-    /** Verse - prints out a verse of the song
-     * @param number - a String like "one", "two", etc.
-     * @param rhyme - a String like "thumb", "shoe", etc.
-     */
-     public void verse(String number, String rhyme)
-     {
-       System.out.println("This old man, he played " + number);
-       System.out.println("He played knick knack on my " + rhyme);
-     }
+      /**
+       * Verse - prints out a verse of the song
+       *
+       * @param number - a String like "one", "two", etc.
+       * @param rhyme - a String like "thumb", "shoe", etc.
+       */
+      public void verse(String number, String rhyme)
+      {
+          System.out.println("This old man, he played " + number);
+          System.out.println("He played knick knack on my " + rhyme);
+      }
 
-    // The chorus method
-    public void chorus()
-    {
-       System.out.println("With a knick knack paddy whack, give a dog a bone.");
-       System.out.println("This old man came rolling home.");
-    }
+      // The chorus method
+      public void chorus()
+      {
+          System.out.println("With a knick knack paddy whack, give a dog a bone.");
+          System.out.println("This old man came rolling home.");
+      }
 
-    public static void main(String args[])
-    {
-        Song mySong = new Song();
-        mySong.verse("one", "thumb");
-        mySong.chorus();
-        mySong.verse("two", "shoe");
-        mySong.chorus();
-    }
+      public static void main(String args[])
+      {
+          Song mySong = new Song();
+          mySong.verse("one", "thumb");
+          mySong.chorus();
+          mySong.verse("two", "shoe");
+          mySong.chorus();
+      }
   }
+
   ====
   import static org.junit.Assert.*;
-    import org.junit.*;;
-    import java.io.*;
 
-    public class RunestoneTests extends CodeTestHelper
-    {
-        @Test
-        public void testThree()
-        {
-            boolean passed = checkCodeContains("verse three", "mySong.verse(\"three\", \"knee\");");
-            assertTrue(passed);
-        }
+  import org.junit.*;
 
-        @Test
-        public void testFour()
-        {
-            boolean passed = checkCodeContains("verse four", "mySong.verse(\"four\", \"door\");");
-            assertTrue(passed);
-        }
-    }
+  import java.io.*;
+
+  public class RunestoneTests extends CodeTestHelper
+  {
+      @Test
+      public void testThree()
+      {
+          boolean passed = checkCodeContains("verse three", "mySong.verse(\"three\", \"knee\");");
+          assertTrue(passed);
+      }
+
+      @Test
+      public void testFour()
+      {
+          boolean passed = checkCodeContains("verse four", "mySong.verse(\"four\", \"door\");");
+          assertTrue(passed);
+      }
+  }
 
 When you create your own method, the variables you define for it in the method header are called **formal parameters**. When you call the method to do its job, you give or pass in **arguments** or **actual parameters** to it that are then saved in these local parameter variables.
 
@@ -322,24 +366,26 @@ Methods can also return values of any type back to the calling method. The calli
   ~~~~
   public class StringFind
   {
-    /** findLetter looks for a letter in a String
-     * @param String letter to look for
-     * @param String text to look in
-     * @return boolean true if letter is in text
-     * After running the code, change this method to return
-     * an int count of how many times letter is in the text.
-     */
-     public boolean findLetter(String letter, String text)
-     {
-         boolean flag = false;
-         for(int i=0; i < text.length(); i++)
-         {
-             if (text.substring(i, i+1).equalsIgnoreCase(letter))
-             {
-                flag = true;
-             }
-         }
-         return flag;
+      /**
+       * findLetter looks for a letter in a String
+       *
+       * @param String letter to look for
+       * @param String text to look in
+       * @return boolean true if letter is in text After running the code, change
+       *     this method to return an int count of how many times letter is in the
+       *     text.
+       */
+      public boolean findLetter(String letter, String text)
+      {
+          boolean flag = false;
+          for (int i = 0; i < text.length(); i++)
+          {
+              if (text.substring(i, i + 1).equalsIgnoreCase(letter))
+              {
+                  flag = true;
+              }
+          }
+          return flag;
       }
 
       public static void main(String args[])
@@ -347,67 +393,82 @@ Methods can also return values of any type back to the calling method. The calli
           StringFind test = new StringFind();
           String message = "Apples and Oranges";
           String letter = "p";
-          System.out.println("Does " + message +  " contain a " + letter + "?");
-          System.out.println( test.findLetter(letter, message) );
+          System.out.println("Does " + message + " contain a " + letter + "?");
+          System.out.println(test.findLetter(letter, message));
       }
   }
+
   ====
   import static org.junit.Assert.*;
-    import org.junit.*;;
-    import java.io.*;
 
-    public class RunestoneTests extends CodeTestHelper
-    {
-        @Test
-        public void tryfindLetter() throws IOException
-        {
-           String message = "Apples and Oranges";
-           String letter = "p";
-           Object[] args = {letter,message};
-           String output = getMethodOutput("findLetter", args);
-           String expect = "2";
+  import org.junit.*;
 
-           boolean passed = getResults(expect, output,
-                    "findLetter(\"p\",\"Apples and Oranges\")");
-           assertTrue(passed);
-        }
+  import java.io.*;
 
-         @Test
-        public void tryfindLetter2() throws IOException
-        {
-           String message = "Test strings";
-           String letter = "s";
-           Object[] args = {letter,message};
-           String output = getMethodOutput("findLetter", args);
-           String expect = "3";
+  public class RunestoneTests extends CodeTestHelper
+  {
+      @Test
+      public void tryfindLetter() throws IOException
+      {
+          String message = "Apples and Oranges";
+          String letter = "p";
+          Object[] args = {letter, message};
+          String output = getMethodOutput("findLetter", args);
+          String expect = "2";
 
-           boolean passed = getResults(expect, output,
-                    "findLetter(\"s\",\"Test strings\")");
-           assertTrue(passed);
-        }
-        @Test
-        public void test2()
-        {
-            boolean passed = checkCodeContains("changed return type of findLetter", "public int findLetter(String letter, String text)");
-            assertTrue(passed);
-        }
+          boolean passed = getResults(expect, output, "findLetter(\"p\",\"Apples and Oranges\")");
+          assertTrue(passed);
+      }
 
-         @Test
-        public void test1()
-        {
-            boolean passed = checkCodeContains("variable count set to 0", "int count = 0;");
-            assertTrue(passed);
-        }
+      @Test
+      public void tryfindLetter2() throws IOException
+      {
+          String message = "Test strings";
+          String letter = "s";
+          Object[] args = {letter, message};
+          String output = getMethodOutput("findLetter", args);
+          String expect = "3";
 
-         @Test
-        public void test3()
-        {   String code = removeSpaces(getCode());
-            boolean passed = code.contains("count++;") ||
-            code.contains("count=count+1;") || code.contains("count=1+count;") || code.contains("count+=1;") || code.contains("++count;");
-            passed = getResults("count incremented",Boolean.toString(passed),"Count incremented?", passed);
-            assertTrue(passed);
-        }
-    }
+          boolean passed = getResults(expect, output, "findLetter(\"s\",\"Test strings\")");
+          assertTrue(passed);
+      }
+
+      @Test
+      public void test2()
+      {
+          boolean passed =
+                  checkCodeContains(
+                          "changed return type of findLetter",
+                          "public int findLetter(String letter, String text)");
+          assertTrue(passed);
+      }
+
+      @Test
+      public void test1()
+      {
+          boolean passed = checkCodeContains("variable count set to 0", "int count = 0;");
+          assertTrue(passed);
+      }
+
+      @Test
+      public void test3()
+      {
+          String code = removeSpaces(getCode());
+          boolean passed =
+                  code.contains("count++;")
+                          || code.contains("count=count+1;")
+                          || code.contains("count=1+count;")
+                          || code.contains("count+=1;")
+                          || code.contains("++count;");
+          passed =
+                  getResults(
+                          "count incremented",
+                          Boolean.toString(passed),
+                          "Count incremented?",
+                          passed);
+          assertTrue(passed);
+      }
+  }
 
 |Groupwork| Programming Challenge : Song with Parameters
 ---------------------------------------------------------
@@ -458,135 +519,146 @@ Here's another song, |The Ants Go Marching|, that is very similar to the This Ol
   ~~~~
   public class Song
   {
-     // Create at least 1 method called verse that takes 2 parameters
-     // that can be used to print out the verses of the song The Ants Go Marching
+      // Create at least 1 method called verse that takes 2 parameters
+      // that can be used to print out the verses of the song The Ants Go Marching
 
+      public static void main(String args[])
+      {
+          // Create a Song object and call its method(s) to print out
+          // the verses of The Ants Go Marching
+          // There should be atleast 1 method called verse that takes 2 arguments.
 
-     public static void main(String args[])
-     {
-         // Create a Song object and call its method(s) to print out
-         // the verses of The Ants Go Marching
-         // There should be atleast 1 method called verse that takes 2 arguments.
-
-
-    }
+      }
   }
+
   ====
   import static org.junit.Assert.*;
-   import org.junit.*;
-   import java.io.*;
-   
-   /* Do NOT change Main or CodeTestHelper.java.
-      Put the active code exercise in a file like ForLoop.java.
-      Put your Junit test in the file RunestoneTests.java.
-      Run. Test by changing ForLoop.java (student code).
-      */
-   public class RunestoneTests extends CodeTestHelper {
-       @Test
-       public void checkCodeContains1() {
-           // check verse 1
-           boolean passed = checkCodeContains(
-                   "verse(...) method header with two String parameters",
-                   "public void verse(String *, String *)");
-   
-           assertTrue(passed);
-   
-       }
-   
-       @Test
-       public void checkCodeContains2() {
-           boolean passed = checkCodeContains(
-                   "a new Song object",
-                   "= new Song()");
-   
-           assertTrue(passed);
-       }
-   
-       @Test
-       public void checkCodeContains3() {
-           // check static
-           String code = getCode();
-           int actual = countOccurences(code, ".verse(");
-           String expected = "3";
-   
-           boolean passed = actual >= 3;
-           getResults(expected, "" + actual,
-                   "Checking that code contains three calls to verse(...) method using object.method(...) syntax",
-                   passed);
-           assertTrue(passed);
-       }
-   
-        @Test
-       public void testVerses() throws IOException {
-           String output = getMethodOutput("main").replaceAll(" his ", " a ").replaceAll("\n\n", "\n");
-           String[] actualArray = output.split("\n");
-   
-           boolean passed = true;
-           String error = "";
-           String expect = "No errors";
-           String actual = "No errors";
-   
-           int j = 0;
-   
-           for (int i = 0; i < actualArray.length; i++) {
-               while (j < expectedArray.length && expectedArray[j].length() < 2)
-                   j++;
-               while (i < expectedArray.length && actualArray[i].length() < 2)
-                   i++;
-   
-               if (j < expectedArray.length && actualArray[i].length() > 1) {
-                   /*
-                    * System.out.println(expectedArray[j]);
-                    * System.out.println(actualArray[i]);
-                    * System.out.println();
-                    */
-                   if(actualArray[i].matches("[\\s\\S]*[0-9]+[\\s\\S]*")) {
-                       continue;
-                   }
-                       
-                   String compAct = removeSpaces(actualArray[i].toLowerCase());
-                   String compExp = removeSpaces(expectedArray[j].toLowerCase());
-   
-                   if (!compAct.equals(compExp)) {
-                       expect = expectedArray[j].trim();
-                       actual = actualArray[i].trim() + "\n(Error on line " + (i + 1)
-                               + " of output)";
-                       passed = false;
-                       error = "\nThere may be more than one error! Did you forget a line?\n(check spelling, new lines, and punctuation carefully)";
-                       break;
-                   }
-               }
-   
-               j++;
-           }
-   
-           getResults(expect, actual, "Checking output from main" + error, passed);
-           assertTrue(passed);
-       }
-   
-       private static String expectedOutput = "The ants go marching one by one, hurrah, hurrah\n"
-               + "The ants go marching one by one, hurrah, hurrah\n"
-               + "The ants go marching one by one\n"
-               + "The little one stops to suck a thumb\n"
-               + "And they all go marching down to the ground\n"
-               + "To get out of the rain, BOOM! BOOM! BOOM! BOOM!\n"
-               + "\n"
-               + "The ants go marching two by two, hurrah, hurrah\n"
-               + "The ants go marching two by two, hurrah, hurrah\n"
-               + "The ants go marching two by two\n"
-               + "The little one stops to tie a shoe\n"
-               + "And they all go marching down to the ground\n"
-               + "To get out of the rain, BOOM! BOOM! BOOM! BOOM!\n"
-               + "\n"
-               + "The ants go marching three by three, hurrah, hurrah\n"
-               + "The ants go marching three by three, hurrah, hurrah\n"
-               + "The ants go marching three by three\n"
-               + "The little one stops to climb a tree\n"
-               + "And they all go marching down to the ground\n"
-               + "To get out of the rain, BOOM! BOOM! BOOM! BOOM!";
-       private static String[] expectedArray = expectedOutput.replaceAll("\n\n", "\n").split("\n");
-   }
 
+  import org.junit.*;
+
+  import java.io.*;
+
+  /* Do NOT change Main or CodeTestHelper.java.
+  Put the active code exercise in a file like ForLoop.java.
+  Put your Junit test in the file RunestoneTests.java.
+  Run. Test by changing ForLoop.java (student code).
+  */
+  public class RunestoneTests extends CodeTestHelper
+  {
+      @Test
+      public void checkCodeContains1()
+      {
+          // check verse 1
+          boolean passed =
+                  checkCodeContains(
+                          "verse(...) method header with two String parameters",
+                          "public void verse(String *, String *)");
+
+          assertTrue(passed);
+      }
+
+      @Test
+      public void checkCodeContains2()
+      {
+          boolean passed = checkCodeContains("a new Song object", "= new Song()");
+
+          assertTrue(passed);
+      }
+
+      @Test
+      public void checkCodeContains3()
+      {
+          // check static
+          String code = getCode();
+          int actual = countOccurences(code, ".verse(");
+          String expected = "3";
+
+          boolean passed = actual >= 3;
+          getResults(
+                  expected,
+                  "" + actual,
+                  "Checking that code contains three calls to verse(...) method using"
+                      + " object.method(...) syntax",
+                  passed);
+          assertTrue(passed);
+      }
+
+      @Test
+      public void testVerses() throws IOException
+      {
+          String output = getMethodOutput("main").replaceAll(" his ", " a ").replaceAll("\n\n", "\n");
+          String[] actualArray = output.split("\n");
+
+          boolean passed = true;
+          String error = "";
+          String expect = "No errors";
+          String actual = "No errors";
+
+          int j = 0;
+
+          for (int i = 0; i < actualArray.length; i++)
+          {
+              while (j < expectedArray.length && expectedArray[j].length() < 2) j++;
+              while (i < expectedArray.length && actualArray[i].length() < 2) i++;
+
+              if (j < expectedArray.length && actualArray[i].length() > 1)
+              {
+                  /*
+                   * System.out.println(expectedArray[j]);
+                   * System.out.println(actualArray[i]);
+                   * System.out.println();
+                   */
+                  if (actualArray[i].matches("[\\s\\S]*[0-9]+[\\s\\S]*"))
+                  {
+                      continue;
+                  }
+
+                  String compAct = removeSpaces(actualArray[i].toLowerCase());
+                  String compExp = removeSpaces(expectedArray[j].toLowerCase());
+
+                  if (!compAct.equals(compExp))
+                  {
+                      expect = expectedArray[j].trim();
+                      actual = actualArray[i].trim() + "\n(Error on line " + (i + 1) + " of output)";
+                      passed = false;
+                      error =
+                              "\n"
+                                  + "There may be more than one error! Did you forget a line?\n"
+                                  + "(check spelling, new lines, and punctuation carefully)";
+                      break;
+                  }
+              }
+
+              j++;
+          }
+
+          getResults(expect, actual, "Checking output from main" + error, passed);
+          assertTrue(passed);
+      }
+
+      private static String expectedOutput =
+              "The ants go marching one by one, hurrah, hurrah\n"
+                      + "The ants go marching one by one, hurrah, hurrah\n"
+                      + "The ants go marching one by one\n"
+                      + "The little one stops to suck a thumb\n"
+                      + "And they all go marching down to the ground\n"
+                      + "To get out of the rain, BOOM! BOOM! BOOM! BOOM!\n"
+                      + "\n"
+                      + "The ants go marching two by two, hurrah, hurrah\n"
+                      + "The ants go marching two by two, hurrah, hurrah\n"
+                      + "The ants go marching two by two\n"
+                      + "The little one stops to tie a shoe\n"
+                      + "And they all go marching down to the ground\n"
+                      + "To get out of the rain, BOOM! BOOM! BOOM! BOOM!\n"
+                      + "\n"
+                      + "The ants go marching three by three, hurrah, hurrah\n"
+                      + "The ants go marching three by three, hurrah, hurrah\n"
+                      + "The ants go marching three by three\n"
+                      + "The little one stops to climb a tree\n"
+                      + "And they all go marching down to the ground\n"
+                      + "To get out of the rain, BOOM! BOOM! BOOM! BOOM!";
+      private static String[] expectedArray = expectedOutput.replaceAll("\n\n", "\n").split("\n");
+  }
 
 |Groupwork| Design a Class for your Community
 ----------------------------------------------------------
@@ -636,122 +708,130 @@ In lessons 5.1 and 5.2, you came up with a class of your own choice relevant to 
   }
   ====
   import static org.junit.Assert.*;
+
   import org.junit.*;
+
   import java.io.*;
 
   public class RunestoneTests extends CodeTestHelper
   {
-         @Test
-        public void testPrivateVariables()
-        {
-            String expect = "3 Private";
-            String output = testPrivateInstanceVariables();
-            boolean passed = false;
-            if (Integer.parseInt(expect.substring(0,1)) <= Integer.parseInt(output.substring(0,1)))
-               passed = true;
-            passed = getResults(expect, output, "Checking private instance variable(s)", passed);
-            assertTrue(passed);
-        }
+      @Test
+      public void testPrivateVariables()
+      {
+          String expect = "3 Private";
+          String output = testPrivateInstanceVariables();
+          boolean passed = false;
+          if (Integer.parseInt(expect.substring(0, 1)) <= Integer.parseInt(output.substring(0, 1)))
+              passed = true;
+          passed = getResults(expect, output, "Checking private instance variable(s)", passed);
+          assertTrue(passed);
+      }
 
-        /* @Test
-        public void testDefaultConstructor()
-        {
-            String output = checkDefaultConstructor();
-            String expect = "pass";
+      /* @Test
+      public void testDefaultConstructor()
+      {
+          String output = checkDefaultConstructor();
+          String expect = "pass";
 
-            boolean passed = getResults(expect, output, "Checking default constructor");
-            assertTrue(passed);
-        } */
+          boolean passed = getResults(expect, output, "Checking default constructor");
+          assertTrue(passed);
+      } */
 
-        @Test
-        public void testConstructor3()
-        {
-            String output = checkConstructor(3);
-            String expect = "pass";
+      @Test
+      public void testConstructor3()
+      {
+          String output = checkConstructor(3);
+          String expect = "pass";
 
-            boolean passed = getResults(expect, output, "Checking constructor with 3 parameters");
-            assertTrue(passed);
-        }
+          boolean passed = getResults(expect, output, "Checking constructor with 3 parameters");
+          assertTrue(passed);
+      }
 
-        @Test
-        public void testPrint()
-        {
-            String output = getMethodOutput("print");
-            String expect = "More than 15 characters";
-            String actual = " than 15 characters";
+      @Test
+      public void testPrint()
+      {
+          String output = getMethodOutput("print");
+          String expect = "More than 15 characters";
+          String actual = " than 15 characters";
 
-            if (output.length() < 15) {
-                actual = "Less" + actual;
-            } else {
-                actual = "More" + actual;
-            }
-            boolean passed = getResults(expect, actual, "Checking print method");
-            assertTrue(passed);
-        }
+          if (output.length() < 15)
+          {
+              actual = "Less" + actual;
+          }
+          else
+          {
+              actual = "More" + actual;
+          }
+          boolean passed = getResults(expect, actual, "Checking print method");
+          assertTrue(passed);
+      }
 
-        @Test
-        public void testMain() throws IOException
-        {
-            String output = getMethodOutput("main");//.split("\n");
-            String expect = "3+ line(s) of text";
-            String actual = " line(s) of text";
-            int len = output.split("\n").length;
+      @Test
+      public void testMain() throws IOException
+      {
+          String output = getMethodOutput("main"); // .split("\n");
+          String expect = "3+ line(s) of text";
+          String actual = " line(s) of text";
+          int len = output.split("\n").length;
 
-            if (output.length() > 0) {
-                actual = len + actual;
-            } else {
-                actual = output.length() + actual;
-            }
-            boolean passed = len >= 3;
+          if (output.length() > 0)
+          {
+              actual = len + actual;
+          }
+          else
+          {
+              actual = output.length() + actual;
+          }
+          boolean passed = len >= 3;
 
-            getResults(expect, actual, "Checking output", passed);
-            assertTrue(passed);
-        }
+          getResults(expect, actual, "Checking output", passed);
+          assertTrue(passed);
+      }
 
-        @Test
-        public void test1()
-        {
-            String code = getCode();
-            String target = "public * get*()";
+      @Test
+      public void test1()
+      {
+          String code = getCode();
+          String target = "public * get*()";
 
-            int num = countOccurencesRegex(code, target);
+          int num = countOccurencesRegex(code, target);
 
-            boolean passed = num >= 3;
+          boolean passed = num >= 3;
 
-            getResults("3", ""+num, "Checking accessor (get) methods for each variable", passed);
-            assertTrue(passed);
-        }
+          getResults("3", "" + num, "Checking accessor (get) methods for each variable", passed);
+          assertTrue(passed);
+      }
 
-        @Test
-        public void test2()
-        {
-            String code = getCode();
-            String target = "public void set*(*)";
+      @Test
+      public void test2()
+      {
+          String code = getCode();
+          String target = "public void set*(*)";
 
-            int num = countOccurencesRegex(code, target);
+          int num = countOccurencesRegex(code, target);
 
-            boolean passed = num >= 3;
+          boolean passed = num >= 3;
 
-            getResults("3", ""+num, "Checking mutator (set) methods for each variable", passed);
-            assertTrue(passed);
-        }
+          getResults("3", "" + num, "Checking mutator (set) methods for each variable", passed);
+          assertTrue(passed);
+      }
 
-        @Test
-        public void test3()
-        {
-            String target = "public String toString()";
-            boolean passed = checkCodeContains("toString() method", target);
-            assertTrue(passed);
-        }
+      @Test
+      public void test3()
+      {
+          String target = "public String toString()";
+          boolean passed = checkCodeContains("toString() method", target);
+          assertTrue(passed);
+      }
 
-        @Test
-        public void testPrintFormat()
-        {
-            String target = "public void print(String";
-            boolean passed = checkCodeContains("print method with String argument", target);
-            assertTrue(passed);
-        }
-    }
+      @Test
+      public void testPrintFormat()
+      {
+          String target = "public void print(String";
+          boolean passed = checkCodeContains("print method with String argument", target);
+          assertTrue(passed);
+      }
+  }
 
 Summary
 -------

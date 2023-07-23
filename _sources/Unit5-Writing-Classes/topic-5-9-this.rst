@@ -51,63 +51,90 @@ Run the code below and also check it out in the Java visualizer with the Show Co
   ~~~~
   public class Person
   {
-     // instance variables
+      // instance variables
       private String name;
       private String email;
       private String phoneNumber;
 
-     // constructor
-     public Person(String theName)
-     {
-        this.name = theName;
-     }
+      // constructor
+      public Person(String theName)
+      {
+          this.name = theName;
+      }
 
-     // accessor methods - getters
-     public String getName() { return this.name;}
-     public String getEmail() { return this.email;}
-     public String getPhoneNumber() { return this.phoneNumber;}
+      // accessor methods - getters
+      public String getName()
+      {
+          return this.name;
+      }
 
-     // mutator methods - setters
-     public void setName(String theName) { this.name = theName;}
-     public void setEmail(String theEmail) {this.email = theEmail;}
-     public void setPhoneNumber(String thePhoneNumber) { this.phoneNumber = thePhoneNumber;}
-     public String toString()
-     {
-        return this.name + " " + this.email + " " + this.phoneNumber;
-     }
+      public String getEmail()
+      {
+          return this.email;
+      }
 
-     // main method for testing
-     public static void main(String[] args)
-     {
-        Person p1 = new Person("Sana");
-        System.out.println(p1);
-        Person p2 = new Person("Jean");
-        p2.setEmail("jean@gmail.com");
-        p2.setPhoneNumber("404 899-9955");
-        System.out.println(p2);
-     }
+      public String getPhoneNumber()
+      {
+          return this.phoneNumber;
+      }
+
+      // mutator methods - setters
+      public void setName(String theName)
+      {
+          this.name = theName;
+      }
+
+      public void setEmail(String theEmail)
+      {
+          this.email = theEmail;
+      }
+
+      public void setPhoneNumber(String thePhoneNumber)
+      {
+          this.phoneNumber = thePhoneNumber;
+      }
+
+      public String toString()
+      {
+          return this.name + " " + this.email + " " + this.phoneNumber;
+      }
+
+      // main method for testing
+      public static void main(String[] args)
+      {
+          Person p1 = new Person("Sana");
+          System.out.println(p1);
+          Person p2 = new Person("Jean");
+          p2.setEmail("jean@gmail.com");
+          p2.setPhoneNumber("404 899-9955");
+          System.out.println(p2);
+      }
   }
+
   ====
    import static org.junit.Assert.*;
-      import org.junit.*;
-      import java.io.*;
 
-      public class RunestoneTests extends CodeTestHelper
-      {
-          public RunestoneTests() {
-              super("Person");
-          }
+   import org.junit.*;
 
-            @Test
-            public void testMain() throws IOException
-            {
-               String output = getMethodOutput("main");
-                String expect = "Sana null null\nJean jean@gmail.com 404 899-9955";
+   import java.io.*;
 
-                boolean passed = getResults(expect, output, "Expected output from main", true);
-                assertTrue(passed);
-            }
-      }
+   public class RunestoneTests extends CodeTestHelper
+   {
+       public RunestoneTests()
+       {
+           super("Person");
+       }
+
+       @Test
+       public void testMain() throws IOException
+       {
+           String output = getMethodOutput("main");
+           String expect = "Sana null null\nJean jean@gmail.com 404 899-9955";
+
+           boolean passed = getResults(expect, output, "Expected output from main", true);
+           assertTrue(passed);
+       }
+   }
 
 .. note::
 
@@ -145,64 +172,67 @@ The ``this`` variable can be used anywhere you would use an object variable.  Yo
    ~~~~
    public class Pay
    {
-    private double pay;
+       private double pay;
 
-    public Pay(double p)
-    {
-        pay = p;
-    }
+       public Pay(double p)
+       {
+           pay = p;
+       }
 
-    public double getPay()
-    {
-        return pay;
-    }
+       public double getPay()
+       {
+           return pay;
+       }
 
-    public void calculatePayWithOvertime()
-    {
-        // this Pay object is passed to the Overtime constructor
-        Overtime ot = new Overtime(this);
-        pay = ot.getOvertimePay();
-    }
+       public void calculatePayWithOvertime()
+       {
+           // this Pay object is passed to the Overtime constructor
+           Overtime ot = new Overtime(this);
+           pay = ot.getOvertimePay();
+       }
 
-    public static void main(String[] args)
-    {
-        Pay myPay = new Pay(100.0);
-        myPay.calculatePayWithOvertime();
-        System.out.println(myPay.getPay());
-    }
+       public static void main(String[] args)
+       {
+           Pay myPay = new Pay(100.0);
+           myPay.calculatePayWithOvertime();
+           System.out.println(myPay.getPay());
+       }
    }
 
    class Overtime
    {
-    private double payWithOvertime;
+       private double payWithOvertime;
 
-    public Overtime(Pay p)
-    {
-        payWithOvertime = p.getPay() * 1.5;
-    }
+       public Overtime(Pay p)
+       {
+           payWithOvertime = p.getPay() * 1.5;
+       }
 
-    public double getOvertimePay()
-    {
-        return payWithOvertime;
-    }
+       public double getOvertimePay()
+       {
+           return payWithOvertime;
+       }
    }
+
    ====
     import static org.junit.Assert.*;
-      import org.junit.*;
-      import java.io.*;
 
-      public class RunestoneTests extends CodeTestHelper
-      {
-            @Test
-            public void testMain() throws IOException
-            {
-               String output = getMethodOutput("main");
-                String expect = "150.0";
+    import org.junit.*;
 
-                boolean passed = getResults(expect, output, "Expected output from main", true);
-                assertTrue(passed);
-            }
-      }
+    import java.io.*;
+
+    public class RunestoneTests extends CodeTestHelper
+    {
+        @Test
+        public void testMain() throws IOException
+        {
+            String output = getMethodOutput("main");
+            String expect = "150.0";
+
+            boolean passed = getResults(expect, output, "Expected output from main", true);
+            assertTrue(passed);
+        }
+    }
 
 |Exercise| Check Your Understanding
 
@@ -215,38 +245,39 @@ The ``this`` variable can be used anywhere you would use an object variable.  Yo
 
        public class Pay
        {
-        private double pay;
+           private double pay;
 
-        public Pay(double p)
-        {
-            pay = p;
-        }
+           public Pay(double p)
+           {
+               pay = p;
+           }
 
-        public double getPay()
-        {
-            return pay;
-        }
+           public double getPay()
+           {
+               return pay;
+           }
 
-        public void calculatePayWithOvertime()
-        {
-            // this Pay object is passed to the Overtime constructor
-            Overtime ot = new Overtime(this);
-            pay = ot.getOvertimePay();
-        }
+           public void calculatePayWithOvertime()
+           {
+               // this Pay object is passed to the Overtime constructor
+               Overtime ot = new Overtime(this);
+               pay = ot.getOvertimePay();
+           }
        }
 
        public class Overtime
        {
-        private double payWithOvertime;
+           private double payWithOvertime;
 
-        public Overtime(Pay p)
-        {
-            payWithOvertime = p.getPay() * 1.5;
-        }
-        public double getOvertimePay()
-        {
-            return payWithOvertime;
-        }
+           public Overtime(Pay p)
+           {
+               payWithOvertime = p.getPay() * 1.5;
+           }
+
+           public double getOvertimePay()
+           {
+               return payWithOvertime;
+           }
        }
 
     The following code segment appears in a class other than Pay or Overtime.
@@ -315,104 +346,105 @@ For this challenge, you can work in pairs to:
 
   Create a class called BankAccount that keeps track of the account holder's name, the account number, and the balance in the account. Create 2 constructors, a toString() method, and withdraw(amount) and deposit(amount) methods. Use the this keyword in the constructor and methods. Test your class in a main method.
   ~~~~
-  public class BankAccount
-  {
+  public class BankAccount {}
 
-
-  }
   ====
    import static org.junit.Assert.*;
-      import org.junit.*;
-      import java.io.*;
 
-      public class RunestoneTests extends CodeTestHelper
-      {
-            public RunestoneTests() {
-                super("BankAccount");
-            }
+   import org.junit.*;
 
-            @Test
-            public void test0()
-            {
-                String output = getMethodOutput("main");
-                String expect = "Something like:\nName 101 100.0\nName 101 200.0\nName 101 100.0";
+   import java.io.*;
 
-                boolean passed = !output.contains("Method main does not exist");
+   public class RunestoneTests extends CodeTestHelper
+   {
+       public RunestoneTests()
+       {
+           super("BankAccount");
+       }
 
-                getResults(expect, output, "Expected output from main", passed);
-                assertTrue(passed);
-            }
+       @Test
+       public void test0()
+       {
+           String output = getMethodOutput("main");
+           String expect = "Something like:\nName 101 100.0\nName 101 200.0\nName 101 100.0";
 
-            @Test
-            public void test1()
-            {
-                String output = checkConstructor(2);
-                String expect = "pass";
+           boolean passed = !output.contains("Method main does not exist");
 
-                boolean passed = getResults(expect, output, "Checking 2-parameter constructor");
-                assertTrue(passed);
-            }
+           getResults(expect, output, "Expected output from main", passed);
+           assertTrue(passed);
+       }
 
-            @Test
-            public void test2()
-            {
-                String output = checkConstructor(3);
-                String expect = "pass";
+       @Test
+       public void test1()
+       {
+           String output = checkConstructor(2);
+           String expect = "pass";
 
-                boolean passed = getResults(expect, output, "Checking 3-parameter constructor");
-                assertTrue(passed);
-            }
+           boolean passed = getResults(expect, output, "Checking 2-parameter constructor");
+           assertTrue(passed);
+       }
 
+       @Test
+       public void test2()
+       {
+           String output = checkConstructor(3);
+           String expect = "pass";
 
-            @Test
-            public void test01()
-            {
-                String expect = "3 Private";
-                String output = testPrivateInstanceVariables();
+           boolean passed = getResults(expect, output, "Checking 3-parameter constructor");
+           assertTrue(passed);
+       }
 
-                boolean passed = getResults(expect, output, "Checking Private Instance Variable(s)");
-                assertTrue(passed);
-            }
+       @Test
+       public void test01()
+       {
+           String expect = "3 Private";
+           String output = testPrivateInstanceVariables();
 
-            @Test
-            public void test3() {
-                String target = "public String toString()";
+           boolean passed = getResults(expect, output, "Checking Private Instance Variable(s)");
+           assertTrue(passed);
+       }
 
-                boolean passed = checkCodeContainsRegex("toString method", target);
-                assertTrue(passed);
-            }
+       @Test
+       public void test3()
+       {
+           String target = "public String toString()";
 
-            @Test
-            public void test41() {
-                String target = "public void withdraw(*)";
+           boolean passed = checkCodeContainsRegex("toString method", target);
+           assertTrue(passed);
+       }
 
-                boolean passed = checkCodeContainsRegex("withdraw method", target);
-                assertTrue(passed);
-            }
+       @Test
+       public void test41()
+       {
+           String target = "public void withdraw(*)";
 
-            @Test
-            public void test42() {
-                String target = "public void deposit(*)";
+           boolean passed = checkCodeContainsRegex("withdraw method", target);
+           assertTrue(passed);
+       }
 
-                boolean passed = checkCodeContainsRegex("deposit method", target);
-                assertTrue(passed);
-            }
+       @Test
+       public void test42()
+       {
+           String target = "public void deposit(*)";
 
-            @Test
-            public void test5() {
-                String target = "this.";
-                String code = getCode();
+           boolean passed = checkCodeContainsRegex("deposit method", target);
+           assertTrue(passed);
+       }
 
-                int num = countOccurences(code, target);
+       @Test
+       public void test5()
+       {
+           String target = "this.";
+           String code = getCode();
 
-                boolean passed = num >= 6;
+           int num = countOccurences(code, target);
 
-                getResults("6+", ""+num, "use of this.*", passed);
-                assertTrue(passed);
-            }
-      }
+           boolean passed = num >= 6;
 
-
+           getResults("6+", "" + num, "use of this.*", passed);
+           assertTrue(passed);
+       }
+   }
 
 Summary
 --------
@@ -440,7 +472,7 @@ AP Practice
         {
             private int currentTemp;
 
-            public Liquid (int ct)
+            public Liquid(int ct)
             {
                 currentTemp = ct;
             }
@@ -462,7 +494,7 @@ AP Practice
 
             public LiquidJar()
             {
-              totalTemp = 0;
+                totalTemp = 0;
             }
 
             public void addLiquid(Liquid l)
