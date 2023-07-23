@@ -67,7 +67,7 @@ The String methods (covered in lesson 2.7 and given in the |AP CSA Reference She
 
 - **int length()** : returns the number of characters in a String object.
 
-- **int indexOf(String str)** : returns the index of the first occurrence of ``str`` or -1 if ``str` is not found.
+- **int indexOf(String str)** : returns the index of the first occurrence of ``str`` or -1 if ``str`` is not found.
 
 - **String substring(int from, int to)** : returns the substring beginning at index from  and ending at index (to – 1). Note that s.substring(i,i+1) returns the character at index i.
 
@@ -155,58 +155,68 @@ The following code loops through a string replacing all 1's with l's.  Trace thr
    ~~~~
    public class FindAndReplace
    {
-      public static void main(String[] args)
-      {
-        String message = "Have a 1ong and happy 1ife";
-        int index = 0;
+       public static void main(String[] args)
+       {
+           String message = "Have a 1ong and happy 1ife";
+           int index = 0;
 
-        // while more 1's in the message
-        while (message.indexOf("1") >= 0)
-        {
-           // Find the next index for 1
-           index = message.indexOf("1");
-           System.out.println("Found a 1 at index: " + index);
-           // Replace the 1 with a l at index by concatenating substring up to index and then the rest of the string.
-           String firstpart = message.substring(0,index);
-           String lastpart = message.substring(index+1);
-           message = firstpart + "l" + lastpart;
-           System.out.println("Replaced 1 with l at index " + index);
-           System.out.println("The message is currently " + message + " but we aren't done looping yet!");
-        }
-        System.out.println("Cleaned text: " + message);
-      }
+           // while more 1's in the message
+           while (message.indexOf("1") >= 0)
+           {
+               // Find the next index for 1
+               index = message.indexOf("1");
+               System.out.println("Found a 1 at index: " + index);
+               // Replace the 1 with a l at index by concatenating substring up to
+               // index and then the rest of the string.
+               String firstpart = message.substring(0, index);
+               String lastpart = message.substring(index + 1);
+               message = firstpart + "l" + lastpart;
+               System.out.println("Replaced 1 with l at index " + index);
+               System.out.println(
+                       "The message is currently "
+                               + message
+                               + " but we aren't done looping yet!");
+           }
+           System.out.println("Cleaned text: " + message);
+       }
    }
+
    ====
    // Test for Lesson 4.3.1 - While Loop FindAndReplace lclw1
-    import static org.junit.Assert.*;
-    import org.junit.*;;
-    import java.io.*;
+   import static org.junit.Assert.*;
 
-    public class RunestoneTests extends CodeTestHelper
-    {
-        public RunestoneTests() {
-            super("FindAndReplace");
-        }
+   import org.junit.*;
 
-        @Test
-        public void testMain() throws IOException
-        {
-            String output = getMethodOutput("main").trim();
-            String expect = "Found a 1 at index: 7\n" +
-                "Replaced 1 with l at index 7\n" +
-                "The message is currently Have a long and happy 1ife but we aren't done looping yet!\n" +
-                "Found a 1 at index: 22\n" +
-                "Replaced 1 with l at index 22\n" +
-                "The message is currently Have a long and happy life but we aren't done looping yet!\n" +
-                "Cleaned text: Have a long and happy life\n";
+   import java.io.*;
 
-            boolean pass = !output.equals(expect.trim());
+   public class RunestoneTests extends CodeTestHelper
+   {
+       public RunestoneTests()
+       {
+           super("FindAndReplace");
+       }
 
-            boolean passed = getResults(expect, output, "Output should be different", pass);
-            assertTrue(passed);
-         }
-        }
+       @Test
+       public void testMain() throws IOException
+       {
+           String output = getMethodOutput("main").trim();
+           String expect =
+                   "Found a 1 at index: 7\n"
+                       + "Replaced 1 with l at index 7\n"
+                       + "The message is currently Have a long and happy 1ife but we aren't done"
+                       + " looping yet!\n"
+                       + "Found a 1 at index: 22\n"
+                       + "Replaced 1 with l at index 22\n"
+                       + "The message is currently Have a long and happy life but we aren't done"
+                       + " looping yet!\n"
+                       + "Cleaned text: Have a long and happy life\n";
 
+           boolean pass = !output.equals(expect.trim());
+
+           boolean passed = getResults(expect, output, "Output should be different", pass);
+           assertTrue(passed);
+       }
+   }
 
 For Loops: Reverse String
 --------------------------
@@ -257,7 +267,7 @@ For loops with strings usually start at 0 and use the string's length() for the 
    =====
       }
    =====
-        System.out.println(count);
+      System.out.println(count);
    =====
    }
 
@@ -281,43 +291,61 @@ Here is a ``for`` loop that creates a new string that reverses the string ``s``.
    ~~~~
    public class ReverseString
    {
-      public static void main(String[] args)
-      {
-        String s = "Hello";
-        String sReversed = "";
-        String ithLetter;
+       public static void main(String[] args)
+       {
+           String s = "Hello";
+           String sReversed = "";
+           String ithLetter;
 
-        for(int i=0; i < s.length(); i++) {
-            ithLetter = s.substring(i,i+1);
-            // add the letter at index i to what's already reversed.
-            sReversed = ithLetter + sReversed;
-        }
-        System.out.println(s + " reversed is " + sReversed);
-      }
-    }
+           for (int i = 0; i < s.length(); i++)
+           {
+               ithLetter = s.substring(i, i + 1);
+               // add the letter at index i to what's already reversed.
+               sReversed = ithLetter + sReversed;
+           }
+           System.out.println(s + " reversed is " + sReversed);
+       }
+   }
+
     ====
     // Test for Lesson 4.3 - ReverseString
     import static org.junit.Assert.*;
-    import org.junit.*;;
+
+    import org.junit.*;
+
     import java.io.*;
 
     public class RunestoneTests extends CodeTestHelper
     {
-        public RunestoneTests() {
+        public RunestoneTests()
+        {
             super("ReverseString");
         }
 
         @Test
         public void testMain() throws IOException
         {
-            String origCode = "public class ReverseString\n{\n   public static void main(String[] args)\n   {\n     String s = \"Hello\";\n     String sReversed = \"\";\n     String ithLetter;\n\n     for(int i=0; i < s.length(); i++) {\n         ithLetter = s.substring(i,i+1);\n         // add the letter at index i to what's already reversed.\n         sReversed = ithLetter + sReversed;\n     }\n     System.out.println(s + \" reversed is \" + sReversed);\n   }\n }\n\n";
+            String origCode =
+                    "public class ReverseString\n"
+                        + "{\n"
+                        + "   public static void main(String[] args)\n"
+                        + "   {\n"
+                        + "     String s = \"Hello\";\n"
+                        + "     String sReversed = \"\";\n"
+                        + "     String ithLetter;\n\n"
+                        + "     for(int i=0; i < s.length(); i++) {\n"
+                        + "         ithLetter = s.substring(i,i+1);\n"
+                        + "         // add the letter at index i to what's already reversed.\n"
+                        + "         sReversed = ithLetter + sReversed;\n"
+                        + "     }\n"
+                        + "     System.out.println(s + \" reversed is \" + sReversed);\n"
+                        + "   }\n"
+                        + " }\n\n";
 
             boolean passed = codeChanged(origCode);
             assertTrue(passed);
         }
     }
-
-
 
 |Groupwork| Programming Challenge : String Replacement Cats and Dogs
 ---------------------------------------------------------------------
@@ -346,71 +374,70 @@ Are you a cat person or a dog person? The code below prints a nice message about
    ~~~~
    public class ChallengeReplace
    {
-     public static void main(String[] args)
-     {
-          String message = "I love cats! I have a cat named Coco. My cat's very smart!";
+       public static void main(String[] args)
+       {
+           String message =
+                   "I love cats! I have a cat named Coco. My cat's very smart!";
 
-          // Write a loop here that replaces every occurrence of "cat"
-          // in the message with "dog", using indexOf and substring.
+           // Write a loop here that replaces every occurrence of "cat"
+           // in the message with "dog", using indexOf and substring.
 
-
-
-          System.out.println(message);
-      }
+           System.out.println(message);
+       }
    }
+
    ====
    // Test Code for Lesson 4.3.3 - String Replacement - ChallengeReplace
 
-    import static org.junit.Assert.*;
+   import static org.junit.Assert.*;
 
-    import org.junit.After;
-    import org.junit.Before;
-    import org.junit.Test;
+   import org.junit.Test;
 
-    import java.io.*;
+   import java.io.*;
 
-    public class RunestoneTests extends CodeTestHelper
-    {
-        public RunestoneTests() {
-            super("ChallengeReplace");
-        }
+   public class RunestoneTests extends CodeTestHelper
+   {
+       public RunestoneTests()
+       {
+           super("ChallengeReplace");
+       }
 
-        @Test
-        public void test1() throws IOException
-        {
-            String output = getMethodOutput("main");
-            String expect = "I love cats! I have a cat named Coco. My cat's very smart!".replaceAll("cat","dog");
+       @Test
+       public void test1() throws IOException
+       {
+           String output = getMethodOutput("main");
+           String expect =
+                   "I love cats! I have a cat named Coco. My cat's very smart!"
+                           .replaceAll("cat", "dog");
 
-            boolean passed = getResults(expect, output, "Running main");
-            assertTrue(passed);
-        }
+           boolean passed = getResults(expect, output, "Running main");
+           assertTrue(passed);
+       }
 
-        @Test
-        public void testWhile() throws IOException
-        {
-            String target = "while(";
-            boolean passed = checkCodeContains("while loop", target);
-            assertTrue(passed);
-        }
+       @Test
+       public void testWhile() throws IOException
+       {
+           String target = "while(";
+           boolean passed = checkCodeContains("while loop", target);
+           assertTrue(passed);
+       }
 
-        @Test
-        public void testSubString()
-        {
-            String target = "substring(";
-            boolean passed = checkCodeContains("substring", target);
-            assertTrue(passed);
-        }
+       @Test
+       public void testSubString()
+       {
+           String target = "substring(";
+           boolean passed = checkCodeContains("substring", target);
+           assertTrue(passed);
+       }
 
-        @Test
-        public void testReplace() throws IOException
-        {
-            String target = ".replace";
-            boolean passed = checkCodeNotContains("shortcut replace", target);
-            assertTrue(passed);
-        }
-
-    }
-
+       @Test
+       public void testReplace() throws IOException
+       {
+           String target = ".replace";
+           boolean passed = checkCodeNotContains("shortcut replace", target);
+           assertTrue(passed);
+       }
+   }
 
 Summary
 ---------

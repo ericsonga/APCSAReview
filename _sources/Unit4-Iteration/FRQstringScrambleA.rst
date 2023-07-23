@@ -30,32 +30,27 @@ The following table shows several examples of words and their scrambled versions
 
 .. code-block:: java
 
-   import java.util.List;
-   import java.util.ArrayList;
 
    public class ScrambledStrings
    {
-      /********************** Part (a) *********************/
+       /********************** Part (a) *********************/
 
-      /** Scrambles a given word.
-       *  @param word the word to be scrambled
-       *  @return the scrambled word (possibly equal to word)
-       *  Precondition: word is either an empty string or
-       *                contains only uppercase letters.
-       *  Postcondition: the string returned was created
-       *                from word as follows:
-       *   - the word was scrambled, beginning at the
-       *     first letter and continuing from left to right
-       *   - two consecutive letters consisting of "A"
-       *     followed by a letter that was not "A" were
-       *     swapped
-       *   - letters were swapped at most once
-       */
-      public static String scrambleWord(String word)
-      {
-         /* to be implemented in part a */
-      }
-
+       /**
+        * Scrambles a given word.
+        *
+        * @param word the word to be scrambled
+        * @return the scrambled word (possibly equal to word) Precondition: word is
+        *     either an empty string or contains only uppercase letters.
+        *     Postcondition: the string returned was created from word as follows: -
+        *     the word was scrambled, beginning at the first letter and continuing
+        *     from left to right - two consecutive letters consisting of "A" followed
+        *     by a letter that was not "A" were swapped - letters were swapped at most
+        *     once
+        */
+       public static String scrambleWord(String word)
+       {
+           /* to be implemented in part a */
+       }
    }
 
 How to solve this problem
@@ -97,45 +92,47 @@ It can help to write out what you need to do to get each of the characters to co
    ~~~~
    public class TestABRACADABRA
    {
-      public static void main(String[] args)
-      {
-         System.out.println("ABRACADABRA".substring(0,1)); // get the A
-         System.out.println("ABRACADABRA".substring(1,2)); // get the B
-         // compare the A and B and swap them which results in BARACADABRA
-         System.out.println("ABRACADABRA".substring(2,3)); // get the R
-         System.out.println("ABRACADABRA".substring(3,4)); // get the A
-         // compare the R and A and do nothing
-         System.out.println("ABRACADABRA".substring(3,4)); // get the A
-         System.out.println("ABRACADABRA".substring(4,5)); // get the C
-         // compare the A and C and swap them which results in BARCAADABRA
-         System.out.println("ABRACADABRA".substring(5,6)); // get the A
-         System.out.println("ABRACADABRA".substring(6,7)); // get the D
-         // compare the A and D and swap them which results in BARCADAABRA
-         System.out.println("ABRACADABRA".substring(7,8)); // get the A
-         System.out.println("ABRACADABRA".substring(8,9)); // get the B
-         // compare the A and B and swap them which results in BARCADABARA
-         System.out.println("ABRACADABRA".substring(9,10)); // get the R
-         System.out.println("ABRACADABRA".substring(10,11)); // get the A
-         // compare R and A and do nothing
-      }
+       public static void main(String[] args)
+       {
+           System.out.println("ABRACADABRA".substring(0, 1)); // get the A
+           System.out.println("ABRACADABRA".substring(1, 2)); // get the B
+           // compare the A and B and swap them which results in BARACADABRA
+           System.out.println("ABRACADABRA".substring(2, 3)); // get the R
+           System.out.println("ABRACADABRA".substring(3, 4)); // get the A
+           // compare the R and A and do nothing
+           System.out.println("ABRACADABRA".substring(3, 4)); // get the A
+           System.out.println("ABRACADABRA".substring(4, 5)); // get the C
+           // compare the A and C and swap them which results in BARCAADABRA
+           System.out.println("ABRACADABRA".substring(5, 6)); // get the A
+           System.out.println("ABRACADABRA".substring(6, 7)); // get the D
+           // compare the A and D and swap them which results in BARCADAABRA
+           System.out.println("ABRACADABRA".substring(7, 8)); // get the A
+           System.out.println("ABRACADABRA".substring(8, 9)); // get the B
+           // compare the A and B and swap them which results in BARCADABARA
+           System.out.println("ABRACADABRA".substring(9, 10)); // get the R
+           System.out.println("ABRACADABRA".substring(10, 11)); // get the A
+           // compare R and A and do nothing
+       }
    }
+
    ====
    import static org.junit.Assert.*;
-    import org.junit.*;
-    import java.io.*;
 
-    public class RunestoneTests extends CodeTestHelper
-    {
-      @Test
-      public void testMain() throws IOException
-      {
-        String output = getMethodOutput("main");
-        String expect = "A\nB\nR\nA\nA\nC\nA\nD\nA\nB\nR\nA\n";
-        boolean passed = getResults(expect, output, "Expected output from main");
-        assertTrue(passed);
-      }
-    }
+   import org.junit.*;
 
+   import java.io.*;
+
+   public class RunestoneTests extends CodeTestHelper
+   {
+       @Test
+       public void testMain() throws IOException
+       {
+           String output = getMethodOutput("main");
+           String expect = "A\nB\nR\nA\nA\nC\nA\nD\nA\nB\nR\nA\n";
+           boolean passed = getResults(expect, output, "Expected output from main");
+           assertTrue(passed);
+       }
+   }
 
 In this example we are looping through the characters from left to right one at a time and comparing the two adjacent characters.  If the first is an "A" and the second is not we will swap the characters and then need to increment the index to not check the ones we swapped again.  So we start checking the characters at index 0 and 1 and then swap them, but then move to comparing 2 and 3 rather than 1 and 2 which means we increment the current index by 2.  If we don't swap the characters we only increment the index by 1.
 
@@ -148,33 +145,50 @@ In this example we are looping through the characters from left to right one at 
    ~~~~
    public class TestWHOA
    {
-      public static void main(String[] args)
-      {
-         System.out.println("WHOA".substring(0,1)); // get the W
-         System.out.println("WHOA".substring(1,2)); // get the H - compare the W and H and do nothing
-         System.out.println("WHOA".substring(1,2)); // get the H
-         System.out.println("WHOA".substring(2,3)); // get the O - compare the H and O and do nothing
-         System.out.println("WHOA".substring(2,3)); // get the O
-         System.out.println("WHOA".substring(3,4)); // get the A - compare the O and A and do nothing
-      }
+       public static void main(String[] args)
+       {
+           System.out.println("WHOA".substring(0, 1)); // get the W
+           System.out.println(
+                   "WHOA"
+                           .substring(
+                                   1,
+                                   2)); // get the H - compare the W and H and do
+                                        // nothing
+           System.out.println("WHOA".substring(1, 2)); // get the H
+           System.out.println(
+                   "WHOA"
+                           .substring(
+                                   2,
+                                   3)); // get the O - compare the H and O and do
+                                        // nothing
+           System.out.println("WHOA".substring(2, 3)); // get the O
+           System.out.println(
+                   "WHOA"
+                           .substring(
+                                   3,
+                                   4)); // get the A - compare the O and A and do
+                                        // nothing
+       }
    }
+
    ====
    import static org.junit.Assert.*;
-    import org.junit.*;
-    import java.io.*;
 
-    public class RunestoneTests extends CodeTestHelper
-    {
-      @Test
-      public void testMain() throws IOException
-      {
-        String output = getMethodOutput("main");
-        String expect = "W\nH\nH\nO\nO\nA\n";
-        boolean passed = getResults(expect, output, "Expected output from main");
-        assertTrue(passed);
-      }
-    }
+   import org.junit.*;
 
+   import java.io.*;
+
+   public class RunestoneTests extends CodeTestHelper
+   {
+       @Test
+       public void testMain() throws IOException
+       {
+           String output = getMethodOutput("main");
+           String expect = "W\nH\nH\nO\nO\nA\n";
+           boolean passed = getResults(expect, output, "Expected output from main");
+           assertTrue(passed);
+       }
+   }
 
 In this case since we didn't swap any characters we only increment the index by 1 each time through the loop.
 
@@ -191,128 +205,144 @@ Write the method ``scrambleWord`` below.
 
    FRQ StringScramble A: Write the method scrambleWord.
    ~~~~
-   import java.util.List;
-   import java.util.ArrayList;
 
    public class ScrambledStrings
    {
-      /********************** Part (a) *********************/
+       /********************** Part (a) *********************/
 
-      /** Scrambles a given word.
-       *  @param word the word to be scrambled
-       *  @return the scrambled word (possibly equal to word)
-       *  Precondition: word is either an empty string or contains
-       *    only uppercase letters.
-       *  Postcondition: the string returned was created from word
-       *      as follows:
-       *   - the word was scrambled, beginning at the first letter
-       *      and continuing from left to right
-       *   - two consecutive letters consisting of "A" followed by
-       *        a letter that was not "A" were swapped
-       *   - letters were swapped at most once
-       */
-      public static String scrambleWord(String word)
-      {
-         /* to be implemented in part a */
-      }
+       /**
+        * Scrambles a given word.
+        *
+        * @param word the word to be scrambled
+        * @return the scrambled word (possibly equal to word) Precondition: word is
+        *     either an empty string or contains only uppercase letters.
+        *     Postcondition: the string returned was created from word as follows: -
+        *     the word was scrambled, beginning at the first letter and continuing
+        *     from left to right - two consecutive letters consisting of "A" followed
+        *     by a letter that was not "A" were swapped - letters were swapped at most
+        *     once
+        */
+       public static String scrambleWord(String word)
+       {
+           /* to be implemented in part a */
+       }
 
-      /********************** Test *********************/
-      public static void main(String[] args)
-      {
-         System.out.println("\nTesting Part (a):\n");
+       /********************** Test *********************/
+       public static void main(String[] args)
+       {
+           System.out.println("\nTesting Part (a):\n");
 
-         String[] words = {"TAN", "ABRACADABRA", "WHOA",
-                           "AARDVARK", "EGGS", "A", ""};
-         for (String word : words)
-            System.out.println(word + " becomes " + scrambleWord(word));
-      }
+           String[] words =
+           {
+               "TAN", "ABRACADABRA", "WHOA", "AARDVARK", "EGGS", "A", ""
+           };
+
+           for (String word : words)
+           {
+               System.out.println(word + " becomes " + scrambleWord(word));
+           }
+       }
    }
+
    ====
    import static org.junit.Assert.*;
+
    import org.junit.*;
+
    import java.io.*;
 
    public class RunestoneTests extends CodeTestHelper
    {
-      @Test
-      public void testMain() throws IOException
-      {
-         String output = getMethodOutput("main");
-         String expect = "Testing Part (a):\nTAN becomes TNA\nABRACADABRA becomes BARCADABARA\nWHOA becomes WHOA\nAARDVARK becomes ARADVRAK\nEGGS becomes EGGS\nA becomes A\n becomes \n";
-         boolean passed = getResults(expect, output, "Expected output from main");
-         assertTrue(passed);
-      }
+       @Test
+       public void testMain() throws IOException
+       {
+           String output = getMethodOutput("main");
+           String expect =
+                   "Testing Part (a):\n"
+                       + "TAN becomes TNA\n"
+                       + "ABRACADABRA becomes BARCADABARA\n"
+                       + "WHOA becomes WHOA\n"
+                       + "AARDVARK becomes ARADVRAK\n"
+                       + "EGGS becomes EGGS\n"
+                       + "A becomes A\n"
+                       + " becomes \n";
+           boolean passed = getResults(expect, output, "Expected output from main");
+           assertTrue(passed);
+       }
 
-      @Test
-      public void testIfLoop()
-      {
-         String code = getCode();
-         boolean passed = code.contains("if") && (code.contains("for") || code.contains("while"));
-         getResults("Expected loop and if",""+passed, "Checking for loop and if statement",passed);
-         assertTrue(passed);
-      }
+       @Test
+       public void testIfLoop()
+       {
+           String code = getCode();
+           boolean passed = code.contains("if") && (code.contains("for") || code.contains("while"));
+           getResults(
+                   "Expected loop and if", "" + passed, "Checking for loop and if statement", passed);
+           assertTrue(passed);
+       }
 
-      @Test
-      public void testCodeContains()
-      {
-         String target = ".substring(";
-         boolean passed = checkCodeContains("substring method", target);
-         assertTrue(passed);
-      }
+       @Test
+       public void testCodeContains()
+       {
+           String target = ".substring(";
+           boolean passed = checkCodeContains("substring method", target);
+           assertTrue(passed);
+       }
 
-      @Test
-      public void testFunction1() {
-         Object[] args = {"TAN"};
-         String output = getMethodOutput("scrambleWord", args);
-         String expect = "TNA";
+       @Test
+       public void testFunction1()
+       {
+           Object[] args = {"TAN"};
+           String output = getMethodOutput("scrambleWord", args);
+           String expect = "TNA";
 
-         boolean passed = getResults(expect, output, "scrambleWord(\"TAN\")");
-         assertTrue(passed);
-      }
+           boolean passed = getResults(expect, output, "scrambleWord(\"TAN\")");
+           assertTrue(passed);
+       }
 
-      @Test
-      public void testFunction2() {
-         Object[] args = {"WHOA"};
-         String output = getMethodOutput("scrambleWord", args);
-         String expect = "WHOA";
+       @Test
+       public void testFunction2()
+       {
+           Object[] args = {"WHOA"};
+           String output = getMethodOutput("scrambleWord", args);
+           String expect = "WHOA";
 
-         boolean passed = getResults(expect, output, "scrambleWord(\"WHOA\")");
-         assertTrue(passed);
-      }
+           boolean passed = getResults(expect, output, "scrambleWord(\"WHOA\")");
+           assertTrue(passed);
+       }
 
-      @Test
-      public void testFunction3() {
-         Object[] args = {"AARDVARK"};
-         String output = getMethodOutput("scrambleWord", args);
-         String expect = "ARADVRAK";
+       @Test
+       public void testFunction3()
+       {
+           Object[] args = {"AARDVARK"};
+           String output = getMethodOutput("scrambleWord", args);
+           String expect = "ARADVRAK";
 
-         boolean passed = getResults(expect, output, "scrambleWord(\"AARDVARK\")");
-         assertTrue(passed);
-      }
+           boolean passed = getResults(expect, output, "scrambleWord(\"AARDVARK\")");
+           assertTrue(passed);
+       }
 
-      @Test
-      public void testFunction4() {
-         Object[] args = {"AMAZING"};
-         String output = getMethodOutput("scrambleWord", args);
-         String expect = "MAZAING";
+       @Test
+       public void testFunction4()
+       {
+           Object[] args = {"AMAZING"};
+           String output = getMethodOutput("scrambleWord", args);
+           String expect = "MAZAING";
 
-         boolean passed = getResults(expect, output, "scrambleWord(\"AMAZING\")");
-         assertTrue(passed);
-      }
+           boolean passed = getResults(expect, output, "scrambleWord(\"AMAZING\")");
+           assertTrue(passed);
+       }
 
-      @Test
-      public void testFunction5() {
-         Object[] args = {"ABRACADABRA"};
-         String output = getMethodOutput("scrambleWord", args);
-         String expect = "BARCADABARA";
+       @Test
+       public void testFunction5()
+       {
+           Object[] args = {"ABRACADABRA"};
+           String output = getMethodOutput("scrambleWord", args);
+           String expect = "BARCADABARA";
 
-         boolean passed = getResults(expect, output, "scrambleWord(\"ABRACADABRA\")");
-         assertTrue(passed);
-      }
+           boolean passed = getResults(expect, output, "scrambleWord(\"ABRACADABRA\")");
+           assertTrue(passed);
+       }
    }
-
-
-
 
 Video - One way to code the solution
 =====================================
