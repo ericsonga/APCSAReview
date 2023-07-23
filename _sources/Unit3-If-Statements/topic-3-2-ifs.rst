@@ -527,14 +527,14 @@ We encourage you to work in pairs for this challenge. Come up with 8 responses t
 
 .. |repl version| raw:: html
 
-    <a href="https://firewalledreplit.com/@BerylHoffman/Magic8BallTemplate" target="_blank" style="text-decoration:underline">repl version</a>
+    <a href="https://firewalledreplit.com/@BerylHoffman/Magic8BallTemplate#Main.java" target="_blank" style="text-decoration:underline">repl version</a>
 
 
 Here's a |repl version| that uses the Scanner class to first have the user ask a question. You can click on Open in Replit below, and click on Fork to make your own copy, and add your code in from above to try your code with user input.
 
 .. raw:: html
 
-    <iframe height="650px" width="100%" style="max-width:90%; margin-left:5%" src="https://firewalledreplit.com/@BerylHoffman/Magic8BallTemplate?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+    <iframe height="650px" width="100%" style="max-width:90%; margin-left:5%" src="https://firewalledreplit.com/@BerylHoffman/Magic8BallTemplate?lite=true#Main.java" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
 Summary
 -------------------
