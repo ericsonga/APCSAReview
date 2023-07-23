@@ -103,8 +103,10 @@ Click to reveal the Mixed Up Code for the solution to this problem.
 
       The method ``getCubeTosses`` below contains the correct code for one solution to this problem, but it is mixed up.  Drag the needed code from the left to the right and put them in order with the correct indention so that the code would work correctly.
       -----
-      public static int[] getCubeTosses(NumberCube cube,
-                                     int numTosses) {
+      public static int[] getCubeTosses(
+                                NumberCube cube,
+                                int numTosses) 
+      {
       =====
         int[] cubeTosses = new int[numTosses];
       =====

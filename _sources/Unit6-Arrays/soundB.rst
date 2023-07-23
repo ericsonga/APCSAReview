@@ -123,7 +123,8 @@ Click to reveal the Mixed Up Code for the solution of this problem.
 
       The method ``trimSilenceFromBeginning`` below contains correct code for one solution to this problem, but it is mixed up.  Drag the code blocks from the left to the right and put them in order with the correct indention so that the code would work correctly.
       -----
-      public void trimSilenceFromBeginning() {
+      public void trimSilenceFromBeginning() 
+      {
         int i = 0;
       =====
         while (this.samples[i] == 0)

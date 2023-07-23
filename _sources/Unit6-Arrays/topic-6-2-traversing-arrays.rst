@@ -317,11 +317,11 @@ The following code demonstrates a loop that changes the values in an array. In t
    =====
            i++)
    =====
-      {
+        {
    =====
-         values[i] = values[i] - amt;
+           values[i] = values[i] - amt;
    =====
-      } // end for loop
+        } // end for loop
    =====
    } // end method
 
