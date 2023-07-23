@@ -17,7 +17,8 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    -----
    int x = 20;
    =====
-   while (x <= 30) {
+   while (x <= 30) 
+   {
    =====
        System.out.println(x);
    =====
@@ -44,7 +45,9 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    =====
            for (int i = 15; i > 0; i--) #paired
    =====
+           {
                System.out.println(i);
+           }
    =====
        }
    =====
@@ -67,10 +70,11 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    =====
            int x = 0;
    =====
-           while (x <= 50) {
+           while (x <= 50) 
    =====
-           while (x < 50) { #paired
+           while (x < 50)  #paired
    =====
+           {
                System.out.println(x);
    =====
                x = x + 5;
@@ -99,7 +103,9 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    =====
           for (int i = 100; i >= 0; i-=20) #paired
    =====
+          {
               System.out.println(i);
+          }
    =====
        }
    =====
@@ -124,7 +130,9 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    =====
            for (int i = 0; i <= 100; i += 10) #paired
    =====
+           {
                System.out.println(i);
+           }
    =====
        }
    =====
@@ -136,7 +144,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    :adaptive:
    :noindent:
 
-   The main method in the following class should print 3 rows with 6 *'s in each row.  But, the blocks have been mixed up and include two extra blocks that aren't needed in the solution.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the Check button to check your solution.
+   The main method in the following class should print 3 rows with 6 \*'s in each row.  But, the blocks have been mixed up and include two extra blocks that aren't needed in the solution.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the Check button to check your solution.
    -----
    public class Test1
    {
@@ -144,15 +152,19 @@ Try to solve each of the following. Click the *Check Me* button to check each so
        public static void main(String[] args)
        {
    =====
-           for (int x = 3; x > 0; x--) {
+           for (int x = 3; x > 0; x--) 
+           {
    =====
-           for (int x = 0; x <= 3; x++) { #paired
+           for (int x = 0; x <= 3; x++) 
+           { #paired
    =====
-               for (int y = 6; y > 0; y--) {
+               for (int y = 6; y > 0; y--) 
+               {
    =====
-               for (int y = 0; y <= 6; y++) { #paired
+               for (int y = 0; y <= 6; y++) 
+               { #paired
    =====
-                   System.out.print("*");
+                    System.out.print("*");
    =====
                }
    =====
@@ -177,11 +189,14 @@ Try to solve each of the following. Click the *Check Me* button to check each so
        public static void main(String[] args)
        {
    =====
-           for (int x = 1; x <= 3; x++) {
+           for (int x = 1; x <= 3; x++) 
+           {
    =====
-           for (int x = 0; x < 3; x++) { #paired
+           for (int x = 0; x < 3; x++) 
+           { #paired
    =====
-               for (int y = 0; y < x; y++) {
+               for (int y = 0; y < x; y++) 
+               {
    =====
                    System.out.print(x);
    =====
@@ -206,11 +221,14 @@ Try to solve each of the following. Click the *Check Me* button to check each so
        public static void main(String[] args)
        {
    =====
-           for (int x = 1; x <= 5; x++) {
+           for (int x = 1; x <= 5; x++) 
+           {
    =====
-           for (int x = 1; x < 5; x++) { #paired
+           for (int x = 1; x < 5; x++) 
+           { #paired
    =====
-               for (int y = 0; y < 5; y++) {
+               for (int y = 0; y < 5; y++) 
+               {
    =====
                    System.out.print(x);
    =====
@@ -240,9 +258,11 @@ Try to solve each of the following. Click the *Check Me* button to check each so
        public static void main(String[] args)
        {
    =====
-           for (int x = 0; x < 5; x++) {
+           for (int x = 0; x < 5; x++) 
+           {
    =====
-               for (int y = 5; y > x; y--) {
+               for (int y = 5; y > x; y--) 
+               {
    =====
                    System.out.print(x+1);
    =====

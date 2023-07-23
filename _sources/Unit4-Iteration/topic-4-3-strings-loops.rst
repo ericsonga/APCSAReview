@@ -67,7 +67,7 @@ The String methods (covered in lesson 2.7 and given in the |AP CSA Reference She
 
 - **int length()** : returns the number of characters in a String object.
 
-- **int indexOf(String str)** : returns the index of the first occurrence of ``str`` or -1 if ``str` is not found.
+- **int indexOf(String str)** : returns the index of the first occurrence of ``str`` or -1 if ``str`` is not found.
 
 - **String substring(int from, int to)** : returns the substring beginning at index from  and ending at index (to – 1). Note that s.substring(i,i+1) returns the character at index i.
 
@@ -267,7 +267,7 @@ For loops with strings usually start at 0 and use the string's length() for the 
    =====
       }
    =====
-        System.out.println(count);
+      System.out.println(count);
    =====
    }
 
