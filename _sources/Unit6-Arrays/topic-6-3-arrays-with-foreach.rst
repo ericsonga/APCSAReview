@@ -613,11 +613,11 @@ In the |last spellcheck lesson|, you created a spellcheck method using a for loo
        {
            String output = getMethodOutput("main");
            String[] lines = output.split("\\s+");
-           boolean passed = lines.length >= 1;
+           boolean passed = lines.length >= 2;
 
            passed =
                    getResults(
-                           "1+ lines of output",
+                           "2+ lines of output",
                            lines.length + " lines of output",
                            "Expected output",
                            passed);
