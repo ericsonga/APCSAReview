@@ -378,7 +378,7 @@ Here is a flowchart for a conditional with 3 options like in the code above.
 
 .. |repl link| raw:: html
 
-   <a href="https://firewalledreplit.com/@BerylHoffman/Adventure" target="_blank" style="text-decoration:underline">repl link</a>
+   <a href="https://firewalledreplit.com/@BerylHoffman/Adventure#Main.java" target="_blank" style="text-decoration:underline">repl link</a>
 
 
 We encourage you to work in pairs for this challenge which is on repl.it (you will need an account there if you want to save your version).
@@ -398,7 +398,7 @@ In a game like Adventure, else if statements can be used to respond to commands 
 
 .. raw:: html
 
-    <iframe height="650px" width="100%" style="max-width:90%; margin-left:5%" src="https://firewalledreplit.com/@BerylHoffman/Adventure?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+    <iframe height="650px" width="100%" style="max-width:90%; margin-left:5%" src="https://firewalledreplit.com/@BerylHoffman/Adventure?lite=true#Main.java" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
 .. activecode:: challenge3-4-ElseIf-Adventure-autograde
   :language: java

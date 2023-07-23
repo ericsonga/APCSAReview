@@ -32,7 +32,7 @@
 
 .. |repl link| raw:: html
 
-   <a href="https://firewalledreplit.com/@BerylHoffman/Java-Swing-Turtle" target="_blank" style="text-decoration:underline">repl.it link</a>
+   <a href="https://firewalledreplit.com/@BerylHoffman/Java-Swing-Turtle#Main.java" target="_blank" style="text-decoration:underline">repl.it link</a>
 
 .. |github| raw:: html
 
