@@ -107,21 +107,25 @@ Click the |start| button when you are ready to begin the exam, but only then as 
 
        .. code-block:: java
 
-          public class Dog {
-             private String name;
+          public class Dog
+          {
+              private String name;
 
-             public void setName(String n) {
-                name = n;
-             }
+              public void setName(String n)
+              {
+                  name = n;
+              }
 
-             public String getName() {
-                return name;
-             }
+              public String getName()
+              {
+                  return name;
+              }
           }
 
-          public class DogOwner {
-             private String name;
-             private Dog[] dogs;
+          public class DogOwner
+          {
+              private String name;
+              private Dog[] dogs;
           }
 
     .. mchoice:: pe3_5
@@ -180,26 +184,24 @@ Click the |start| button when you are ready to begin the exam, but only then as 
 
        .. code-block:: java
 
-          public class Vehicle {
-             public void test(Car x, SportsCar y) {}
+          public class Vehicle
+          {
+              public void test(Car x, SportsCar y) {}
           }
 
-          public class Car extends Vehicle {
-          }
+          public class Car extends Vehicle {}
 
-          public class SportsCar extends Car {
-          }
+          public class SportsCar extends Car {}
 
           public class VechicleTest
           {
-             public static void main(String[] args)
-             {
-                Vechicle v = new Vechicle();
-                Car c = new Car();
-                SportsCar sporty = new SportsCar();
-             }
+              public static void main(String[] args)
+              {
+                  Vechicle v = new Vechicle();
+                  Car c = new Car();
+                  SportsCar sporty = new SportsCar();
+              }
           }
-
 
     .. mchoice:: pe3_8
        :answer_a: 8
@@ -291,28 +293,33 @@ Click the |start| button when you are ready to begin the exam, but only then as 
 
        .. code-block:: java
 
-          public class Parent {
-             public void m1() {
-               System.out.print("pm1");
-               m2();
-             }
+          public class Parent
+          {
+              public void m1()
+              {
+                  System.out.print("pm1");
+                  m2();
+              }
 
-             public void m2() {
-                System.out.print("pm2");
-             }
+              public void m2()
+              {
+                  System.out.print("pm2");
+              }
           }
 
-          public class Child extends Parent {
-             public void m1()
-             {
-                super.m1();
-                System.out.print("cm1");
-             }
-             public void m2()
-             {
-                super.m2();
-                System.out.print("cm2");
-             }
+          public class Child extends Parent
+          {
+              public void m1()
+              {
+                  super.m1();
+                  System.out.print("cm1");
+              }
+
+              public void m2()
+              {
+                  super.m2();
+                  System.out.print("cm2");
+              }
           }
 
     .. mchoice:: pe3_12

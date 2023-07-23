@@ -350,14 +350,13 @@ Click the |start| button when you are ready to begin the exam, but only then as 
 
          public class Book
          {
-            // code for class
+             // code for class
          }
 
          public class Dictionary extends Book
          {
-            // code for class
+             // code for class
          }
-
 
     .. mchoice:: pe4_14
        :answer_a: 2

@@ -214,18 +214,18 @@ Click the |start| button when you are ready to begin the exam, but only then as 
 
          public class mysterious
          {
-            public static void main (String[] args)
-            {
-               String mystery;
-               String starter = "Hello World!";
-               for (int i = 0; i < starter.length(); i++)
-               {
-                 if (i % 2 == 0)
+             public static void main(String[] args)
+             {
+                 String mystery;
+                 String starter = "Hello World!";
+                 for (int i = 0; i < starter.length(); i++)
                  {
-                   mystery += starter.charAt(i);
+                     if (i % 2 == 0)
+                     {
+                         mystery += starter.charAt(i);
+                     }
                  }
-               }
-            }
+             }
          }
 
    .. mchoice:: mt1_12
