@@ -11,22 +11,26 @@ RandomStringChooser - Part B Parsons
 
    public class RandomLetterChooser extends RandomStringChooser
    {
-       /** Constructs a random letter chooser using the given string str.
-        *  Precondition: str contains only letters.
+       /**
+        * Constructs a random letter chooser using the given string str. Precondition:
+        * str contains only letters.
         */
-       public RandomLetterChooser (String str)
-       { /* to be implemented in part (b) */ }
+       public RandomLetterChooser(String str)
+       {
+           /* to be implemented in part (b) */
+       }
 
-       /** Returns an array of single-letter strings.
-        *  Each of these strings consists of a single letter from str.  Element k
-        *  of the returned array contains the single letter at position k of str.
-        *  For example, getSingleLetters("cat") return the
-        *  array {"c", "a", "t" }.
+       /**
+        * Returns an array of single-letter strings. Each of these strings consists of
+        * a single letter from str. Element k of the returned array contains the
+        * single letter at position k of str. For example, getSingleLetters("cat")
+        * return the array {"c", "a", "t" }.
         */
        public static String[] getSingleLetters(String str)
-       {    /* implementation not shown */ }
+       {
+           /* implementation not shown */
+       }
    }
-
 
 The following code segment shows an example of using ``RandomLetterChooser``.
 

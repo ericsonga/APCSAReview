@@ -74,97 +74,109 @@ The code below has a main method for testing.  Write the constructor for the ``R
 
    Complete the ``RandomLetterChooser`` constructor below (which can be 1 or 2 lines of code). Copy in your RandomStringChooser class from the previous lesson (delete the public from in front of it since there can only be 1 public class if you ha
    ~~~~
-   import java.util.List;
-   import java.util.ArrayList;
 
    // Add in class RandomStringChooser from the previous lesson.
    // Do not make it public
 
    public class RandomLetterChooser extends RandomStringChooser
    {
-       /** Constructs a random letter chooser using the given string str.
-        *  Precondition: str contains only letters.
+       /**
+        * Constructs a random letter chooser using the given string str. Precondition:
+        * str contains only letters.
         */
-       public RandomLetterChooser (String str)
+       public RandomLetterChooser(String str)
        {
-         //*** write the constructor here ***!
+           // *** write the constructor here ***!
        }
 
-       /** Returns an array of single-letter strings.
-        *  Each of these strings consists of a single letter from str.  Element k
-        *  of the returned array contains the single letter at position k of str.
-        *  For example, getSingleLetters("cat") return the
-        *  array {"c", "a", "t" }.
+       /**
+        * Returns an array of single-letter strings. Each of these strings consists of
+        * a single letter from str. Element k of the returned array contains the
+        * single letter at position k of str. For example, getSingleLetters("cat")
+        * return the array {"c", "a", "t" }.
         */
        public static String[] getSingleLetters(String str)
        {
-          String[] strArr = new String[str.length()];
-          for (int i = 0; i < str.length(); i++)
-          {
-             strArr[i] = str.substring(i, i+1);
-          }
-          return strArr;
+           String[] strArr = new String[str.length()];
+           for (int i = 0; i < str.length(); i++)
+           {
+               strArr[i] = str.substring(i, i + 1);
+           }
+           return strArr;
        }
 
        public static void main(String[] args)
        {
            RandomLetterChooser letterChooser = new RandomLetterChooser("cat");
-           System.out.println("This should print three letters at random from cat and then NONE");
+           System.out.println(
+                   "This should print three letters at random from cat and then"
+                       + " NONE");
            for (int k = 0; k < 4; k++)
            {
                System.out.print(letterChooser.getNext());
            }
-        }
+       }
    }
+
    ====
    import static org.junit.Assert.*;
-     import org.junit.*;
-     import java.io.*;
 
+   import org.junit.*;
 
-     public class RunestoneTests extends CodeTestHelper
-     {
-         public RunestoneTests() {
-             super("RandomLetterChooser");
-             //CodeTestHelper.sort = true;
-         }
+   import java.io.*;
 
-         @Test
-         public void testMain1() {
-             boolean passed = false;
+   public class RunestoneTests extends CodeTestHelper
+   {
+       public RunestoneTests()
+       {
+           super("RandomLetterChooser");
+           // CodeTestHelper.sort = true;
+       }
 
-             String expect = "This should print three letters at random from cat and then NONE\ntcaNONE";
+       @Test
+       public void testMain1()
+       {
+           boolean passed = false;
 
-             String output1 = getMethodOutput("main");
+           String expect = "This should print three letters at random from cat and then NONE\ntcaNONE";
 
-             expect = expect.substring(expect.indexOf("\n")+1);
-             output1 = output1.substring(output1.indexOf("\n")+1);
+           String output1 = getMethodOutput("main");
 
-             int num1 = countOccurences(output1, "c");
-             int num2 = countOccurences(output1, "a");
-             int num3 = countOccurences(output1, "t");
-             int num5 = countOccurences(output1, "NONE");
+           expect = expect.substring(expect.indexOf("\n") + 1);
+           output1 = output1.substring(output1.indexOf("\n") + 1);
 
-             passed = num1 == 1 && num2 == 1 && num3 == 1 && num5 == 1;
+           int num1 = countOccurences(output1, "c");
+           int num2 = countOccurences(output1, "a");
+           int num3 = countOccurences(output1, "t");
+           int num5 = countOccurences(output1, "NONE");
 
-             getResults(expect, output1, "Checking that each letter is in output correct number of times", passed);
-             assertTrue(passed);
-         }
+           passed = num1 == 1 && num2 == 1 && num3 == 1 && num5 == 1;
 
-         @Test
-         public void testMain2() {
-             boolean passed = false;
+           getResults(
+                   expect,
+                   output1,
+                   "Checking that each letter is in output correct number of times",
+                   passed);
+           assertTrue(passed);
+       }
 
-             String output1 = getMethodOutput("main");
-             String output2 = getMethodOutput("main");
-             String output3 = getMethodOutput("main");
+       @Test
+       public void testMain2()
+       {
+           boolean passed = false;
 
-             passed = !output1.equals(output2) || !output2.equals(output3) || !output1.equals(output3);
+           String output1 = getMethodOutput("main");
+           String output2 = getMethodOutput("main");
+           String output3 = getMethodOutput("main");
 
-             getResults("Different results each time", "Same results each time", "Checking for random order", passed);
-                 assertTrue(passed);
+           passed = !output1.equals(output2) || !output2.equals(output3) || !output1.equals(output3);
 
-         }
-     }
-
+           getResults(
+                   "Different results each time",
+                   "Same results each time",
+                   "Checking for random order",
+                   passed);
+           assertTrue(passed);
+       }
+   }
 
