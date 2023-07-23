@@ -32,23 +32,32 @@ String parts will be represented by the ``StringPart`` class shown below.
 
    public class StringPart
    {
-      /** @param start the starting position of the substring in a master string
+       /**
+        * @param start the starting position of the substring in a master string
         * @param length the length of the substring in a master string
         */
-      public StringPart(int start, int length)
-      { /* implementation not shown */ }
+       public StringPart(int start, int length)
+       {
+           /* implementation not shown */
+       }
 
-      /** @return the starting position of the substring in a master string
+       /**
+        * @return the starting position of the substring in a master string
         */
-      public int getStart()
-      { /* implementation not shown */ }
+       public int getStart()
+       {
+           /* implementation not shown */
+       }
 
-      /** @return the length of the substring in a master string
-       */
-      public int getLength()
-      { /* implementation not shown */ }
+       /**
+        * @return the length of the substring in a master string
+        */
+       public int getLength()
+       {
+           /* implementation not shown */
+       }
 
-      // There may be other instance variables, constructors, and methods
+       // There may be other instance variables, constructors, and methods
    }
 
 The class ``StringCoder`` provides methods to encode and decode words using a given master string. When
@@ -59,46 +68,51 @@ provided to choose a string part within the master string that matches the begin
 
    public class StringCoder
    {
-      private String masterString;
+       private String masterString;
 
-      /** @param master the master string for the StringCoder
-        * Precondition: the master string contains all the letters of the alphabet
+       /**
+        * @param master the master string for the StringCoder Precondition: the master
+        *     string contains all the letters of the alphabet
         */
-      public StringCoder(String master)
-      { masterString = master; }
+       public StringCoder(String master)
+       {
+           masterString = master;
+       }
 
-      /** @param parts an ArrayList of string parts that are valid in the
-        * master string
-        * Precondition: parts.size() > 0
-        * @return the string obtained by concatenating the parts of the
-        *  master string
+       /**
+        * @param parts an ArrayList of string parts that are valid in the master
+        *     string Precondition: parts.size() > 0
+        * @return the string obtained by concatenating the parts of the master string
         */
-      public String decodeString(ArrayList<StringPart> parts)
-      { /* to be implemented in part (a) */ }
+       public String decodeString(ArrayList<StringPart> parts)
+       {
+           /* to be implemented in part (a) */
+       }
 
-      /** @param str the string to encode using the master string
-        * Precondition: all of the characters in str appear in the master
-        * string;
-        * str.length() > 0
-        * @return a string part in the master string that matches the
-        * beginning of str.
-        * The returned string part has length at least 1.
+       /**
+        * @param str the string to encode using the master string Precondition: all of
+        *     the characters in str appear in the master string; str.length() > 0
+        * @return a string part in the master string that matches the beginning of
+        *     str. The returned string part has length at least 1.
         */
-      private StringPart findPart(String str)
-      { /* implementation not shown */ }
+       private StringPart findPart(String str)
+       {
+           /* implementation not shown */
+       }
 
-      /** @param word the string to be encoded
-        * Precondition: all of the characters in word appear in the
-        * master string;
-        * word.length() > 0
-        * @return an ArrayList of string parts of the master string
-        * that can be combined to create word
+       /**
+        * @param word the string to be encoded Precondition: all of the characters in
+        *     word appear in the master string; word.length() > 0
+        * @return an ArrayList of string parts of the master string that can be
+        *     combined to create word
         */
-      public ArrayList<StringPart> encodeString(String word)
-      { /* to be implemented in part (b) */ }
+       public ArrayList<StringPart> encodeString(String word)
+       {
+           /* to be implemented in part (b) */
+       }
 
-      // There may be other instance variables, constructors, and methods
-    }
+       // There may be other instance variables, constructors, and methods
+   }
 
 Try and Solve It
 ----------------
@@ -119,147 +133,153 @@ The code below contains a main method for testing the ``decodeString`` method.
 
    class StringPart
    {
-      private int start;
-      private int len;
+       private int start;
+       private int len;
 
-      public StringPart(int theStart, int theLen)
-      {
-         // initialise instance variables
-         start = theStart;
-         len=theLen;
-      }
+       public StringPart(int theStart, int theLen)
+       {
+           // initialise instance variables
+           start = theStart;
+           len = theLen;
+       }
 
-      public StringPart()
-      {
-         start = 0;
-         len = 0;
-      }
+       public StringPart()
+       {
+           start = 0;
+           len = 0;
+       }
 
-      public int getStart()
-      {
-         return start;
-      }
+       public int getStart()
+       {
+           return start;
+       }
 
-      public int getLength()
-      {
-        return len;
-      }
+       public int getLength()
+       {
+           return len;
+       }
 
-      public String toString()
-      {
-        return "(" + getStart() + ", " + getLength() + ")";
-      }
+       public String toString()
+       {
+           return "(" + getStart() + ", " + getLength() + ")";
+       }
    }
 
    public class StringCoder
    {
 
-      private String masterString;
+       private String masterString;
 
-      /**
-        * Constructor for objects of class StringCoder
+       /** Constructor for objects of class StringCoder */
+       public StringCoder()
+       {
+           masterString = "sixtyzipperswerequicklypickedfromthewovenjutebag";
+       }
+
+       public StringCoder(String master)
+       {
+           masterString = master;
+       }
+
+       /**
+        * @param parts an ArrayList of string parts that are valid in the master
+        *     string Precondition: parts.size() > 0
+        * @return the string obtained by concatenating the parts of the master string
         */
-      public StringCoder()
-      {
-         masterString="sixtyzipperswerequicklypickedfromthewovenjutebag";
-      }
+       public String decodeString(ArrayList<StringPart> parts)
+       {
+           // *** Finish writing this method! ***
+       }
 
-      public StringCoder(String master)
-      {
-         masterString=master;
-      }
+       private StringPart findPart(String str)
+       {
+           int start = 0;
+           int length = 0;
+           for (int len = 1; len <= str.length(); len++)
+           {
+               int found = masterString.indexOf(str.substring(0, len));
+               if (found != -1)
+               {
+                   start = found;
+                   length = len;
+               }
+           }
+           return new StringPart(start, length);
+       }
 
-      /** @param parts an ArrayList of string parts that are
-        * valid in the master string
-        * Precondition: parts.size() > 0
-        * @return the string obtained by concatenating the parts
-        * of the master string
-        */
-      public String decodeString(ArrayList<StringPart> parts)
-      {
-         //*** Finish writing this method! ***
-      }
-
-      private StringPart findPart(String str)
-      {
-         int start=0;
-         int length=0;
-         for (int len=1; len<=str.length(); len++)
-         {
-            int found=masterString.indexOf(str.substring(0,len));
-            if (found!=-1)
-            {
-               start=found;
-               length=len;
-            }
-          }
-          return new StringPart(start, length);
-      }
-
-      public static void main(String[] args)
-      {
-         ArrayList<StringPart> overeager = new ArrayList<StringPart>();
-         overeager.add(new StringPart(37,3));
-         overeager.add(new StringPart(14,2));
-         overeager.add(new StringPart(46,2));
-         overeager.add(new StringPart(9,2));
-         System.out.println("overeager is encoded as " + overeager);
-         StringCoder key = new StringCoder();
-         System.out.println("Decoding we get " + key.decodeString(overeager) + " and should be overeager");
-      }
-
+       public static void main(String[] args)
+       {
+           ArrayList<StringPart> overeager = new ArrayList<StringPart>();
+           overeager.add(new StringPart(37, 3));
+           overeager.add(new StringPart(14, 2));
+           overeager.add(new StringPart(46, 2));
+           overeager.add(new StringPart(9, 2));
+           System.out.println("overeager is encoded as " + overeager);
+           StringCoder key = new StringCoder();
+           System.out.println(
+                   "Decoding we get "
+                           + key.decodeString(overeager)
+                           + " and should be overeager");
+       }
    }
+
    ====
    import static org.junit.Assert.*;
-     import org.junit.*;
-     import java.io.*;
 
-     import java.util.ArrayList;
+   import org.junit.*;
 
+   import java.io.*;
+   import java.util.ArrayList;
 
-     public class RunestoneTests extends CodeTestHelper
-     {
-         public RunestoneTests() {
-             super("StringCoder");
-             //CodeTestHelper.sort = true;
-         }
+   public class RunestoneTests extends CodeTestHelper
+   {
+       public RunestoneTests()
+       {
+           super("StringCoder");
+           // CodeTestHelper.sort = true;
+       }
 
-         @Test
-         public void testMain1() {
-             boolean passed = false;
+       @Test
+       public void testMain1()
+       {
+           boolean passed = false;
 
-             String expect = "overeager is encoded as [(37, 3), (14, 2), (46, 2), (9, 2)]\nDecoding we get overeager and should be overeager";
+           String expect =
+                   "overeager is encoded as [(37, 3), (14, 2), (46, 2), (9, 2)]\n"
+                       + "Decoding we get overeager and should be overeager";
 
-             String output = getMethodOutput("main");
+           String output = getMethodOutput("main");
 
-             passed = getResults(expect, output, "Checking for expected output");
-             assertTrue(passed);
-         }
+           passed = getResults(expect, output, "Checking for expected output");
+           assertTrue(passed);
+       }
 
-        @Test
-         public void testMain2() {
-             boolean passed = false;
+       @Test
+       public void testMain2()
+       {
+           boolean passed = false;
 
-             ArrayList<StringPart> csawesome = new ArrayList<StringPart>();
-             csawesome.add(new StringPart(19,0));
-             csawesome.add(new StringPart(0,1));
-             csawesome.add(new StringPart(46,1));
-             csawesome.add(new StringPart(12,2));
-             csawesome.add(new StringPart(0,1));
-             csawesome.add(new StringPart(31,2));
-             csawesome.add(new StringPart(9,1));
-             String output = "csawesome is encoded as " + csawesome + "\n";
+           ArrayList<StringPart> csawesome = new ArrayList<StringPart>();
+           csawesome.add(new StringPart(19, 0));
+           csawesome.add(new StringPart(0, 1));
+           csawesome.add(new StringPart(46, 1));
+           csawesome.add(new StringPart(12, 2));
+           csawesome.add(new StringPart(0, 1));
+           csawesome.add(new StringPart(31, 2));
+           csawesome.add(new StringPart(9, 1));
+           String output = "csawesome is encoded as " + csawesome + "\n";
 
-             StringCoder key = new StringCoder();
-             output += "Decoding we get " + key.decodeString(csawesome) + " and should be csawesome";
+           StringCoder key = new StringCoder();
+           output += "Decoding we get " + key.decodeString(csawesome) + " and should be csawesome";
 
-             String expect = "csawesome is encoded as [(19, 0), (0, 1), (46, 1), (12, 2), (0, 1), (31, 2), (9, 1)]\nDecoding we get sawesome and should be csawesome";
+           String expect =
+                   "csawesome is encoded as [(19, 0), (0, 1), (46, 1), (12, 2), (0, 1), (31, 2), (9,"
+                       + " 1)]\n"
+                       + "Decoding we get sawesome and should be csawesome";
 
-             passed = getResults(expect, output, "Checking for expected results for \"csawesome\"");
+           passed = getResults(expect, output, "Checking for expected results for \"csawesome\"");
 
-             assertTrue(passed);
-
-         }
-     }
-
+           assertTrue(passed);
+       }
+   }
 

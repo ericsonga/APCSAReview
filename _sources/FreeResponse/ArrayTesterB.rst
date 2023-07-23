@@ -44,94 +44,105 @@ Try and Solve It
    public class ArrayTester
    {
 
-      public static boolean isLatin(int[] [] square)
-      {
-         // put your solution here
+       public static boolean isLatin(int[][] square)
+       {
+           // put your solution here
 
-      }
+       }
 
-      /** Copy in your solution of getColumn from the previous section
-      */
-      public static int[] getColumn(int[][] arr2D, int c)
-      {
-         // put your solution here
+       /** Copy in your solution of getColumn from the previous section */
+       public static int[] getColumn(int[][] arr2D, int c)
+       {
+           // put your solution here
 
-      }
-
+       }
 
        // Main method to test getColumn method
        public static void main(String[] args)
        {
-            int [] [] arr2D = { { 1, 2, 3 }, { 2, 3, 1 }, { 3, 1, 2 }};
-            boolean test = isLatin(arr2D);
-            System.out.println("If isLatin is implemented correctly, then test should be true:" + test);
-            if (!test)
-            {
-                System.out.print("Uh oh! isLatin(test) was false, but it should be true.");
-            }
-            else {
-             System.out.println("Correct!");
+           int[][] arr2D = {{1, 2, 3}, {2, 3, 1}, {3, 1, 2}};
+           boolean test = isLatin(arr2D);
+           System.out.println(
+                   "If isLatin is implemented correctly, then test should be true:"
+                           + test);
+           if (!test)
+           {
+               System.out.print(
+                       "Uh oh! isLatin(test) was false, but it should be true.");
+           }
+           else
+           {
+               System.out.println("Correct!");
            }
        } // end of main
 
+       /** Returns true if and only if every value in arr1 appears in arr2. */
+       public static boolean hasAllValues(int[] arr1, int[] arr2)
+       {
 
+           boolean[] flags = new boolean[arr1.length]; // default values false
 
-      /** Returns true if and only if every value in arr1 appears in arr2.
-        */
-      public static boolean hasAllValues(int[] arr1, int[] arr2){
+           for (int i = 0; i < arr1.length; i++)
+           {
+               for (int j = 0; j < arr2.length; j++)
+               {
+                   if (arr1[i] == arr2[j])
+                   {
+                       flags[i] = true;
+                   }
+               }
+           }
+           for (boolean b : flags)
+           {
+               if (b == false)
+               {
+                   return false;
+               }
+           }
+           return true;
+       }
 
-        boolean[] flags = new boolean[arr1.length]; // default values false
+       /** Returns true if arr contains any duplicate values; false otherwise. */
+       public static boolean containsDuplicates(int[] arr)
+       {
+           for (int i = 0; i < arr.length - 1; i++)
+           {
+               for (int j = i + 1; j < arr.length; j++)
+               {
+                   if (arr[i] == arr[j])
+                   {
+                       return true;
+                   }
+               }
+           }
+           return false;
+       }
+   } // end of the class
 
-        for(int i = 0; i < arr1.length; i++){
-          for(int j = 0; j < arr2.length; j++){
-            if(arr1[i] == arr2[j]){
-              flags[i] = true;
-            }
-          }
-        }
-        for(boolean b: flags){
-          if(b == false){
-            return false;
-          }
-        }
-        return true;
-      }
-
-      /** Returns true if arr contains any duplicate values;
-        * false otherwise.
-        */
-      public static boolean containsDuplicates(int[] arr){
-        for(int i = 0; i < arr.length - 1; i++){
-          for(int j = i + 1; j < arr.length; j++){
-            if(arr[i] == arr[j]){
-              return true;
-            }
-          }
-        }
-        return false;
-      }
-
-     } // end of the class
      ====
      import static org.junit.Assert.*;
+
      import org.junit.*;
+
      import java.io.*;
 
-     import java.util.Arrays;
-     //import java.util.ArrayList;
+     // import java.util.ArrayList;
 
      public class RunestoneTests extends CodeTestHelper
      {
-         public RunestoneTests() {
+         public RunestoneTests()
+         {
              super("ArrayTester");
-             //CodeTestHelper.sort = true;
+             // CodeTestHelper.sort = true;
          }
 
          @Test
-         public void testMain1() {
+         public void testMain1()
+         {
              boolean passed = false;
 
-             String expect = "If isLatin is implemented correctly, then test should be true:true\nCorrect!";
+             String expect =
+                     "If isLatin is implemented correctly, then test should be true:true\nCorrect!";
 
              String output = getMethodOutput("main");
 
@@ -140,32 +151,43 @@ Try and Solve It
          }
 
          @Test
-         public void testMain2() {
+         public void testMain2()
+         {
              boolean passed = false;
 
-             int [][] arr2D = { { 1, 2, 3 }, { 2, 3, 1 }, { 3, 1, 2 }};
+             int[][] arr2D = {{1, 2, 3}, {2, 3, 1}, {3, 1, 2}};
 
              String arrayStr = "[[1, 2, 3],\n [2, 3, 1],\n [3, 1, 2]]";
 
              String expect = "true";
              String output = "" + ArrayTester.isLatin(arr2D);
 
-             passed = getResults(expect, output, "Checking for expected output for isLatin(arr2D)\n" + arrayStr);
+             passed =
+                     getResults(
+                             expect,
+                             output,
+                             "Checking for expected output for isLatin(arr2D)\n" + arrayStr);
              assertTrue(passed);
          }
 
          @Test
-         public void testMain3() {
+         public void testMain3()
+         {
              boolean passed = false;
 
-             int [][] arr2D = { { 1, 2, 3 }, { 2, 3, 1 }, { 7, 8, 9 }};
+             int[][] arr2D = {{1, 2, 3}, {2, 3, 1}, {7, 8, 9}};
 
              String arrayStr = "[[1, 2, 3],\n [2, 3, 1],\n [7, 8, 9]]";
 
              String expect = "false";
              String output = "" + ArrayTester.isLatin(arr2D);
 
-             passed = getResults(expect, output, "Checking for expected output for isLatin(arr2D)\n" + arrayStr);
+             passed =
+                     getResults(
+                             expect,
+                             output,
+                             "Checking for expected output for isLatin(arr2D)\n" + arrayStr);
              assertTrue(passed);
          }
      }
+

@@ -41,18 +41,20 @@ Try and Solve It
    {
        private double[][] view;
 
-       /** Constructs a SkyView object from a 1-dimensional array of scan data.
-         * @param numRows the number of rows represented in the view
-         * Precondition: numRows > 0
-         * @param numCols the number of columns represented in the view
-         * Precondition: numCols > 0
-         * @param scanned the scan data received from the telescope, stored in telescope order
-         * Precondition: scanned.length == numRows * numCols
-         * Postcondition: view has been created as a rectangular 2-dimensional array
-         * with numRows rows and numCols columns and the values in
-         * scanned have been copied to view and are ordered as
-         * in the original rectangular area of sky.
-         */
+       /**
+        * Constructs a SkyView object from a 1-dimensional array of scan data.
+        *
+        * @param numRows the number of rows represented in the view Precondition:
+        *     numRows > 0
+        * @param numCols the number of columns represented in the view Precondition:
+        *     numCols > 0
+        * @param scanned the scan data received from the telescope, stored in
+        *     telescope order Precondition: scanned.length == numRows * numCols
+        *     Postcondition: view has been created as a rectangular 2-dimensional
+        *     array with numRows rows and numCols columns and the values in scanned
+        *     have been copied to view and are ordered as in the original rectangular
+        *     area of sky.
+        */
        public SkyView(int numRows, int numCols, double[] scanned)
        {
            view = new double[numRows][numCols];
@@ -68,86 +70,97 @@ Try and Solve It
                        scannedIndex++;
                    }
                }
-               else {
+               else
+               {
                    for (int c = numCols - 1; c >= 0; c--)
                    {
                        view[r][c] = scanned[scannedIndex];
                        scannedIndex++;
                    }
-                }
+               }
            }
        }
 
-       /** Returns the average of the values in a rectangular section of view.
-         *
-         * @param startRow the first row index of the section
-         * @param endRow the last row index of the section
-         * @param startCol the first column index of the section
-         * @param endCol the last column index of the section
-         * Precondition: 0 <= startRow <= endRow < view.length
-         * Precondition: 0 <= startCol <= endCol < view[0].length
-         * @return the average of the values in the specified section of view */
+       /**
+        * Returns the average of the values in a rectangular section of view.
+        *
+        * @param startRow the first row index of the section
+        * @param endRow the last row index of the section
+        * @param startCol the first column index of the section
+        * @param endCol the last column index of the section Precondition: 0 <=
+        *     startRow <= endRow < view.length Precondition: 0 <= startCol <= endCol <
+        *     view[0].length
+        * @return the average of the values in the specified section of view
+        */
        public double getAverage(int startRow, int endRow, int startCol, int endCol)
        {
-           //*** Finish writing this method! ***
+           // *** Finish writing this method! ***
        }
 
        /** This is a main method for testing getAverage */
        public static void main(String[] args)
        {
-           double[] startArray = { 0.3, 0.7, 0.8, 0.4, 1.4, 1.1, 0.2, 0.5, 0.1, 1.6, 0.6, 0.9};
-           SkyView sView = new SkyView(4,3,startArray);
-           System.out.println("getAverage(1,2,0,1) should return 0.8 and returns " + sView.getAverage(1,2,0,1));
-        } // end of main
-
+           double[] startArray =
+           {
+               0.3, 0.7, 0.8, 0.4, 1.4, 1.1, 0.2, 0.5, 0.1, 1.6, 0.6, 0.9
+           };
+           SkyView sView = new SkyView(4, 3, startArray);
+           System.out.println(
+                   "getAverage(1,2,0,1) should return 0.8 and returns "
+                           + sView.getAverage(1, 2, 0, 1));
+       } // end of main
    } // end of class
+
    ====
    import static org.junit.Assert.*;
-     import org.junit.*;
-     import java.io.*;
 
-     //import java.util.Arrays;
-     //import java.util.ArrayList;
+   import org.junit.*;
 
-     public class RunestoneTests extends CodeTestHelper
-     {
-         public RunestoneTests() {
-             super("SkyView");
-             //CodeTestHelper.sort = true;
-         }
+   import java.io.*;
 
-         @Test
-         public void testMain1() {
-             boolean passed = false;
+   // import java.util.Arrays;
+   // import java.util.ArrayList;
 
-             double[] val2 = {0.3, 0.7, 0.4, 0.8, 1.4, 1.1};
+   public class RunestoneTests extends CodeTestHelper
+   {
+       public RunestoneTests()
+       {
+           super("SkyView");
+           // CodeTestHelper.sort = true;
+       }
 
-             String view = "0.3, 0.7,\n0.8, 0.4,\n1.4,1.1,";
+       @Test
+       public void testMain1()
+       {
+           boolean passed = false;
 
-             SkyView sView = new SkyView(3, 2, val2);
-             String expect = "getAverage(1,2,0,1)  --> 0.925";
+           double[] val2 = {0.3, 0.7, 0.4, 0.8, 1.4, 1.1};
 
-             String output = "getAverage(1,2,0,1)  --> " + sView.getAverage(1, 2, 0, 1);
+           String view = "0.3, 0.7,\n0.8, 0.4,\n1.4,1.1,";
 
-             passed = getResults(expect, output, "Checking for expected output from:\n" + view);
-             assertTrue(passed);
-         }
+           SkyView sView = new SkyView(3, 2, val2);
+           String expect = "getAverage(1,2,0,1)  --> 0.925";
 
-         @Test
-         public void testMain2() {
-             boolean passed = false;
+           String output = "getAverage(1,2,0,1)  --> " + sView.getAverage(1, 2, 0, 1);
 
-             double[] val2 = {0.3, 0.7, 0.4, 0.8, 1.4, 1.1};
-             String view = "0.3, 0.7, 0.4,\n1.1, 1.4,  0.8,";
-             SkyView sView = new SkyView(2, 3, val2);
-             String expect = "getAverage(1,2,0,1) --> 0.875";
+           passed = getResults(expect, output, "Checking for expected output from:\n" + view);
+           assertTrue(passed);
+       }
 
-             String output = "getAverage(1,2,0,1)  --> " + sView.getAverage(0, 1, 0, 1);
+       @Test
+       public void testMain2()
+       {
+           boolean passed = false;
 
-             passed = getResults(expect, output, "Checking for expected output from:\n" + view);
-             assertTrue(passed);
-         }
-     }
+           double[] val2 = {0.3, 0.7, 0.4, 0.8, 1.4, 1.1};
+           String view = "0.3, 0.7, 0.4,\n1.1, 1.4,  0.8,";
+           SkyView sView = new SkyView(2, 3, val2);
+           String expect = "getAverage(1,2,0,1) --> 0.875";
 
+           String output = "getAverage(1,2,0,1)  --> " + sView.getAverage(0, 1, 0, 1);
 
+           passed = getResults(expect, output, "Checking for expected output from:\n" + view);
+           assertTrue(passed);
+       }
+   }
 
