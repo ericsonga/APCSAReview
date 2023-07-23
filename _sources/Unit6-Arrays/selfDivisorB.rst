@@ -33,8 +33,14 @@ For example, the call firstNumSelfDivisors(10, 3) should return an array contain
            while (currNumber > 0)
            {
                digit = currNumber % 10;
-               if (digit == 0) return false;
-               if (number % digit != 0) return false;
+               if (digit == 0) 
+               {
+                   return false;
+               }
+               if (number % digit != 0) 
+               {
+                   return false;
+               }
                currNumber = currNumber / 10;
            }
            return true;
@@ -54,11 +60,17 @@ For example, the call firstNumSelfDivisors(10, 3) should return an array contain
        public static void main(String[] args)
        {
            System.out.println("Self divisors for firstNumSelfDivisors(10, 3):");
-           for (int n : firstNumSelfDivisors(10, 3)) System.out.print(n + " ");
+           for (int n : firstNumSelfDivisors(10, 3)) 
+           {
+               System.out.print(n + " ");
+           }
            System.out.println();
 
            System.out.println("Self divisors for firstNumSelfDivisors(22, 5)");
-           for (int n : firstNumSelfDivisors(22, 5)) System.out.print(n + " ");
+           for (int n : firstNumSelfDivisors(22, 5)) 
+           {
+               System.out.print(n + " ");
+           }
            System.out.println();
        }
    }
@@ -130,8 +142,14 @@ Try to write the code for firstNumSelfDivisors.  Run the main to check your answ
            while (currNumber > 0)
            {
                digit = currNumber % 10;
-               if (digit == 0) return false;
-               if (number % digit != 0) return false;
+               if (digit == 0) 
+               {
+                   return false;
+               }               
+               if (number % digit != 0) 
+               {
+                   return false;
+               }
                currNumber = currNumber / 10;
            }
            return true;
@@ -151,11 +169,17 @@ Try to write the code for firstNumSelfDivisors.  Run the main to check your answ
        public static void main(String[] args)
        {
            System.out.println("Self divisors for firstNumSelfDivisors(10, 3):");
-           for (int n : firstNumSelfDivisors(10, 3)) System.out.print(n + " ");
+           for (int n : firstNumSelfDivisors(10, 3)) 
+           {
+               System.out.print(n + " ");
+           }
            System.out.println();
 
            System.out.println("Self divisors for firstNumSelfDivisors(22, 5):");
-           for (int n : firstNumSelfDivisors(22, 5)) System.out.print(n + " ");
+           for (int n : firstNumSelfDivisors(22, 5)) 
+           {
+               System.out.print(n + " ");
+           }
            System.out.println();
        }
    }
