@@ -152,40 +152,45 @@ The Student class can also inherit from the class Person just like Employee and 
   ~~~~
   class Person
   {
-       private String name;
+      private String name;
   }
 
   // How can we make the Student class inherit from class Person?
   public class Student
   {
-       private int id;
+      private int id;
 
-       public static void main(String[] args)
-       {
+      public static void main(String[] args)
+      {
           Student s = new Student();
           System.out.println(s instanceof Student);
           System.out.println(s instanceof Person);
-       }
-   }
+      }
+  }
+
    ====
    import static org.junit.Assert.*;
-    import org.junit.*;;
-    import java.io.*;
 
-    public class RunestoneTests extends CodeTestHelper
-    {
-        @Test
-        public void testMain() throws IOException
-        {
-            String output = getMethodOutput("main");
-            String expect = "true\ntrue";
-            boolean passed = getResults(expect, output, "Expected output from main");
-            assertTrue(passed);
-        }
-        @Test
-        public void containsExtends()
-        {
+   import org.junit.*;
+
+   import java.io.*;
+
+   public class RunestoneTests extends CodeTestHelper
+   {
+       @Test
+       public void testMain() throws IOException
+       {
+           String output = getMethodOutput("main");
+           String expect = "true\ntrue";
+           boolean passed = getResults(expect, output, "Expected output from main");
+           assertTrue(passed);
+       }
+
+       @Test
+       public void containsExtends()
+       {
            boolean passed = checkCodeContains("Student extends Person");
            assertTrue(passed);
-        }
-    }
+       }
+   }
+

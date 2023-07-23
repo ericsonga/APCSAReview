@@ -112,34 +112,51 @@ In all of these cases, there are no errors at compile-time because the compiler 
 
    .. code-block:: java
 
-      public class Shape {
-         public void what() { System.out.print("Shape ");}
+      public class Shape
+      {
+          public void what()
+          {
+              System.out.print("Shape ");
+          }
 
-         public static void main(String[] args) {
+          public static void main(String[] args)
+          {
 
-            Shape[] shapes = {new Shape(), new Rectangle(), new Square(),
-                              new Circle()};
-            for (Shape s : shapes)
-            {
-               s.what();
-            }
-         }
-
+              Shape[] shapes =
+              {
+                  new Shape(), new Rectangle(), new Square(), new Circle()
+              };
+              for (Shape s : shapes)
+              {
+                  s.what();
+              }
+          }
       }
 
-      class Rectangle extends Shape {
-         public void what() { System.out.print("Rectangle "); }
+      class Rectangle extends Shape
+      {
+          public void what()
+          {
+              System.out.print("Rectangle ");
+          }
       }
 
-      class Square extends Rectangle {
+      class Square extends Rectangle {}
+
+      class Oval extends Shape
+      {
+          public void what()
+          {
+              System.out.print("Oval ");
+          }
       }
 
-      class Oval extends Shape {
-         public void what() { System.out.print("Oval "); }
-      }
-
-      class Circle extends Oval {
-         public void what() { System.out.print("Circle ");}
+      class Circle extends Oval
+      {
+          public void what()
+          {
+              System.out.print("Circle ");
+          }
       }
 
 You can step through this code using the Java Visualizer by clicking on the following link `Shape Example <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+Shape+%7B%0A+++public+void+what()+%7B+System.out.print(%22Shape+%22)%3B%7D%0A+++++++++%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A+++++++++%0A++++++Shape%5B%5D+shapes+%3D+%7Bnew+Shape(),+new+Rectangle(),+new+Square(),+%0A++++++++++++++++++++++++++++++new+Circle()%7D%3B%0A++++++for+(Shape+s+%3A+shapes)%0A++++++%7B%0A+++++++++s.what()%3B%0A+++++++++System.out.print(%22+%22)%3B%0A++++++%7D%0A+++%7D%0A%0A%7D+%0A%0Aclass+Rectangle+extends+Shape+%7B%0A+++public+void+what()+%7B+System.out.print(%22Rectangle+%22)%3B+%7D%0A%7D%0A%0Aclass+Square+extends+Rectangle+%7B%0A%7D%0A++++++%0Aclass+Oval+extends+Shape+%7B%0A+++public+void+what()+%7B+System.out.print(%22Oval+%22)%3B+%7D%0A%7D%0A%0Aclass+Circle+extends+Oval+%7B%0A+++public+void+what()+%7B+System.out.print(%22Circle+%22)%3B%7D%0A%7D%0A%0A&mode=display&curInstr=38>`_.
@@ -161,29 +178,33 @@ You can step through this code using the Java Visualizer by clicking on the foll
 
    .. code-block:: java
 
-      public class Student {
+      public class Student
+      {
 
-         public String getFood() {
-            return "Pizza";
-         }
+          public String getFood()
+          {
+              return "Pizza";
+          }
 
-         public String getInfo()  {
-           return this.getFood();
-         }
+          public String getInfo()
+          {
+              return this.getFood();
+          }
 
-         public static void main(String[] args)
-         {
-           Student s1 = new GradStudent();
-           System.out.println(s1.getInfo());
-         }
+          public static void main(String[] args)
+          {
+              Student s1 = new GradStudent();
+              System.out.println(s1.getInfo());
+          }
       }
 
-      class GradStudent extends Student {
+      class GradStudent extends Student
+      {
 
-        public String getFood() {
-           return "Taco";
-        }
-
+          public String getFood()
+          {
+              return "Taco";
+          }
       }
 
 You can step through this code using the Java Visualizer by clicking on the following link `Student Example <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+Student+%7B%0A+++%0A+++public+String+getFood()+%7B%0A++++++return+%22Pizza%22%3B%0A+++%7D%0A+++%0A+++public+String+getInfo()++%7B+%0A++++++return+this.getFood()%3B+%0A+++%7D%0A+++%0A+++public+static+void+main(String%5B%5D+args)%0A+++%7B%0A++++++Student+s1+%3D+new+GradStudent()%3B%0A++++++System.out.println(s1.getInfo())%3B%0A+++%7D%0A%7D%0A%0Aclass+GradStudent+extends+Student+%7B%0A+++%0A+++public+String+getFood()+%7B%0A++++++return+%22Taco%22%3B%0A+++%7D%0A++++++++%0A+++%0A%7D%0A&mode=display&curInstr=10>`_.
@@ -207,31 +228,47 @@ You can step through this code using the Java Visualizer by clicking on the foll
 
       public class Car
       {
-        private int fuel;
+          private int fuel;
 
-        public Car() { fuel = 0; }
-        public Car(int g) { fuel = g; }
+          public Car()
+          {
+              fuel = 0;
+          }
 
-        public void addFuel() { fuel++; }
-        public void display() { System.out.print(fuel + " "); }
+          public Car(int g)
+          {
+              fuel = g;
+          }
 
-        public static void main(String[] args)
-        {
-           Car car = new Car(5);
-           Car fastCar = new RaceCar(5);
-           car.display();
-           car.addFuel();
-           car.display();
-           fastCar.display();
-           fastCar.addFuel();
-           fastCar.display();
-        }
+          public void addFuel()
+          {
+              fuel++;
+          }
 
+          public void display()
+          {
+              System.out.print(fuel + " ");
+          }
+
+          public static void main(String[] args)
+          {
+              Car car = new Car(5);
+              Car fastCar = new RaceCar(5);
+              car.display();
+              car.addFuel();
+              car.display();
+              fastCar.display();
+              fastCar.addFuel();
+              fastCar.display();
+          }
       }
 
       class RaceCar extends Car
       {
-        public RaceCar(int g) { super(2*g); }
+          public RaceCar(int g)
+          {
+              super(2 * g);
+          }
       }
 
 You can step through the code using the Java Visualizer by clicking on the following link: `Car Example <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+Car%0A%7B%0A+++private+int+fuel%3B%0A%0A+++public+Car()+%7B+fuel+%3D+0%3B+%7D+%0A+++public+Car(int+g)+%7B+fuel+%3D+g%3B+%7D%0A%0A+++public+void+addFuel()+%7B+fuel%2B%2B%3B+%7D%0A+++public+void+display()+%7B+System.out.print(fuel+%2B+%22+%22)%3B+%7D%0A+++%0A+++public+static+void+main(String%5B%5D+args)%0A+++%7B%0A++++++Car+car+%3D+new+Car(5)%3B%0A++++++Car+fastCar+%3D+new+RaceCar(5)%3B%0A++++++car.display()%3B%0A++++++car.addFuel()%3B%0A++++++car.display()%3B%0A++++++fastCar.display()%3B%0A++++++fastCar.addFuel()%3B%0A++++++fastCar.display()%3B%0A++++%7D%0A%7D%0A%0Aclass+RaceCar+extends+Car%0A%7B%0A+++public+RaceCar(int+g)+%7B+super(2*g)%3B+%7D%0A%7D+%0A&mode=display&curInstr=0>`_.
@@ -252,23 +289,21 @@ You can step through the code using the Java Visualizer by clicking on the follo
 
       public class Book
       {
-         public String getISBN()
-         {
-            // implementation not shown
-         }
+          public String getISBN()
+          {
+              // implementation not shown
+          }
 
-         // constructors, fields, and other methods not shown
+          // constructors, fields, and other methods not shown
       }
 
       public class Dictionary extends Book
       {
-         public String getDefinition()
-         {
-            // implementation not shown
-         }
+          public String getDefinition()
+          {
+              // implementation not shown
+          }
       }
-
-
 
 |Groupwork| Programming Challenge : Shopping Cart 2
 ---------------------------------------------------
@@ -316,176 +351,217 @@ In this challenge, you will write a method called ``int countDiscountedItems()``
   ~~~~
   import java.util.*;
 
-    /**
-       The ShoppingCart class has an ArrayList of Items.
-       You will write a new class DiscountedItem that extends Item.
-       This code is adapted https://practiceit.cs.washington.edu/problem/view/bjp4/chapter9/e10-DiscountBill
-    */
+  /**
+   * The ShoppingCart class has an ArrayList of Items. You will write a new class
+   * DiscountedItem that extends Item. This code is adapted
+   * https://practiceit.cs.washington.edu/problem/view/bjp4/chapter9/e10-DiscountBill
+   */
+  public class Tester
+  {
+      public static void main(String[] args)
+      {
+          ShoppingCart cart = new ShoppingCart();
+          cart.add(new Item("bread", 3.25));
+          cart.add(new Item("milk", 2.50));
+          // cart.add(new DiscountedItem("ice cream", 4.50, 1.50));
+          // cart.add(new DiscountedItem("apples", 1.35, 0.25));
 
-    public class Tester
-    {
-      public static void main(String[] args) {
-        ShoppingCart cart = new ShoppingCart();
-        cart.add(new Item("bread", 3.25));
-        cart.add(new Item("milk", 2.50));
-        //cart.add(new DiscountedItem("ice cream", 4.50, 1.50));
-        //cart.add(new DiscountedItem("apples", 1.35, 0.25));
-
-        cart.printOrder();
+          cart.printOrder();
       }
-    }
+  }
 
-    class DiscountedItem extends Item
-    {
-        // Copy your code from the last lesson's challenge here!
-    }
+  class DiscountedItem extends Item
+  {
+      // Copy your code from the last lesson's challenge here!
+  }
 
-    // Add a method called countDiscountedItems()
-    class ShoppingCart
-    {
-        private ArrayList<Item> order;
-        private double total;
-        private double internalDiscount;
+  // Add a method called countDiscountedItems()
+  class ShoppingCart
+  {
+      private ArrayList<Item> order;
+      private double total;
+      private double internalDiscount;
 
-        public ShoppingCart()
-        {
-            order = new ArrayList<Item>();
-            total = 0.0;
-            internalDiscount = 0.0;
-        }
-
-        public void add(Item i) {
-            order.add(i);
-            total += i.getPrice();
-            if (i instanceof DiscountedItem)
-               internalDiscount += ((DiscountedItem) i).getDiscount();
-        }
-
-       /** printOrder() will call toString() to print */
-        public void printOrder() {
-            System.out.println(this);
-        }
-
-        public String toString() {
-            return discountToString();
-        }
-
-        public String discountToString() {
-            return orderToString() + "\nSub-total: " + valueToString(total) + "\nDiscount: " + valueToString(internalDiscount) + "\nTotal: " + valueToString(total - internalDiscount);
-        }
-
-        private String valueToString(double value) {
-            value = Math.rint(value * 100) / 100.0;
-            String result = "" + Math.abs(value);
-            if(result.indexOf(".") == result.length() - 2) {
-                result += "0";
-            }
-            result = "$" + result;
-            return result;
-        }
-
-        public String orderToString() {
-            String build = "\nOrder Items:\n";
-            for(int i = 0; i < order.size(); i++) {
-                build += "   " + order.get(i);
-                if(i != order.size() - 1) {
-                    build += "\n";
-                }
-            }
-            return build;
-        }
+      public ShoppingCart()
+      {
+          order = new ArrayList<Item>();
+          total = 0.0;
+          internalDiscount = 0.0;
       }
 
-      class Item {
-        private String name;
-        private double price;
+      public void add(Item i)
+      {
+          order.add(i);
+          total += i.getPrice();
+          if (i instanceof DiscountedItem)
+              internalDiscount += ((DiscountedItem) i).getDiscount();
+      }
 
-        public Item()
-        {
+      /** printOrder() will call toString() to print */
+      public void printOrder()
+      {
+          System.out.println(this);
+      }
+
+      public String toString()
+      {
+          return discountToString();
+      }
+
+      public String discountToString()
+      {
+          return orderToString()
+                  + "\nSub-total: "
+                  + valueToString(total)
+                  + "\nDiscount: "
+                  + valueToString(internalDiscount)
+                  + "\nTotal: "
+                  + valueToString(total - internalDiscount);
+      }
+
+      private String valueToString(double value)
+      {
+          value = Math.rint(value * 100) / 100.0;
+          String result = "" + Math.abs(value);
+          if (result.indexOf(".") == result.length() - 2)
+          {
+              result += "0";
+          }
+          result = "$" + result;
+          return result;
+      }
+
+      public String orderToString()
+      {
+          String build = "\nOrder Items:\n";
+          for (int i = 0; i < order.size(); i++)
+          {
+              build += "   " + order.get(i);
+              if (i != order.size() - 1)
+              {
+                  build += "\n";
+              }
+          }
+          return build;
+      }
+  }
+
+  class Item
+  {
+      private String name;
+      private double price;
+
+      public Item()
+      {
           this.name = "";
           this.price = 0.0;
-        }
+      }
 
-        public Item(String name, double price) {
-                this.name = name;
-                this.price = price;
-        }
+      public Item(String name, double price)
+      {
+          this.name = name;
+          this.price = price;
+      }
 
-        public double getPrice() {
-                return price;
-        }
+      public double getPrice()
+      {
+          return price;
+      }
 
-        public String valueToString(double value) {
-                String result = "" + Math.abs(value);
-                if(result.indexOf(".") == result.length() - 2) {
-                    result += "0";
-                }
-                result = "$" + result;
-                return result;
-        }
+      public String valueToString(double value)
+      {
+          String result = "" + Math.abs(value);
+          if (result.indexOf(".") == result.length() - 2)
+          {
+              result += "0";
+          }
+          result = "$" + result;
+          return result;
+      }
 
-        public String toString() {
-                return name + " " + valueToString(price);
-        }
-       }
+      public String toString()
+      {
+          return name + " " + valueToString(price);
+      }
+  }
+
        ====
        import static org.junit.Assert.*;
-        import org.junit.*;;
-        import java.io.*;
 
-        public class RunestoneTests extends CodeTestHelper
-        {
-            public RunestoneTests() {
-                super("Tester");
-            }
+       import org.junit.*;
 
-            @Test
-            public void test1()
-            {
-                String output = getMethodOutput("main");
-                String expect = "Order Items:\n   bread $3.25\n   milk $2.50\n   ice cream $1.50 ($1.50)\n   apples $0.25 ($0.25)\nSub-total: $7.50\nDiscount: $1.75\nTotal: $5.75";
+       import java.io.*;
 
-                boolean passed = output.contains("ice cream") && output.contains("apples");
+       public class RunestoneTests extends CodeTestHelper
+       {
+           public RunestoneTests()
+           {
+               super("Tester");
+           }
 
-                getResults(expect, output, "Checking that DiscountedItem objects were added to ArrayList", passed);
-                assertTrue(passed);
+           @Test
+           public void test1()
+           {
+               String output = getMethodOutput("main");
+               String expect =
+                       "Order Items:\n"
+                           + "   bread $3.25\n"
+                           + "   milk $2.50\n"
+                           + "   ice cream $1.50 ($1.50)\n"
+                           + "   apples $0.25 ($0.25)\n"
+                           + "Sub-total: $7.50\n"
+                           + "Discount: $1.75\n"
+                           + "Total: $5.75";
 
-            }
+               boolean passed = output.contains("ice cream") && output.contains("apples");
 
-            @Test
-            public void test2()
-            {
-                String output = getMethodOutput("main");
-                String expect = "Order Items:\n   bread $3.25\n   milk $2.50\n   ice cream $1.50 ($1.50)\n   apples $0.25 ($0.25)\nSub-total: $7.50\nDiscount: $1.75\nTotal: $5.75";
+               getResults(
+                       expect,
+                       output,
+                       "Checking that DiscountedItem objects were added to ArrayList",
+                       passed);
+               assertTrue(passed);
+           }
 
-                boolean passed = !output.equals(expect);
+           @Test
+           public void test2()
+           {
+               String output = getMethodOutput("main");
+               String expect =
+                       "Order Items:\n"
+                           + "   bread $3.25\n"
+                           + "   milk $2.50\n"
+                           + "   ice cream $1.50 ($1.50)\n"
+                           + "   apples $0.25 ($0.25)\n"
+                           + "Sub-total: $7.50\n"
+                           + "Discount: $1.75\n"
+                           + "Total: $5.75";
 
-                getResults(expect, output, "Checking that countDiscountedItems() was added to output", passed);
-                assertTrue(passed);
+               boolean passed = !output.equals(expect);
 
-            }
+               getResults(
+                       expect, output, "Checking that countDiscountedItems() was added to output", passed);
+               assertTrue(passed);
+           }
 
-            @Test
-            public void test4()
-            {
-                String target = "public int countDiscountedItems()";
+           @Test
+           public void test4()
+           {
+               String target = "public int countDiscountedItems()";
 
-                boolean passed = checkCodeContains(target);
-                assertTrue(passed);
+               boolean passed = checkCodeContains(target);
+               assertTrue(passed);
+           }
 
-            }
+           @Test
+           public void test5()
+           {
+               String target = "if (* instanceof DiscountedItem)";
 
-            @Test
-            public void test5()
-            {
-                String target = "if (* instanceof DiscountedItem)";
-
-                boolean passed = checkCodeContains(target);
-                assertTrue(passed);
-
-            }
-        }
-
+               boolean passed = checkCodeContains(target);
+               assertTrue(passed);
+           }
+       }
 
 Summary
 ----------

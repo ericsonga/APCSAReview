@@ -97,61 +97,65 @@ initializes an instance variable in the ``Person`` class to hold the name.
   ~~~~
   class Person
   {
-     private String name;
+      private String name;
 
-     public Person(String theName)
-     {
-        this.name = theName;
-     }
+      public Person(String theName)
+      {
+          this.name = theName;
+      }
 
-     public String getName()
-     {
-        return name;
-     }
+      public String getName()
+      {
+          return name;
+      }
 
-     public boolean setName(String theNewName)
-     {
-        if (theNewName != null)
-        {
-           this.name = theNewName;
-           return true;
-        }
-        return false;
-     }
+      public boolean setName(String theNewName)
+      {
+          if (theNewName != null)
+          {
+              this.name = theNewName;
+              return true;
+          }
+          return false;
+      }
   }
 
   public class Employee extends Person
   {
-     private int id;
-     public static int nextId = 1;
+      private int id;
+      public static int nextId = 1;
 
-     public Employee(String theName)
-     {
-        super(theName);
-        id = nextId;
-        nextId++;
-     }
+      public Employee(String theName)
+      {
+          super(theName);
+          id = nextId;
+          nextId++;
+      }
 
-     public int getId()
-     {
-        return id;
-     }
+      public int getId()
+      {
+          return id;
+      }
 
-     public static void main(String[] args)
-     {
-        Employee emp = new Employee("Dani");
-        System.out.println(emp.getName());
-        System.out.println(emp.getId());
-     }
+      public static void main(String[] args)
+      {
+          Employee emp = new Employee("Dani");
+          System.out.println(emp.getName());
+          System.out.println(emp.getId());
+      }
   }
+
   ====
   import static org.junit.Assert.*;
-  import org.junit.*;;
+
+  import org.junit.*;
+
   import java.io.*;
 
   public class RunestoneTests extends CodeTestHelper
   {
-      public RunestoneTests() {
+      public RunestoneTests()
+      {
           super("Employee");
           Employee.nextId = 1;
       }
@@ -323,9 +327,9 @@ constructors.
 
       public void draw()
       {
-          for(int i=0; i < length; i++)
+          for (int i = 0; i < length; i++)
           {
-              for(int j=0; j < width; j++)
+              for (int j = 0; j < width; j++)
               {
                   System.out.print("* ");
               }
@@ -346,7 +350,7 @@ constructors.
 
       public static void main(String[] args)
       {
-          Rectangle r = new Rectangle(3,5);
+          Rectangle r = new Rectangle(3, 5);
           r.draw();
           // 3. Uncomment these to test
           // Square s1 = new Square(1);
@@ -358,16 +362,19 @@ constructors.
       }
   }
 
-  // 5. Define the LongRectangle class here
+    // 5. Define the LongRectangle class here
 
   ====
   import static org.junit.Assert.*;
+
   import org.junit.*;
+
   import java.io.*;
 
   public class RunestoneTests extends CodeTestHelper
   {
-      public RunestoneTests() {
+      public RunestoneTests()
+      {
           super("Square");
       }
 
@@ -393,28 +400,31 @@ constructors.
       @Test
       public void test4()
       {
-          String output = checkConstructor(new Object[]{1});
+          String output = checkConstructor(new Object[] {1});
           String expect = "pass";
 
-          boolean passed = getResults(expect, output, "Checking Square constructor with 1 argument (int)");
+          boolean passed =
+                  getResults(expect, output, "Checking Square constructor with 1 argument (int)");
           assertTrue(passed);
       }
+
       @Test
-       public void test5()
-       {
-           String target = "area";
+      public void test5()
+      {
+          String target = "area";
 
-           boolean passed = checkCodeContains(target);
-           assertTrue(passed);
-       }
-       @Test
-       public void test6()
-       {
-           String target = "LongRectangle extends Rectangle";
+          boolean passed = checkCodeContains(target);
+          assertTrue(passed);
+      }
 
-           boolean passed = checkCodeContains(target);
-           assertTrue(passed);
-       }
+      @Test
+      public void test6()
+      {
+          String target = "LongRectangle extends Rectangle";
+
+          boolean passed = checkCodeContains(target);
+          assertTrue(passed);
+      }
   }
 
 .. |repl.it Java Swing code| raw:: html

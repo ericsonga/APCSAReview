@@ -21,11 +21,15 @@ Each menu item has a name and a price. The four types of menu items are represen
 
    public interface MenuItem
    {
-     /** @return the name of the menu item */
-     String getName();
+       /**
+        * @return the name of the menu item
+        */
+       String getName();
 
-     /** @return the price of the menu item */
-     double getPrice();
+       /**
+        * @return the price of the menu item
+        */
+       double getPrice();
    }
 
 The following diagram shows the relationship between the ``MenuItem`` interface and the ``Sandwich``, ``Salad``, ``Drink``, and ``Trio`` classes.
