@@ -209,43 +209,44 @@ You will receive at least 1 point if you write the class header and a constructo
    }
    ====
    import static org.junit.Assert.*;
-    import org.junit.*;
-    import java.io.*;
 
-    // Tests for ActiveCode StepTrackerCode1
-    public class RunestoneTests extends CodeTestHelper
-    {
-      @Test
-      public void test1(){
-        //check class name
-        boolean passed = checkCodeContains("correct class heading", "public class StepTracker");
-        assertTrue(passed);
+   import org.junit.*;
 
-      }
+   import java.io.*;
 
-      @Test
-      public void test2(){
-         //constructor with 1 parameter for threshold minSteps
-         String args = "int";
-         String results = checkConstructor(args);
+   // Tests for ActiveCode StepTrackerCode1
+   public class RunestoneTests extends CodeTestHelper
+   {
+       @Test
+       public void test1()
+       {
+           // check class name
+           boolean passed = checkCodeContains("correct class heading", "public class StepTracker");
+           assertTrue(passed);
+       }
 
-         boolean passed = getResults("pass", results, "Checking constructor with one int argument");
-         assertTrue(passed);
+       @Test
+       public void test2()
+       {
+           // constructor with 1 parameter for threshold minSteps
+           String args = "int";
+           String results = checkConstructor(args);
 
-      }
+           boolean passed = getResults("pass", results, "Checking constructor with one int argument");
+           assertTrue(passed);
+       }
 
-      @Test
-      public void test3(){
-            //check int - declaration of instance variables and parameter in constructor
-            String actual = testPrivateInstanceVariables();
-            String expected = "4 Private";
+       @Test
+       public void test3()
+       {
+           // check int - declaration of instance variables and parameter in constructor
+           String actual = testPrivateInstanceVariables();
+           String expected = "4 Private";
 
-            boolean passed = getResults(expected, actual, "Checking declaration of instance variables");
-            assertTrue(passed);
-
-      }
-    }
-
+           boolean passed = getResults(expected, actual, "Checking declaration of instance variables");
+           assertTrue(passed);
+       }
+   }
 
 Here is the rubric for the instance variables and the constructor for this problem. Did you receive all 3 points? In class, your teacher may have you grade each others' code.
 
@@ -271,14 +272,14 @@ Remember that accessor methods usually look like the following:
 
    class ExampleClass
    {
-     //Instance variable declaration
-     private typeOfVar varName;
+       // Instance variable declaration
+       private typeOfVar varName;
 
-     // Accessor method template
-     public typeOfVar getVarName()
-     {
-        return varName;
-     }
+       // Accessor method template
+       public typeOfVar getVarName()
+       {
+           return varName;
+       }
    }
 
 Click to reveal a multiple choice problem to help you determine the accessor method header.
@@ -311,53 +312,55 @@ Click to reveal a multiple choice problem to help you determine the accessor met
    ~~~~
    public class StepTracker
    {
-      // copy the instance variable declarations here
+       // copy the instance variable declarations here
 
+       // copy the constructor with a parameter here
 
-      // copy the constructor with a parameter here
+       // Write the accessor method activeDays() here
+       // @return activeDays
 
-      // Write the accessor method activeDays() here
-      // @return activeDays
-
-      public static void main(String[] args)
-      {
-         StepTracker tr = new StepTracker(10000);
-         System.out.println(tr.activeDays()); // returns 0. No data have been recorded yet.
-      }
+       public static void main(String[] args)
+       {
+           StepTracker tr = new StepTracker(10000);
+           System.out.println(
+                   tr.activeDays()); // returns 0. No data have been recorded yet.
+       }
    }
+
    ====
    import static org.junit.Assert.*;
-    import org.junit.*;;
-    import java.io.*;
 
-    public class RunestoneTests extends CodeTestHelper
-    {
+   import org.junit.*;
+
+   import java.io.*;
+
+   public class RunestoneTests extends CodeTestHelper
+   {
        @Test
-      public void testMain() throws IOException
-      {
-        String output = getMethodOutput("main");
-        String expect = "0\n";
-        boolean passed = getResults(expect, output, "Expected output from main");
-        assertTrue(passed);
-      }
+       public void testMain() throws IOException
+       {
+           String output = getMethodOutput("main");
+           String expect = "0\n";
+           boolean passed = getResults(expect, output, "Expected output from main");
+           assertTrue(passed);
+       }
 
-      @Test
-      public void checkCodeContains1(){
-        //check accessor method activeDays()
-        boolean passed = checkCodeContains("activeDays() method", "public int activeDays()");
-        assertTrue(passed);
+       @Test
+       public void checkCodeContains1()
+       {
+           // check accessor method activeDays()
+           boolean passed = checkCodeContains("activeDays() method", "public int activeDays()");
+           assertTrue(passed);
+       }
 
-      }
-
-      @Test
-      public void checkCodeContains2(){
-         //check that activeDays() returns a value
-          boolean passed = checkCodeContains("return");
-        assertTrue(passed);
-
-      }
-    }
-
+       @Test
+       public void checkCodeContains2()
+       {
+           // check that activeDays() returns a value
+           boolean passed = checkCodeContains("return");
+           assertTrue(passed);
+       }
+   }
 
 Here is the rubric for the accessor method ``activeDays`` for this problem. The second column is small mistakes that will still earn the point but the third column is larger mistakes that will not earn the point. Did you receive the point for this method? In class, your teacher may have you grade each others' code.
 
@@ -383,14 +386,15 @@ Remember that mutator methods often look like the following:
 
      class Example
      {
-         //Instance variable declaration
+         // Instance variable declaration
          private typeOfVar varName;
 
          // Mutator method template
          public void changeVarName(typeOfVar newValue)
          {
-            // an instance variable is changed through = or an operator like +=, -=, ++, etc.
-            varName = newValue;
+             // an instance variable is changed through = or an operator like +=, -=,
+             // ++, etc.
+             varName = newValue;
          }
      }
 
@@ -464,63 +468,73 @@ Consider each of your instance variables and whether this method should change t
    ~~~~
    public class StepTracker
    {
-      // copy the instance variable declarations here
+       // copy the instance variable declarations here
 
+       // copy the constructor with a parameter here
 
-      // copy the constructor with a parameter here
+       // copy the accessor method activeDays() here.
 
-      // copy the accessor method activeDays() here.
+       // Write the mutator method addDailySteps here.
+       // @param number of steps taken that day
 
-      // Write the mutator method addDailySteps here.
-      // @param number of steps taken that day
-
-
-
-      public static void main(String[] args)
-      {
-         StepTracker tr = new StepTracker(10000);
-         System.out.println(tr.activeDays()); // returns 0. No data have been recorded yet.
-         tr.addDailySteps(9000); // This is too few steps for the day to be considered active.
-         tr.addDailySteps(5000); // This is too few steps for the day to be considered active.
-         System.out.println(tr.activeDays()); // returns 0.  No day had at least 10,000 steps.
-         tr.addDailySteps(13000); // This represents an active day.
-         System.out.println(tr.activeDays());  // returns 1. Of the three days for which step data were entered, one day had at least 10,000 steps.
-      }
+       public static void main(String[] args)
+       {
+           StepTracker tr = new StepTracker(10000);
+           System.out.println(
+                   tr.activeDays()); // returns 0. No data have been recorded yet.
+           tr.addDailySteps(
+                   9000); // This is too few steps for the day to be considered
+                          // active.
+           tr.addDailySteps(
+                   5000); // This is too few steps for the day to be considered
+                          // active.
+           System.out.println(
+                   tr.activeDays()); // returns 0.  No day had at least 10,000 steps.
+           tr.addDailySteps(13000); // This represents an active day.
+           System.out.println(
+                   tr
+                           .activeDays()); // returns 1. Of the three days for which
+                                           // step data were entered, one day had at
+                                           // least 10,000 steps.
+       }
    }
+
    ====
    import static org.junit.Assert.*;
-    import org.junit.*;;
-    import java.io.*;
 
-    public class RunestoneTests extends CodeTestHelper
-    {
-     @Test
-     public void testMain() throws IOException
-      {
-        String output = getMethodOutput("main");
-        String expect = "0\n0\n1\n";
-        boolean passed = getResults(expect, output, "Expected output from main");
-        assertTrue(passed);
-      }
+   import org.junit.*;
 
-      @Test
-      public void checkCodeContains1()
-      {
-        //check mutator method addDailySteps()
-        boolean passed = checkCodeContains("addDailySteps method with parameter", "public void addDailySteps(int");
-        assertTrue(passed);
+   import java.io.*;
 
-      }
+   public class RunestoneTests extends CodeTestHelper
+   {
+       @Test
+       public void testMain() throws IOException
+       {
+           String output = getMethodOutput("main");
+           String expect = "0\n0\n1\n";
+           boolean passed = getResults(expect, output, "Expected output from main");
+           assertTrue(passed);
+       }
 
-     @Test
-      public void checkCodeContains2()
-      {
-        //check mutator method addDailySteps() contains "if"
-        boolean passed = checkCodeContains("if statement","if (");
-        assertTrue(passed);
-      }
-    }
+       @Test
+       public void checkCodeContains1()
+       {
+           // check mutator method addDailySteps()
+           boolean passed =
+                   checkCodeContains(
+                           "addDailySteps method with parameter", "public void addDailySteps(int");
+           assertTrue(passed);
+       }
 
+       @Test
+       public void checkCodeContains2()
+       {
+           // check mutator method addDailySteps() contains "if"
+           boolean passed = checkCodeContains("if statement", "if (");
+           assertTrue(passed);
+       }
+   }
 
 Here is the rubric for the mutator method for this problem. The second column is small mistakes that will still earn the point but the third column is larger mistakes that will not earn the point. Did you receive all the points? In class, your teacher may have you grade each others' code.
 
@@ -578,78 +592,113 @@ The complex accessor method **averageSteps()** must calculate the average number
    ~~~~
    public class StepTracker
    {
-      // copy the instance variable declarations here
+       // copy the instance variable declarations here
 
+       // copy the constructor with a parameter here
 
-      // copy the constructor with a parameter here
+       // copy the accessor method activeDays() here
 
-      // copy the accessor method activeDays() here
+       // copy the mutator method addDailySteps here.
+       // @param number of steps taken that day
 
+       // Write the accessor method averageSteps() here
+       // @return average steps calculated by dividing the total number of steps taken
+       // by the number of days tracked (which should be instance variables). Make
+       // sure you use type casting to double!
 
-      // copy the mutator method addDailySteps here.
-      // @param number of steps taken that day
-
-
-      //Write the accessor method averageSteps() here
-      // @return average steps calculated by dividing the total number of steps taken by the number of days tracked (which should be instance variables). Make sure you use type casting to double!
-
-
-
-
-      public static void main(String[] args)
-      {
-         StepTracker tr = new StepTracker(10000);
-         System.out.println(tr.activeDays()); // returns 0. No data have been recorded yet.
-         System.out.println(tr.averageSteps()); // returns 0.0. When no step data have been recorded, the averageSteps method returns 0.0.
-         tr.addDailySteps(9000); // This is too few steps for the day to be considered active.
-         tr.addDailySteps(5000); // This is too few steps for the day to be considered active.
-         System.out.println(tr.activeDays()); // returns 0.  No day had at least 10,000 steps.
-         System.out.println(tr.averageSteps()); // returns 7000.0 The average number of steps per day is (14000 / 2).
-         tr.addDailySteps(13000); // This represents an active day.
-         System.out.println(tr.activeDays());  // returns 1. Of the three days for which step data were entered, one day had at least 10,000 steps.
-         System.out.println(tr.averageSteps()); // returns 9000.0. The average number of steps per day is (27000 / 3).
-         tr.addDailySteps(23000); // This represents an active day.
-         tr.addDailySteps(1111); // This is too few steps for the day to be considered active.
-         System.out.println(tr.activeDays()); // returns 2. Of the five days for which step data were entered, two days had at least 10,000 steps.
-         System.out.println(tr.averageSteps()); // returns 10222.2. The average number of steps per day is (51111 / 5).
-      }
+       public static void main(String[] args)
+       {
+           StepTracker tr = new StepTracker(10000);
+           System.out.println(
+                   tr.activeDays()); // returns 0. No data have been recorded yet.
+           System.out.println(
+                   tr
+                           .averageSteps()); // returns 0.0. When no step data have
+                                             // been recorded, the averageSteps method
+                                             // returns 0.0.
+           tr.addDailySteps(
+                   9000); // This is too few steps for the day to be considered
+                          // active.
+           tr.addDailySteps(
+                   5000); // This is too few steps for the day to be considered
+                          // active.
+           System.out.println(
+                   tr.activeDays()); // returns 0.  No day had at least 10,000 steps.
+           System.out.println(
+                   tr
+                           .averageSteps()); // returns 7000.0 The average number of
+                                             // steps per day is (14000 / 2).
+           tr.addDailySteps(13000); // This represents an active day.
+           System.out.println(
+                   tr
+                           .activeDays()); // returns 1. Of the three days for which
+                                           // step data were entered, one day had at
+                                           // least 10,000 steps.
+           System.out.println(
+                   tr
+                           .averageSteps()); // returns 9000.0. The average number of
+                                             // steps per day is (27000 / 3).
+           tr.addDailySteps(23000); // This represents an active day.
+           tr.addDailySteps(
+                   1111); // This is too few steps for the day to be considered
+                          // active.
+           System.out.println(
+                   tr
+                           .activeDays()); // returns 2. Of the five days for which
+                                           // step data were entered, two days had at
+                                           // least 10,000 steps.
+           System.out.println(
+                   tr
+                           .averageSteps()); // returns 10222.2. The average number of
+                                             // steps per day is (51111 / 5).
+       }
    }
+
    ====
    import static org.junit.Assert.*;
-    import org.junit.*;;
-    import java.io.*;
 
-    public class RunestoneTests extends CodeTestHelper
-    {
-     @Test
-     public void testMain() throws IOException
-      {
-        String output = getMethodOutput("main");
-        String expect = "0\n0.0\n0\n7000.0\n1\n9000.0\n2\n10222.2\n";
-        boolean passed = getResults(expect, output, "Expected output from main. Make sure you used casting to double for the last result!");
-        assertTrue(passed);
-      }
+   import org.junit.*;
 
-      @Test
-      public void checkCodeContains1()
-      {
-        //check mutator method averageSteps()
-        boolean passed = checkCodeContains("averageSteps() method","public double averageSteps()");
-        assertTrue(passed);
+   import java.io.*;
 
-      }
-
-      @Test
-       public void checkCodeZero() {
-           StepTracker tr = new StepTracker(10000);
-           double average = tr.averageSteps();
-
-           boolean passed = getResults(0.0, average, "averageSteps() returns 0.0 when no days recorded");
+   public class RunestoneTests extends CodeTestHelper
+   {
+       @Test
+       public void testMain() throws IOException
+       {
+           String output = getMethodOutput("main");
+           String expect = "0\n0.0\n0\n7000.0\n1\n9000.0\n2\n10222.2\n";
+           boolean passed =
+                   getResults(
+                           expect,
+                           output,
+                           "Expected output from main. Make sure you used casting to double for the"
+                               + " last result!");
            assertTrue(passed);
        }
 
        @Test
-       public void checkCodeDoubleResult() {
+       public void checkCodeContains1()
+       {
+           // check mutator method averageSteps()
+           boolean passed = checkCodeContains("averageSteps() method", "public double averageSteps()");
+           assertTrue(passed);
+       }
+
+       @Test
+       public void checkCodeZero()
+       {
+           StepTracker tr = new StepTracker(10000);
+           double average = tr.averageSteps();
+
+           boolean passed =
+                   getResults(0.0, average, "averageSteps() returns 0.0 when no days recorded");
+           assertTrue(passed);
+       }
+
+       @Test
+       public void checkCodeDoubleResult()
+       {
            StepTracker tr = new StepTracker(10000);
            tr.addDailySteps(9000); // This is too few steps for the day to be considered active.
            tr.addDailySteps(5000);
@@ -658,11 +707,12 @@ The complex accessor method **averageSteps()** must calculate the average number
            tr.addDailySteps(1111);
            double average = tr.averageSteps();
 
-           boolean passed = getResults(10222.2, average, "averageSteps() returns 10222.2 (no integer division)");
+           boolean passed =
+                   getResults(
+                           10222.2, average, "averageSteps() returns 10222.2 (no integer division)");
            assertTrue(passed);
        }
-
-      }
+   }
 
 Here is the rubric for the ``averageSteps`` method for this problem.  Did you receive all the points? In class, your teacher may have you grade each others' code.
 

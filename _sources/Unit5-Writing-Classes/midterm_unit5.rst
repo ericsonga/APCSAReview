@@ -234,20 +234,20 @@ We estimate that a score of about 50% on this test would correspond to the passi
 
            public class Test1
            {
-             public static void test(String str, int y)
-             {
-                str = str + "bow";
-                y = y * 2;
-             }
+               public static void test(String str, int y)
+               {
+                   str = str + "bow";
+                   y = y * 2;
+               }
 
-             public static void main(String[] args)
-             {
-                String s = "rain";
-                int b = 4;
-                test(s, b);
-                System.out.println("s="+s+"; b="+b);
-             }
-            }
+               public static void main(String[] args)
+               {
+                   String s = "rain";
+                   int b = 4;
+                   test(s, b);
+                   System.out.println("s=" + s + "; b=" + b);
+               }
+           }
 
      .. mchoice:: mid_1_7
         :answer_a: The ``getAge()`` method should be declared as private.
@@ -268,17 +268,17 @@ We estimate that a score of about 50% on this test would correspond to the passi
 
            public class Cat
            {
-              private int age;
+               private int age;
 
-              public Cat(int a)
-              {
-                 age = a;
-              }
+               public Cat(int a)
+               {
+                   age = a;
+               }
 
-              public int getAge()
-              {
-                 return a;
-              }
+               public int getAge()
+               {
+                   return a;
+               }
            }
 
      .. mchoice:: mid_1_8
@@ -528,18 +528,18 @@ We estimate that a score of about 50% on this test would correspond to the passi
 
            public class Mysterious
            {
-              public static void main (String[] args)
-              {
-                 String mystery = "";
-                 String starter = "Hello World!";
-                 for (int i = 0; i < starter.length(); i++)
-                 {
-                    if(i % 2 == 0)
-                    {
-                       mystery += starter.substring(i,i+1);
-                    }
-                 }
-              }
+               public static void main(String[] args)
+               {
+                   String mystery = "";
+                   String starter = "Hello World!";
+                   for (int i = 0; i < starter.length(); i++)
+                   {
+                       if (i % 2 == 0)
+                       {
+                           mystery += starter.substring(i, i + 1);
+                       }
+                   }
+               }
            }
 
      .. mchoice:: mid_1_17

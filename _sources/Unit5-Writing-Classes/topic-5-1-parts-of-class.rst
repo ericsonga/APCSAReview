@@ -76,7 +76,7 @@ class:
 
     public class Person
     {
-       // define class here - also called the “body” of the class
+        // define class here - also called the “body” of the class
 
     }
 
@@ -133,11 +133,11 @@ can use the instance variables defined in the class.
 
     public class Person
     {
-       // instance variables
+        // instance variables
 
-       // constructors
+        // constructors
 
-       // methods
+        // methods
 
     }
 
@@ -182,61 +182,66 @@ the Next button to run the code step by step.
   ~~~~
   public class Person
   {
-     // instance variables
-     private String name;
-     private String email;
-     private String phoneNumber;
+      // instance variables
+      private String name;
+      private String email;
+      private String phoneNumber;
 
-     // constructor: construct a Person copying in the data into the instance variables
-     public Person(String initName, String initEmail, String initPhone)
-     {
-        name = initName;
-        email = initEmail;
-        phoneNumber = initPhone;
-     }
+      // constructor: construct a Person copying in the data into the instance
+      // variables
+      public Person(String initName, String initEmail, String initPhone)
+      {
+          name = initName;
+          email = initEmail;
+          phoneNumber = initPhone;
+      }
 
-     // Print all the data for a person
-     public void print()
-     {
-       System.out.println("Name: " + name);
-       System.out.println("Email: " + email);
-       System.out.println("Phone Number: " + phoneNumber);
-     }
+      // Print all the data for a person
+      public void print()
+      {
+          System.out.println("Name: " + name);
+          System.out.println("Email: " + email);
+          System.out.println("Phone Number: " + phoneNumber);
+      }
 
-     // main method for testing
-     public static void main(String[] args)
-     {
-        // call the constructor to create a new person
-        Person p1 = new Person("Sana", "sana@gmail.com", "123-456-7890");
-        // call p1's print method
-        p1.print();
-        Person p2 = new Person("Jean", "jean@gmail.com", "404 899-9955");
-        p2.print();
-     }
+      // main method for testing
+      public static void main(String[] args)
+      {
+          // call the constructor to create a new person
+          Person p1 = new Person("Sana", "sana@gmail.com", "123-456-7890");
+          // call p1's print method
+          p1.print();
+          Person p2 = new Person("Jean", "jean@gmail.com", "404 899-9955");
+          p2.print();
+      }
   }
 
   ====
   // Test for Lesson 5.1.0 - Person class - should pass if/when they run code
   import static org.junit.Assert.*;
-  import org.junit.*;;
+
+  import org.junit.*;
+
   import java.io.*;
 
   public class RunestoneTests extends CodeTestHelper
   {
-        @Test
-        public void testMain() throws IOException
-        {
-           String output = getMethodOutput("main");
-            String expect = "Name: Sana\nEmail: sana@gmail.com\nPhone Number: 123-456-7890\nName: Jean\nEmail: jean@gmail.com\nPhone Number: 404 899-9955";
+      @Test
+      public void testMain() throws IOException
+      {
+          String output = getMethodOutput("main");
+          String expect =
+                  "Name: Sana\n"
+                      + "Email: sana@gmail.com\n"
+                      + "Phone Number: 123-456-7890\n"
+                      + "Name: Jean\n"
+                      + "Email: jean@gmail.com\n"
+                      + "Phone Number: 404 899-9955";
 
-            boolean passed = getResults(expect, output, "Expected output from main", true);
-            assertTrue(passed);
-        }
+          boolean passed = getResults(expect, output, "Expected output from main", true);
+          assertTrue(passed);
+      }
   }
-
-
-
-
 
 Instance Variables
 ---------------------------
@@ -502,8 +507,8 @@ In this project, you will create a class that can tell riddles like the followin
   ~~~~
   public class Riddle
   {
-      // write 2 instance variables for Riddle's question and answer: private type variableName;
-
+      // write 2 instance variables for Riddle's question and answer: private type
+      // variableName;
 
       // constructor
       public Riddle(String initQuestion, String initAnswer)
@@ -536,101 +541,106 @@ In this project, you will create a class that can tell riddles like the followin
 
       }
   }
+
   ====
   // Test Code for Lesson 5.1.5 - Riddle
   // @author Kate McDonnell
   // Test Code for Lesson 5.1.5 - Riddle
   import static org.junit.Assert.*;
+
   import org.junit.*;
 
   import java.io.*;
 
   public class RunestoneTests extends CodeTestHelper
   {
-        public RunestoneTests()
-        {
-            super("Riddle"); // class name / location of main
+      public RunestoneTests()
+      {
+          super("Riddle"); // class name / location of main
 
-            Object[] values = new Object[]{"Question", "Answer"};
-            setDefaultValues(values);
-        }
+          Object[] values = new Object[] {"Question", "Answer"};
+          setDefaultValues(values);
+      }
 
-        @Test
-        public void testPrintQuestion()
-        {
-            String output = getMethodOutput("printQuestion");
-            String expect = "Question";
+      @Test
+      public void testPrintQuestion()
+      {
+          String output = getMethodOutput("printQuestion");
+          String expect = "Question";
 
-            boolean passed = getResults(expect, output, "Checking method printQuestion()");
-            assertTrue(passed);
-        }
+          boolean passed = getResults(expect, output, "Checking method printQuestion()");
+          assertTrue(passed);
+      }
 
-        @Test
-        public void testPrintAnswer()
-        {
-            String output = getMethodOutput("printAnswer");
-            String expect = "Answer";
+      @Test
+      public void testPrintAnswer()
+      {
+          String output = getMethodOutput("printAnswer");
+          String expect = "Answer";
 
-            boolean passed = getResults(expect, output, "Checking method printAnswer()");
-            assertTrue(passed);
-        }
+          boolean passed = getResults(expect, output, "Checking method printAnswer()");
+          assertTrue(passed);
+      }
 
-        @Test
-        public void testCallConstructors() {
-            String code = getCodeWithoutComments();
-            String search = "= new Riddle(";
+      @Test
+      public void testCallConstructors()
+      {
+          String code = getCodeWithoutComments();
+          String search = "= new Riddle(";
 
-            int num = countOccurences(code, search);
+          int num = countOccurences(code, search);
 
-            String expect = search + "...) x 2";
-            String actual = search + "...) x " + num;
+          String expect = search + "...) x 2";
+          String actual = search + "...) x " + num;
 
-            boolean passed = getResults(expect, actual, "Checking that you made 2 Riddle objects");
-            assertTrue(passed);
-        }
+          boolean passed = getResults(expect, actual, "Checking that you made 2 Riddle objects");
+          assertTrue(passed);
+      }
 
-        @Test
-        public void testVariableTypes()
-        {
-            String varTypes = "String String";
-            String output = testInstanceVariableTypes(varTypes.split(" "));
+      @Test
+      public void testVariableTypes()
+      {
+          String varTypes = "String String";
+          String output = testInstanceVariableTypes(varTypes.split(" "));
 
-            boolean passed = getResults(varTypes, output, "Checking Instance Variable Type(s)");
-            assertTrue(passed);
-        }
+          boolean passed = getResults(varTypes, output, "Checking Instance Variable Type(s)");
+          assertTrue(passed);
+      }
 
-        @Test
-        public void testPrivateVariables()
-        {
-            String expect = "2 Private";
-            String output = testPrivateInstanceVariables();
+      @Test
+      public void testPrivateVariables()
+      {
+          String expect = "2 Private";
+          String output = testPrivateInstanceVariables();
 
-            boolean passed = getResults(expect, output, "Checking Private Instance Variable(s)");
-            assertTrue(passed);
-        }
+          boolean passed = getResults(expect, output, "Checking Private Instance Variable(s)");
+          assertTrue(passed);
+      }
 
+      @Test
+      public void testMain()
+      {
+          String output = getMethodOutput("main");
 
-        @Test
-        public void testMain()
-        {
-            String output = getMethodOutput("main");
+          String expect = "2+ line(s) of text";
+          String actual = " line(s) of text";
 
-            String expect = "2+ line(s) of text";
-            String actual = " line(s) of text";
+          int len = output.split("\n").length;
 
-            int len = output.split("\n").length;
+          if (output.length() > 0)
+          {
+              actual = len + actual;
+          }
+          else
+          {
+              actual = output.length() + actual;
+          }
+          boolean passed = len >= 2;
 
-            if (output.length() > 0) {
-                actual = len + actual;
-            } else {
-                actual = output.length() + actual;
-            }
-            boolean passed = len >= 2;
-
-            getResults(expect, actual, "Checking main method", passed);
-            assertTrue(passed);
-        }
-    }
+          getResults(expect, actual, "Checking main method", passed);
+          assertTrue(passed);
+      }
+  }
 
 |Groupwork| Design a Class for your Community
 ----------------------------------------------------------
@@ -676,24 +686,25 @@ you can do this in |community1| at the end of Unit 5.
   }
   ====
   import static org.junit.Assert.*;
+
   import org.junit.*;
+
   import java.io.*;
 
   public class RunestoneTests extends CodeTestHelper
   {
-        @Test
-        public void testPrivateVariables()
-        {
-            String expect = "3 Private";
-            String output = testPrivateInstanceVariables();
-            boolean passed = false;
-            if (Integer.parseInt(expect.substring(0,1)) <= Integer.parseInt(output.substring(0,1)))
-               passed = true;
-            passed = getResults(expect, output, "Checking private instance variable(s)", passed);
-            assertTrue(passed);
-        }
-    }
-
+      @Test
+      public void testPrivateVariables()
+      {
+          String expect = "3 Private";
+          String output = testPrivateInstanceVariables();
+          boolean passed = false;
+          if (Integer.parseInt(expect.substring(0, 1)) <= Integer.parseInt(output.substring(0, 1)))
+              passed = true;
+          passed = getResults(expect, output, "Checking private instance variable(s)", passed);
+          assertTrue(passed);
+      }
+  }
 
 Summary
 ----------
@@ -735,7 +746,7 @@ AP Practice
 
             public class Cat
             {
-              /* missing code */
+                /* missing code */
             }
 
         Which of the following replacements for /* missing code \*/ is the most appropriate
@@ -795,7 +806,7 @@ AP Practice
 
         public class Party
         {
-          /* missing code */
+            /* missing code */
         }
 
     Which of the following replacements for /* missing code \*/ is the most appropriate

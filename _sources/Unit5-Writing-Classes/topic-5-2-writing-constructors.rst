@@ -236,45 +236,45 @@ values themselves.
    ~~~~
    public class Fraction
    {
-      //  instance variables
-      private int numerator;
-      private int denominator;
+       //  instance variables
+       private int numerator;
+       private int denominator;
 
-      // constructor: set instance variables to default values
-      public Fraction()
-      {
-         numerator = 1;
-         denominator = 1;
-      }
+       // constructor: set instance variables to default values
+       public Fraction()
+       {
+           numerator = 1;
+           denominator = 1;
+       }
 
-      // constructor: set instance variables to init parameters
-      public Fraction(int initNumerator, int initDenominator)
-      {
-         numerator = initNumerator;
-         denominator = initDenominator;
-      }
+       // constructor: set instance variables to init parameters
+       public Fraction(int initNumerator, int initDenominator)
+       {
+           numerator = initNumerator;
+           denominator = initDenominator;
+       }
 
-      // Print fraction
-      public void print()
-      {
-        System.out.println(numerator + "/" + denominator);
-      }
+       // Print fraction
+       public void print()
+       {
+           System.out.println(numerator + "/" + denominator);
+       }
 
-      // main method for testing
-      public static void main(String[] args)
-      {
-         Fraction f1 = new Fraction();
-         Fraction f2 = new Fraction(1,2);
-         // What will these print out?
-         f1.print();
-         f2.print();
-      }
+       // main method for testing
+       public static void main(String[] args)
+       {
+           Fraction f1 = new Fraction();
+           Fraction f2 = new Fraction(1, 2);
+           // What will these print out?
+           f1.print();
+           f2.print();
+       }
    }
+
    ====
    // Test Code for Lesson 5.2.0.1 - Fraction
    import static org.junit.Assert.*;
-   import org.junit.After;
-   import org.junit.Before;
+
    import org.junit.Test;
 
    import java.io.*;
@@ -290,7 +290,6 @@ values themselves.
            boolean passed = getResults(expect, output, "Running main", true);
            assertTrue(passed);
        }
-
    }
 
 |CodingEx| **Coding Exercise**
@@ -345,8 +344,7 @@ values themselves.
    ====
    // Test Code for Lesson 5.2.0 - Car
    import static org.junit.Assert.*;
-   import org.junit.After;
-   import org.junit.Before;
+
    import org.junit.Test;
 
    import java.io.*;
@@ -362,7 +360,6 @@ values themselves.
            boolean passed = getResults(expect, output, "Running main");
            assertTrue(passed);
        }
-
    }
 
 Advanced AP Topic: Reference parameters 
@@ -385,18 +382,21 @@ the original object as shown below.
 
      public class Person
      {
-       private String name;
-       private Address addr; //Assumes an Address class is already defined
+         private String name;
+         private Address addr; // Assumes an Address class is already defined
 
-       // constructor: initialize instance variable and call Address constructor to make a copy
-       public Person(String initName, Address initAddr)
-       {
-          name = initName;
-          addr = new Address(initAddr.getStreet(),
-                     initAddr.getCity(), initAddr.getState());
-       }
-      }
-
+         // constructor: initialize instance variable and call Address constructor to
+         // make a copy
+         public Person(String initName, Address initAddr)
+         {
+             name = initName;
+             addr =
+                     new Address(
+                             initAddr.getStreet(),
+                             initAddr.getCity(),
+                             initAddr.getState());
+         }
+     }
 
 |Groupwork| Programming Challenge : Student Class
 --------------------------------------------------
@@ -417,55 +417,51 @@ We encourage you to work in pairs for this challenge to create a Student class w
 
   Create a class Student with 4 instance variables, a constructor, and a print method. Write a main method that creates 2 Student objects with the constructor and calls their print() method.
   ~~~~
-  /** class Student
-   * with 4 instance variables,
-   * a constructor, a print method,
-   * and a main method to test them.
+  /**
+   * class Student with 4 instance variables, a constructor, a print method, and a
+   * main method to test them.
    */
-   public class Student
-   {
-       // Write 4 instance variables
+  public class Student
+  {
+      // Write 4 instance variables
 
+      // Write a constructor with 4 parameters to initialize all of the instance
+      // variables
 
-       // Write a constructor with 4 parameters to initialize all of the instance variables
-
-
-       // Write a print method that prints all the instance variables
-       public void print()
-       {
-
-
-       }
+      // Write a print method that prints all the instance variables
+      public void print() {}
 
       // main method
       public static void main(String[] args)
       {
-         // Construct 2 Student objects using the constructor with different values
+          // Construct 2 Student objects using the constructor with different values
 
-
-         // call their print() methods
+          // call their print() methods
 
       }
-   }
+  }
+
    ====
     // Test Code for Lesson 5.2.1 - Challenge - Student
     import static org.junit.Assert.*;
-    import org.junit.After;
-    import org.junit.Before;
+
     import org.junit.Test;
 
     import java.io.*;
 
-    public class RunestoneTests extends CodeTestHelper {
-        public RunestoneTests() {
+    public class RunestoneTests extends CodeTestHelper
+    {
+        public RunestoneTests()
+        {
             super("Student");
 
-            Object[] values = new Object[] { "Name", 0 };
+            Object[] values = new Object[] {"Name", 0};
             setDefaultValues(values);
         }
 
         @Test
-        public void testCallConstructors() {
+        public void testCallConstructors()
+        {
             String code = getCodeWithoutComments();
             String search = "= new Student(";
 
@@ -479,7 +475,8 @@ We encourage you to work in pairs for this challenge to create a Student class w
         }
 
         @Test
-        public void testConstructors() {
+        public void testConstructors()
+        {
             String code = getCodeWithoutComments();
             String search = "public Student(";
 
@@ -493,7 +490,8 @@ We encourage you to work in pairs for this challenge to create a Student class w
         }
 
         @Test
-        public void testPrint() {
+        public void testPrint()
+        {
             String code = getCodeWithoutComments();
             String search = ".print()";
 
@@ -507,14 +505,14 @@ We encourage you to work in pairs for this challenge to create a Student class w
         }
 
         @Test
-        public void testPrivateVariables() {
+        public void testPrivateVariables()
+        {
             String expect = "4 Private";
             String output = testPrivateInstanceVariables();
 
             boolean passed = getResults(expect, output, "Checking for 4 Private Instance Variable(s)");
             assertTrue(passed);
         }
-
     }
 
 |Groupwork| Design a Class for your Community
@@ -562,78 +560,88 @@ In the last lesson, you came up with a class of your own choice relevant to you 
   }
   ====
   import static org.junit.Assert.*;
+
   import org.junit.*;
+
   import java.io.*;
 
   public class RunestoneTests extends CodeTestHelper
   {
-        @Test
-        public void testPrivateVariables()
-        {
-            String expect = "3 Private";
-            String output = testPrivateInstanceVariables();
-            boolean passed = false;
-            if (Integer.parseInt(expect.substring(0,1)) <= Integer.parseInt(output.substring(0,1)))
-               passed = true;
-            passed = getResults(expect, output, "Checking private instance variable(s)", passed);
-            assertTrue(passed);
-        }
-        /* No longer required
-        @Test
-        public void testDefaultConstructor()
-        {
-            String output = checkDefaultConstructor();
-            String expect = "pass";
+      @Test
+      public void testPrivateVariables()
+      {
+          String expect = "3 Private";
+          String output = testPrivateInstanceVariables();
+          boolean passed = false;
+          if (Integer.parseInt(expect.substring(0, 1)) <= Integer.parseInt(output.substring(0, 1)))
+              passed = true;
+          passed = getResults(expect, output, "Checking private instance variable(s)", passed);
+          assertTrue(passed);
+      }
 
-            boolean passed = getResults(expect, output, "Checking default constructor");
-            assertTrue(passed);
-        }
-        */
+      /* No longer required
+      @Test
+      public void testDefaultConstructor()
+      {
+          String output = checkDefaultConstructor();
+          String expect = "pass";
 
-        @Test
-        public void testConstructor3()
-        {
-            String output = checkConstructor(3);
-            String expect = "pass";
+          boolean passed = getResults(expect, output, "Checking default constructor");
+          assertTrue(passed);
+      }
+      */
 
-            boolean passed = getResults(expect, output, "Checking constructor with 3 parameters");
-            assertTrue(passed);
-        }
-        @Test
-        public void testPrint()
-        {
-            String output = getMethodOutput("print");
-            String expect = "More than 15 characters";
-            String actual = " than 15 characters";
+      @Test
+      public void testConstructor3()
+      {
+          String output = checkConstructor(3);
+          String expect = "pass";
 
-            if (output.length() < 15) {
-                actual = "Less" + actual;
-            } else {
-                actual = "More" + actual;
-            }
-            boolean passed = getResults(expect, actual, "Checking print method");
-            assertTrue(passed);
-        }
+          boolean passed = getResults(expect, output, "Checking constructor with 3 parameters");
+          assertTrue(passed);
+      }
 
-        @Test
-        public void testMain() throws IOException
-        {
-            String output = getMethodOutput("main");//.split("\n");
-            String expect = "3+ line(s) of text";
-            String actual = " line(s) of text";
-            int len = output.split("\n").length;
+      @Test
+      public void testPrint()
+      {
+          String output = getMethodOutput("print");
+          String expect = "More than 15 characters";
+          String actual = " than 15 characters";
 
-            if (output.length() > 0) {
-                actual = len + actual;
-            } else {
-                actual = output.length() + actual;
-            }
-            boolean passed = len >= 3;
+          if (output.length() < 15)
+          {
+              actual = "Less" + actual;
+          }
+          else
+          {
+              actual = "More" + actual;
+          }
+          boolean passed = getResults(expect, actual, "Checking print method");
+          assertTrue(passed);
+      }
 
-            getResults(expect, actual, "Checking output", passed);
-            assertTrue(passed);
-        }
-    }
+      @Test
+      public void testMain() throws IOException
+      {
+          String output = getMethodOutput("main"); // .split("\n");
+          String expect = "3+ line(s) of text";
+          String actual = " line(s) of text";
+          int len = output.split("\n").length;
+
+          if (output.length() > 0)
+          {
+              actual = len + actual;
+          }
+          else
+          {
+              actual = output.length() + actual;
+          }
+          boolean passed = len >= 3;
+
+          getResults(expect, actual, "Checking output", passed);
+          assertTrue(passed);
+      }
+  }
 
 Summary
 --------

@@ -71,15 +71,15 @@ Here are some examples of how to write a setter for an instance variable:
 
 .. code-block:: java
 
-     class ExampleTemplate 
+     class ExampleTemplate
      {
-         //Instance variable declaration
+         // Instance variable declaration
          private typeOfVar varName;
 
          // Setter method template
          public void setVarName(typeOfVar newValue)
          {
-            varName = newValue;
+             varName = newValue;
          }
      }
 
@@ -87,25 +87,28 @@ Here's an example of the ``Student`` class with a setter for the ``name`` variab
 
 .. code-block:: java
 
-  class Student 
+  class Student
   {
-     //Instance variable name
-     private String name;
+      // Instance variable name
+      private String name;
 
-     /** setName sets name to newName
-      *  @param newName                */
-     public void setName(String newName)
-     {
-        name = newName;
-     }
+      /**
+       * setName sets name to newName
+       *
+       * @param newName
+       */
+      public void setName(String newName)
+      {
+          name = newName;
+      }
 
-     public static void main(String[] args)
-     {
-        // To call a set method, use objectName.setVar(newValue)
-        Student s = new Student();
-        s.setName("Ayanna");
-     }
-    }
+      public static void main(String[] args)
+      {
+          // To call a set method, use objectName.setVar(newValue)
+          Student s = new Student();
+          s.setName("Ayanna");
+      }
+  }
 
 Notice the difference between setters and getters in the following figure.
 Getters return an instance variable's value and have the same return type as
@@ -149,7 +152,7 @@ in the ```Student`` class. Change the ``main`` method so that it uses a
            // Main doesn't have access to email, use set method!
            s1.email = "skyler2@gmail.com";
            System.out.println(s1);
-        }
+       }
    }
 
    class Student
@@ -160,9 +163,9 @@ in the ```Student`` class. Change the ``main`` method so that it uses a
 
        public Student(String initName, String initEmail, int initId)
        {
-          name = initName;
-          email = initEmail;
-          id = initId;
+           name = initName;
+           email = initEmail;
+           id = initId;
        }
 
        // Setters
@@ -199,9 +202,12 @@ in the ```Student`` class. Change the ``main`` method so that it uses a
            return id + ": " + name + ", " + email;
        }
    }
+
    ====
    import static org.junit.Assert.*;
+
    import org.junit.*;
+
    import java.io.*;
 
    // activeCode StudentObjExample2
@@ -243,7 +249,7 @@ in the ```Student`` class. Change the ``main`` method so that it uses a
 
         public class Party
         {
-            //number of people at the party
+            // number of people at the party
             private int numOfPeople;
 
             /* Missing header of set method */
@@ -315,139 +321,144 @@ Mutator methods do not have to have a name with "set" in it, although most do. T
 
   ~~~~
   /**
-      Pet class (complete comments)
-      @author
-      @since
-
-  */
+   * Pet class (complete comments)
+   *
+   * @author
+   * @since
+   */
   class Pet
   {
-     // complete class definition with set methods
+      // complete class definition with set methods
 
   }
 
   public class TesterClass
   {
-     // main method for testing
-     public static void main(String[] args)
-     {
-        // Create 2 Pet objects and test all your set methods
+      // main method for testing
+      public static void main(String[] args)
+      {
+          // Create 2 Pet objects and test all your set methods
 
-     }
-   }
+      }
+  }
+
    ====
    import static org.junit.Assert.*;
-    import org.junit.*;
-    import java.io.*;
 
-    // activecode challenge-5-5-Pet-Class
-    public class RunestoneTests extends CodeTestHelper
-    {
-        public RunestoneTests()
-        {
-            super("TesterClass");
-        }
+   import org.junit.*;
 
-        @Test
-        public void testConstructors()
-        {
+   import java.io.*;
+
+   // activecode challenge-5-5-Pet-Class
+   public class RunestoneTests extends CodeTestHelper
+   {
+       public RunestoneTests()
+       {
+           super("TesterClass");
+       }
+
+       @Test
+       public void testConstructors()
+       {
            changeClass("Pet");
-            int count = 0;
+           int count = 0;
 
-            for (int i = 0; i < 6; i++) {
-                if (checkConstructor(i).equals("pass"))
-                    count++;
-            }
+           for (int i = 0; i < 6; i++)
+           {
+               if (checkConstructor(i).equals("pass")) count++;
+           }
 
-            boolean passed = count >= 1;
+           boolean passed = count >= 1;
 
-            getResults("2+", ""+count, "Checking for constructor", passed);
-            assertTrue(passed);
-        }
+           getResults("2+", "" + count, "Checking for constructor", passed);
+           assertTrue(passed);
+       }
 
-        @Test
-        public void testPrivateVariables()
-        {
-            changeClass("Pet");
-            String expect = "5 Private";
-            String output = testPrivateInstanceVariables();
+       @Test
+       public void testPrivateVariables()
+       {
+           changeClass("Pet");
+           String expect = "5 Private";
+           String output = testPrivateInstanceVariables();
 
-            boolean passed = getResults(expect, output, "Checking Private Instance Variables");
-            assertTrue(passed);
-        }
+           boolean passed = getResults(expect, output, "Checking Private Instance Variables");
+           assertTrue(passed);
+       }
 
-        @Test
-        public void test1()
-        {
-            String code = getCode();
-            String target = "public * get*()";
+       @Test
+       public void test1()
+       {
+           String code = getCode();
+           String target = "public * get*()";
 
-            int num = countOccurencesRegex(code, target);
+           int num = countOccurencesRegex(code, target);
 
-            boolean passed = num >= 5;
+           boolean passed = num >= 5;
 
-            getResults("5", ""+num, "Checking accessor (get) methods for each variable", passed);
-            assertTrue(passed);
-        }
+           getResults("5", "" + num, "Checking accessor (get) methods for each variable", passed);
+           assertTrue(passed);
+       }
 
-        @Test
-        public void test2()
-        {
-            String code = getCode();
-            String target = "public void set*(*)";
+       @Test
+       public void test2()
+       {
+           String code = getCode();
+           String target = "public void set*(*)";
 
-            int num = countOccurencesRegex(code, target);
+           int num = countOccurencesRegex(code, target);
 
-            boolean passed = num >= 5;
+           boolean passed = num >= 5;
 
-            getResults("5", ""+num, "Checking mutator (set) methods for each variable", passed);
-            assertTrue(passed);
-        }
+           getResults("5", "" + num, "Checking mutator (set) methods for each variable", passed);
+           assertTrue(passed);
+       }
 
-        @Test
-        public void test3()
-        {
-            String target = "public String toString()";
-            boolean passed = checkCodeContains("toString() method", target);
-            assertTrue(passed);
-        }
+       @Test
+       public void test3()
+       {
+           String target = "public String toString()";
+           boolean passed = checkCodeContains("toString() method", target);
+           assertTrue(passed);
+       }
 
-        @Test
-        public void test4()
-        {
-            String code = getCode();
-            String target = "Pet * = new Pet(";
+       @Test
+       public void test4()
+       {
+           String code = getCode();
+           String target = "Pet * = new Pet(";
 
-            int num = countOccurencesRegex(code, target);
+           int num = countOccurencesRegex(code, target);
 
-            boolean passed = num >= 2;
+           boolean passed = num >= 2;
 
-            getResults("2", ""+num, "Checking main method creates 2 Pet objects", passed);
-            assertTrue(passed);
-        }
+           getResults("2", "" + num, "Checking main method creates 2 Pet objects", passed);
+           assertTrue(passed);
+       }
 
+       @Test
+       public void testMain()
+       {
+           String output = getMethodOutput("main");
 
-        @Test
-        public void testMain()
-        {
-            String output = getMethodOutput("main");
+           String expect = "3+ line(s) of text";
+           String actual = " line(s) of text";
 
-            String expect = "3+ line(s) of text";
-            String actual = " line(s) of text";
+           int len = output.split("\n").length;
 
-            int len = output.split("\n").length;
+           if (output.length() > 0)
+           {
+               actual = len + actual;
+           }
+           else
+           {
+               actual = output.length() + actual;
+           }
+           boolean passed = len >= 3;
 
-            if (output.length() > 0) {
-                actual = len + actual;
-            } else {
-                actual = output.length() + actual;
-            }
-            boolean passed = len >= 3;
-
-            getResults(expect, actual, "Checking main method prints info for 3 Pet objects", passed);
-            assertTrue(passed);
-        }
-    }
+           getResults(expect, actual, "Checking main method prints info for 3 Pet objects", passed);
+           assertTrue(passed);
+       }
+   }
 
 Summary
 --------
@@ -534,7 +545,7 @@ AP Practice
             }
 
             public int addPeople(int additionalPeople) // Line 10
-            {
+                    {
                 numOfPeople += additionalPeople; // Line 12
             }
         }

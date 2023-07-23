@@ -150,36 +150,43 @@ Try to break the preconditions of the Turtle constructor below. Does the Turtle 
 
     Try to break the preconditions about the range of the values of x and y in the Turtle constructor below.
     ~~~~
-    import java.util.*;
     import java.awt.*;
+    import java.util.*;
 
     public class TurtlePreconditions
     {
-      public static void main(String[] args)
-      {
-          World world = new World(300,300);
-          // Change 0,0 to other values outside of 0-300 to break the preconditions and see what happens
-          Turtle t = new Turtle(0,0,world);
-          t.turnRight();
-          world.show(true);
-      }
+        public static void main(String[] args)
+        {
+            World world = new World(300, 300);
+            // Change 0, 0 in the Turtle constructor to other values 
+            // outside of 0-300 to break the preconditions 
+            // and see what happens
+            Turtle t = new Turtle(0, 0, world);
+            t.turnRight();
+            world.show(true);
+        }
     }
+
     ====
     import static org.junit.Assert.*;
-    import org.junit.*;;
+
+    import org.junit.*;
+
     import java.io.*;
 
     public class RunestoneTests extends CodeTestHelper
     {
-        public RunestoneTests() {
+        public RunestoneTests()
+        {
             super("TurtlePreconditions");
         }
 
         @Test
         public void test1()
         {
-            String orig = "import java.util.*;\nimport java.awt.*;\n\npublic class TurtlePreconditions\n{\n  public static void main(String[] args)\n  {\n      World world = new World(300,300);\n      // Change 0,0 to other values outside of 0-300 to break the preconditions and see what happens\n      Turtle t = new Turtle(0,0,world);\n      t.turnRight();\n      world.show(true);\n  }\n}";
-            boolean passed = codeChanged(orig);
+            String code = getCode();
+            boolean passed = !(code.contains("new Turtle(0, 0"));
+            passed = getResults("true", "" + passed, "Change (0, 0) to try to break preconditions", passed);
             assertTrue(passed);
         }
     }
@@ -236,21 +243,25 @@ Let's consider the substring method in Java. This method has a strong preconditi
     ~~~~
     public class SubstringPreconditions
     {
-      public static void main(String[] args)
-      {
-          String str = "hello";
-          System.out.println( str.substring(-1,10) );
-      }
+        public static void main(String[] args)
+        {
+            String str = "hello";
+            System.out.println(str.substring(-1, 10));
+        }
     }
+
     ====
     // Test for Lesson 5.3.2 Substring-preconditions
     import static org.junit.Assert.*;
+
     import org.junit.*;
+
     import java.io.*;
 
     public class RunestoneTests extends CodeTestHelper
     {
-        public RunestoneTests() {
+        public RunestoneTests()
+        {
             super("SubstringPreconditions");
         }
 
@@ -392,7 +403,7 @@ Here is a simple class called User that could be used in an online store. Add go
         public User()
         {
             username = "guest";
-            password = "guest" + (int)(Math.random()*1000);
+            password = "guest" + (int) (Math.random() * 1000);
         }
 
         public User(String nameInit, String pwordInit)
@@ -415,14 +426,14 @@ Here is a simple class called User that could be used in an online store. Add go
             u2.welcome();
         }
     }
+
     ====
     // Test for 5.3.5 Comments
     import static org.junit.Assert.*;
-    import org.junit.*;;
-    import java.io.*;
 
-    import java.nio.file.Files;
-    import java.nio.file.Paths;
+    import org.junit.*;
+
+    import java.io.*;
 
     public class RunestoneTests extends CodeTestHelper
     {
@@ -438,14 +449,15 @@ Here is a simple class called User that could be used in an online store. Add go
         }
 
         @Test
-        public void testClassComment() {
+        public void testClassComment()
+        {
             program = getCodeWithComments();
 
             int index = program.indexOf("public class User");
 
-            String beginning = program.substring(0, index-1).trim();
+            String beginning = program.substring(0, index - 1).trim();
             String expected = "A comment starting with // or /* and not // comments?";
-            //System.out.println(beginning);
+            // System.out.println(beginning);
 
             boolean pass = !beginning.startsWith("// comments") && isComment(beginning);
 
@@ -454,7 +466,8 @@ Here is a simple class called User that could be used in an online store. Add go
         }
 
         @Test
-        public void testVariablesComment() {
+        public void testVariablesComment()
+        {
             program = getCodeWithComments();
 
             int start = program.indexOf("{") + 1;
@@ -462,14 +475,15 @@ Here is a simple class called User that could be used in an online store. Add go
 
             String comment = program.substring(start, end).trim();
             String expected = "A comment starting with // or /*";
-            //System.out.println(beginning);
+            // System.out.println(beginning);
 
             boolean passed = getResults(expected, comment, "Variable comment", isComment(comment));
             assertTrue(passed);
         }
 
         @Test
-        public void testDefaultConstructorComment() {
+        public void testDefaultConstructorComment()
+        {
             program = getCodeWithComments();
 
             int start = program.indexOf("password;") + "password;".length() + 1;
@@ -477,14 +491,16 @@ Here is a simple class called User that could be used in an online store. Add go
 
             String comment = program.substring(start, end).trim();
             String expected = "A comment starting with // or /*";
-            //System.out.println(beginning);
+            // System.out.println(beginning);
 
-            boolean passed = getResults(expected, comment, "Default constructor comment", isComment(comment));
+            boolean passed =
+                    getResults(expected, comment, "Default constructor comment", isComment(comment));
             assertTrue(passed);
         }
 
         @Test
-        public void testConstructorComment() {
+        public void testConstructorComment()
+        {
             program = getCodeWithComments();
 
             int start = program.indexOf("*1000);");
@@ -493,14 +509,15 @@ Here is a simple class called User that could be used in an online store. Add go
 
             String comment = program.substring(start, end).trim();
             String expected = "A comment starting with // or /*";
-            //System.out.println(beginning);
+            // System.out.println(beginning);
 
             boolean passed = getResults(expected, comment, "Constructor comment", isComment(comment));
             assertTrue(passed);
         }
 
         @Test
-        public void testWelcomeComment() {
+        public void testWelcomeComment()
+        {
             program = getCodeWithComments();
 
             int start = program.indexOf("password = pwordInit;");
@@ -509,14 +526,16 @@ Here is a simple class called User that could be used in an online store. Add go
 
             String comment = program.substring(start, end).trim();
             String expected = "A comment starting with // or /*";
-            //System.out.println(beginning);
+            // System.out.println(beginning);
 
-            boolean passed = getResults(expected, comment, "Welcome method comment", isComment(comment));
+            boolean passed =
+                    getResults(expected, comment, "Welcome method comment", isComment(comment));
             assertTrue(passed);
         }
 
         @Test
-        public void testMainComment() {
+        public void testMainComment()
+        {
             program = getCodeWithComments();
 
             int start = program.indexOf("username + \"!\");");
@@ -525,19 +544,17 @@ Here is a simple class called User that could be used in an online store. Add go
 
             String comment = program.substring(start, end).trim();
             String expected = "A comment starting with // or /*";
-            //System.out.println(beginning);
+            // System.out.println(beginning);
 
             boolean passed = getResults(expected, comment, "Main method comment", isComment(comment));
             assertTrue(passed);
         }
 
-        private boolean isComment(String block) {
-            if (!block.contains("\n") && block.startsWith("//"))
-                return true;
-            if (block.startsWith("/*") && block.endsWith("*/"))
-                return true;
+        private boolean isComment(String block)
+        {
+            if (!block.contains("\n") && block.startsWith("//")) return true;
+            if (block.startsWith("/*") && block.endsWith("*/")) return true;
             return false;
-
         }
     }
 
