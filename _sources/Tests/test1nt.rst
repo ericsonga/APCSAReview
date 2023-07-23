@@ -501,26 +501,26 @@ The following problems are similar to what you might see on the AP CSA exam.  Pl
       public class B
       {
 
-         public int myValue;
+          public int myValue;
 
-         public B()
-         {
-            myValue = 0;
-         }
+          public B()
+          {
+              myValue = 0;
+          }
 
-         public B(int x)
-         {
-            myValue = x;
-         }
+          public B(int x)
+          {
+              myValue = x;
+          }
       }
 
       public class C extends B
       {
 
-         public C()
-         {
-            super(0);
-         }
+          public C()
+          {
+              super(0);
+          }
       }
 
 .. mchoice:: qtnt1_18
