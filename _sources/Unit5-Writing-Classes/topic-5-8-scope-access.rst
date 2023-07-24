@@ -70,16 +70,17 @@ The image below shows these 3 levels of scope.
     :iscode:
     :feedback: Remember that the instance variables declared at the top of the class have Class Scope.
 
-    :click-incorrect:public class Name {:endclick:
-
+    :click-incorrect:public class Name:endclick:
+    :click-incorrect:{:endclick:
         :click-correct:private String first;:endclick:
         :click-correct:public String last;:endclick:
 
-        :click-incorrect:public Name(String theFirst, String theLast) {:endclick:
+        :click-incorrect:public Name(String theFirst, String theLast):endclick:
+        :click-incorrect:{:endclick:
             :click-incorrect:String firstName = theFirst;:endclick:
             :click-incorrect:first = firstName;:endclick:
             :click-incorrect:last = theLast;:endclick:
-         :click-incorrect:}:endclick:
+        :click-incorrect:}:endclick:
     :click-incorrect:}:endclick:
 
 .. clickablearea:: name_method_scope
@@ -87,16 +88,17 @@ The image below shows these 3 levels of scope.
     :iscode:
     :feedback: Remember that the parameter variables and the local variables declared inside a method have Method Level Scope.
 
-    :click-incorrect:public class Name {:endclick:
-
+    :click-incorrect:public class Name:endclick:
+    :click-incorrect:{:endclick:
         :click-incorrect:private String first;:endclick:
         :click-incorrect:public String last;:endclick:
 
-        :click-correct:public Name(String theFirst, String theLast) {:endclick:
+        :click-correct:public Name(String theFirst, String theLast):endclick:
+        :click-incorrect:{:endclick:
             :click-correct:String firstName = theFirst;:endclick:
             :click-incorrect:first = firstName;:endclick:
             :click-incorrect:last = theLast;:endclick:
-         :click-incorrect:}:endclick:
+        :click-incorrect:}:endclick:
     :click-incorrect:}:endclick:
 
 **Local variables** are variables that are declared inside a method, usually at the top of the method. These variables can only be used within the method and do not exist outside of the method. Parameter variables are also considered local variables that only exist for that method. It's good practice to declare any variables that are used by just one method as local variables in that method.
