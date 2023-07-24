@@ -552,7 +552,10 @@ the next step:
     * interest rate instance variable and write a constructor and a toString
     * method.
     */
-   class SavingsAccount {}
+   class SavingsAccount 
+   {
+   
+   }
 
    ====
    import static org.junit.Assert.*;

@@ -263,9 +263,13 @@ The ``Customer`` class below keeps track of the names and addresses of customers
    // constructor,
    // and an overridden toString() method that calls the super toString() method
    //  and then prints "\nEmail:" and the email variable.
-   class OnlineCustomer {}
+   
+   class OnlineCustomer 
+   {
+   
+   }
 
-    ====
+   ====
     import static org.junit.Assert.*;
 
     import org.junit.*;

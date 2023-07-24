@@ -228,13 +228,25 @@ Working in pairs or groups, design an online store with classes for Store, ItemF
 
   Declare at least 2 instance variables for each of the classes below. Create an inheritance or association relationship for some of them.
   ~~~~
-  class ItemForSale {}
+  class ItemForSale 
+  {
+  
+  }
 
-  class Movie {}
+  class Movie 
+  {
+  
+  }
 
-  class Book {}
+  class Book 
+  {
+  
+  }
 
-  class Author {}
+  class Author 
+  {
+  
+  }
 
   public class Store
   {

@@ -571,11 +571,15 @@ The following Pet class keeps track of a pet's name and type and has a construct
    }
 
    // Complete the Dog class
-   class Dog {}
+   class Dog 
+   {
+   
+   }
 
-       // Add a Cat class
+   // Add a Cat class
 
-    ====
+
+   ====
     import static org.junit.Assert.*;
 
     import org.junit.*;
