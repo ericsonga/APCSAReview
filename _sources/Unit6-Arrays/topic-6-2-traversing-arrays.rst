@@ -308,7 +308,7 @@ The following code demonstrates a loop that changes the values in an array. In t
 
    The following method has the correct code to subtract amt from all the values in the array values, but the code is mixed up.  Drag the blocks from the left into the correct order on the right. You will be told if any of the blocks are in the wrong order.
    -----
-   public static void subAll(int[] values, int amt)
+   public void subAll(int[] values, int amt)
    {
    =====
         for (int i = 0;
@@ -353,12 +353,14 @@ You don't have to loop through an array from the front to the back.  You can loo
        /**
         * @return index of the last number smaller than target
         */
-       public static int getIndexOfLastElementSmallerThanTarget(
-               int[] values, int target)
-               {
+       public static int getIndexOfLastElementSmallerThanTarget(int[] values, int target)
+       {
            for (int index = values.length - 1; index >= 0; index--)
            {
-               if (values[index] < target) return index;
+               if (values[index] < target) 
+               {
+                  return index;
+               }
            }
            return -1;
        }
