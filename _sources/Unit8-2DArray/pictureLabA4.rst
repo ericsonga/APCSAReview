@@ -276,7 +276,7 @@ this in IntArrayWorkerTester.
         public static void testGetCount()
         {
             IntArrayWorker worker = new IntArrayWorker();
-            worker.setMatrix(new int[][] {{1, 2, 1}, {2, 1, 0}});
+            worker.setMatrix(new int[][] { {1, 2, 1}, {2, 1, 0}});
             int count = worker.getCount(1);
             System.out.println("Count should be 3 and count is " + count);
         }
@@ -325,7 +325,7 @@ this in IntArrayWorkerTester.
         public void test2()
         {
             IntArrayWorker worker = new IntArrayWorker();
-            worker.setMatrix(new int[][] {{1, 4, 8}, {8, 8, 8}});
+            worker.setMatrix(new int[][] { {1, 4, 8}, {8, 8, 8}});
             int count = worker.getCount(8);
             int expectedCount = 4;
 
@@ -382,19 +382,19 @@ in the matrix. There is already a method to test this in IntArrayWorkerTester.
         {
             // test when largest is last
             IntArrayWorker worker = new IntArrayWorker();
-            int[][] nums2 = {{1, 2, 3}, {4, 5, 6}};
+            int[][] nums2 = { {1, 2, 3}, {4, 5, 6}};
             worker.setMatrix(nums2);
             int largest = worker.getLargest();
             System.out.println(
                     "When largest is last, it should be 6 and is " + largest);
             // test when largest is first
-            int[][] nums3 = {{6, 2, 3}, {4, 5, 1}};
+            int[][] nums3 = { {6, 2, 3}, {4, 5, 1}};
             worker.setMatrix(nums3);
             largest = worker.getLargest();
             System.out.println(
                     "When largest is first, it should be 6 and is " + largest);
             // test when largest is in the middle
-            int[][] nums4 = {{1, 2, 3}, {6, 5, 1}};
+            int[][] nums4 = { {1, 2, 3}, {6, 5, 1}};
             worker.setMatrix(nums4);
             largest = worker.getLargest();
             System.out.println(
@@ -448,7 +448,7 @@ in the matrix. There is already a method to test this in IntArrayWorkerTester.
         public void test2()
         {
             IntArrayWorker worker = new IntArrayWorker();
-            worker.setMatrix(new int[][] {{1, 4, 8}, {6, 9, 7}});
+            worker.setMatrix(new int[][] { {1, 4, 8}, {6, 9, 7}});
             int output = worker.getLargest();
             int expect = 9;
 
@@ -515,7 +515,7 @@ IntArrayWorkerTester.
         public static void testGetColTotal()
         {
             IntArrayWorker worker = new IntArrayWorker();
-            int[][] nums2 = {{1, 2, 3}, {4, 5, 6}};
+            int[][] nums2 = { {1, 2, 3}, {4, 5, 6}};
             worker.setMatrix(nums2);
             int total = worker.getColTotal(0);
             System.out.println("Total for column 0 should be 5 and is " + total);
@@ -562,7 +562,7 @@ IntArrayWorkerTester.
         public void test2()
         {
             IntArrayWorker worker = new IntArrayWorker();
-            worker.setMatrix(new int[][] {{1, 1, 1}, {0, 1, 2}});
+            worker.setMatrix(new int[][] { {1, 1, 1}, {0, 1, 2}});
             int count = worker.getColTotal(1);
             int expectedCount = 2;
 

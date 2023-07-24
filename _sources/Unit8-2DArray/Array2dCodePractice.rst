@@ -202,7 +202,7 @@ Code Practice with 2D Arrays
               {
                   public static void main(String[] args)
                   {
-                      int[][] arr = {{47, 3, 12}, {51, 74, 20}};
+                      int[][] arr = { {47, 3, 12}, {51, 74, 20}};
 
                       // ADD CODE HERE //
 
@@ -256,7 +256,7 @@ Code Practice with 2D Arrays
               {
                   public static void main(String[] args)
                   {
-                      int[][] arr = {{47, 3, 12}, {51, 74, 20}};
+                      int[][] arr = { {47, 3, 12}, {51, 74, 20}};
 
                       // Prints 47, 51, 20 in that order
                       System.out.println(arr[0][0]);
@@ -286,7 +286,7 @@ Code Practice with 2D Arrays
               {
                   public static void main(String[] args)
                   {
-                      int[][] arr = {{10, 39, 8}, {3}, {35, 87}, {22}, {34}};
+                      int[][] arr = { {10, 39, 8}, {3}, {35, 87}, {22}, {34}};
 
                       // ADD CODE HERE //
 
@@ -357,7 +357,7 @@ Code Practice with 2D Arrays
               {
                   public static void main(String[] args)
                   {
-                      int[][] arr = {{10, 39, 8}, {3}, {35, 87}, {22}, {34}};
+                      int[][] arr = { {10, 39, 8}, {3}, {35, 87}, {22}, {34}};
 
                       // Prints 8, 3, 87, and 34 in order
                       System.out.println(arr[0][2]);
@@ -397,7 +397,7 @@ Code Practice with 2D Arrays
 
                   public static void main(String[] args)
                   {
-                      String[][] arr = {{"hello", "there", "world"}, {"how", "are", "you"}};
+                      String[][] arr = { {"hello", "there", "world"}, {"how", "are", "you"}};
 
                       System.out.print("Rows:");
                       // ADD CODE TO PRINT NUMBER OF ROWS HERE using arr //
@@ -457,7 +457,7 @@ Code Practice with 2D Arrays
               {
                   public static void main(String[] args)
                   {
-                      String[][] arr = {{"hello", "there", "world"}, {"how", "are", "you"}};
+                      String[][] arr = { {"hello", "there", "world"}, {"how", "are", "you"}};
 
                       System.out.print("Rows:");
                       System.out.println(arr.length);
@@ -668,7 +668,7 @@ Code Practice with 2D Arrays
               {
                   public static void main(String[] args)
                   {
-                      int[][] array = {{4, 7, 8}, {8, 8, 7}};
+                      int[][] array = { {4, 7, 8}, {8, 8, 7}};
 
                       // ADD CODE HERE
 
@@ -726,7 +726,7 @@ Code Practice with 2D Arrays
               {
                   public static void main(String[] args)
                   {
-                      int[][] array = {{4, 7, 8}, {8, 8, 7}};
+                      int[][] array = { {4, 7, 8}, {8, 8, 7}};
 
                       int count = 0;
 
@@ -763,7 +763,7 @@ Code Practice with 2D Arrays
 
                   public static void main(String[] args)
                   {
-                      int[][] table = {{1, 4, 9}, {11, 4, 3}, {2, 2, 3}};
+                      int[][] table = { {1, 4, 9}, {11, 4, 3}, {2, 2, 3}};
 
                       // ADD CODE HERE
 
@@ -810,7 +810,7 @@ Code Practice with 2D Arrays
 
                   public static void main(String[] args)
                   {
-                      int[][] table = {{1, 4, 9}, {11, 4, 3}, {2, 2, 3}};
+                      int[][] table = { {1, 4, 9}, {11, 4, 3}, {2, 2, 3}};
                       int sum = 0;
 
                       for (int col = 0; col < table[0].length; col++)
@@ -843,7 +843,7 @@ Code Practice with 2D Arrays
 
                   public static void main(String[] args)
                   {
-                      int[][] array = {{1, 2, 3}, {-1, -2, -3}, {4, 5, 6}};
+                      int[][] array = { {1, 2, 3}, {-1, -2, -3}, {4, 5, 6}};
 
                       // ADD CODE HERE
 
@@ -890,7 +890,7 @@ Code Practice with 2D Arrays
 
                   public static void main(String[] args)
                   {
-                      int[][] array = {{1, 2, 3}, {-1, -2, -3}, {4, 5, 6}};
+                      int[][] array = { {1, 2, 3}, {-1, -2, -3}, {4, 5, 6}};
                       int total = 0;
 
                       for (int row = 0; row < array.length; row++)
@@ -975,7 +975,7 @@ Code Practice with 2D Arrays
               {
                   public static void main(String[] args)
                   {
-                      int[][] numbers = {{1, 2, 3}, {4, 5, 6}};
+                      int[][] numbers = { {1, 2, 3}, {4, 5, 6}};
 
                       for (int row = 0; row < numbers.length; row++)
                       {
@@ -1060,7 +1060,7 @@ Code Practice with 2D Arrays
               {
                   public static void main(String[] args)
                   {
-                      int[][] numbers = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
+                      int[][] numbers = { {1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
                       for (int row = 0; row < numbers.length; row++)
                       {
                           for (int col = 0; col < numbers[1].length; col++)

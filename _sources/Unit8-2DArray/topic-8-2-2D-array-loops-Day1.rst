@@ -137,7 +137,7 @@ Since you can find out the number of rows and columns in a 2D array you can use 
 
        public static void main(String[] args)
        {
-           int[][] matrix = {{1, 2, 3}, {4, 5, 6}};
+           int[][] matrix = { {1, 2, 3}, {4, 5, 6}};
            System.out.println(getAverage(matrix));
        }
    }
@@ -242,7 +242,7 @@ Most nested loops with 2D Arrays use "row-major order" where the outer loop goes
    {
        public static void main(String[] args)
        {
-           int[][] array = {{1, 2, 3}, {4, 5, 6}};
+           int[][] array = { {1, 2, 3}, {4, 5, 6}};
            for (int col = 0; col < array[0].length; col++)
            {
                for (int row = 0; row < array.length; row++)

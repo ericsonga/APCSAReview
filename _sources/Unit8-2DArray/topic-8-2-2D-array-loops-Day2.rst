@@ -79,7 +79,7 @@ Since 2D arrays are really arrays of arrays you can also use a nested enhanced f
 
        public static void main(String[] args)
        {
-           int[][] theArray = {{80, 90, 70}, {20, 80, 75}};
+           int[][] theArray = { {80, 90, 70}, {20, 80, 75}};
            System.out.println(getAvg(theArray));
        }
    }
@@ -148,7 +148,7 @@ All of the array algorithms can be applied to 2D arrays too. For example, counti
 
        public static void main(String[] args)
        {
-           int[][] matrix = {{1, 2, 3}, {4, 5, 6}};
+           int[][] matrix = { {1, 2, 3}, {4, 5, 6}};
            System.out.println(getTotalForRow(0, matrix));
            System.out.println(getTotalForCol(0, matrix));
        }
@@ -180,7 +180,7 @@ All of the array algorithms can be applied to 2D arrays too. For example, counti
        @Test
        public void test2()
        {
-           int[][] array = {{1, 4, 8}, {6, 7, 9}};
+           int[][] array = { {1, 4, 8}, {6, 7, 9}};
            int value = 0;
            Object[] args = {value, array};
 
@@ -227,7 +227,7 @@ You can loop through just part of a 2D array. You can change the starting value 
 
        public static void main(String[] args)
        {
-           int[][] matrix = {{3, 2, 3}, {4, 3, 6}, {8, 9, 3}, {10, 3, 3}};
+           int[][] matrix = { {3, 2, 3}, {4, 3, 6}, {8, 9, 3}, {10, 3, 3}};
            System.out.println(countValues(3, matrix, 0, 2, 0, 2));
        }
    }
@@ -280,7 +280,7 @@ Here is a linear search algorithm where we access each row and then apply a line
 
        public static void main(String[] args)
        {
-           int[][] matrix = {{3, 2, 3}, {4, 3, 6}, {8, 9, 3}, {10, 3, 3}};
+           int[][] matrix = { {3, 2, 3}, {4, 3, 6}, {8, 9, 3}, {10, 3, 3}};
            System.out.println(search(matrix, 10));
            System.out.println(search(matrix, 11));
 
@@ -308,7 +308,7 @@ Here is a linear search algorithm where we access each row and then apply a line
        @Test
        public void test2()
        {
-           String[][] array = {{"a", "b", "c"}, {"d", "e", "f"}, {"g", "h", "i"}, {"j", "k", "l"}};
+           String[][] array = { {"a", "b", "c"}, {"d", "e", "f"}, {"g", "h", "i"}, {"j", "k", "l"}};
            String value = "b";
            Object[] args = {array, value};
 
