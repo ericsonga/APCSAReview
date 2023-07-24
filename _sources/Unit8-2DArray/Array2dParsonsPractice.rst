@@ -151,12 +151,12 @@ Try to solve each of the following. Click the *Check Me* button to check each so
            {  #distractor 
    =====
                if (nums[row][col] % 2 == 0)
-               { 
-                    nums[row][col] = 0;
+               {
+                   nums[row][col] = 0; 
                } //end if
    =====
-               if (nums[row][col] % 2 == 1) 
-               {  #distractor 
+               if (nums[row][col] % 2 == 1) #distractor 
+               {  
                    nums[row][col] = 0;
                } //end if
    =====
@@ -185,19 +185,19 @@ Try to solve each of the following. Click the *Check Me* button to check each so
        for (int i = 0; i < nums.length; i++)
        { 
             for (int j = 0; j < nums[i].length; j++)
-            { 
+            {
     =====
                if (nums[i][j] == desired)
                { 
-                    occurrences++;
-               }
-   =====
-               if (nums[i][j] != desired) 
-               {  #distractor 
                    occurrences++;
                }
    =====
-           } //end inner for loop
+               if (nums[i][j] != desired) #distractor 
+               {  
+                   occurrences++;
+               }
+   =====
+            } //end inner for loop
        } //end outer for loop
    =====
        return occurrences;
@@ -226,12 +226,11 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    =====
            for (int row = 0; row < nums.length; row++)
            { 
-                colSum += nums[row][col];
+               colSum += nums[row][col];
            } //end inner for loop
    =====
            for (int row = 0; row < nums.length; row++) 
            {  #distractor 
- 
                colSum += nums[col][row];
            } //end inner for loop
    =====
@@ -274,10 +273,9 @@ Try to solve each of the following. Click the *Check Me* button to check each so
                     odds[index][j] = nums[i][j];
                }
    =====
-               for (int j = 0; j < nums[i].length; j++) 
-               {  #distractor 
- 
-                   odds[index][j] = nums[j][i];
+               for (int j = 0; j < nums[i].length; j++) #distractor 
+               {  
+                    odds[index][j] = nums[j][i];
                }
    =====
                index++;
@@ -341,7 +339,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    { 
     =====
       int[] max = new int[nums.length];
-   =====
+    =====
       for (int i = 0; i < nums.length; i++)
       { 
     =====
@@ -351,12 +349,11 @@ Try to solve each of the following. Click the *Check Me* button to check each so
     =====
               if (maxVal < nums[i][j])
               { 
-                   maxVal = nums[i][j];
+                  maxVal = nums[i][j];
               }
    =====
-              if (maxVal > nums[i][j]) 
-              {  #distractor 
- 
+              if (maxVal > nums[i][j]) #distractor 
+              {  
                   maxVal = nums[i][j];
               }
    =====
