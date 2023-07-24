@@ -119,7 +119,7 @@ Please note that this is a difficult exam. We estimate that a score of about 50%
        :answer_b: x = 0;
        :answer_c: if (x < 0) x = 0;
        :answer_d: if (x > 0) x = -x; else x = 0;
-       :answer_e: if ( x < 0) x = 0; else x = -1;
+       :answer_e: if (x < 0) x = 0; else x = -1;
        :correct: b
        :feedback_a: Even if x is < 0, the above code will set it to 0.
        :feedback_b: No matter what x is set to originally, the code will reset it to 0.
@@ -131,7 +131,7 @@ Please note that this is a difficult exam. We estimate that a score of about 50%
 
        .. code-block:: java
 
-         if ( x > 0) x = -x;
+         if (x > 0) x = -x;
          if (x < 0) x = 0;
 
     .. mchoice:: pe2_6-15
