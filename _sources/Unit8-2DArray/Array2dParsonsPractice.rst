@@ -18,9 +18,11 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    -----
    int[][] table = new int[10][10];
    =====
-   for (int row = 0; row < table.length; row++) {
-       for (int col = 0; col < table[row].length; col++) {
-   =====
+   for (int row = 0; row < table.length; row++)
+   { 
+        for (int col = 0; col < table[row].length; col++)
+        { 
+    =====
            table[row][col] = col + 10 * row;
    =====
            table[row][col] = row + 10 * col; #paired
@@ -41,12 +43,16 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    -----
    int[][] checkerboard = new int[8][8];
    =====
-   for (int row = 0; row < checkerboard.length; row++) {
-       for (int col = 0; col < checkerboard[row].length; col++) {
-   =====
-           if ( (row + col) % 2 == 0) {
-   =====
-           if ( (row + col) % 2 == 1) { #paired
+   for (int row = 0; row < checkerboard.length; row++)
+   { 
+        for (int col = 0; col < checkerboard[row].length; col++)
+        { 
+    =====
+           if ( (row + col) % 2 == 0)
+           { 
+    =====
+           if ( (row + col) % 2 == 1) 
+           { #paired
    =====
                checkerboard[row][col] = 1;
    =====
@@ -66,18 +72,22 @@ Try to solve each of the following. Click the *Check Me* button to check each so
 
    The following program segment is a method that should accept a two-dimensional int array and return the sum of all of its values.  But, the blocks have been mixed up and include three extra blocks that are not needed in a correct solution.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the Check button to check your solution.
    -----
-   public static int sumVals(int[][] nums) {
-   =====
+   public static int sumVals(int[][] nums)
+   { 
+    =====
       int sum = 0;
    =====
       int sum; #distractor
    =====
-      for (int row = 0; row < nums.length; row++) {
+      for (int row = 0; row < nums.length; row++)
+      { 
+    =====
+      for (int row = 0; row < nums.length(); row++) 
+      { #paired
    =====
-      for (int row = 0; row < nums.length(); row++) { #paired
-   =====
-            for (int col = 0; col < nums[row].length; col++) {
-   =====
+            for (int col = 0; col < nums[row].length; col++)
+            { 
+    =====
                 sum += nums[row][col];
    =====
                 sum = nums[row][col]; #paired
@@ -99,12 +109,15 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    The following program segment is a method that should accept a two-dimensional String array "image" and flip the "image" 180 degrees vertically. For example:   1 2 3 4  ->    4 3 2 1.
    But, the blocks have been mixed up and include one extra block that is not needed in a correct solution.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the Check button to check your solution.
    -----
-   public static void flipImage(String[][] image) {
-   =====
-       for (int row = 0; row < image.length; row++) {
-   =====
-           for (int col = 0; col < image[0].length / 2; col++) {
-   =====
+   public static void flipImage(String[][] image)
+   { 
+    =====
+       for (int row = 0; row < image.length; row++)
+       { 
+    =====
+           for (int col = 0; col < image[0].length / 2; col++)
+           { 
+    =====
                String temp = image[row][col];
                image[row][col] = image[row][image[row].length - 1 - col];
                image[row][image[row].length - 1 - col] = temp;
@@ -125,19 +138,25 @@ Try to solve each of the following. Click the *Check Me* button to check each so
 
    The following program segment is a method that should accept a two-dimensional array of ints and edit it such that all even numbers are replaced by zero.  But, the blocks have been mixed up and include two extra blocks that are not needed in a correct solution.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the Check button to check your solution.
    -----
-   public static void makeEvenNumsZero(int[][] nums) {
+   public static void makeEvenNumsZero(int[][] nums)
+   { 
+    =====
+       for (int row = 0; row < nums.length; row++)
+       { 
+    =====
+           for (int col = 0; col < nums[row].length; col++)
+           { 
+    =====
+           for (int col = 0; col < nums[row].length(); col++) 
+           {  #distractor 
    =====
-       for (int row = 0; row < nums.length; row++) {
-   =====
-           for (int col = 0; col < nums[row].length; col++) {
-   =====
-           for (int col = 0; col < nums[row].length(); col++) { #distractor
-   =====
-               if (nums[row][col] % 2 == 0) {
-                   nums[row][col] = 0;
+               if (nums[row][col] % 2 == 0)
+               {
+                   nums[row][col] = 0; 
                } //end if
    =====
-               if (nums[row][col] % 2 == 1) { #distractor
+               if (nums[row][col] % 2 == 1) #distractor 
+               {  
                    nums[row][col] = 0;
                } //end if
    =====
@@ -156,24 +175,29 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    The following program segment is a method that should accept a two-dimensional array of ints and a desired int and return the number of occurrences of the desired int in the two-dimensional array.  But, the blocks have been mixed up and include two extra blocks that are not needed in a correct solution.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the Check button to check your solution.
    -----
    public static int numOccurrences(int[][] nums,
-                                    int desired) {
-   =====
+                                    int desired)
+   { 
+    =====
        int occurrences = 0;
    =====
        int occurrences; #distractor
    =====
-       for (int i = 0; i < nums.length; i++) {
-           for (int j = 0; j < nums[i].length; j++) {
-   =====
-               if (nums[i][j] == desired) {
+       for (int i = 0; i < nums.length; i++)
+       { 
+            for (int j = 0; j < nums[i].length; j++)
+            {
+    =====
+               if (nums[i][j] == desired)
+               { 
                    occurrences++;
                }
    =====
-               if (nums[i][j] != desired) { #distractor
+               if (nums[i][j] != desired) #distractor 
+               {  
                    occurrences++;
                }
    =====
-           } //end inner for loop
+            } //end inner for loop
        } //end outer for loop
    =====
        return occurrences;
@@ -188,21 +212,25 @@ Try to solve each of the following. Click the *Check Me* button to check each so
 
    The following program segment is a method that should accept a two-dimensional int array and return a single dimensional (normal) int array containing the average of each of the columns.  But, the blocks have been mixed up and include three extra blocks that are not needed in a correct solution.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the Check button to check your solution.
    -----
-   public static int[] averageCols(int[][] nums) {
-   =====
+   public static int[] averageCols(int[][] nums)
+   { 
+    =====
        int[] averages = new int[nums.length]; #distractor
    =====
        int[] averages = new int[nums[0].length];
    =====
-       for (int col = 0; col < nums[0].length; col++) {
-   =====
+       for (int col = 0; col < nums[0].length; col++)
+       { 
+    =====
            int colSum = 0;
    =====
-           for (int row = 0; row < nums.length; row++) {
+           for (int row = 0; row < nums.length; row++)
+           { 
                colSum += nums[row][col];
            } //end inner for loop
    =====
-           for (int row = 0; row < nums.length; row++) { #distractor
+           for (int row = 0; row < nums.length; row++) 
+           {  #distractor 
                colSum += nums[col][row];
            } //end inner for loop
    =====
@@ -223,31 +251,37 @@ Try to solve each of the following. Click the *Check Me* button to check each so
 
    The following program segment is a method that should accept a two-dimensional int array and return a new two-dimensional int array containing only the odd index rows.  But, the blocks have been mixed up and include three extra blocks that are not needed in a correct solution.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the Check button to check your solution.
    -----
-   public static int[][] oddRows(int[][] nums) {
-   =====
-   public static int[] oddRows(int[][] nums) { #distractor
+   public static int[][] oddRows(int[][] nums)
+   { 
+    =====
+   public static int[] oddRows(int[][] nums) 
+   {  #distractor 
    =====
        int[][] odds = new int[nums.length / 2][nums[0].length];
    =====
        int[][] odds = new int[nums.length][nums[0].length]; #distractor
    =====
        int index = 0;
-       for (int i = 0; i < nums.length; i++) {
-   =====
-           if (i % 2 == 1) {
-   =====
-               for (int j = 0; j < nums[i].length; j++) {
-                   odds[index][j] = nums[i][j];
+       for (int i = 0; i < nums.length; i++)
+       { 
+    =====
+           if (i % 2 == 1)
+           { 
+    =====
+               for (int j = 0; j < nums[i].length; j++)
+               { 
+                    odds[index][j] = nums[i][j];
                }
    =====
-               for (int j = 0; j < nums[i].length; j++) { #distractor
-                   odds[index][j] = nums[j][i];
+               for (int j = 0; j < nums[i].length; j++) #distractor 
+               {  
+                    odds[index][j] = nums[j][i];
                }
    =====
                index++;
    =====
            } //end if
-   =====
+   ===== 
        } //end outer for loop
        return odds;
    } //end method
@@ -270,16 +304,19 @@ Try to solve each of the following. Click the *Check Me* button to check each so
 
    But, the blocks have been mixed up.  Drag the needed code from the left to the right and put them in order with the correct indention so that the code would work correctly.  Click the Check button to check your solution.
    -----
-   public static String[] breakIntoLetters(String[][] words) {
-   =====
+   public static String[] breakIntoLetters(String[][] words)
+   { 
+    =====
       String[] result = new String[words.length];
    =====
-      for (int i = 0; i < words.length; i++) {
-   =====
+      for (int i = 0; i < words.length; i++)
+      { 
+    =====
           String word = "";
    =====
-          for (int j = 0; j < words[i].length; j++) {
-              word += words[i][j];
+          for (int j = 0; j < words[i].length; j++)
+          { 
+               word += words[i][j];
           }
    =====
           result[i] = word;
@@ -298,20 +335,25 @@ Try to solve each of the following. Click the *Check Me* button to check each so
 
    The following program segment is a method that should accept a two-dimensional int array, and return a single-dimensional (normal) int array containing the max of each row.  But, the blocks have been mixed up and include one extra block that is not needed in a correct solution.  Drag the needed code from the left to the right and put them in order with the correct indention so that the code would work correctly.  Click the Check button to check your solution.
    -----
-   public static int[] maxEachRow(int[][] nums) {
-   =====
+   public static int[] maxEachRow(int[][] nums)
+   { 
+    =====
       int[] max = new int[nums.length];
-   =====
-      for (int i = 0; i < nums.length; i++) {
-   =====
+    =====
+      for (int i = 0; i < nums.length; i++)
+      { 
+    =====
           int maxVal = nums[i][0];
-          for (int j = 1; j < nums[i].length; j++) {
-   =====
-              if (maxVal < nums[i][j]) {
+          for (int j = 1; j < nums[i].length; j++)
+          { 
+    =====
+              if (maxVal < nums[i][j])
+              { 
                   maxVal = nums[i][j];
               }
    =====
-              if (maxVal > nums[i][j]) { #distractor
+              if (maxVal > nums[i][j]) #distractor 
+              {  
                   maxVal = nums[i][j];
               }
    =====

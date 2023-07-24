@@ -26,41 +26,55 @@ An incomplete implementation of the ``RouteCipher`` class is shown below.
 
    public class RouteCipher
    {
-     /** A two-dimensional array of single-character strings,
-     instantiated in the constructor */
-     private String[][] letterBlock;
+       /**
+        * A two-dimensional array of single-character strings, instantiated in the
+        * constructor
+        */
+       private String[][] letterBlock;
 
-     /** The number of rows of letterBlock, set by the constructor */
-     private int numRows;
+       /** The number of rows of letterBlock, set by the constructor */
+       private int numRows;
 
-     /** The number of columns of letterBlock, set by the constructor */
-     private int numCols;
+       /** The number of columns of letterBlock, set by the constructor */
+       private int numCols;
 
-     /** Places a string into letterBlock in row-major order.
-     *   @param str the string to be processed
-     *   Postcondition:
-     *     if str.length() < numRows * numCols, "A" in each unfilled cell
-     *     if str.length() > numRows * numCols, trailing characters are ignored
-     */
-     private void fillBlock(String str)
-     { /* to be implemented in part (a) */ }
+       /**
+        * Places a string into letterBlock in row-major order.
+        *
+        * @param str the string to be processed Postcondition: if str.length() <
+        *     numRows * numCols, "A" in each unfilled cell if str.length() > numRows *
+        *     numCols, trailing characters are ignored
+        */
+       private void fillBlock(String str)
+       {
+           /* to be implemented in part (a) */
+       }
 
-     /** Extracts encrypted string from letterBlock in column-major order.
-     *   Precondition: letterBlock has been filled
-     *   @return the encrypted string from letterBlock
-     */
-     private String encryptBlock()
-     { /* implementation not shown */ }
+       /**
+        * Extracts encrypted string from letterBlock in column-major order.
+        * Precondition: letterBlock has been filled
+        *
+        * @return the encrypted string from letterBlock
+        */
+       private String encryptBlock()
+       {
+           /* implementation not shown */
+       }
 
-     /** Encrypts a message.
-     *   @param message the string to be encrypted
-     *   @return the encrypted message;
-     *           if message is the empty string, returns the empty string
-     */
-     public String encryptMessage(String message)
-     { /* to be implemented in part (b) */ }
+       /**
+        * Encrypts a message.
+        *
+        * @param message the string to be encrypted
+        * @return the encrypted message; if message is the empty string, returns the
+        *     empty string
+        */
+       public String encryptMessage(String message)
+       {
+           /* to be implemented in part (b) */
+       }
 
-     // There may be instance variables, constructors, and methods that are not shown
+       // There may be instance variables, constructors, and methods that are not
+       // shown
    }
 
 **Part b.**
@@ -175,14 +189,16 @@ Below is a mixed up version of the correct solution hinted at by the previous qu
 
          The method encryptMessage below contains the correct code for one solution to this problem, but it is mixed up and contains extra blocks that are not needed.  Drag the needed code from the left to the right and put them in order with the correct indention so that the code would work correctly.
          -----
-         public String encryptMessage(String message) {
+         public String encryptMessage(String message) 
+         {
            String encryptedMessage = "";
            int chunkSize = this.numRows * this.numCols;
          =====
-           while (message.length() > 0) {
+           while (message.length() > 0)
+           {
          =====
-             if (chunkSize > message.length()) {
-         =====
+             if (chunkSize > message.length()) 
+             {
                chunkSize = message.length();
          =====
              } // end if
@@ -207,107 +223,123 @@ Complete method ``encryptMessage`` below.
 
    public class RouteCipher
    {
-     /** A two-dimensional array of single-character strings,
-     instantiated in the constructor */
-     private String[][] letterBlock;
+       /**
+        * A two-dimensional array of single-character strings, instantiated in the
+        * constructor
+        */
+       private String[][] letterBlock;
 
-     /** The number of rows of letterBlock, set by the constructor */
-     private int numRows;
+       /** The number of rows of letterBlock, set by the constructor */
+       private int numRows;
 
-     /** The number of columns of letterBlock, set by the constructor */
-     private int numCols;
+       /** The number of columns of letterBlock, set by the constructor */
+       private int numCols;
 
-     private int counter = 0;
+       private int counter = 0;
 
-     public RouteCipher(int r, int c){
-      letterBlock = new String[r][c];
-      this.fillBlock("Meet at midnight");
-      this.numRows = r;
-      this.numCols = c;
-     }
+       public RouteCipher(int r, int c)
+       {
+           letterBlock = new String[r][c];
+           this.fillBlock("Meet at midnight");
+           this.numRows = r;
+           this.numCols = c;
+       }
 
-     /** Places a string into letterBlock in row-major order.
-     *   @param str the string to be processed
-     *   Postcondition:
-     *     if str.length() < numRows * numCols, "A" in each unfilled cell
-     *     if str.length() > numRows * numCols, trailing characters are ignored
-     */
-     private void fillBlock(String str)
-     {
-     int pos = 0;
-     for (int r = 0; r < this.numRows; r++ ) {
-       for (int c = 0; c < this.numCols; c++ ) {
-         if (pos < str.length()) {
-           this.letterBlock[r][c] = str.substring(pos, pos+1);
-           pos++;
-         } else {
-           this.letterBlock[r][c] = "A";
-         } // end else block
-       } // end inner for
-     } // end outer for
-     }
+       /**
+        * Places a string into letterBlock in row-major order.
+        *
+        * @param str the string to be processed Postcondition: if str.length() <
+        *     numRows * numCols, "A" in each unfilled cell if str.length() > numRows *
+        *     numCols, trailing characters are ignored
+        */
+       private void fillBlock(String str)
+       {
+           int pos = 0;
+           for (int r = 0; r < this.numRows; r++)
+           {
+               for (int c = 0; c < this.numCols; c++)
+               {
+                   if (pos < str.length())
+                   {
+                       this.letterBlock[r][c] = str.substring(pos, pos + 1);
+                       pos++;
+                   }
+                   else
+                   {
+                       this.letterBlock[r][c] = "A";
+                   } // end else block
+               } // end inner for
+           } // end outer for
+       }
 
-     /** Extracts encrypted string from letterBlock in column-major order.
-     *   Precondition: letterBlock has been filled
-     *   @return the encrypted string from letterBlock
-     */
-     private String encryptBlock()
-     {
-      return "Mte ea";
-     }
+       /**
+        * Extracts encrypted string from letterBlock in column-major order.
+        * Precondition: letterBlock has been filled
+        *
+        * @return the encrypted string from letterBlock
+        */
+       private String encryptBlock()
+       {
+           return "Mte ea";
+       }
 
-     /** Encrypts a message.
-     *   @param message the string to be encrypted
-     *   @return the encrypted message;
-     *           if message is the empty string, returns the empty string
-     */
-     public String encryptMessage(String message){
-      // Complete this method
-     }
+       /**
+        * Encrypts a message.
+        *
+        * @param message the string to be encrypted
+        * @return the encrypted message; if message is the empty string, returns the
+        *     empty string
+        */
+       public String encryptMessage(String message)
+       {
+           // Complete this method
+       }
 
-     public static void main(String[] args){
+       public static void main(String[] args)
+       {
 
-      RouteCipher ciph = new RouteCipher(2, 3);
-      if(ciph.encryptMessage("Meet at midnight").substring(0, 6).equals("Mte ea"))
-        System.out.println("Looks like your code works well!");
-      else
-        System.out.println("Oops! Make a few changes to your code, please.");
-     }
+           RouteCipher ciph = new RouteCipher(2, 3);
+           if (ciph.encryptMessage("Meet at midnight")
+                   .substring(0, 6)
+                   .equals("Mte ea"))
+               System.out.println("Looks like your code works well!");
+           else System.out.println("Oops! Make a few changes to your code, please.");
+       }
    }
+
    ====
    import static org.junit.Assert.*;
-     import org.junit.*;
-     import java.io.*;
-     import java.util.List;
-     import java.util.ArrayList;
-     import java.util.Arrays;
 
-     public class RunestoneTests extends CodeTestHelper
-     {
+   import org.junit.*;
+
+   import java.io.*;
+
+   public class RunestoneTests extends CodeTestHelper
+   {
 
        @Test
        public void testMain() throws IOException
        {
-         String output = getMethodOutput("main");
-         String expect = "Looks like your code works well!\n" ;
+           String output = getMethodOutput("main");
+           String expect = "Looks like your code works well!\n";
 
-         boolean passed = getResults(expect, output, "Expected output from main");
-         assertTrue(passed);
+           boolean passed = getResults(expect, output, "Expected output from main");
+           assertTrue(passed);
        }
 
-     @Test
+       @Test
        public void test1()
        {
-         RouteCipher ciph = new RouteCipher(2, 3);
+           RouteCipher ciph = new RouteCipher(2, 3);
 
-         String result = String.valueOf(ciph.encryptMessage("Meet at midnight").substring(0, 6).equals("Mte ea"));
+           String result =
+                   String.valueOf(
+                           ciph.encryptMessage("Meet at midnight").substring(0, 6).equals("Mte ea"));
 
-         boolean passed = getResults("true", result, "method encryptMessage works");
-         assertTrue(passed);
+           boolean passed = getResults("true", result, "method encryptMessage works");
+           assertTrue(passed);
        }
-     }
-
-
+   }
 
 Alternate Recursive Solution
 -----------------------------
@@ -372,14 +404,23 @@ If you still feel unsure of the recursive solution, it is recommended that you r
 
         The method encryptMessage below contains the correct code for one solution to this problem, but it is mixed up and contains extra blocks that are not needed.  Drag the needed code from the left to the right and put them in order with the correct indention so that the code would work correctly.
         -----
-        public String encryptMessage(String message) {
+        public String encryptMessage(String message)
+        {
         =====
-          if (message.length() == 0) { return ""; }
+          if (message.length() == 0)
+          { 
+              return ""; 
+          }
         =====
           fillBlock(message);
         =====
-          if (message.length() <= this.numRows * this.numCols) { return encryptBlock(); }
+          if (message.length() <= this.numRows * this.numCols) 
+          { 
+              return encryptBlock(); 
+          }
         =====
-          return (encryptBlock() + encryptMessage(message.substring(this.numRows * this.numCols)));
+          return (encryptBlock() + 
+                 encryptMessage(message.substring(
+                    this.numRows * this.numCols)));
         =====
         } // end method

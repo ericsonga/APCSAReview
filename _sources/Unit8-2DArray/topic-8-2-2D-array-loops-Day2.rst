@@ -64,41 +64,44 @@ Since 2D arrays are really arrays of arrays you can also use a nested enhanced f
    public class Average
    {
 
-      public static double getAvg(int[][] a)
-      {
-         double total = 0;
-         for (int[] innerArray : a)
-         {
-            for (int val : innerArray)
-            {
-               total = total + val;
-            }
-         }
-         return total / (a.length * a[0].length);
-      }
+       public static double getAvg(int[][] a)
+       {
+           double total = 0;
+           for (int[] innerArray : a)
+           {
+               for (int val : innerArray)
+               {
+                   total = total + val;
+               }
+           }
+           return total / (a.length * a[0].length);
+       }
 
-      public static void main(String[] args)
-      {
-         int[][] theArray = {  {80, 90, 70}, {20, 80, 75}};
-         System.out.println(getAvg(theArray));
-      }
+       public static void main(String[] args)
+       {
+           int[][] theArray = { {80, 90, 70}, {20, 80, 75}};
+           System.out.println(getAvg(theArray));
+       }
    }
+
    ====
    import static org.junit.Assert.*;
-    import org.junit.*;;
-    import java.io.*;
 
-    public class RunestoneTests extends CodeTestHelper
-    {
-        @Test
-        public void testMain() throws IOException
-        {
-            String output = getMethodOutput("main");
-            String expect = "69.16666666666667";
-            boolean passed = getResults(expect, output, "Expected output from main", true);
-            assertTrue(passed);
-        }
-    }
+   import org.junit.*;
+
+   import java.io.*;
+
+   public class RunestoneTests extends CodeTestHelper
+   {
+       @Test
+       public void testMain() throws IOException
+       {
+           String output = getMethodOutput("main");
+           String expect = "69.16666666666667";
+           boolean passed = getResults(expect, output, "Expected output from main", true);
+           assertTrue(passed);
+       }
+   }
 
 In this case the ``for (int[] colArray : a)`` means to loop through each element of the outer array which will set ``colArray`` to the current column array.  Then you can loop through the value in the column array.
 
@@ -124,67 +127,71 @@ All of the array algorithms can be applied to 2D arrays too. For example, counti
    public class Total
    {
 
-      public static int getTotalForRow(int row, int[][] a)
-      {
-         int total = 0;
-         for (int col = 0; col < a[0].length; col++)
-         {
-            total = total + a[row][col];
-         }
-         return total;
-      }
+       public static int getTotalForRow(int row, int[][] a)
+       {
+           int total = 0;
+           for (int col = 0; col < a[0].length; col++)
+           {
+               total = total + a[row][col];
+           }
+           return total;
+       }
 
-      // Complete the method getTotalForCol below
-      public static int getTotalForCol(int col, int[][] a)
-      {
-          int total = 0;
-          // Add a loop here to total a column col
+       // Complete the method getTotalForCol below
+       public static int getTotalForCol(int col, int[][] a)
+       {
+           int total = 0;
+           // Add a loop here to total a column col
 
+           return total;
+       }
 
-          return total;
-      }
-
-      public static void main(String[] args)
-      {
-         int[][] matrix = {  {1,2,3},{4,5,6}};
-         System.out.println(getTotalForRow(0,matrix));
-         System.out.println(getTotalForCol(0,matrix));
-      }
+       public static void main(String[] args)
+       {
+           int[][] matrix = { {1, 2, 3}, {4, 5, 6}};
+           System.out.println(getTotalForRow(0, matrix));
+           System.out.println(getTotalForCol(0, matrix));
+       }
    }
+
    ====
    import static org.junit.Assert.*;
-    import org.junit.*;;
-    import java.io.*;
 
-    public class RunestoneTests extends CodeTestHelper
-    {
-         public RunestoneTests() {
-            super("Total");
-        }
-        @Test
-        public void testMain() throws IOException
-        {
-            String output = getMethodOutput("main");
-            String expect = "6\n5";
-            boolean passed = getResults(expect, output, "Expected output from main");
-            assertTrue(passed);
-        }
-        @Test
-            public void test2()
-            {
-                int[][] array = { {1,4,8},{6,7,9} };
-                int value = 0;
-                Object[] args = {value, array};
+   import org.junit.*;
 
+   import java.io.*;
 
-                String output = getMethodOutput("getTotalForCol", args);
-                String expect = "7";
+   public class RunestoneTests extends CodeTestHelper
+   {
+       public RunestoneTests()
+       {
+           super("Total");
+       }
 
-                boolean passed = getResults(expect, output, "Testing getTotalForCol(0, { {1, 4,8},{6, 7, 9} })");
-                assertTrue(passed);
-            }
-    }
+       @Test
+       public void testMain() throws IOException
+       {
+           String output = getMethodOutput("main");
+           String expect = "6\n5";
+           boolean passed = getResults(expect, output, "Expected output from main");
+           assertTrue(passed);
+       }
 
+       @Test
+       public void test2()
+       {
+           int[][] array = { {1, 4, 8}, {6, 7, 9}};
+           int value = 0;
+           Object[] args = {value, array};
+
+           String output = getMethodOutput("getTotalForCol", args);
+           String expect = "7";
+
+           boolean passed =
+                   getResults(expect, output, "Testing getTotalForCol(0, { {1, 4,8},{6, 7, 9} })");
+           assertTrue(passed);
+       }
+   }
 
 .. index::
    pair: 2D Array; loop range
@@ -199,45 +206,50 @@ You can loop through just part of a 2D array. You can change the starting value 
    ~~~~
    public class Count
    {
-      public static int countValues(int value, int[][] a,
-                                 int rowStart, int rowEnd,
-                                 int colStart, int colEnd)
-      {
-         int count = 0;
-         for (int row = rowStart; row <= rowEnd; row++)
-         {
-            for (int col = colStart; col <= colEnd; col++)
-            {
-               if (a[row][col] == value)
-                  count++;
-            }
-         }
-         return count;
-      }
+       public static int countValues(
+               int value,
+               int[][] a,
+               int rowStart,
+               int rowEnd,
+               int colStart,
+               int colEnd)
+               {
+           int count = 0;
+           for (int row = rowStart; row <= rowEnd; row++)
+           {
+               for (int col = colStart; col <= colEnd; col++)
+               {
+                   if (a[row][col] == value) count++;
+               }
+           }
+           return count;
+       }
 
-      public static void main(String[] args)
-      {
-         int[][] matrix = {  {3,2,3},{4,3,6},{8,9,3},{10,3,3}};
-         System.out.println(countValues(3,matrix,0,2,0,2));
-      }
+       public static void main(String[] args)
+       {
+           int[][] matrix = { {3, 2, 3}, {4, 3, 6}, {8, 9, 3}, {10, 3, 3}};
+           System.out.println(countValues(3, matrix, 0, 2, 0, 2));
+       }
    }
+
    ====
    import static org.junit.Assert.*;
-    import org.junit.*;;
-    import java.io.*;
 
-    public class RunestoneTests extends CodeTestHelper
-    {
-        @Test
-        public void testMain() throws IOException
-        {
-            String output = getMethodOutput("main");
-            String expect = "4";
-            boolean passed = getResults(expect, output, "Expected output from main", true);
-            assertTrue(passed);
-        }
-    }
+   import org.junit.*;
 
+   import java.io.*;
+
+   public class RunestoneTests extends CodeTestHelper
+   {
+       @Test
+       public void testMain() throws IOException
+       {
+           String output = getMethodOutput("main");
+           String expect = "4";
+           boolean passed = getResults(expect, output, "Expected output from main", true);
+           assertTrue(passed);
+       }
+   }
 
 Here is a linear search algorithm where we access each row and then apply a linear search on it to find an element.
 
@@ -253,58 +265,66 @@ Here is a linear search algorithm where we access each row and then apply a line
    ~~~~
    public class Search
    {
-      public static boolean search(int[][] array, int value)
-      {
-         boolean found = false;
-         for (int row = 0; row < array.length; row++)
-         {
-            for (int col = 0; col < array[0].length; col++)
-            {
-               if (array[row][col] == value)
-                   found = true;
-            }
-         }
-         return found;
-      }
+       public static boolean search(int[][] array, int value)
+       {
+           boolean found = false;
+           for (int row = 0; row < array.length; row++)
+           {
+               for (int col = 0; col < array[0].length; col++)
+               {
+                   if (array[row][col] == value) found = true;
+               }
+           }
+           return found;
+       }
 
-      public static void main(String[] args)
-      {
-         int[][] matrix = { {3,2,3},{4,3,6},{8,9,3},{10,3,3} };
-         System.out.println(search(matrix,10));
-         System.out.println(search(matrix,11));
+       public static void main(String[] args)
+       {
+           int[][] matrix = { {3, 2, 3}, {4, 3, 6}, {8, 9, 3}, {10, 3, 3}};
+           System.out.println(search(matrix, 10));
+           System.out.println(search(matrix, 11));
 
-        // Comment out the code above, and try these:
-        // String[][] matrix2 = { {"a","b","c"},{"d","e","f"} };
-        // System.out.println(search(matrix2, "b"));
+           // Comment out the code above, and try these:
+           // String[][] matrix2 = { {"a","b","c"},{"d","e","f"} };
+           // System.out.println(search(matrix2, "b"));
 
-      }
+       }
    }
+
    ====
    import static org.junit.Assert.*;
-    import org.junit.*;;
-    import java.io.*;
 
-    public class RunestoneTests extends CodeTestHelper
-    {
-        public RunestoneTests() {
-            super("Search");
-        }
+   import org.junit.*;
 
-        @Test
-            public void test2()
-            {
-                String[][] array = { {"a","b","c"},{"d","e","f"},{"g","h","i"},{"j","k","l"} };
-                String value = "b";
-                Object[] args = {array, value};
+   import java.io.*;
 
+   public class RunestoneTests extends CodeTestHelper
+   {
+       public RunestoneTests()
+       {
+           super("Search");
+       }
 
-                String output = getMethodOutput("search", args);
-                String expect = "true";
+       @Test
+       public void test2()
+       {
+           String[][] array = { {"a", "b", "c"}, {"d", "e", "f"}, {"g", "h", "i"}, {"j", "k", "l"}};
+           String value = "b";
+           Object[] args = {array, value};
 
-                boolean passed = getResults(expect, output, "Testing search({ {\"a\",\"b\",\"c\"},{\"d\",\"e\",\"f\"},{\"g\",\"h\",\"i\"},{\"j\",\"k\",\"l\" } }, \"b\")");
-                assertTrue(passed);
-            }
-    }
+           String output = getMethodOutput("search", args);
+           String expect = "true";
+
+           boolean passed =
+                   getResults(
+                           expect,
+                           output,
+                           "Testing search({"
+                               + " {\"a\",\"b\",\"c\"},{\"d\",\"e\",\"f\"},{\"g\",\"h\",\"i\"},{\"j\",\"k\",\"l\""
+                               + " } }, \"b\")");
+           assertTrue(passed);
+       }
+   }
 
 2D Array of Objects
 --------------------
@@ -356,12 +376,12 @@ model, which stores values for red, green, and blue, each ranging from 0 to 255.
 In Java, we can write a ``Pixel`` class to represent a pixel in an image at a given x and y coordinate. 
 
 .. code-block:: java
-   
-   public class Pixel 
+
+   public class Pixel
    {
        private int x;
        private int y;
-       /** Implementation not shown **/
+       /** Implementation not shown * */
    }
 
 The |CB Picture Lab| contains a ``Pixel`` class and a ``Picture`` class that loads an image and creates a 2D array of pixels to represent it. For example, the ``Picture`` constructor below loads the image ``beach.jpg``, and the ``getPixels2D`` method returns its 2D array of pixels. You can get and set the red, green, and/or blue value for a Pixel object to change its color.  
@@ -375,8 +395,8 @@ The |CB Picture Lab| contains a ``Pixel`` class and a ``Picture`` class that loa
       int blue = p.getBlue(); // get its blue value
       System.out.println("Pixel (0,0) has a blue value of " + blue );
       p.setBlue(255);  // set its blue value to 255
- 
- 
+
+
 You can loop through all the Pixel objects in the two-dimensional array to modify the picture. The following code is the ``zeroBlue`` method in the ``Picture`` class. It uses nested loops to visit each pixel in a photo which has a color with red, green, and blue values, and it sets all the blue values to 0. You can experiment with this method and write your own methods to modify the pixels in the challenge below and the extended |Picture Lab A5|.
 
 .. code-block:: java
@@ -420,193 +440,197 @@ You can test the methods in the active code below or in this |replit project| or
     import java.awt.image.BufferedImage;
     import java.text.*;
     import java.util.*;
-    import java.util.List;
 
     /**
-     * A class that represents a picture.  This class inherits from
-     * SimplePicture and allows the student to add functionality to
-     * the Picture class.
+     * A class that represents a picture. This class inherits from SimplePicture and
+     * allows the student to add functionality to the Picture class.
      *
      * @author Barbara Ericson ericson@cc.gatech.edu
      */
     public class Picture extends SimplePicture
     {
-      ///////////////////// constructors //////////////////////////////////
+        ///////////////////// constructors //////////////////////////////////
 
-      /**
-       * Constructor that takes no arguments
-       */
-      public Picture ()
-      {
-        /* not needed but use it to show students the implicit call to super()
-         * child constructors always call a parent constructor
-         */
-        super();
-      }
-
-      /**
-       * Constructor that takes a file name and creates the picture
-       * @param fileName the name of the file to create the picture from
-       */
-      public Picture(String fileName)
-      {
-        // let the parent class handle this fileName
-        super(fileName);
-      }
-
-      /**
-       * Constructor that takes the height and width
-       * @param height the height of the desired picture
-       * @param width the width of the desired picture
-       */
-      public Picture(int height, int width)
-      {
-        // let the parent class handle this width and height
-        super(width,height);
-      }
-
-      /**
-       * Constructor that takes a picture and creates a
-       * copy of that picture
-       * @param copyPicture the picture to copy
-       */
-      public Picture(Picture copyPicture)
-      {
-        // let the parent class do the copy
-        super(copyPicture);
-      }
-
-      /**
-       * Constructor that takes a buffered image
-       * @param image the buffered image to use
-       */
-      public Picture(BufferedImage image)
-      {
-        super(image);
-      }
-      ////////////////////// methods ///////////////////////////////////////
-
-      /**
-       * Method to return a string with information about this picture.
-       * @return a string with information about the picture such as fileName,
-       * height and width.
-       */
-      public String toString()
-      {
-        String output = "Picture, filename " + getFileName() +
-          " height " + getHeight()
-          + " width " + getWidth();
-        return output;
-
-      }
-
-      /**
-        zeroBlue() method sets the blue values at all pixels to zero
-     */
-      public void zeroBlue()
-      {
-        Pixel[][] pixels = this.getPixels2D();
-
-        for (Pixel[] rowArray : pixels)
-         {
-           for (Pixel p: rowArray)
-           {
-                  p.setBlue(0);
-           }
+        /** Constructor that takes no arguments */
+        public Picture()
+        {
+            /* not needed but use it to show students the implicit call to super()
+             * child constructors always call a parent constructor
+             */
+            super();
         }
-      }
 
+        /**
+         * Constructor that takes a file name and creates the picture
+         *
+         * @param fileName the name of the file to create the picture from
+         */
+        public Picture(String fileName)
+        {
+            // let the parent class handle this fileName
+            super(fileName);
+        }
 
-     /* Add new methods here.
-        keepOnlyBlue() method sets the blue values at all pixels to zero.
-        switchColors() method swaps the color values of pixels.
-     */
+        /**
+         * Constructor that takes the height and width
+         *
+         * @param height the height of the desired picture
+         * @param width the width of the desired picture
+         */
+        public Picture(int height, int width)
+        {
+            // let the parent class handle this width and height
+            super(width, height);
+        }
 
-      /* Main method for testing
-       */
-      public static void main(String[] args)
-      {
-        Picture arch = new Picture("arch.jpg");
-        arch.show();
-        arch.zeroBlue();
-        arch.show();
+        /**
+         * Constructor that takes a picture and creates a copy of that picture
+         *
+         * @param copyPicture the picture to copy
+         */
+        public Picture(Picture copyPicture)
+        {
+            // let the parent class do the copy
+            super(copyPicture);
+        }
 
-        //Uncomment the follow code to test your keepOnlyBlue method.
-        /*
-        Picture arch2 = new Picture("arch.jpg");
-        System.out.println("Keep only blue: ");
-        arch2.keepOnlyBlue();// using new method
-        arch2.show();
+        /**
+         * Constructor that takes a buffered image
+         *
+         * @param image the buffered image to use
+         */
+        public Picture(BufferedImage image)
+        {
+            super(image);
+        }
+
+        ////////////////////// methods ///////////////////////////////////////
+
+        /**
+         * Method to return a string with information about this picture.
+         *
+         * @return a string with information about the picture such as fileName, height
+         *     and width.
+         */
+        public String toString()
+        {
+            String output =
+                    "Picture, filename "
+                            + getFileName()
+                            + " height "
+                            + getHeight()
+                            + " width "
+                            + getWidth();
+            return output;
+        }
+
+        /** zeroBlue() method sets the blue values at all pixels to zero */
+        public void zeroBlue()
+        {
+            Pixel[][] pixels = this.getPixels2D();
+
+            for (Pixel[] rowArray : pixels)
+            {
+                for (Pixel p : rowArray)
+                {
+                    p.setBlue(0);
+                }
+            }
+        }
+
+        /* Add new methods here.
+           keepOnlyBlue() method sets the blue values at all pixels to zero.
+           switchColors() method swaps the color values of pixels.
         */
-        System.out.println();
 
-        //Uncomment the follow code to test your swithColors method.
-        /*
-        Picture arch3 = new Picture("arch.jpg");
-        System.out.println("Switch colors: ");
-        arch3.switchColors();// using new method
-        arch3.show();
-        */
-      }
+        /* Main method for testing
+         */
+        public static void main(String[] args)
+        {
+            Picture arch = new Picture("arch.jpg");
+            arch.show();
+            arch.zeroBlue();
+            arch.show();
+
+            // Uncomment the follow code to test your keepOnlyBlue method.
+            /*
+            Picture arch2 = new Picture("arch.jpg");
+            System.out.println("Keep only blue: ");
+            arch2.keepOnlyBlue();// using new method
+            arch2.show();
+            */
+            System.out.println();
+
+            // Uncomment the follow code to test your swithColors method.
+            /*
+            Picture arch3 = new Picture("arch.jpg");
+            System.out.println("Switch colors: ");
+            arch3.switchColors();// using new method
+            arch3.show();
+            */
+        }
     }
+
     ====
     import static org.junit.Assert.*;
-     import org.junit.*;
-     import java.io.*;
-     import java.util.List;
-     import java.util.ArrayList;
-     import java.util.Arrays;
 
-     public class RunestoneTests extends CodeTestHelper
-     {
-       @Test
-       public void test1()
-       {
-         String target = "public void keepOnlyBlue()";
-         boolean passed = checkCodeContains("keepOnlyBlue() method",target);
-         assertTrue(passed);
-       }
+    import org.junit.*;
 
-       @Test
-       public void test2()
-       {
-         String target = ".setGreen(0);";
-         boolean passed = checkCodeContains("keepOnlyBlue() setting green pixels to the number 0",target);
-         assertTrue(passed);
-       }
+    import java.io.*;
 
-       @Test
-         public void test3()
-         {
+    public class RunestoneTests extends CodeTestHelper
+    {
+        @Test
+        public void test1()
+        {
+            String target = "public void keepOnlyBlue()";
+            boolean passed = checkCodeContains("keepOnlyBlue() method", target);
+            assertTrue(passed);
+        }
+
+        @Test
+        public void test2()
+        {
+            String target = ".setGreen(0);";
+            boolean passed =
+                    checkCodeContains("keepOnlyBlue() setting green pixels to the number 0", target);
+            assertTrue(passed);
+        }
+
+        @Test
+        public void test3()
+        {
             String target = "for";
             String code = getCode();
             int index = code.indexOf("public void keepOnlyBlue()");
             boolean passed = false;
-            if (index > 0) {
-             code = code.substring(index, index + 200);
-             int num = countOccurences(code, target);
-             passed = num == 2;
+            if (index > 0)
+            {
+                code = code.substring(index, index + 200);
+                int num = countOccurences(code, target);
+                passed = num == 2;
             }
-            getResults("true", ""+passed, "Checking that keepOnlyBlue() contains 2 for loops", passed);
+            getResults(
+                    "true", "" + passed, "Checking that keepOnlyBlue() contains 2 for loops", passed);
             assertTrue(passed);
-         }
-         @Test
+        }
+
+        @Test
         public void testSwitch1()
         {
-         String target = "public void switchColors()";
-         boolean passed = checkCodeContains("switchColors() method",target);
-         assertTrue(passed);
+            String target = "public void switchColors()";
+            boolean passed = checkCodeContains("switchColors() method", target);
+            assertTrue(passed);
         }
 
         @Test
         public void testSwitch2()
         {
-         String target = ".getGreen()";
-         boolean passed = checkCodeContains("switchColors() uses getGreen()",target);
-         assertTrue(passed);
+            String target = ".getGreen()";
+            boolean passed = checkCodeContains("switchColors() uses getGreen()", target);
+            assertTrue(passed);
         }
-      }
-
+    }
 
 Here are some more exercises from the |Picture Lab A5|:
 

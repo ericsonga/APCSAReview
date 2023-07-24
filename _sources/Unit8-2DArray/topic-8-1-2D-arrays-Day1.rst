@@ -221,44 +221,51 @@ The code below creates a 2D array with 2 rows and 3 columns named ``ticketInfo``
   ~~~~
   public class TicketInfo
   {
-     public static void main(String[] args)
-     {
-        // declare arrays
-        int[][] ticketInfo = new int[2][3];
-        System.out.println(ticketInfo.length + " rows");
-        System.out.println(ticketInfo[0].length + " columns");
-     }
+      public static void main(String[] args)
+      {
+          // declare arrays
+          int[][] ticketInfo = new int[2][3];
+          System.out.println(ticketInfo.length + " rows");
+          System.out.println(ticketInfo[0].length + " columns");
+      }
   }
+
   ====
   import static org.junit.Assert.*;
-    import org.junit.*;;
-    import java.io.*;
 
-    public class RunestoneTests extends CodeTestHelper
-    {
-        public RunestoneTests() {
-            super("TicketInfo");
-        }
-        @Test
-        public void test1()
-        {
-            String output = getMethodOutput("main");
-            String expected = "5 rows\n10 columns";
+  import org.junit.*;
 
-            boolean passed = output.contains(expected);passed = getResults(expected, output, "Changed ticketInfo to 5 rows and 10 columns", passed);
+  import java.io.*;
 
-            assertTrue(passed);
-        }
+  public class RunestoneTests extends CodeTestHelper
+  {
+      public RunestoneTests()
+      {
+          super("TicketInfo");
+      }
 
-        @Test
-        public void test2()
-        {
-            String expected = "studentNames = new String[10][5]";
+      @Test
+      public void test1()
+      {
+          String output = getMethodOutput("main");
+          String expected = "5 rows\n10 columns";
 
-            boolean passed = checkCodeContains(expected);
-            assertTrue(passed);
-        }
-    }
+          boolean passed = output.contains(expected);
+          passed =
+                  getResults(expected, output, "Changed ticketInfo to 5 rows and 10 columns", passed);
+
+          assertTrue(passed);
+      }
+
+      @Test
+      public void test2()
+      {
+          String expected = "studentNames = new String[10][5]";
+
+          boolean passed = checkCodeContains(expected);
+          assertTrue(passed);
+      }
+  }
 
 This lesson is continued on the next page.
 

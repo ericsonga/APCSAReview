@@ -76,139 +76,139 @@ You can test this with the ``mirrorTemple`` method below.
     import java.awt.image.BufferedImage;
     import java.text.*;
     import java.util.*;
-    import java.util.List;
 
     /**
-     * A class that represents a picture.  This class inherits from
-     * SimplePicture and allows the student to add functionality to
-     * the Picture class.
+     * A class that represents a picture. This class inherits from SimplePicture and
+     * allows the student to add functionality to the Picture class.
      *
      * @author Barbara Ericson ericson@cc.gatech.edu
      */
     public class Picture extends SimplePicture
     {
-      ///////////////////// constructors //////////////////////////////////
+        ///////////////////// constructors //////////////////////////////////
 
-      /**
-       * Constructor that takes no arguments
-       */
-      public Picture ()
-      {
-        /* not needed but use it to show students the implicit call to super()
-         * child constructors always call a parent constructor
+        /** Constructor that takes no arguments */
+        public Picture()
+        {
+            /* not needed but use it to show students the implicit call to super()
+             * child constructors always call a parent constructor
+             */
+            super();
+        }
+
+        /**
+         * Constructor that takes a file name and creates the picture
+         *
+         * @param fileName the name of the file to create the picture from
          */
-        super();
-      }
+        public Picture(String fileName)
+        {
+            // let the parent class handle this fileName
+            super(fileName);
+        }
 
-      /**
-       * Constructor that takes a file name and creates the picture
-       * @param fileName the name of the file to create the picture from
-       */
-      public Picture(String fileName)
-      {
-        // let the parent class handle this fileName
-        super(fileName);
-      }
+        /**
+         * Constructor that takes the height and width
+         *
+         * @param height the height of the desired picture
+         * @param width the width of the desired picture
+         */
+        public Picture(int height, int width)
+        {
+            // let the parent class handle this width and height
+            super(width, height);
+        }
 
-      /**
-       * Constructor that takes the height and width
-       * @param height the height of the desired picture
-       * @param width the width of the desired picture
-       */
-      public Picture(int height, int width)
-      {
-        // let the parent class handle this width and height
-        super(width,height);
-      }
+        /**
+         * Constructor that takes a picture and creates a copy of that picture
+         *
+         * @param copyPicture the picture to copy
+         */
+        public Picture(Picture copyPicture)
+        {
+            // let the parent class do the copy
+            super(copyPicture);
+        }
 
-      /**
-       * Constructor that takes a picture and creates a
-       * copy of that picture
-       * @param copyPicture the picture to copy
-       */
-      public Picture(Picture copyPicture)
-      {
-        // let the parent class do the copy
-        super(copyPicture);
-      }
+        /**
+         * Constructor that takes a buffered image
+         *
+         * @param image the buffered image to use
+         */
+        public Picture(BufferedImage image)
+        {
+            super(image);
+        }
 
-      /**
-       * Constructor that takes a buffered image
-       * @param image the buffered image to use
-       */
-      public Picture(BufferedImage image)
-      {
-        super(image);
-      }
-      ////////////////////// methods ///////////////////////////////////////
+        ////////////////////// methods ///////////////////////////////////////
 
-      /**
-       * Method to return a string with information about this picture.
-       * @return a string with information about the picture such as fileName,
-       * height and width.
-       */
-      public String toString()
-      {
-        String output = "Picture, filename " + getFileName() +
-          " height " + getHeight()
-          + " width " + getWidth();
-        return output;
+        /**
+         * Method to return a string with information about this picture.
+         *
+         * @return a string with information about the picture such as fileName, height
+         *     and width.
+         */
+        public String toString()
+        {
+            String output =
+                    "Picture, filename "
+                            + getFileName()
+                            + " height "
+                            + getHeight()
+                            + " width "
+                            + getWidth();
+            return output;
+        }
 
-      }
+        /** Method mirrorTemple() fixes the temple.jpg picture */
+        public void mirrorTemple()
+        {
+            int mirrorPoint = 276;
+            Pixel leftPixel = null;
+            Pixel rightPixel = null;
+            Pixel[][] pixels = this.getPixels2D();
 
-      /** Method mirrorTemple() fixes the temple.jpg picture */
-      public void mirrorTemple()
-      {
-           int mirrorPoint = 276;
-           Pixel leftPixel = null;
-           Pixel rightPixel = null;
-           Pixel[][] pixels = this.getPixels2D();
-
-           // loop through the rows
-           for (int row = 27; row < 97; row++)
-           {
+            // loop through the rows
+            for (int row = 27; row < 97; row++)
+            {
                 // loop from 13 to just before the mirror point
                 for (int col = 13; col < mirrorPoint; col++)
                 {
-                     leftPixel = pixels[row][col];
-                     rightPixel = pixels[row][mirrorPoint - col + mirrorPoint];
-                     rightPixel.setColor(leftPixel.getColor());
+                    leftPixel = pixels[row][col];
+                    rightPixel = pixels[row][mirrorPoint - col + mirrorPoint];
+                    rightPixel.setColor(leftPixel.getColor());
                 }
-           }
-       }
+            }
+        }
 
-
-      /* Main method for testing
-       */
-      public static void main(String[] args)
-      {
-        Picture pict = new Picture("temple.jpg");
-        pict.show();
-        pict.mirrorTemple();
-        pict.show();
-      }
+        /* Main method for testing
+         */
+        public static void main(String[] args)
+        {
+            Picture pict = new Picture("temple.jpg");
+            pict.show();
+            pict.mirrorTemple();
+            pict.show();
+        }
     }
+
     ====
     import static org.junit.Assert.*;
-     import org.junit.*;
-     import java.io.*;
-     import java.util.List;
-     import java.util.ArrayList;
-     import java.util.Arrays;
 
-     public class RunestoneTests extends CodeTestHelper
-     {
-       @Test
-       public void test1()
-       {
-         String target = "public void mirrorTemple()";
-         boolean passed = checkCodeContains("mirrorTemple() method",target);
-         assertTrue(passed);
-       }
+    import org.junit.*;
 
+    import java.io.*;
 
-      }
-
+    public class RunestoneTests extends CodeTestHelper
+    {
+        @Test
+        public void test1()
+        {
+            String target = "public void mirrorTemple()";
+            boolean passed = checkCodeContains("mirrorTemple() method", target);
+            assertTrue(passed);
+        }
+    }
 
 How many times was ``leftPixel = pixels[row][col];`` executed? The formula for the
 number of times a nested loop executes is the number of times the outer loop executes multiplied by the
@@ -285,147 +285,148 @@ inside the body of the loop. Print the value of count after the nested loop ends
     import java.awt.image.BufferedImage;
     import java.text.*;
     import java.util.*;
-    import java.util.List;
 
     /**
-     * A class that represents a picture.  This class inherits from
-     * SimplePicture and allows the student to add functionality to
-     * the Picture class.
+     * A class that represents a picture. This class inherits from SimplePicture and
+     * allows the student to add functionality to the Picture class.
      *
      * @author Barbara Ericson ericson@cc.gatech.edu
      */
     public class Picture extends SimplePicture
     {
-      ///////////////////// constructors //////////////////////////////////
+        ///////////////////// constructors //////////////////////////////////
 
-      /**
-       * Constructor that takes no arguments
-       */
-      public Picture ()
-      {
-        /* not needed but use it to show students the implicit call to super()
-         * child constructors always call a parent constructor
+        /** Constructor that takes no arguments */
+        public Picture()
+        {
+            /* not needed but use it to show students the implicit call to super()
+             * child constructors always call a parent constructor
+             */
+            super();
+        }
+
+        /**
+         * Constructor that takes a file name and creates the picture
+         *
+         * @param fileName the name of the file to create the picture from
          */
-        super();
-      }
+        public Picture(String fileName)
+        {
+            // let the parent class handle this fileName
+            super(fileName);
+        }
 
-      /**
-       * Constructor that takes a file name and creates the picture
-       * @param fileName the name of the file to create the picture from
-       */
-      public Picture(String fileName)
-      {
-        // let the parent class handle this fileName
-        super(fileName);
-      }
+        /**
+         * Constructor that takes the height and width
+         *
+         * @param height the height of the desired picture
+         * @param width the width of the desired picture
+         */
+        public Picture(int height, int width)
+        {
+            // let the parent class handle this width and height
+            super(width, height);
+        }
 
-      /**
-       * Constructor that takes the height and width
-       * @param height the height of the desired picture
-       * @param width the width of the desired picture
-       */
-      public Picture(int height, int width)
-      {
-        // let the parent class handle this width and height
-        super(width,height);
-      }
+        /**
+         * Constructor that takes a picture and creates a copy of that picture
+         *
+         * @param copyPicture the picture to copy
+         */
+        public Picture(Picture copyPicture)
+        {
+            // let the parent class do the copy
+            super(copyPicture);
+        }
 
-      /**
-       * Constructor that takes a picture and creates a
-       * copy of that picture
-       * @param copyPicture the picture to copy
-       */
-      public Picture(Picture copyPicture)
-      {
-        // let the parent class do the copy
-        super(copyPicture);
-      }
+        /**
+         * Constructor that takes a buffered image
+         *
+         * @param image the buffered image to use
+         */
+        public Picture(BufferedImage image)
+        {
+            super(image);
+        }
 
-      /**
-       * Constructor that takes a buffered image
-       * @param image the buffered image to use
-       */
-      public Picture(BufferedImage image)
-      {
-        super(image);
-      }
-      ////////////////////// methods ///////////////////////////////////////
+        ////////////////////// methods ///////////////////////////////////////
 
-      /**
-       * Method to return a string with information about this picture.
-       * @return a string with information about the picture such as fileName,
-       * height and width.
-       */
-      public String toString()
-      {
-        String output = "Picture, filename " + getFileName() +
-          " height " + getHeight()
-          + " width " + getWidth();
-        return output;
+        /**
+         * Method to return a string with information about this picture.
+         *
+         * @return a string with information about the picture such as fileName, height
+         *     and width.
+         */
+        public String toString()
+        {
+            String output =
+                    "Picture, filename "
+                            + getFileName()
+                            + " height "
+                            + getHeight()
+                            + " width "
+                            + getWidth();
+            return output;
+        }
 
-      }
+        /** Method mirrorTemple() fixes the temple.jpg picture */
+        public void mirrorTemple()
+        {
+            int mirrorPoint = 276;
+            Pixel leftPixel = null;
+            Pixel rightPixel = null;
+            int count = 0;
+            Pixel[][] pixels = this.getPixels2D();
 
-
-
-      /** Method mirrorTemple() fixes the temple.jpg picture */
-      public void mirrorTemple()
-      {
-           int mirrorPoint = 276;
-           Pixel leftPixel = null;
-           Pixel rightPixel = null;
-           int count = 0;
-           Pixel[][] pixels = this.getPixels2D();
-
-           // loop through the rows
-           for (int row = 27; row < 97; row++)
-           {
+            // loop through the rows
+            for (int row = 27; row < 97; row++)
+            {
                 // loop from 13 to just before the mirror point
                 for (int col = 13; col < mirrorPoint; col++)
                 {
-                     leftPixel = pixels[row][col];
-                     rightPixel = pixels[row][mirrorPoint - col + mirrorPoint];
-                     rightPixel.setColor(leftPixel.getColor());
+                    leftPixel = pixels[row][col];
+                    rightPixel = pixels[row][mirrorPoint - col + mirrorPoint];
+                    rightPixel.setColor(leftPixel.getColor());
                 }
-           }
-       }
+            }
+        }
 
-
-      /* Main method for testing
-       */
-      public static void main(String[] args)
-      {
-        Picture pict = new Picture("temple.jpg");
-        pict.show();
-        pict.mirrorTemple();
-        pict.show();
-      }
+        /* Main method for testing
+         */
+        public static void main(String[] args)
+        {
+            Picture pict = new Picture("temple.jpg");
+            pict.show();
+            pict.mirrorTemple();
+            pict.show();
+        }
     }
+
     ====
     import static org.junit.Assert.*;
-     import org.junit.*;
-     import java.io.*;
-     import java.util.List;
-     import java.util.ArrayList;
-     import java.util.Arrays;
 
-     public class RunestoneTests extends CodeTestHelper
-     {
-       @Test
-       public void test1()
-       {
-         String target = "count = 0";
-         boolean passed = checkCodeContains("mirrorTemple() has count = 0",target);
-         assertTrue(passed);
-       }
+    import org.junit.*;
 
-       @Test
-       public void test2()
-       {
-         String target = "count++";
-         boolean passed = checkCodeContains("mirrorTemple() has count++",target);
-         assertTrue(passed);
-       }
-      }
+    import java.io.*;
+
+    public class RunestoneTests extends CodeTestHelper
+    {
+        @Test
+        public void test1()
+        {
+            String target = "count = 0";
+            boolean passed = checkCodeContains("mirrorTemple() has count = 0", target);
+            assertTrue(passed);
+        }
+
+        @Test
+        public void test2()
+        {
+            String target = "count++";
+            boolean passed = checkCodeContains("mirrorTemple() has count++", target);
+            assertTrue(passed);
+        }
+    }
 
 .. image:: Figures/mirrorarms.png
     :width: 150
@@ -446,153 +447,157 @@ inside the body of the loop. Print the value of count after the nested loop ends
     import java.awt.image.BufferedImage;
     import java.text.*;
     import java.util.*;
-    import java.util.List;
 
     /**
-     * A class that represents a picture.  This class inherits from
-     * SimplePicture and allows the student to add functionality to
-     * the Picture class.
+     * A class that represents a picture. This class inherits from SimplePicture and
+     * allows the student to add functionality to the Picture class.
      *
      * @author Barbara Ericson ericson@cc.gatech.edu
      */
     public class Picture extends SimplePicture
     {
-      ///////////////////// constructors //////////////////////////////////
+        ///////////////////// constructors //////////////////////////////////
 
-      /**
-       * Constructor that takes no arguments
-       */
-      public Picture ()
-      {
-        /* not needed but use it to show students the implicit call to super()
-         * child constructors always call a parent constructor
+        /** Constructor that takes no arguments */
+        public Picture()
+        {
+            /* not needed but use it to show students the implicit call to super()
+             * child constructors always call a parent constructor
+             */
+            super();
+        }
+
+        /**
+         * Constructor that takes a file name and creates the picture
+         *
+         * @param fileName the name of the file to create the picture from
          */
-        super();
-      }
+        public Picture(String fileName)
+        {
+            // let the parent class handle this fileName
+            super(fileName);
+        }
 
-      /**
-       * Constructor that takes a file name and creates the picture
-       * @param fileName the name of the file to create the picture from
-       */
-      public Picture(String fileName)
-      {
-        // let the parent class handle this fileName
-        super(fileName);
-      }
+        /**
+         * Constructor that takes the height and width
+         *
+         * @param height the height of the desired picture
+         * @param width the width of the desired picture
+         */
+        public Picture(int height, int width)
+        {
+            // let the parent class handle this width and height
+            super(width, height);
+        }
 
-      /**
-       * Constructor that takes the height and width
-       * @param height the height of the desired picture
-       * @param width the width of the desired picture
-       */
-      public Picture(int height, int width)
-      {
-        // let the parent class handle this width and height
-        super(width,height);
-      }
+        /**
+         * Constructor that takes a picture and creates a copy of that picture
+         *
+         * @param copyPicture the picture to copy
+         */
+        public Picture(Picture copyPicture)
+        {
+            // let the parent class do the copy
+            super(copyPicture);
+        }
 
-      /**
-       * Constructor that takes a picture and creates a
-       * copy of that picture
-       * @param copyPicture the picture to copy
-       */
-      public Picture(Picture copyPicture)
-      {
-        // let the parent class do the copy
-        super(copyPicture);
-      }
+        /**
+         * Constructor that takes a buffered image
+         *
+         * @param image the buffered image to use
+         */
+        public Picture(BufferedImage image)
+        {
+            super(image);
+        }
 
-      /**
-       * Constructor that takes a buffered image
-       * @param image the buffered image to use
-       */
-      public Picture(BufferedImage image)
-      {
-        super(image);
-      }
-      ////////////////////// methods ///////////////////////////////////////
+        ////////////////////// methods ///////////////////////////////////////
 
-      /**
-       * Method to return a string with information about this picture.
-       * @return a string with information about the picture such as fileName,
-       * height and width.
-       */
-      public String toString()
-      {
-        String output = "Picture, filename " + getFileName() +
-          " height " + getHeight()
-          + " width " + getWidth();
-        return output;
+        /**
+         * Method to return a string with information about this picture.
+         *
+         * @return a string with information about the picture such as fileName, height
+         *     and width.
+         */
+        public String toString()
+        {
+            String output =
+                    "Picture, filename "
+                            + getFileName()
+                            + " height "
+                            + getHeight()
+                            + " width "
+                            + getWidth();
+            return output;
+        }
 
-      }
+        /** Write the method mirrorArms() to add more arms to snowperson.jpg */
 
-
-
-      /** Write the method mirrorArms() to add more arms to snowperson.jpg */
-
-
-
-      /* Main method for testing
-       */
-      public static void main(String[] args)
-      {
-        Picture pict = new Picture("snowperson.jpg");
-        pict.show();
-        pict.mirrorArms();
-        pict.show();
-      }
+        /* Main method for testing
+         */
+        public static void main(String[] args)
+        {
+            Picture pict = new Picture("snowperson.jpg");
+            pict.show();
+            pict.mirrorArms();
+            pict.show();
+        }
     }
+
     ====
     import static org.junit.Assert.*;
-     import org.junit.*;
-     import java.io.*;
-     import java.util.List;
-     import java.util.ArrayList;
-     import java.util.Arrays;
 
-     public class RunestoneTests extends CodeTestHelper
-     {
-       @Test
-       public void test1()
-       {
-         String target = "public void mirrorArms()";
-         boolean passed = checkCodeContains("mirrorArms() method",target);
-         assertTrue(passed);
-       }
+    import org.junit.*;
 
-       @Test
-       public void test2()
-       {
-         String target = "row = 155";
-         boolean passed = checkCodeContains("starts looping at row = 155",target);
-         assertTrue(passed);
-       }
+    import java.io.*;
 
-       @Test
-       public void test2b()
-       {
-         String target = "191";
-         boolean passed = checkCodeContains("mirrors at pixel 191",target);
-         assertTrue(passed);
-       }
+    public class RunestoneTests extends CodeTestHelper
+    {
+        @Test
+        public void test1()
+        {
+            String target = "public void mirrorArms()";
+            boolean passed = checkCodeContains("mirrorArms() method", target);
+            assertTrue(passed);
+        }
 
+        @Test
+        public void test2()
+        {
+            String target = "row = 155";
+            boolean passed = checkCodeContains("starts looping at row = 155", target);
+            assertTrue(passed);
+        }
 
-       @Test
-         public void test3()
-         {
+        @Test
+        public void test2b()
+        {
+            String target = "191";
+            boolean passed = checkCodeContains("mirrors at pixel 191", target);
+            assertTrue(passed);
+        }
+
+        @Test
+        public void test3()
+        {
             String target = "for";
             String code = getCode();
             int index = code.indexOf("public void mirrorArms()");
             boolean passed = false;
-            if (index > 0) {
-             code = code.substring(index);
-             int num = countOccurences(code, target);
-             passed = num >= 4;
+            if (index > 0)
+            {
+                code = code.substring(index);
+                int num = countOccurences(code, target);
+                passed = num >= 4;
             }
-            getResults("true", ""+passed, "Checking that mirrorArms() contains 4 (2 nested) for loops for mirroring arms", passed);
+            getResults(
+                    "true",
+                    "" + passed,
+                    "Checking that mirrorArms() contains 4 (2 nested) for loops for mirroring arms",
+                    passed);
             assertTrue(passed);
-         }
-      }
+        }
+    }
 
 .. image:: Figures/mirrorgull.png
     :width: 150
@@ -615,153 +620,156 @@ that there are two seagulls on the beach near each other. Fork |Explorer Repl| a
     import java.awt.image.BufferedImage;
     import java.text.*;
     import java.util.*;
-    import java.util.List;
 
     /**
-     * A class that represents a picture.  This class inherits from
-     * SimplePicture and allows the student to add functionality to
-     * the Picture class.
+     * A class that represents a picture. This class inherits from SimplePicture and
+     * allows the student to add functionality to the Picture class.
      *
      * @author Barbara Ericson ericson@cc.gatech.edu
      */
     public class Picture extends SimplePicture
     {
-      ///////////////////// constructors //////////////////////////////////
+        ///////////////////// constructors //////////////////////////////////
 
-      /**
-       * Constructor that takes no arguments
-       */
-      public Picture ()
-      {
-        /* not needed but use it to show students the implicit call to super()
-         * child constructors always call a parent constructor
+        /** Constructor that takes no arguments */
+        public Picture()
+        {
+            /* not needed but use it to show students the implicit call to super()
+             * child constructors always call a parent constructor
+             */
+            super();
+        }
+
+        /**
+         * Constructor that takes a file name and creates the picture
+         *
+         * @param fileName the name of the file to create the picture from
          */
-        super();
-      }
+        public Picture(String fileName)
+        {
+            // let the parent class handle this fileName
+            super(fileName);
+        }
 
-      /**
-       * Constructor that takes a file name and creates the picture
-       * @param fileName the name of the file to create the picture from
-       */
-      public Picture(String fileName)
-      {
-        // let the parent class handle this fileName
-        super(fileName);
-      }
+        /**
+         * Constructor that takes the height and width
+         *
+         * @param height the height of the desired picture
+         * @param width the width of the desired picture
+         */
+        public Picture(int height, int width)
+        {
+            // let the parent class handle this width and height
+            super(width, height);
+        }
 
-      /**
-       * Constructor that takes the height and width
-       * @param height the height of the desired picture
-       * @param width the width of the desired picture
-       */
-      public Picture(int height, int width)
-      {
-        // let the parent class handle this width and height
-        super(width,height);
-      }
+        /**
+         * Constructor that takes a picture and creates a copy of that picture
+         *
+         * @param copyPicture the picture to copy
+         */
+        public Picture(Picture copyPicture)
+        {
+            // let the parent class do the copy
+            super(copyPicture);
+        }
 
-      /**
-       * Constructor that takes a picture and creates a
-       * copy of that picture
-       * @param copyPicture the picture to copy
-       */
-      public Picture(Picture copyPicture)
-      {
-        // let the parent class do the copy
-        super(copyPicture);
-      }
+        /**
+         * Constructor that takes a buffered image
+         *
+         * @param image the buffered image to use
+         */
+        public Picture(BufferedImage image)
+        {
+            super(image);
+        }
 
-      /**
-       * Constructor that takes a buffered image
-       * @param image the buffered image to use
-       */
-      public Picture(BufferedImage image)
-      {
-        super(image);
-      }
-      ////////////////////// methods ///////////////////////////////////////
+        ////////////////////// methods ///////////////////////////////////////
 
-      /**
-       * Method to return a string with information about this picture.
-       * @return a string with information about the picture such as fileName,
-       * height and width.
-       */
-      public String toString()
-      {
-        String output = "Picture, filename " + getFileName() +
-          " height " + getHeight()
-          + " width " + getWidth();
-        return output;
+        /**
+         * Method to return a string with information about this picture.
+         *
+         * @return a string with information about the picture such as fileName, height
+         *     and width.
+         */
+        public String toString()
+        {
+            String output =
+                    "Picture, filename "
+                            + getFileName()
+                            + " height "
+                            + getHeight()
+                            + " width "
+                            + getWidth();
+            return output;
+        }
 
-      }
+        /**
+         * Write the method mirrorGull to mirror the seagull to the right so that there
+         * are two seagulls on the beach near each other.
+         */
 
-
-
-      /** Write the method mirrorGull to mirror the seagull to the right so that there are two seagulls on the beach near each other.*/
-
-
-
-      /* Main method for testing
-       */
-      public static void main(String[] args)
-      {
-        Picture pict = new Picture("seagull.jpg");
-        pict.show();
-        pict.mirrorGull();
-        pict.show();
-      }
+        /* Main method for testing
+         */
+        public static void main(String[] args)
+        {
+            Picture pict = new Picture("seagull.jpg");
+            pict.show();
+            pict.mirrorGull();
+            pict.show();
+        }
     }
+
     ====
     import static org.junit.Assert.*;
-     import org.junit.*;
-     import java.io.*;
-     import java.util.List;
-     import java.util.ArrayList;
-     import java.util.Arrays;
 
-     public class RunestoneTests extends CodeTestHelper
-     {
-       @Test
-       public void test1()
-       {
-         String target = "public void mirrorGull()";
-         boolean passed = checkCodeContains("mirrorGull() method",target);
-         assertTrue(passed);
-       }
+    import org.junit.*;
 
-       @Test
-       public void test2()
-       {
-         String target = "row = 225";
-         boolean passed = checkCodeContains("starts looping at row = 225",target);
-         assertTrue(passed);
-       }
+    import java.io.*;
 
-       @Test
-       public void test2b()
-       {
-         String target = "350";
-         boolean passed = checkCodeContains("mirrors at pixel 350",target);
-         assertTrue(passed);
-       }
+    public class RunestoneTests extends CodeTestHelper
+    {
+        @Test
+        public void test1()
+        {
+            String target = "public void mirrorGull()";
+            boolean passed = checkCodeContains("mirrorGull() method", target);
+            assertTrue(passed);
+        }
 
+        @Test
+        public void test2()
+        {
+            String target = "row = 225";
+            boolean passed = checkCodeContains("starts looping at row = 225", target);
+            assertTrue(passed);
+        }
 
-       @Test
-         public void test3()
-         {
+        @Test
+        public void test2b()
+        {
+            String target = "350";
+            boolean passed = checkCodeContains("mirrors at pixel 350", target);
+            assertTrue(passed);
+        }
+
+        @Test
+        public void test3()
+        {
             String target = "for";
             String code = getCode();
             int index = code.indexOf("public void mirrorGull()");
             boolean passed = false;
-            if (index > 0) {
-             code = code.substring(index);
-             int num = countOccurences(code, target);
-             passed = num >= 2;
+            if (index > 0)
+            {
+                code = code.substring(index);
+                int num = countOccurences(code, target);
+                passed = num >= 2;
             }
-            getResults("true", ""+passed, "Checking that mirrorGull() contains 2 for loops", passed);
+            getResults("true", "" + passed, "Checking that mirrorGull() contains 2 for loops", passed);
             assertTrue(passed);
-         }
-      }
+        }
+    }
 
 Images to use:
 

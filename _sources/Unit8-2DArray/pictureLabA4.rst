@@ -245,68 +245,73 @@ this in IntArrayWorkerTester.
     ~~~~
     public class IntArrayWorker
     {
-      /** two dimensional matrix */
-      private int[][] matrix = null;
+        /** two dimensional matrix */
+        private int[][] matrix = null;
 
-      /** set the matrix to the passed one
-        * @param theMatrix the one to use
-        */
-      public void setMatrix(int[][] theMatrix)
-      {
-        matrix = theMatrix;
-      }
-
-      /**
-       * print the values in the array in rows and columns
-       */
-      public void print()
-      {
-        for (int row = 0; row < matrix.length; row++)
+        /**
+         * set the matrix to the passed one
+         *
+         * @param theMatrix the one to use
+         */
+        public void setMatrix(int[][] theMatrix)
         {
-          for (int col = 0; col < matrix[0].length; col++)
-          {
-            System.out.print( matrix[row][col] + " " );
-          }
-          System.out.println();
+            matrix = theMatrix;
         }
-        System.out.println();
-      }
 
-      /** Method to test getCount*/
-       public static void testGetCount()
-       {
-         IntArrayWorker worker = new IntArrayWorker();
-         worker.setMatrix( new int[][]{ {1, 2, 1}, {2, 1, 0} });
-         int count = worker.getCount(1);
-         System.out.println("Count should be 3 and count is " + count);
-       }
+        /** print the values in the array in rows and columns */
+        public void print()
+        {
+            for (int row = 0; row < matrix.length; row++)
+            {
+                for (int col = 0; col < matrix[0].length; col++)
+                {
+                    System.out.print(matrix[row][col] + " ");
+                }
+                System.out.println();
+            }
+            System.out.println();
+        }
 
-      /**
-       * getCount counts number of times value is found in the matrix.
-       * @return the number of times value is found in the array
-       */
-      public int getCount(int value)
-      {
-        //TO DO
-      }
+        /** Method to test getCount */
+        public static void testGetCount()
+        {
+            IntArrayWorker worker = new IntArrayWorker();
+            worker.setMatrix(new int[][] { {1, 2, 1}, {2, 1, 0}});
+            int count = worker.getCount(1);
+            System.out.println("Count should be 3 and count is " + count);
+        }
 
+        /**
+         * getCount counts number of times value is found in the matrix.
+         *
+         * @return the number of times value is found in the array
+         */
+        public int getCount(int value)
+        {
+            // TO DO
+        }
 
-      public static void main(String[] args)
-      {
-        testGetCount();
-      }
+        public static void main(String[] args)
+        {
+            testGetCount();
+        }
     }
+
     ====
     import static org.junit.Assert.*;
-    import org.junit.*;;
+
+    import org.junit.*;
+
     import java.io.*;
 
     public class RunestoneTests extends CodeTestHelper
     {
 
-         public RunestoneTests() {
+        public RunestoneTests()
+        {
             super("IntArrayWorker");
         }
+
         @Test
         public void testMain() throws IOException
         {
@@ -315,19 +320,23 @@ this in IntArrayWorkerTester.
             boolean passed = getResults(expect, output, "Expected output from main");
             assertTrue(passed);
         }
+
         @Test
-            public void test2()
-            {
-                IntArrayWorker worker = new IntArrayWorker();
-                worker.setMatrix( new int[][]{ {1,4,8},{8,8,8} });
-                int count = worker.getCount(8);
-                int expectedCount = 4;
+        public void test2()
+        {
+            IntArrayWorker worker = new IntArrayWorker();
+            worker.setMatrix(new int[][] { {1, 4, 8}, {8, 8, 8}});
+            int count = worker.getCount(8);
+            int expectedCount = 4;
 
-                boolean passed = getResults(expectedCount+"", count+"", "Testing getCount for matrix { {1,4,8},{8,8,8} }");
-                assertTrue(passed);
-            }
+            boolean passed =
+                    getResults(
+                            expectedCount + "",
+                            count + "",
+                            "Testing getCount for matrix { {1,4,8},{8,8,8} }");
+            assertTrue(passed);
+        }
     }
-
 
 2. Write a ``getLargest`` method in the ``IntArrayWorker`` class that returns the largest value
 in the matrix. There is already a method to test this in IntArrayWorkerTester.
@@ -342,98 +351,114 @@ in the matrix. There is already a method to test this in IntArrayWorkerTester.
     ~~~~
     public class IntArrayWorker
     {
-      /** two dimensional matrix */
-      private int[][] matrix = null;
+        /** two dimensional matrix */
+        private int[][] matrix = null;
 
-      /** set the matrix to the passed one
-        * @param theMatrix the one to use
-        */
-      public void setMatrix(int[][] theMatrix)
-      {
-        matrix = theMatrix;
-      }
-
-      /**
-       * print the values in the array in rows and columns
-       */
-      public void print()
-      {
-        for (int row = 0; row < matrix.length; row++)
+        /**
+         * set the matrix to the passed one
+         *
+         * @param theMatrix the one to use
+         */
+        public void setMatrix(int[][] theMatrix)
         {
-          for (int col = 0; col < matrix[0].length; col++)
-          {
-            System.out.print( matrix[row][col] + " " );
-          }
-          System.out.println();
+            matrix = theMatrix;
         }
-        System.out.println();
-      }
 
-      public static void testGetLargest() {
-      // test when largest is last
-        IntArrayWorker worker = new IntArrayWorker();
-        int [][] nums2 = { {1, 2, 3}, {4, 5, 6} };
-        worker.setMatrix(nums2);
-        int largest = worker.getLargest();
-        System.out.println("When largest is last, it should be 6 and is " + largest);
-        // test when largest is first
-        int[][] nums3 = { {6, 2, 3}, {4, 5, 1} };
-        worker.setMatrix(nums3);
-        largest = worker.getLargest();
-        System.out.println("When largest is first, it should be 6 and is " + largest);
-        // test when largest is in the middle
-        int[][] nums4 = { {1, 2, 3}, {6, 5, 1} };
-        worker.setMatrix(nums4);
-        largest = worker.getLargest();
-        System.out.println("When largest is in the middle, it should be 6 and is " + largest);
-      }
+        /** print the values in the array in rows and columns */
+        public void print()
+        {
+            for (int row = 0; row < matrix.length; row++)
+            {
+                for (int col = 0; col < matrix[0].length; col++)
+                {
+                    System.out.print(matrix[row][col] + " ");
+                }
+                System.out.println();
+            }
+            System.out.println();
+        }
 
-      /**
-       * Method to return the largest value in
-       * the array
-       * @return the largest value found in the array
-       */
-      public int getLargest()
-      {
-        //TO DO
-      }
+        public static void testGetLargest()
+        {
+            // test when largest is last
+            IntArrayWorker worker = new IntArrayWorker();
+            int[][] nums2 = { {1, 2, 3}, {4, 5, 6}};
+            worker.setMatrix(nums2);
+            int largest = worker.getLargest();
+            System.out.println(
+                    "When largest is last, it should be 6 and is " + largest);
+            // test when largest is first
+            int[][] nums3 = { {6, 2, 3}, {4, 5, 1}};
+            worker.setMatrix(nums3);
+            largest = worker.getLargest();
+            System.out.println(
+                    "When largest is first, it should be 6 and is " + largest);
+            // test when largest is in the middle
+            int[][] nums4 = { {1, 2, 3}, {6, 5, 1}};
+            worker.setMatrix(nums4);
+            largest = worker.getLargest();
+            System.out.println(
+                    "When largest is in the middle, it should be 6 and is " + largest);
+        }
 
+        /**
+         * Method to return the largest value in the array
+         *
+         * @return the largest value found in the array
+         */
+        public int getLargest()
+        {
+            // TO DO
+        }
 
-      public static void main(String[] args)
-      {
-        testGetLargest();
-      }
+        public static void main(String[] args)
+        {
+            testGetLargest();
+        }
     }
+
     ====
     import static org.junit.Assert.*;
-    import org.junit.*;;
+
+    import org.junit.*;
+
     import java.io.*;
 
     public class RunestoneTests extends CodeTestHelper
     {
 
-         public RunestoneTests() {
+        public RunestoneTests()
+        {
             super("IntArrayWorker");
         }
+
         @Test
         public void testMain() throws IOException
         {
             String output = getMethodOutput("main");
-            String expect = "When largest is last, it should be 6 and is 6\nWhen largest is first, it should be 6 and is 6\nWhen largest is in the middle, it should be 6 and is 6\n";
+            String expect =
+                    "When largest is last, it should be 6 and is 6\n"
+                        + "When largest is first, it should be 6 and is 6\n"
+                        + "When largest is in the middle, it should be 6 and is 6\n";
             boolean passed = getResults(expect, output, "Expected output from main");
             assertTrue(passed);
         }
-        @Test
-            public void test2()
-            {
-                IntArrayWorker worker = new IntArrayWorker();
-                worker.setMatrix( new int[][]{ {1,4,8},{6,9,7} });
-                int output = worker.getLargest();
-                int expect = 9;
 
-                boolean passed = getResults(expect+"", output+"", "Testing getLargest for matrix { {1, 4,8},{6, 9, 7} }");
-                assertTrue(passed);
-            }
+        @Test
+        public void test2()
+        {
+            IntArrayWorker worker = new IntArrayWorker();
+            worker.setMatrix(new int[][] { {1, 4, 8}, {6, 9, 7}});
+            int output = worker.getLargest();
+            int expect = 9;
+
+            boolean passed =
+                    getResults(
+                            expect + "",
+                            output + "",
+                            "Testing getLargest for matrix { {1, 4,8},{6, 9, 7} }");
+            assertTrue(passed);
+        }
     }
 
 3. Write a ``getColTotal`` method in the ``IntArrayWorker`` class that returns the total of all
@@ -448,89 +473,105 @@ IntArrayWorkerTester.
     ~~~~
     public class IntArrayWorker
     {
-      /** two dimensional matrix */
-      private int[][] matrix = null;
+        /** two dimensional matrix */
+        private int[][] matrix = null;
 
-      /** set the matrix to the passed one
-        * @param theMatrix the one to use
-        */
-      public void setMatrix(int[][] theMatrix)
-      {
-        matrix = theMatrix;
-      }
-
-      /**
-       * print the values in the array in rows and columns
-       */
-      public void print()
-      {
-        for (int row = 0; row < matrix.length; row++)
+        /**
+         * set the matrix to the passed one
+         *
+         * @param theMatrix the one to use
+         */
+        public void setMatrix(int[][] theMatrix)
         {
-          for (int col = 0; col < matrix[0].length; col++)
-          {
-            System.out.print( matrix[row][col] + " " );
-          }
-          System.out.println();
+            matrix = theMatrix;
         }
-        System.out.println();
-      }
 
-      /**
-       * getColTotal adds and returns the total of all integers in a specified column.
-       * @return the total of elements in a column
-       */
-      public int getColTotal(int column)
-      {
-        //TO DO
-      }
+        /** print the values in the array in rows and columns */
+        public void print()
+        {
+            for (int row = 0; row < matrix.length; row++)
+            {
+                for (int col = 0; col < matrix[0].length; col++)
+                {
+                    System.out.print(matrix[row][col] + " ");
+                }
+                System.out.println();
+            }
+            System.out.println();
+        }
 
-      /** Method to test getColTotal */
-       public static void testGetColTotal()
-       {
-         IntArrayWorker worker = new IntArrayWorker();
-         int [][] nums2 = { {1, 2, 3}, {4, 5, 6} };
-          worker.setMatrix(nums2);
-         int total = worker.getColTotal(0);
-         System.out.println("Total for column 0 should be 5 and is " + total);
-         total = worker.getColTotal(1);
-         System.out.println("Total for column 1 should be 7 and is " + total);
-         total = worker.getColTotal(2);
-         System.out.println("Total for column 2 should be 9 and is " + total);
-       }
+        /**
+         * getColTotal adds and returns the total of all integers in a specified
+         * column.
+         *
+         * @return the total of elements in a column
+         */
+        public int getColTotal(int column)
+        {
+            // TO DO
+        }
 
-      public static void main(String[] args)
-      {
-        testGetColTotal();
-      }
+        /** Method to test getColTotal */
+        public static void testGetColTotal()
+        {
+            IntArrayWorker worker = new IntArrayWorker();
+            int[][] nums2 = { {1, 2, 3}, {4, 5, 6}};
+            worker.setMatrix(nums2);
+            int total = worker.getColTotal(0);
+            System.out.println("Total for column 0 should be 5 and is " + total);
+            total = worker.getColTotal(1);
+            System.out.println("Total for column 1 should be 7 and is " + total);
+            total = worker.getColTotal(2);
+            System.out.println("Total for column 2 should be 9 and is " + total);
+        }
+
+        public static void main(String[] args)
+        {
+            testGetColTotal();
+        }
     }
+
     ====
     import static org.junit.Assert.*;
-    import org.junit.*;;
+
+    import org.junit.*;
+
     import java.io.*;
 
     public class RunestoneTests extends CodeTestHelper
     {
 
-         public RunestoneTests() {
+        public RunestoneTests()
+        {
             super("IntArrayWorker");
         }
+
         @Test
         public void testMain() throws IOException
         {
             String output = getMethodOutput("main");
-            String expect = "Total for column 0 should be 5 and is 5\nTotal for column 1 should be 7 and is 7\nTotal for column 2 should be 9 and is 9";
+            String expect =
+                    "Total for column 0 should be 5 and is 5\n"
+                        + "Total for column 1 should be 7 and is 7\n"
+                        + "Total for column 2 should be 9 and is 9";
             boolean passed = getResults(expect, output, "Expected output from main");
             assertTrue(passed);
         }
-        @Test
-            public void test2()
-            {
-                IntArrayWorker worker = new IntArrayWorker();
-                worker.setMatrix( new int[][]{ {1,1,1},{0,1,2} });
-                int count = worker.getColTotal(1);
-                int expectedCount = 2;
 
-                boolean passed = getResults(expectedCount+"", count+"", "Testing getColTotal for matrix { {1,1,1},{0,1,2} }");
-                assertTrue(passed);
-            }
+        @Test
+        public void test2()
+        {
+            IntArrayWorker worker = new IntArrayWorker();
+            worker.setMatrix(new int[][] { {1, 1, 1}, {0, 1, 2}});
+            int count = worker.getColTotal(1);
+            int expectedCount = 2;
+
+            boolean passed =
+                    getResults(
+                            expectedCount + "",
+                            count + "",
+                            "Testing getColTotal for matrix { {1,1,1},{0,1,2} }");
+            assertTrue(passed);
+        }
     }
+

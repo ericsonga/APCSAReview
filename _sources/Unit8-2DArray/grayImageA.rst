@@ -17,22 +17,23 @@ The following is part a of a free response question from 2012.  It was question 
 
    public class GrayImage
    {
-      public static final int BLACK = 0;
-      public static final int WHITE = 255;
+       public static final int BLACK = 0;
+       public static final int WHITE = 255;
 
-      /** The 2-dimensional representation of this image.
-       *  Guaranteed not to be null.
-       *  All values in the array are within the range
-       *  [BLACK, WHITE], inclusive.
-       */
-      private int[][] pixelValues;
+       /**
+        * The 2-dimensional representation of this image. Guaranteed not to be null.
+        * All values in the array are within the range [BLACK, WHITE], inclusive.
+        */
+       private int[][] pixelValues;
 
-      /** @return the total number of white pixels in
-       *    this image.
-       * Postcondition: this image has not been changed.
-       */
-      public int countWhitePixels()
-      { /* to be implemented in part (a) */ }
+       /**
+        * @return the total number of white pixels in this image. Postcondition: this
+        *     image has not been changed.
+        */
+       public int countWhitePixels()
+       {
+           /* to be implemented in part (a) */
+       }
    }
 
 **Part a.**  Write the method ``countWhitePixels`` that returns the number of pixels in the image that contain the value ``WHITE``.  For example, assume that ``pixelValues`` contains the following image.
@@ -51,22 +52,23 @@ that have the value ``WHITE``.
 
    public class GrayImage
    {
-      public static final int BLACK = 0;
-      public static final int WHITE = 255;
+       public static final int BLACK = 0;
+       public static final int WHITE = 255;
 
-      /** The 2-dimensional representation of this image.
-       *  Guaranteed not to be null.
-       *  All values in the array are within the range
-       *  [BLACK, WHITE], inclusive.
-       */
-      private int[][] pixelValues;
+       /**
+        * The 2-dimensional representation of this image. Guaranteed not to be null.
+        * All values in the array are within the range [BLACK, WHITE], inclusive.
+        */
+       private int[][] pixelValues;
 
-      /** @return the total number of white pixels in
-       *    this image.
-       * Postcondition: this image has not been changed.
-       */
-      public int countWhitePixels()
-      { /* to be implemented in part (a) */ }
+       /**
+        * @return the total number of white pixels in this image. Postcondition: this
+        *     image has not been changed.
+        */
+       public int countWhitePixels()
+       {
+           /* to be implemented in part (a) */
+       }
    }
 
 How to solve this problem
@@ -117,15 +119,17 @@ Looping through a 2D array is more complicated than the simple arrays we usually
 
        public class Test
        {
-          public static void main(String[] args)
-          {
-            for (int i = 0; i < 5; i++) {
-              for (int j = 0; j < 5; j++) {
-                System.out.print(j);
-              }
-              System.out.println();
-            }
-          }
+           public static void main(String[] args)
+           {
+               for (int i = 0; i < 5; i++)
+               {
+                   for (int j = 0; j < 5; j++)
+                   {
+                       System.out.print(j);
+                   }
+                   System.out.println();
+               }
+           }
        }
 
 .. reveal:: 2012greyScaleForEach
@@ -137,15 +141,17 @@ Looping through a 2D array is more complicated than the simple arrays we usually
 
         public class Test
         {
-           public static void main(String[] args)
-           {
-           int[][] arr = new int[5][5];
-            for (int[] row : arr) {
-               for (int ent : row) {
-                  System.out.print(ent);
+            public static void main(String[] args)
+            {
+                int[][] arr = new int[5][5];
+                for (int[] row : arr)
+                {
+                    for (int ent : row)
+                    {
+                        System.out.print(ent);
+                    }
+                    System.out.println();
                 }
-                System.out.println();
-              }
             }
         }
 
@@ -310,108 +316,114 @@ Try and Solve It
    ~~~~
    public class GrayImage
    {
-      public static final int BLACK = 0;
-      public static final int WHITE = 255;
+       public static final int BLACK = 0;
+       public static final int WHITE = 255;
 
-      /** The 2-dimensional representation of this image.
-       *  Guaranteed not to be null.
-       *  All values in the array are within the range
-       *  [BLACK, WHITE], inclusive.
-       */
-      private int[][] pixelValues;
+       /**
+        * The 2-dimensional representation of this image. Guaranteed not to be null.
+        * All values in the array are within the range [BLACK, WHITE], inclusive.
+        */
+       private int[][] pixelValues;
 
-      /** constructor that takes a 2D array */
-      public GrayImage(int[][] theArray)
-      {
-         pixelValues = theArray;
-      }
+       /** constructor that takes a 2D array */
+       public GrayImage(int[][] theArray)
+       {
+           pixelValues = theArray;
+       }
 
-      /** @return the total number of white pixels in
-       *    this image.
-       * Postcondition: this image has not been changed.
-       */
-      public int countWhitePixels()
-      {
+       /**
+        * @return the total number of white pixels in this image. Postcondition: this
+        *     image has not been changed.
+        */
+       public int countWhitePixels() {}
 
-      }
-
-      /** main for testing */
-      public static void main (String[] args)
-      {
-        int[][] values = { {255, 184, 178, 84, 129},
-                          {84, 255, 255, 130, 94},
-                          {78, 255, 0, 0, 78},
-                          {84, 130, 255, 130, 84}};
-        GrayImage image = new GrayImage(values);
-        System.out.println("count white should be 5 and is " +
-                           image.countWhitePixels());
-      }
+       /** main for testing */
+       public static void main(String[] args)
+       {
+           int[][] values =
+           {
+               {255, 184, 178, 84, 129},
+               {84, 255, 255, 130, 94},
+               {78, 255, 0, 0, 78},
+               {84, 130, 255, 130, 84}
+           };
+           GrayImage image = new GrayImage(values);
+           System.out.println(
+                   "count white should be 5 and is " + image.countWhitePixels());
+       }
    }
+
    ====
    import static org.junit.Assert.*;
-     import org.junit.*;
-     import java.io.*;
-     import java.util.List;
-     import java.util.ArrayList;
 
-     public class RunestoneTests extends CodeTestHelper
-     {
+   import org.junit.*;
+
+   import java.io.*;
+
+   public class RunestoneTests extends CodeTestHelper
+   {
 
        @Test
        public void testMain() throws IOException
        {
-         String output = getMethodOutput("main");
-         String expect = "count white should be 5 and is 5\n";
+           String output = getMethodOutput("main");
+           String expect = "count white should be 5 and is 5\n";
 
-         boolean passed = getResults(expect, output, "Expected output from main");
-         assertTrue(passed);
+           boolean passed = getResults(expect, output, "Expected output from main");
+           assertTrue(passed);
        }
+
        @Test
        public void test1()
        {
-         int[][] values = { {255, 255, 255},
-                            {255, 255, 255},
-                            {255, 255, 255}};
+           int[][] values =
+           {
+               {255, 255, 255},
+               {255, 255, 255},
+               {255, 255, 255}
+           };
 
-         GrayImage image = new GrayImage(values);
-         String output = String.valueOf(image.countWhitePixels());
-         String expect = "9";
+           GrayImage image = new GrayImage(values);
+           String output = String.valueOf(image.countWhitePixels());
+           String expect = "9";
 
-         boolean passed = getResults(expect, output, "countWhitePixels 3X3, all are white");
-         assertTrue(passed);
+           boolean passed = getResults(expect, output, "countWhitePixels 3X3, all are white");
+           assertTrue(passed);
        }
 
        @Test
        public void test2()
        {
-         int[][] values = { {255, 0},
-                            {0, 255},
-                            {255, 0},
-                            {0, 255},};
+           int[][] values =
+           {
+               {255, 0},
+               {0, 255},
+               {255, 0},
+               {0, 255},
+           };
 
-         GrayImage image = new GrayImage(values);
-         String output = String.valueOf(image.countWhitePixels());
-         String expect = "4";
+           GrayImage image = new GrayImage(values);
+           String output = String.valueOf(image.countWhitePixels());
+           String expect = "4";
 
-         boolean passed = getResults(expect, output, "countWhitePixels 4X2, half are white");
-         assertTrue(passed);
+           boolean passed = getResults(expect, output, "countWhitePixels 4X2, half are white");
+           assertTrue(passed);
        }
 
        @Test
        public void test3()
        {
-         String code = getCode();
-         String target = "for";
+           String code = getCode();
+           String target = "for";
 
-         int num = countOccurencesRegex(code, target);
+           int num = countOccurencesRegex(code, target);
 
-         boolean passed = num == 2;
+           boolean passed = num == 2;
 
-         getResults("2", ""+num, "2 for loops (nested)", passed);
-         assertTrue(passed);
+           getResults("2", "" + num, "2 for loops (nested)", passed);
+           assertTrue(passed);
        }
-     }
-
+   }
 
 Video - One way to code the solution
 =====================================
