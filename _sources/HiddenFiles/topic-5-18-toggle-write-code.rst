@@ -421,18 +421,17 @@ This is the write code problems associated with the mixed up code problems.
         {
             private int orbitLength;
             private int daysSinceDiscovered;
-
-            public CelestialBody(
-                    int
-                            orbitLength) { // There is an error in this function or in the
-                                           // header
+            
+            // There is an error in this function or in the header
+            public CelestialBody(int orbitLength) 
+            {                               
                 this.daysSinceDiscovered = 0;
             }
-
-            public String orbit(int numberOfTimes) { // There is an error in this header
-
+            
+            // There is an error in this header
+            public String orbit(int numberOfTimes) 
+            { 
                 // YOUR CODE HERE
-
             }
 
             public int getDaysSinceDiscovered()
@@ -616,22 +615,18 @@ This is the write code problems associated with the mixed up code problems.
             {
                 Point origin = new Point(0, 0);
                 Point C = new Point(3, 4);
-                System.out.println(
-                        "The origin is at "
+                System.out.println("The origin is at "
                                 + origin); // Should print "The origin is at (0, 0)"
-                System.out.println(
-                        "That is "
+                System.out.println("That is "
                                 + origin.getDistance(C)
                                 + " units away from "
                                 + C); // Should print "That is 5.0 units away from (3, 4)"
                 Point D = new Point(5, 6);
-                System.out.println(
-                        "And "
+                System.out.println("And "
                                 + Math.round(origin.getDistance(D) * 100) / 100.0
                                 + " units away from "
                                 + D); // Should print "And 7.81 units away from (5, 6)"
-                System.out.println(
-                        C
+                System.out.println(C
                                 + " and "
                                 + D
                                 + " are "
@@ -823,13 +818,10 @@ This is the write code problems associated with the mixed up code problems.
                 {
 
                     // This part of the function is finished for you
-
-                    this.setHP(
-                            this.getHP()
-                                    - other
-                                            .getHP()); // update the healthPoints (HP) of
-                                                       // this object to be the difference
-                                                       // between its HP and other's HP
+                    // update the healthPoints (HP) of this object to be the difference
+                    // between its HP and other's HP
+                    this.setHP(this.getHP() - other.getHP()); 
+                    
 
                     other.setHP(0); // update other's HP to be 0
 
