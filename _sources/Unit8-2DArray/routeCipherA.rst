@@ -276,20 +276,25 @@ button below and complete the problem.
       but it is mixed up.  Drag the needed code from the left to the right and put them in order with the
       correct indention so that the code would work correctly.
       -----
-      public void fillBlock(String str) {
+      public void fillBlock(String str)
+      {
         int pos = 0;
       =====
-        for (int r = 0; r < this.numRows; r++ ) {
+        for (int r = 0; r < this.numRows; r++ )
+        {
       =====
-            for (int c = 0; c < this.numCols; c++ ) {
+            for (int c = 0; c < this.numCols; c++ )
+            {
       =====
-                if (pos < str.length()) {
+                if (pos < str.length())
+                {
       =====
                     String subStr = str.substring(pos, pos+1);
                     this.letterBlock[r][c] = subStr;
                     pos++;
       =====
-                } else {
+                } else 
+                {
                     this.letterBlock[r][c] = "A";
                 } // end else block
       =====

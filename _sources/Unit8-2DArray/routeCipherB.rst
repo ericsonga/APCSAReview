@@ -189,14 +189,16 @@ Below is a mixed up version of the correct solution hinted at by the previous qu
 
          The method encryptMessage below contains the correct code for one solution to this problem, but it is mixed up and contains extra blocks that are not needed.  Drag the needed code from the left to the right and put them in order with the correct indention so that the code would work correctly.
          -----
-         public String encryptMessage(String message) {
+         public String encryptMessage(String message) 
+         {
            String encryptedMessage = "";
            int chunkSize = this.numRows * this.numCols;
          =====
-           while (message.length() > 0) {
+           while (message.length() > 0)
+           {
          =====
-             if (chunkSize > message.length()) {
-         =====
+             if (chunkSize > message.length()) 
+             {
                chunkSize = message.length();
          =====
              } // end if
@@ -402,14 +404,23 @@ If you still feel unsure of the recursive solution, it is recommended that you r
 
         The method encryptMessage below contains the correct code for one solution to this problem, but it is mixed up and contains extra blocks that are not needed.  Drag the needed code from the left to the right and put them in order with the correct indention so that the code would work correctly.
         -----
-        public String encryptMessage(String message) {
+        public String encryptMessage(String message)
+        {
         =====
-          if (message.length() == 0) { return ""; }
+          if (message.length() == 0)
+          { 
+              return ""; 
+          }
         =====
           fillBlock(message);
         =====
-          if (message.length() <= this.numRows * this.numCols) { return encryptBlock(); }
+          if (message.length() <= this.numRows * this.numCols) 
+          { 
+              return encryptBlock(); 
+          }
         =====
-          return (encryptBlock() + encryptMessage(message.substring(this.numRows * this.numCols)));
+          return (encryptBlock() + 
+                 encryptMessage(message.substring(
+                    this.numRows * this.numCols)));
         =====
         } // end method
