@@ -202,10 +202,12 @@ We will only want to increment the index if the word was replaced and not remove
 
       The method test below contains the correct code for one solution to this problem, but it is mixed up.  Drag the needed code from the left to the right and put them in order with the correct indention so that the code would work correctly.
       -----
-      public static void test(List<String> wordList) {
+      public static void test(List<String> wordList)
+      {
       =====
         int i = 0;
-        while (i < wordList.size()) {
+        while (i < wordList.size())
+        {
       =====
            String current = wordList.get(i);
            String scrambled = scrambleWord(current);
@@ -259,9 +261,11 @@ Another way to solve this problem is to start at the end of the list and loop to
       The method test below contains the correct code for another solution to this problem, but it is mixed up.  Drag the needed code from the left to the right and put them in order with the correct indention so that the code would work correctly.
       -----
 
-      public static void test(List<String> wordList) {
+      public static void test(List<String> wordList)
+      {
       =====
-         for (int i = wordList.size() - 1; i >= 0; i--) {
+         for (int i = wordList.size() - 1; i >= 0; i--)
+         {
       =====
             String word = wordList.get(i);
       =====
@@ -323,7 +327,7 @@ Try and Solve It
                if (letter1.equals("A")
                        && !letter2.equals("A")
                        && !letter2.equals(""))
-                       {
+               {
                    scrambled += letter2 + letter1;
                    i += 2;
                }
