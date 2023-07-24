@@ -106,52 +106,57 @@ You can add values to an ArrayList by using the method ``add(obj)`` which will a
 
    Run the code below to see how the list changes as each object is added to the end.  Notice that we added the same string to the list more than once.  Lists can hold duplicate objects. Can you add your name to the list and then print out the list?
    ~~~~
-   import java.util.*;  // import all classes in this package.
+   import java.util.*; // import all classes in this package.
+
    public class listAdd1
    {
-      public static void main(String[] args)
-      {
-          ArrayList<String> nameList = new ArrayList<String>();
-          nameList.add("Diego");
-          System.out.println(nameList);
-          nameList.add("Grace");
-          System.out.println(nameList);
-          nameList.add("Diego");
-          System.out.println(nameList);
-          System.out.println(nameList.size());
-      }
+       public static void main(String[] args)
+       {
+           ArrayList<String> nameList = new ArrayList<String>();
+           nameList.add("Diego");
+           System.out.println(nameList);
+           nameList.add("Grace");
+           System.out.println(nameList);
+           nameList.add("Diego");
+           System.out.println(nameList);
+           System.out.println(nameList.size());
+       }
    }
+
    ====
    import static org.junit.Assert.*;
-    import org.junit.*;;
-    import java.io.*;
 
-    public class RunestoneTests extends CodeTestHelper
-    {
-        public RunestoneTests() {
-            super("listAdd1");
-        }
+   import org.junit.*;
 
-        @Test
-        public void test1()
-        {
-            String output = getMethodOutput("main");
-            String expect = "[Diego, Grace, Diego, Your name]";
-            String searchString = "\\[Diego, Grace, Diego, [A-Za-z0-9 '-,]+\\]";
+   import java.io.*;
 
-            String[] lines = output.split("\n");
-            String longest = lines[0];
-            for (int i = 0; i < lines.length; i++) {
-                if (lines[i].length() > longest.length())
-                    longest = lines[i];
-            }
+   public class RunestoneTests extends CodeTestHelper
+   {
+       public RunestoneTests()
+       {
+           super("listAdd1");
+       }
 
-            boolean passed = output.matches("[\\s\\S]+" + searchString + "[\\s\\S]*");
+       @Test
+       public void test1()
+       {
+           String output = getMethodOutput("main");
+           String expect = "[Diego, Grace, Diego, Your name]";
+           String searchString = "\\[Diego, Grace, Diego, [A-Za-z0-9 '-,]+\\]";
 
-            passed = getResults(expect, longest, "Add your name to the list", passed);
-            assertTrue(passed);
-        }
-    }
+           String[] lines = output.split("\n");
+           String longest = lines[0];
+           for (int i = 0; i < lines.length; i++)
+           {
+               if (lines[i].length() > longest.length()) longest = lines[i];
+           }
+
+           boolean passed = output.matches("[\\s\\S]+" + searchString + "[\\s\\S]*");
+
+           passed = getResults(expect, longest, "Add your name to the list", passed);
+           assertTrue(passed);
+       }
+   }
 
 .. index::
    pair: list; autoboxing
@@ -177,57 +182,61 @@ You can put any kind of Objects into an ArrayList. Even objects for a class that
 
   public class StudentList
   {
-     // main method for testing
-     public static void main(String[] args)
-     {
-         ArrayList<Student> roster = new ArrayList<Student>();
-         roster.add(new Student("Skyler", "skyler@sky.com", 123456));
-         roster.add(new Student("Ayanna", "ayanna@gmail.com", 789012));
+      // main method for testing
+      public static void main(String[] args)
+      {
+          ArrayList<Student> roster = new ArrayList<Student>();
+          roster.add(new Student("Skyler", "skyler@sky.com", 123456));
+          roster.add(new Student("Ayanna", "ayanna@gmail.com", 789012));
 
-         System.out.println(roster);
-     }
-   }
+          System.out.println(roster);
+      }
+  }
 
   class Student
   {
-     private String name;
-     private String email;
-     private int id;
+      private String name;
+      private String email;
+      private int id;
 
-     public Student(String initName, String initEmail, int initId)
-     {
-        name = initName;
-        email = initEmail;
-        id = initId;
-     }
+      public Student(String initName, String initEmail, int initId)
+      {
+          name = initName;
+          email = initEmail;
+          id = initId;
+      }
 
-     // toString() method
-     public String toString()
-     {
-       return id + ": " + name + ", " + email;
-     }
+      // toString() method
+      public String toString()
+      {
+          return id + ": " + name + ", " + email;
+      }
   }
+
   ====
   import static org.junit.Assert.*;
-    import org.junit.*;;
-    import java.io.*;
 
-    public class RunestoneTests extends CodeTestHelper
-    {
-        public RunestoneTests() {
-            super("StudentList");
-        }
+  import org.junit.*;
 
-        @Test
-        public void test1()
-        {
-            String output = getMethodOutput("main");
-            String expect = "[123456: Skyler, skyler@sky.com, 789012: Ayanna, ayanna@gmail.com]";
+  import java.io.*;
 
-            boolean passed = getResults(expect, output, "main()", true);
-            assertTrue(passed);
-        }
-    }
+  public class RunestoneTests extends CodeTestHelper
+  {
+      public RunestoneTests()
+      {
+          super("StudentList");
+      }
+
+      @Test
+      public void test1()
+      {
+          String output = getMethodOutput("main");
+          String expect = "[123456: Skyler, skyler@sky.com, 789012: Ayanna, ayanna@gmail.com]";
+
+          boolean passed = getResults(expect, output, "main()", true);
+          assertTrue(passed);
+      }
+  }
 
 Add(index,obj) in an ArrayList
 ------------------------------
@@ -245,47 +254,52 @@ There are actually two different ``add`` methods in the ``ArrayList`` class.  Th
 
    What will the code below print out? Try figuring it out before running it. Remember that ArrayLists start at index 0 and that the add(index,obj) always has the index as the first argument.
    ~~~~
-   import java.util.*;  // import all classes in this package.
+   import java.util.*; // import all classes in this package.
+
    public class listAddInt2
    {
-      public static void main(String[] arts)
-      {
-         ArrayList<Integer> list1 = new ArrayList<Integer>();
-         list1.add(1);
-         System.out.println(list1);
-         // adds the number 2 to the end of the list
-         list1.add(2);
-         System.out.println(list1);
-         // This will add the number 3 at index 1
-         list1.add(1, 3);
-         System.out.println(list1);
-         // This will add the number 4 at index 1
-         list1.add(1, 4);
-         System.out.println(list1);
-         System.out.println(list1.size());
-      }
+       public static void main(String[] arts)
+       {
+           ArrayList<Integer> list1 = new ArrayList<Integer>();
+           list1.add(1);
+           System.out.println(list1);
+           // adds the number 2 to the end of the list
+           list1.add(2);
+           System.out.println(list1);
+           // This will add the number 3 at index 1
+           list1.add(1, 3);
+           System.out.println(list1);
+           // This will add the number 4 at index 1
+           list1.add(1, 4);
+           System.out.println(list1);
+           System.out.println(list1.size());
+       }
    }
+
    ====
    import static org.junit.Assert.*;
-    import org.junit.*;;
-    import java.io.*;
 
-    public class RunestoneTests extends CodeTestHelper
-    {
-        public RunestoneTests() {
-            super("listAddInt2");
-        }
+   import org.junit.*;
 
-        @Test
-        public void test1()
-        {
-            String output = getMethodOutput("main");
-            String expect = "[1]\n[1, 2]\n[1, 3, 2]\n[1, 4, 3, 2]\n4\n";
+   import java.io.*;
 
-            boolean passed = getResults(expect, output, "main()", true);
-            assertTrue(passed);
-        }
-    }
+   public class RunestoneTests extends CodeTestHelper
+   {
+       public RunestoneTests()
+       {
+           super("listAddInt2");
+       }
+
+       @Test
+       public void test1()
+       {
+           String output = getMethodOutput("main");
+           String expect = "[1]\n[1, 2]\n[1, 3, 2]\n[1, 4, 3, 2]\n4\n";
+
+           boolean passed = getResults(expect, output, "main()", true);
+           assertTrue(passed);
+       }
+   }
 
 .. note::
 
@@ -369,41 +383,46 @@ You can also remove values from an ArrayList by using **remove(index)** to remov
 
    What will the following code print out? Try to guess before you run it. Were you surprised? Read the note below.
    ~~~~
-   import java.util.*;  // import all classes in this package.
+   import java.util.*; // import all classes in this package.
+
    public class listRem
    {
-      public static void main(String[] arts)
-      {
-         ArrayList<Integer> list1 = new ArrayList<Integer>();
-         list1.add(1);
-         list1.add(2);
-         list1.add(3);
-         System.out.println(list1);
-         list1.remove(1);
-         System.out.println(list1);
-      }
+       public static void main(String[] arts)
+       {
+           ArrayList<Integer> list1 = new ArrayList<Integer>();
+           list1.add(1);
+           list1.add(2);
+           list1.add(3);
+           System.out.println(list1);
+           list1.remove(1);
+           System.out.println(list1);
+       }
    }
+
    ====
    import static org.junit.Assert.*;
-    import org.junit.*;;
-    import java.io.*;
 
-    public class RunestoneTests extends CodeTestHelper
-    {
-        public RunestoneTests() {
-            super("listRem");
-        }
+   import org.junit.*;
 
-        @Test
-        public void test1()
-        {
-            String output = getMethodOutput("main");
-            String expect = "[1, 2, 3]\n[1, 3]";
+   import java.io.*;
 
-            boolean passed = getResults(expect, output, "main()", true);
-            assertTrue(passed);
-        }
-    }
+   public class RunestoneTests extends CodeTestHelper
+   {
+       public RunestoneTests()
+       {
+           super("listRem");
+       }
+
+       @Test
+       public void test1()
+       {
+           String output = getMethodOutput("main");
+           String expect = "[1, 2, 3]\n[1, 3]";
+
+           boolean passed = getResults(expect, output, "main()", true);
+           assertTrue(passed);
+       }
+   }
 
 .. note::
 
@@ -455,53 +474,60 @@ Notice that ArrayLists use set/get methods instead of using the square brackets 
 
    Try to guess what the code below will print before running it. Can you get the last element in the nameList to print it out? Can you set the first element in the list to your name and print out the list?
    ~~~~
-   import java.util.*;  // import all classes in this package.
+   import java.util.*; // import all classes in this package.
+
    public class listGetSet
    {
-      public static void main(String[] args)
-      {
-          ArrayList<String> nameList = new ArrayList<String>();
-          nameList.add("Diego");
-          nameList.add("Grace");
-          nameList.add("Deja");
-          System.out.println(nameList);
-          System.out.println(nameList.get(0));
-          System.out.println(nameList.get(1));
-          nameList.set(1, "John");
-          System.out.println(nameList);
-      }
+       public static void main(String[] args)
+       {
+           ArrayList<String> nameList = new ArrayList<String>();
+           nameList.add("Diego");
+           nameList.add("Grace");
+           nameList.add("Deja");
+           System.out.println(nameList);
+           System.out.println(nameList.get(0));
+           System.out.println(nameList.get(1));
+           nameList.set(1, "John");
+           System.out.println(nameList);
+       }
    }
+
    ====
    import static org.junit.Assert.*;
-    import org.junit.*;;
-    import java.io.*;
 
-    public class RunestoneTests extends CodeTestHelper
-    {
-        public RunestoneTests() {
-            super("listGetSet");
-        }
+   import org.junit.*;
 
-        @Test
-        public void test1()
-        {
-            boolean passed = checkCodeContainsRegex("nameList.set(0, \"Your name\")", "nameList.set(0, ");
-            assertTrue(passed);
-        }
+   import java.io.*;
 
-        @Test
-        public void test2()
-        {
-            String output = getMethodOutput("main");
-            String searchString = "Deja";
+   public class RunestoneTests extends CodeTestHelper
+   {
+       public RunestoneTests()
+       {
+           super("listGetSet");
+       }
 
-            boolean passed = output.contains("\n" + searchString) || output.matches("\\s+" + searchString + "\\s+");
+       @Test
+       public void test1()
+       {
+           boolean passed =
+                   checkCodeContainsRegex("nameList.set(0, \"Your name\")", "nameList.set(0, ");
+           assertTrue(passed);
+       }
 
-            passed = getResults("true", "" + passed, "Prints last item in list (Deja)", passed);
-            assertTrue(passed);
-        }
-    }
+       @Test
+       public void test2()
+       {
+           String output = getMethodOutput("main");
+           String searchString = "Deja";
 
+           boolean passed =
+                   output.contains("\n" + searchString)
+                           || output.matches("\\s+" + searchString + "\\s+");
+
+           passed = getResults("true", "" + passed, "Prints last item in list (Deja)", passed);
+           assertTrue(passed);
+       }
+   }
 
 |Exercise| **Check your understanding**
 
@@ -615,77 +641,81 @@ Note that the ArrayList methods add and remove do not have a simple equivalent i
 
    public class ToDoList
    {
-      public static void main(String[] args)
-      {
-          // Rewrite this code to use an ArrayList instead of an array
-          String[] toDoList = new String[3];
-          toDoList[0] = "Do homework";
-          toDoList[1] = "Help make dinner";
-          toDoList[2] = "Call grandma";
+       public static void main(String[] args)
+       {
+           // Rewrite this code to use an ArrayList instead of an array
+           String[] toDoList = new String[3];
+           toDoList[0] = "Do homework";
+           toDoList[1] = "Help make dinner";
+           toDoList[2] = "Call grandma";
 
-          // changing element 1
-          toDoList[1] = "Order pizza";
+           // changing element 1
+           toDoList[1] = "Order pizza";
 
-          System.out.println(toDoList.length + " things to do!");
-          System.out.println("Here's the first thing to do: "
-              + toDoList[0] );
+           System.out.println(toDoList.length + " things to do!");
+           System.out.println("Here's the first thing to do: " + toDoList[0]);
 
-          // remove item 0 and move everything down
-          //  (this can be done in one method call with ArrayList)
-          toDoList[0] = toDoList[1];
-          toDoList[1] = toDoList[2];
-          toDoList[2] = "";
+           // remove item 0 and move everything down
+           //  (this can be done in one method call with ArrayList)
+           toDoList[0] = toDoList[1];
+           toDoList[1] = toDoList[2];
+           toDoList[2] = "";
 
-          System.out.println("Here's the next thing to do: "
-              + toDoList[0] );
+           System.out.println("Here's the next thing to do: " + toDoList[0]);
 
-          // Why is an ArrayList better than an array for a toDoList?
-          // Answer:
-      }
+           // Why is an ArrayList better than an array for a toDoList?
+           // Answer:
+       }
    }
+
    ====
    import static org.junit.Assert.*;
-   import org.junit.*;;
+
+   import org.junit.*;
+
    import java.io.*;
 
-    public class RunestoneTests extends CodeTestHelper
-    {
-        public RunestoneTests() {
-            super("ToDoList");
-        }
+   public class RunestoneTests extends CodeTestHelper
+   {
+       public RunestoneTests()
+       {
+           super("ToDoList");
+       }
 
-        @Test
-        public void test1()
-        {
-            String output = getMethodOutput("main");
-            String expect = "3 things to do!\nHere's the first thing to do: Do homework\nHere's the next thing to do: Order pizza";
+       @Test
+       public void test1()
+       {
+           String output = getMethodOutput("main");
+           String expect =
+                   "3 things to do!\n"
+                       + "Here's the first thing to do: Do homework\n"
+                       + "Here's the next thing to do: Order pizza";
 
-            boolean passed = getResults(expect, output, "Output is the same");
-            assertTrue(passed);
-        }
+           boolean passed = getResults(expect, output, "Output is the same");
+           assertTrue(passed);
+       }
 
+       @Test
+       public void test2()
+       {
+           String output = removeSpaces(getCode());
+           String expect = "ArrayList<String>";
 
-        @Test
-        public void test2()
-        {
-            String output = removeSpaces(getCode());
-            String expect = "ArrayList<String>";
+           boolean passed = output.contains(expect);
 
-            boolean passed = output.contains(expect);
+           passed = getResults("true", "" + passed, "Declare ArrayList", passed);
+           assertTrue(passed);
+       }
 
-            passed = getResults("true", "" + passed, "Declare ArrayList", passed);
-            assertTrue(passed);
-        }
+       @Test
+       public void test3()
+       {
+           String expect = "[*]";
 
-        @Test
-        public void test3()
-        {
-            String expect = "[*]";
-
-            boolean passed = checkCodeNotContains(expect);
-            assertTrue(passed);
-        }
-    }
+           boolean passed = checkCodeNotContains(expect);
+           assertTrue(passed);
+       }
+   }
 
 Summary
 -----------

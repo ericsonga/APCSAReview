@@ -247,634 +247,620 @@ Write the method ``getEmptyLocations`` in the code below.
    public class GridWorldUtilities
    {
 
-       /** Gets all the locations in grid that do not contain objects.
-        *  @param grid is a reference to a bounded object
-        *  @param an array list (possibly contains nothing) of empty locations in grid.
-        *         The size of the returned list is 0 if there are no empty locations in grid.
-        *         Each empty location in grid should appear exactly and only once in the returned list.
+       /**
+        * Gets all the locations in grid that do not contain objects.
+        *
+        * @param grid is a reference to a bounded object
+        * @param an array list (possibly contains nothing) of empty locations in grid.
+        *     The size of the returned list is 0 if there are no empty locations in
+        *     grid. Each empty location in grid should appear exactly and only once in
+        *     the returned list.
         */
-       public static ArrayList<Location> getEmptyLocations(Grid<Location> grid) {
-          /* TO BE IMPLEMENTED IN PART A*/
+       public static ArrayList<Location> getEmptyLocations(Grid<Location> grid)
+       {
+           /* TO BE IMPLEMENTED IN PART A*/
        }
 
        public static void main(String[] args)
        {
-            System.out.println("Running Test 1");
-            BoundedGrid<Location> example = new BoundedGrid<Location>(2,2);
-            Location loc1 = new Location(0,0);
-            Location loc2 = new Location(1,0);
-            Location loc3 = new Location(0,1);
-            Location loc4 = new Location(1,1);
-            example.put(loc1, loc1);
-            example.put(loc2, loc2);
-            example.put(loc3, loc3);
+           System.out.println("Running Test 1");
+           BoundedGrid<Location> example = new BoundedGrid<Location>(2, 2);
+           Location loc1 = new Location(0, 0);
+           Location loc2 = new Location(1, 0);
+           Location loc3 = new Location(0, 1);
+           Location loc4 = new Location(1, 1);
+           example.put(loc1, loc1);
+           example.put(loc2, loc2);
+           example.put(loc3, loc3);
 
-            ArrayList<Location> locsCorrect = new ArrayList<Location>();
-            locsCorrect.add(loc4);
+           ArrayList<Location> locsCorrect = new ArrayList<Location>();
+           locsCorrect.add(loc4);
 
-            ArrayList<Location> studentAnswer = new ArrayList<Location>();
-            studentAnswer = getEmptyLocations(example);
+           ArrayList<Location> studentAnswer = new ArrayList<Location>();
+           studentAnswer = getEmptyLocations(example);
 
-            System.out.println("This is the correct output for test 1, compare the result with your output");
-            for (int i = 0; i < locsCorrect.size(); i++) {
-                System.out.println(locsCorrect.get(i));
-            }
+           System.out.println(
+                   "This is the correct output for test 1, compare the result with"
+                       + " your output");
+           for (int i = 0; i < locsCorrect.size(); i++)
+           {
+               System.out.println(locsCorrect.get(i));
+           }
 
-            System.out.println("Student output:");
-            for (int j = 0; j < studentAnswer.size(); j++) {
-                System.out.println(studentAnswer.get(j));
-            }
+           System.out.println("Student output:");
+           for (int j = 0; j < studentAnswer.size(); j++)
+           {
+               System.out.println(studentAnswer.get(j));
+           }
 
-            System.out.println("Running Test 2: returns empty ArrayList if no empty locations");
-            example.put(loc4, loc4);
-            locsCorrect.clear();
-            studentAnswer = getEmptyLocations(example);
+           System.out.println(
+                   "Running Test 2: returns empty ArrayList if no empty locations");
+           example.put(loc4, loc4);
+           locsCorrect.clear();
+           studentAnswer = getEmptyLocations(example);
 
-            System.out.println("This is the correct output for test 2 (empty), compare the result with your output");
-            for (int i = 0; i < locsCorrect.size(); i++) {
-                System.out.println(locsCorrect.get(i));
-            }
+           System.out.println(
+                   "This is the correct output for test 2 (empty), compare the result"
+                       + " with your output");
+           for (int i = 0; i < locsCorrect.size(); i++)
+           {
+               System.out.println(locsCorrect.get(i));
+           }
 
-            System.out.println("Student output:");
-            for (int j = 0; j < studentAnswer.size(); j++) {
-                System.out.println(studentAnswer.get(j));
-            }
+           System.out.println("Student output:");
+           for (int j = 0; j < studentAnswer.size(); j++)
+           {
+               System.out.println(studentAnswer.get(j));
+           }
+       }
+   }
 
-        }
-     }
+   /* GridWorld files
+    */
+   /**
+    * Grid provides an interface for a two-dimensional, grid-like environment
+    * containing arbitrary objects.
+    */
+   interface Grid<E>
+   {
+       /**
+        * Returns the number of rows in this grid.
+        *
+        * @return the number of rows, or -1 if this grid is unbounded
+        */
+       int getNumRows();
 
-     /* GridWorld files
-     */
-      /**
-         * Grid provides an interface for a two-dimensional, grid-like
-         * environment containing arbitrary objects.
-         */
-       interface Grid<E>
-        {
-            /**
-             * Returns the number of rows in this grid.
-             * @return the number of rows, or -1 if this grid is unbounded
-             */
-            int getNumRows();
+       /**
+        * Returns the number of columns in this grid.
+        *
+        * @return the number of columns, or -1 if this grid is unbounded
+        */
+       int getNumCols();
 
-            /**
-             * Returns the number of columns in this grid.
-             * @return the number of columns, or -1 if this grid is unbounded
-             */
-            int getNumCols();
+       /**
+        * Checks whether a location is valid in this grid. Precondition: loc is not
+        * null
+        *
+        * @param loc the location to check
+        * @return true if loc is valid in this grid, false otherwise
+        */
+       boolean isValid(Location loc);
 
-            /**
-             * Checks whether a location is valid in this grid.
-             * Precondition: loc is not null
-             * @param loc the location to check
-             * @return true if loc is valid in this grid,
-             * false otherwise
-             */
-            boolean isValid(Location loc);
+       /**
+        * Puts an object at a given location in this grid. Precondition: (1) loc is
+        * valid in this grid (2) obj is not null
+        *
+        * @param loc the location at which to put the object
+        * @param obj the new object to be added
+        * @return the object previously at loc (or null if the location was previously
+        *     unoccupied)
+        */
+       E put(Location loc, E obj);
 
-            /**
-             * Puts an object at a given location in this grid.
-             * Precondition: (1) loc is valid in this grid (2)
-             * obj is not null
-             * @param loc the location at which to put the object
-             * @param obj the new object to be added
-             * @return the object previously at loc (or null
-             * if the location was previously unoccupied)
-             */
-            E put(Location loc, E obj);
+       /**
+        * Removes the object at a given location from this grid. Precondition: loc is
+        * valid in this grid
+        *
+        * @param loc the location of the object that is to be removed
+        * @return the object that was removed (or null if the location is unoccupied)
+        */
+       E remove(Location loc);
 
-            /**
-             * Removes the object at a given location from this grid.
-             * Precondition: loc is valid in this grid
-             * @param loc the location of the object that is to be removed
-             * @return the object that was removed (or null if the location
-             *  is unoccupied)
-             */
-            E remove(Location loc);
+       /**
+        * Returns the object at a given location in this grid. Precondition: loc is
+        * valid in this grid
+        *
+        * @param loc a location in this grid
+        * @return the object at location loc (or null if the location is unoccupied)
+        */
+       E get(Location loc);
 
-            /**
-             * Returns the object at a given location in this grid.
-             * Precondition: loc is valid in this grid
-             * @param loc a location in this grid
-             * @return the object at location loc (or null
-             *  if the location is unoccupied)
-             */
-            E get(Location loc);
+       /**
+        * Gets the locations in this grid that contain objects.
+        *
+        * @return an array list of all occupied locations in this grid
+        */
+       ArrayList<Location> getOccupiedLocations();
 
-            /**
-             * Gets the locations in this grid that contain objects.
-             * @return an array list of all occupied locations in this grid
-             */
-            ArrayList<Location> getOccupiedLocations();
+       /**
+        * Gets the valid locations adjacent to a given location in all eight compass
+        * directions (north, northeast, east, southeast, south, southwest, west, and
+        * northwest). Precondition: loc is valid in this grid
+        *
+        * @param loc a location in this grid
+        * @return an array list of the valid locations adjacent to loc in this grid
+        */
+       ArrayList<Location> getValidAdjacentLocations(Location loc);
 
-            /**
-             * Gets the valid locations adjacent to a given location in all eight
-             * compass directions (north, northeast, east, southeast, south, southwest,
-             * west, and northwest).
-             * Precondition: loc is valid in this grid
-             * @param loc a location in this grid
-             * @return an array list of the valid locations adjacent to loc
-             * in this grid
-             */
-            ArrayList<Location> getValidAdjacentLocations(Location loc);
+       /**
+        * Gets the valid empty locations adjacent to a given location in all eight
+        * compass directions (north, northeast, east, southeast, south, southwest,
+        * west, and northwest). Precondition: loc is valid in this grid
+        *
+        * @param loc a location in this grid
+        * @return an array list of the valid empty locations adjacent to loc in this
+        *     grid
+        */
+       ArrayList<Location> getEmptyAdjacentLocations(Location loc);
 
-            /**
-             * Gets the valid empty locations adjacent to a given location in all eight
-             * compass directions (north, northeast, east, southeast, south, southwest,
-             * west, and northwest).
-             * Precondition: loc is valid in this grid
-             * @param loc a location in this grid
-             * @return an array list of the valid empty locations adjacent to
-             * loc in this grid
-             */
-            ArrayList<Location> getEmptyAdjacentLocations(Location loc);
+       /**
+        * Gets the valid occupied locations adjacent to a given location in all eight
+        * compass directions (north, northeast, east, southeast, south, southwest,
+        * west, and northwest). Precondition: loc is valid in this grid
+        *
+        * @param loc a location in this grid
+        * @return an array list of the valid occupied locations adjacent to loc in
+        *     this grid
+        */
+       ArrayList<Location> getOccupiedAdjacentLocations(Location loc);
 
-            /**
-             * Gets the valid occupied locations adjacent to a given location in all
-             * eight compass directions (north, northeast, east, southeast, south,
-             * southwest, west, and northwest).
-             * Precondition: loc is valid in this grid
-             * @param loc a location in this grid
-             * @return an array list of the valid occupied locations adjacent to
-             * loc in this grid
-             */
-            ArrayList<Location> getOccupiedAdjacentLocations(Location loc);
+       /**
+        * Gets the neighboring occupants in all eight compass directions (north,
+        * northeast, east, southeast, south, southwest, west, and northwest).
+        *
+        * <p>Precondition: loc is valid in this grid
+        *
+        * @param loc a location in this grid
+        * @return returns an array list of the objects in the occupied locations
+        *     adjacent to loc in this grid
+        */
+       ArrayList<E> getNeighbors(Location loc);
+   }
 
-            /**
-             * Gets the neighboring occupants in all eight compass directions (north,
-             * northeast, east, southeast, south, southwest, west, and northwest).
-             *
-             * Precondition: loc is valid in this grid
-             * @param loc a location in this grid
-             * @return returns an array list of the objects in the occupied locations
-             * adjacent to loc in this grid
-             */
-            ArrayList<E> getNeighbors(Location loc);
-        }
-         // End of Class Grid
+   // End of Class Grid
 
-        // Location Class
+   // Location Class
 
-        /**
-         * A Location object represents the row and column of a location
-         * in a two-dimensional grid.
-         * The API of this class is testable on the AP CSA and AB exams.
-         */
-         class Location implements Comparable
-        {
-            private int row; // row location in grid
-            private int col; // column location in grid
+   /**
+    * A Location object represents the row and column of a location in a
+    * two-dimensional grid. The API of this class is testable on the AP CSA and AB
+    * exams.
+    */
+   class Location implements Comparable
+   {
+       private int row; // row location in grid
+       private int col; // column location in grid
 
-            /**
-             * The turn angle for turning 90 degrees to the left.
-             */
-            public static final int LEFT = -90;
-            /**
-             * The turn angle for turning 90 degrees to the right.
-             */
-            public static final int RIGHT = 90;
-            /**
-             * The turn angle for turning 45 degrees to the left.
-             */
-            public static final int HALF_LEFT = -45;
-            /**
-             * The turn angle for turning 45 degrees to the right.
-             */
-            public static final int HALF_RIGHT = 45;
-            /**
-             * The turn angle for turning a full circle.
-             */
-            public static final int FULL_CIRCLE = 360;
-            /**
-             * The turn angle for turning a half circle.
-             */
-            public static final int HALF_CIRCLE = 180;
-            /**
-             * The turn angle for making no turn.
-             */
-            public static final int AHEAD = 0;
+       /** The turn angle for turning 90 degrees to the left. */
+       public static final int LEFT = -90;
 
-            /**
-             * The compass direction for north.
-             */
-            public static final int NORTH = 0;
-            /**
-             * The compass direction for northeast.
-             */
-            public static final int NORTHEAST = 45;
-            /**
-             * The compass direction for east.
-             */
-            public static final int EAST = 90;
-            /**
-             * The compass direction for southeast.
-             */
-            public static final int SOUTHEAST = 135;
-            /**
-             * The compass direction for south.
-             */
-            public static final int SOUTH = 180;
-            /**
-             * The compass direction for southwest.
-             */
-            public static final int SOUTHWEST = 225;
-            /**
-             * The compass direction for west.
-             */
-            public static final int WEST = 270;
-            /**
-             * The compass direction for northwest.
-             */
-            public static final int NORTHWEST = 315;
+       /** The turn angle for turning 90 degrees to the right. */
+       public static final int RIGHT = 90;
 
-            /**
-             * Constructs a location with given row and column coordinates.
-             * @param r the row
-             * @param c the column
-             */
-            public Location(int r, int c)
-            {
-                row = r;
-                col = c;
-            }
+       /** The turn angle for turning 45 degrees to the left. */
+       public static final int HALF_LEFT = -45;
 
-            /**
-             * Gets the row coordinate.
-             * @return the row of this location
-             */
-            public int getRow()
-            {
-                return row;
-            }
+       /** The turn angle for turning 45 degrees to the right. */
+       public static final int HALF_RIGHT = 45;
 
-            /**
-             * Gets the column coordinate.
-             * @return the column of this location
-             */
-            public int getCol()
-            {
-                return col;
-            }
+       /** The turn angle for turning a full circle. */
+       public static final int FULL_CIRCLE = 360;
 
-            /**
-             * Gets the adjacent location in any one of the eight compass directions.
-             * @param direction the direction in which to find a neighbor location
-             * @return the adjacent location in the direction that is closest to
-             * <tt>direction</tt>
-             */
-            public Location getAdjacentLocation(int direction)
-            {
-                // reduce mod 360 and round to closest multiple of 45
-                int adjustedDirection = (direction + HALF_RIGHT / 2) % FULL_CIRCLE;
-                if (adjustedDirection < 0)
-                    adjustedDirection += FULL_CIRCLE;
+       /** The turn angle for turning a half circle. */
+       public static final int HALF_CIRCLE = 180;
 
-                adjustedDirection = (adjustedDirection / HALF_RIGHT) * HALF_RIGHT;
-                int dc = 0;
-                int dr = 0;
-                if (adjustedDirection == EAST)
-                    dc = 1;
-                else if (adjustedDirection == SOUTHEAST)
-                {
-                    dc = 1;
-                    dr = 1;
-                }
-                else if (adjustedDirection == SOUTH)
-                    dr = 1;
-                else if (adjustedDirection == SOUTHWEST)
-                {
-                    dc = -1;
-                    dr = 1;
-                }
-                else if (adjustedDirection == WEST)
-                    dc = -1;
-                else if (adjustedDirection == NORTHWEST)
-                {
-                    dc = -1;
-                    dr = -1;
-                }
-                else if (adjustedDirection == NORTH)
-                    dr = -1;
-                else if (adjustedDirection == NORTHEAST)
-                {
-                    dc = 1;
-                    dr = -1;
-                }
-                return new Location(getRow() + dr, getCol() + dc);
-            }
+       /** The turn angle for making no turn. */
+       public static final int AHEAD = 0;
 
-            /**
-             * Returns the direction from this location toward another location. The
-             * direction is rounded to the nearest compass direction.
-             * @param target a location that is different from this location
-             * @return the closest compass direction from this location toward
-             * target
-             */
-            public int getDirectionToward(Location target)
-            {
-                int dx = target.getCol() - getCol();
-                int dy = target.getRow() - getRow();
-                // y axis points opposite to mathematical orientation
-                int angle = (int) Math.toDegrees(Math.atan2(-dy, dx));
+       /** The compass direction for north. */
+       public static final int NORTH = 0;
 
-                // mathematical angle is counterclockwise from x-axis,
-                // compass angle is clockwise from y-axis
-                int compassAngle = RIGHT - angle;
-                // prepare for truncating division by 45 degrees
-                compassAngle += HALF_RIGHT / 2;
-                // wrap negative angles
-                if (compassAngle < 0)
-                    compassAngle += FULL_CIRCLE;
-                // round to nearest multiple of 45
-                return (compassAngle / HALF_RIGHT) * HALF_RIGHT;
-            }
+       /** The compass direction for northeast. */
+       public static final int NORTHEAST = 45;
 
-            /**
-             * Indicates whether some other Location object is "equal to"
-             * this one.
-             * @param other the other location to test
-             * @return true if other is a
-             * Location with the same row and column as this location;
-             * false otherwise
-             */
-            public boolean equals(Object other)
-            {
-                if (!(other instanceof Location))
-                    return false;
+       /** The compass direction for east. */
+       public static final int EAST = 90;
 
-                Location otherLoc = (Location) other;
-                return getRow() == otherLoc.getRow() && getCol() == otherLoc.getCol();
-            }
+       /** The compass direction for southeast. */
+       public static final int SOUTHEAST = 135;
 
-            /**
-             * Generates a hash code.
-             * @return a hash code for this location
-             */
-            public int hashCode()
-            {
-                return getRow() * 3737 + getCol();
-            }
+       /** The compass direction for south. */
+       public static final int SOUTH = 180;
 
-            /**
-             * Compares this location to other for ordering. Returns a
-             * negative integer, zero, or a positive integer as this location is less
-             * than, equal to, or greater than other. Locations are
-             * ordered in row-major order.
-             * (Precondition: other is a Location object.)
-             * @param other the other location to test
-             * @return a negative integer if this location is less than
-             * other, zero if the two locations are equal, or a positive
-             * integer if this location is greater than other
-             */
-            public int compareTo(Object other)
-            {
-                Location otherLoc = (Location) other;
-                if (getRow() < otherLoc.getRow())
-                    return -1;
-                if (getRow() > otherLoc.getRow())
-                    return 1;
-                if (getCol() < otherLoc.getCol())
-                    return -1;
-                if (getCol() > otherLoc.getCol())
-                    return 1;
-                return 0;
-            }
+       /** The compass direction for southwest. */
+       public static final int SOUTHWEST = 225;
 
-            /**
-             * Creates a string that describes this location.
-             * @return a string with the row and column of this location, in the format
-             * (row, col)
-             */
-            public String toString()
-            {
-                return "(" + getRow() + ", " + getCol() + ")";
-            }
-        }
+       /** The compass direction for west. */
+       public static final int WEST = 270;
 
-        // End of Class
+       /** The compass direction for northwest. */
+       public static final int NORTHWEST = 315;
 
-        // BoundedGrid Class
+       /**
+        * Constructs a location with given row and column coordinates.
+        *
+        * @param r the row
+        * @param c the column
+        */
+       public Location(int r, int c)
+       {
+           row = r;
+           col = c;
+       }
 
+       /**
+        * Gets the row coordinate.
+        *
+        * @return the row of this location
+        */
+       public int getRow()
+       {
+           return row;
+       }
 
-        /**
-         * A BoundedGrid is a rectangular grid with a finite number of
-         * rows and columns.
-         * The implementation of this class is testable on the AP CS AB exam.
-         */
-         class BoundedGrid<E> extends AbstractGrid<E>
-        {
-            private Object[][] occupantArray; // the array storing the grid elements
+       /**
+        * Gets the column coordinate.
+        *
+        * @return the column of this location
+        */
+       public int getCol()
+       {
+           return col;
+       }
 
-            /**
-             * Constructs an empty bounded grid with the given dimensions.
-             * (Precondition: rows > 0 and cols > 0.)
-             * @param rows number of rows in BoundedGrid
-             * @param cols number of columns in BoundedGrid
-             */
-            public BoundedGrid(int rows, int cols)
-            {
-                if (rows <= 0)
-                    throw new IllegalArgumentException("rows <= 0");
-                if (cols <= 0)
-                    throw new IllegalArgumentException("cols <= 0");
-                occupantArray = new Object[rows][cols];
-            }
+       /**
+        * Gets the adjacent location in any one of the eight compass directions.
+        *
+        * @param direction the direction in which to find a neighbor location
+        * @return the adjacent location in the direction that is closest to
+        *     <tt>direction</tt>
+        */
+       public Location getAdjacentLocation(int direction)
+       {
+           // reduce mod 360 and round to closest multiple of 45
+           int adjustedDirection = (direction + HALF_RIGHT / 2) % FULL_CIRCLE;
+           if (adjustedDirection < 0) adjustedDirection += FULL_CIRCLE;
 
-            public int getNumRows()
-            {
-                return occupantArray.length;
-            }
+           adjustedDirection = (adjustedDirection / HALF_RIGHT) * HALF_RIGHT;
+           int dc = 0;
+           int dr = 0;
+           if (adjustedDirection == EAST) dc = 1;
+           else if (adjustedDirection == SOUTHEAST)
+           {
+               dc = 1;
+               dr = 1;
+           } else if (adjustedDirection == SOUTH) dr = 1;
+           else if (adjustedDirection == SOUTHWEST)
+           {
+               dc = -1;
+               dr = 1;
+           } else if (adjustedDirection == WEST) dc = -1;
+           else if (adjustedDirection == NORTHWEST)
+           {
+               dc = -1;
+               dr = -1;
+           } else if (adjustedDirection == NORTH) dr = -1;
+           else if (adjustedDirection == NORTHEAST)
+           {
+               dc = 1;
+               dr = -1;
+           }
+           return new Location(getRow() + dr, getCol() + dc);
+       }
 
-            public int getNumCols()
-            {
-                // Note: according to the constructor precondition, numRows() > 0, so
-                // theGrid[0] is non-null.
-                return occupantArray[0].length;
-            }
+       /**
+        * Returns the direction from this location toward another location. The
+        * direction is rounded to the nearest compass direction.
+        *
+        * @param target a location that is different from this location
+        * @return the closest compass direction from this location toward target
+        */
+       public int getDirectionToward(Location target)
+       {
+           int dx = target.getCol() - getCol();
+           int dy = target.getRow() - getRow();
+           // y axis points opposite to mathematical orientation
+           int angle = (int) Math.toDegrees(Math.atan2(-dy, dx));
 
-            public boolean isValid(Location loc)
-            {
-                return 0 <= loc.getRow() && loc.getRow() < getNumRows()
-                        && 0 <= loc.getCol() && loc.getCol() < getNumCols();
-            }
+           // mathematical angle is counterclockwise from x-axis,
+           // compass angle is clockwise from y-axis
+           int compassAngle = RIGHT - angle;
+           // prepare for truncating division by 45 degrees
+           compassAngle += HALF_RIGHT / 2;
+           // wrap negative angles
+           if (compassAngle < 0) compassAngle += FULL_CIRCLE;
+           // round to nearest multiple of 45
+           return (compassAngle / HALF_RIGHT) * HALF_RIGHT;
+       }
 
-            public ArrayList<Location> getOccupiedLocations()
-            {
-                ArrayList<Location> theLocations = new ArrayList<Location>();
+       /**
+        * Indicates whether some other Location object is "equal to" this one.
+        *
+        * @param other the other location to test
+        * @return true if other is a Location with the same row and column as this
+        *     location; false otherwise
+        */
+       public boolean equals(Object other)
+       {
+           if (!(other instanceof Location)) return false;
 
-                // Look at all grid locations.
-                for (int r = 0; r < getNumRows(); r++)
-                {
-                    for (int c = 0; c < getNumCols(); c++)
-                    {
-                        // If there's an object at this location, put it in the array.
-                        Location loc = new Location(r, c);
-                        if (get(loc) != null)
-                            theLocations.add(loc);
-                    }
-                }
+           Location otherLoc = (Location) other;
+           return getRow() == otherLoc.getRow() && getCol() == otherLoc.getCol();
+       }
 
-                return theLocations;
-            }
+       /**
+        * Generates a hash code.
+        *
+        * @return a hash code for this location
+        */
+       public int hashCode()
+       {
+           return getRow() * 3737 + getCol();
+       }
 
-            @SuppressWarnings("unchecked")
-            public E get(Location loc)
-            {
-                if (!isValid(loc))
-                    throw new IllegalArgumentException("Location " + loc
-                            + " is not valid");
-                return (E) occupantArray[loc.getRow()][loc.getCol()]; // unavoidable warning
-            }
+       /**
+        * Compares this location to other for ordering. Returns a negative integer,
+        * zero, or a positive integer as this location is less than, equal to, or
+        * greater than other. Locations are ordered in row-major order. (Precondition:
+        * other is a Location object.)
+        *
+        * @param other the other location to test
+        * @return a negative integer if this location is less than other, zero if the
+        *     two locations are equal, or a positive integer if this location is
+        *     greater than other
+        */
+       public int compareTo(Object other)
+       {
+           Location otherLoc = (Location) other;
+           if (getRow() < otherLoc.getRow()) return -1;
+           if (getRow() > otherLoc.getRow()) return 1;
+           if (getCol() < otherLoc.getCol()) return -1;
+           if (getCol() > otherLoc.getCol()) return 1;
+           return 0;
+       }
 
-            public E put(Location loc, E obj)
-            {
-                if (!isValid(loc))
-                    throw new IllegalArgumentException("Location " + loc
-                            + " is not valid");
-                if (obj == null)
-                    throw new NullPointerException("obj == null");
+       /**
+        * Creates a string that describes this location.
+        *
+        * @return a string with the row and column of this location, in the format
+        *     (row, col)
+        */
+       public String toString()
+       {
+           return "(" + getRow() + ", " + getCol() + ")";
+       }
+   }
 
-                // Add the object to the grid.
-                E oldOccupant = get(loc);
-                occupantArray[loc.getRow()][loc.getCol()] = obj;
-                return oldOccupant;
-            }
+   // End of Class
 
-            public E remove(Location loc)
-            {
-                if (!isValid(loc))
-                    throw new IllegalArgumentException("Location " + loc
-                            + " is not valid");
+   // BoundedGrid Class
 
-                // Remove the object from the grid.
-                E r = get(loc);
-                occupantArray[loc.getRow()][loc.getCol()] = null;
-                return r;
-            }
-        }
+   /**
+    * A BoundedGrid is a rectangular grid with a finite number of rows and columns.
+    * The implementation of this class is testable on the AP CS AB exam.
+    */
+   class BoundedGrid<E> extends AbstractGrid<E>
+   {
+       private Object[][] occupantArray; // the array storing the grid elements
 
-        // End of Class
+       /**
+        * Constructs an empty bounded grid with the given dimensions. (Precondition:
+        * rows > 0 and cols > 0.)
+        *
+        * @param rows number of rows in BoundedGrid
+        * @param cols number of columns in BoundedGrid
+        */
+       public BoundedGrid(int rows, int cols)
+       {
+           if (rows <= 0) throw new IllegalArgumentException("rows <= 0");
+           if (cols <= 0) throw new IllegalArgumentException("cols <= 0");
+           occupantArray = new Object[rows][cols];
+       }
 
-        // Class AbstractGrid
+       public int getNumRows()
+       {
+           return occupantArray.length;
+       }
 
+       public int getNumCols()
+       {
+           // Note: according to the constructor precondition, numRows() > 0, so
+           // theGrid[0] is non-null.
+           return occupantArray[0].length;
+       }
 
-        /**
-         * AbstractGrid contains the methods that are common to grid
-         * implementations.
-         * The implementation of this class is testable on the AP CS AB exam.
-         */
-         abstract class AbstractGrid<E> implements Grid<E>
-        {
-            public ArrayList<E> getNeighbors(Location loc)
-            {
-                ArrayList<E> neighbors = new ArrayList<E>();
-                for (Location neighborLoc : getOccupiedAdjacentLocations(loc))
-                    neighbors.add(get(neighborLoc));
-                return neighbors;
-            }
+       public boolean isValid(Location loc)
+       {
+           return 0 <= loc.getRow()
+                   && loc.getRow() < getNumRows()
+                   && 0 <= loc.getCol()
+                   && loc.getCol() < getNumCols();
+       }
 
-            public ArrayList<Location> getValidAdjacentLocations(Location loc)
-            {
-                ArrayList<Location> locs = new ArrayList<Location>();
+       public ArrayList<Location> getOccupiedLocations()
+       {
+           ArrayList<Location> theLocations = new ArrayList<Location>();
 
-                int d = Location.NORTH;
-                for (int i = 0; i < Location.FULL_CIRCLE / Location.HALF_RIGHT; i++)
-                {
-                    Location neighborLoc = loc.getAdjacentLocation(d);
-                    if (isValid(neighborLoc))
-                        locs.add(neighborLoc);
-                    d = d + Location.HALF_RIGHT;
-                }
-                return locs;
-            }
+           // Look at all grid locations.
+           for (int r = 0; r < getNumRows(); r++)
+           {
+               for (int c = 0; c < getNumCols(); c++)
+               {
+                   // If there's an object at this location, put it in the array.
+                   Location loc = new Location(r, c);
+                   if (get(loc) != null) theLocations.add(loc);
+               }
+           }
 
-            public ArrayList<Location> getEmptyAdjacentLocations(Location loc)
-            {
-                ArrayList<Location> locs = new ArrayList<Location>();
-                for (Location neighborLoc : getValidAdjacentLocations(loc))
-                {
-                    if (get(neighborLoc) == null)
-                        locs.add(neighborLoc);
-                }
-                return locs;
-            }
+           return theLocations;
+       }
 
-            public ArrayList<Location> getOccupiedAdjacentLocations(Location loc)
-            {
-                ArrayList<Location> locs = new ArrayList<Location>();
-                for (Location neighborLoc : getValidAdjacentLocations(loc))
-                {
-                    if (get(neighborLoc) != null)
-                        locs.add(neighborLoc);
-                }
-                return locs;
-            }
+       @SuppressWarnings("unchecked")
+       public E get(Location loc)
+       {
+           if (!isValid(loc))
+               throw new IllegalArgumentException(
+                       "Location " + loc + " is not valid");
+           return (E)
+                   occupantArray[loc.getRow()][loc.getCol()]; // unavoidable warning
+       }
 
-            /**
-             * Creates a string that describes this grid.
-             * @return a string with descriptions of all objects in this grid (not
-             * necessarily in any particular order), in the format {loc=obj, loc=obj,
-             * ...}
-             */
-                public String toString()
-                {
-                    String s = "{";
-                    for (Location loc : getOccupiedLocations())
-                    {
-                        if (s.length() > 1)
-                            s += ", ";
-                        s += loc + "=" + get(loc);
-                    }
-                    return s + "}";
-                }
-        }
+       public E put(Location loc, E obj)
+       {
+           if (!isValid(loc))
+               throw new IllegalArgumentException(
+                       "Location " + loc + " is not valid");
+           if (obj == null) throw new NullPointerException("obj == null");
+
+           // Add the object to the grid.
+           E oldOccupant = get(loc);
+           occupantArray[loc.getRow()][loc.getCol()] = obj;
+           return oldOccupant;
+       }
+
+       public E remove(Location loc)
+       {
+           if (!isValid(loc))
+               throw new IllegalArgumentException(
+                       "Location " + loc + " is not valid");
+
+           // Remove the object from the grid.
+           E r = get(loc);
+           occupantArray[loc.getRow()][loc.getCol()] = null;
+           return r;
+       }
+   }
+
+   // End of Class
+
+   // Class AbstractGrid
+
+   /**
+    * AbstractGrid contains the methods that are common to grid implementations. The
+    * implementation of this class is testable on the AP CS AB exam.
+    */
+   abstract class AbstractGrid<E> implements Grid<E>
+   {
+       public ArrayList<E> getNeighbors(Location loc)
+       {
+           ArrayList<E> neighbors = new ArrayList<E>();
+           for (Location neighborLoc : getOccupiedAdjacentLocations(loc))
+               neighbors.add(get(neighborLoc));
+           return neighbors;
+       }
+
+       public ArrayList<Location> getValidAdjacentLocations(Location loc)
+       {
+           ArrayList<Location> locs = new ArrayList<Location>();
+
+           int d = Location.NORTH;
+           for (int i = 0; i < Location.FULL_CIRCLE / Location.HALF_RIGHT; i++)
+           {
+               Location neighborLoc = loc.getAdjacentLocation(d);
+               if (isValid(neighborLoc)) locs.add(neighborLoc);
+               d = d + Location.HALF_RIGHT;
+           }
+           return locs;
+       }
+
+       public ArrayList<Location> getEmptyAdjacentLocations(Location loc)
+       {
+           ArrayList<Location> locs = new ArrayList<Location>();
+           for (Location neighborLoc : getValidAdjacentLocations(loc))
+           {
+               if (get(neighborLoc) == null) locs.add(neighborLoc);
+           }
+           return locs;
+       }
+
+       public ArrayList<Location> getOccupiedAdjacentLocations(Location loc)
+       {
+           ArrayList<Location> locs = new ArrayList<Location>();
+           for (Location neighborLoc : getValidAdjacentLocations(loc))
+           {
+               if (get(neighborLoc) != null) locs.add(neighborLoc);
+           }
+           return locs;
+       }
+
+       /**
+        * Creates a string that describes this grid.
+        *
+        * @return a string with descriptions of all objects in this grid (not
+        *     necessarily in any particular order), in the format {loc=obj, loc=obj,
+        *     ...}
+        */
+       public String toString()
+       {
+           String s = "{";
+           for (Location loc : getOccupiedLocations())
+           {
+               if (s.length() > 1) s += ", ";
+               s += loc + "=" + get(loc);
+           }
+           return s + "}";
+       }
+   }
+
    ====
    import static org.junit.Assert.*;
-    import org.junit.*;
-    import java.io.*;
-    import java.util.*;
 
-    public class RunestoneTests extends CodeTestHelper
-    {
-      public RunestoneTests()
-      {
-        super("GridWorldUtilities");
-      }
+   import org.junit.*;
 
-      @Test
-      public void testMain() throws IOException
-      {
-        String output = getMethodOutput("main");
-        String expect = "Student output:\n(1, 1)\n";
+   import java.io.*;
+   import java.util.*;
 
-        boolean passed = getResults(expect, output, "Expected output from main");
-        assertTrue(passed);
-      }
+   public class RunestoneTests extends CodeTestHelper
+   {
+       public RunestoneTests()
+       {
+           super("GridWorldUtilities");
+       }
 
-      @Test
-      public void test1()
-      {
-         BoundedGrid<Location> example = new BoundedGrid<Location>(2,2);
-         Location loc1 = new Location(0,0);
-         Location loc2 = new Location(1,0);
-         Location loc3 = new Location(0,1);
-         Location loc4 = new Location(1,1);
-         example.put(loc1, loc1);
-         example.put(loc2, loc2);
-         example.put(loc3, loc3);
+       @Test
+       public void testMain() throws IOException
+       {
+           String output = getMethodOutput("main");
+           String expect = "Student output:\n(1, 1)\n";
 
-         ArrayList<Location> locsCorrect = new ArrayList<Location>();
-         locsCorrect.add(loc4);
-         ArrayList<Location> studentAnswer = new ArrayList<Location>();
-         studentAnswer = GridWorldUtilities.getEmptyLocations(example);
+           boolean passed = getResults(expect, output, "Expected output from main");
+           assertTrue(passed);
+       }
 
-         String output =  studentAnswer.get(0).toString();
-         String expect = "(1, 1)";
+       @Test
+       public void test1()
+       {
+           BoundedGrid<Location> example = new BoundedGrid<Location>(2, 2);
+           Location loc1 = new Location(0, 0);
+           Location loc2 = new Location(1, 0);
+           Location loc3 = new Location(0, 1);
+           Location loc4 = new Location(1, 1);
+           example.put(loc1, loc1);
+           example.put(loc2, loc2);
+           example.put(loc3, loc3);
 
-         boolean passed = getResults(expect, output, "Test 1 call to getEmptyLocations()");
-         assertTrue(passed);
-      }
-    }
+           ArrayList<Location> locsCorrect = new ArrayList<Location>();
+           locsCorrect.add(loc4);
+           ArrayList<Location> studentAnswer = new ArrayList<Location>();
+           studentAnswer = GridWorldUtilities.getEmptyLocations(example);
+
+           String output = studentAnswer.get(0).toString();
+           String expect = "(1, 1)";
+
+           boolean passed = getResults(expect, output, "Test 1 call to getEmptyLocations()");
+           assertTrue(passed);
+       }
+   }
 
 .. datafile:: GridWorld.jar
         :hide:

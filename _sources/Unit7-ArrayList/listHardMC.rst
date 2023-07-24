@@ -56,7 +56,8 @@ You can step through the code above by clicking on the following `Example-8-13-1
      public void numQuest() {
         int k = 0;
         Integer zero = new Integer(0);
-        while (k < nums.size()) {
+        while (k < nums.size()) 
+        {
            if (nums.get(k).equals(zero))
               nums.remove(k);
            k++;

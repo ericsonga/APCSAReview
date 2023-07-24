@@ -89,49 +89,54 @@ Sequential or linear search is the only method that can be used to find a value 
   public class ArraySearcher
   {
 
-     /** Finds the index of a value in an array of integers.
+      /**
+       * Finds the index of a value in an array of integers.
+       *
        * @param elements an array containing the items to be searched.
        * @param target the item to be found in elements.
        * @return an index of target in elements if found; -1 otherwise.
        */
-     public static int sequentialSearch(int[] elements, int target)
-     {
-       for (int j = 0; j < elements.length; j++)
-       {
-         if (elements[j] == target)
-         {
-           return j;
-         }
-       }
-       return -1;
-     }
+      public static int sequentialSearch(int[] elements, int target)
+      {
+          for (int j = 0; j < elements.length; j++)
+          {
+              if (elements[j] == target)
+              {
+                  return j;
+              }
+          }
+          return -1;
+      }
 
-     public static void main(String[] args)
-     {
-       int[] numArray = {3, -2, 9, 38, -23};
-       System.out.println("Tests of sequentialSearch");
-       System.out.println(sequentialSearch(numArray,3));
-       System.out.println(sequentialSearch(numArray,9));
-       System.out.println(sequentialSearch(numArray,-23));
-       System.out.println(sequentialSearch(numArray,99));
-     }
+      public static void main(String[] args)
+      {
+          int[] numArray = {3, -2, 9, 38, -23};
+          System.out.println("Tests of sequentialSearch");
+          System.out.println(sequentialSearch(numArray, 3));
+          System.out.println(sequentialSearch(numArray, 9));
+          System.out.println(sequentialSearch(numArray, -23));
+          System.out.println(sequentialSearch(numArray, 99));
+      }
   }
+
   ====
   import static org.junit.Assert.*;
-    import org.junit.*;;
-    import java.io.*;
 
-    public class RunestoneTests extends CodeTestHelper
-    {
-        @Test
-        public void testMain() throws IOException
-        {
-            String output = getMethodOutput("main");
-            String expect = "Tests of sequentialSearch\n0\n2\n4\n-1";
-            boolean passed = getResults(expect, output, "Expected output from main", true);
-            assertTrue(passed);
-        }
-    }
+  import org.junit.*;
+
+  import java.io.*;
+
+  public class RunestoneTests extends CodeTestHelper
+  {
+      @Test
+      public void testMain() throws IOException
+      {
+          String output = getMethodOutput("main");
+          String expect = "Tests of sequentialSearch\n0\n2\n4\n-1";
+          boolean passed = getResults(expect, output, "Expected output from main", true);
+          assertTrue(passed);
+      }
+  }
 
 To see this executing using the Java Visualizer click on the following link `SequentialSearch <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+ArraySearcher%0A%7B%0A++%0A++/**+Finds+the+index+of+a+value+in+an+array+of+integers.%0A++++*+%40param+elements+an+array+containing+the+items+to+be+searched.+%0A++++*+%40param+target+the+item+to+be+found+in+elements.+%0A++++*+%40return+an+index+of+target+in+elements+if+found%3B+-1+otherwise.+%0A++++*/%0A++public+static+int+sequentialSearch(int%5B%5D+elements,+int+target)+%0A++%7B+%0A++++for+(int+j+%3D+0%3B+j+%3C+elements.length%3B+j%2B%2B)+%0A++++%7B+%0A++++++if+(elements%5Bj%5D+%3D%3D+target)+%0A++++++%7B+%0A++++++++return+j%3B+%0A++++++%7D+%0A++++%7D+%0A++++return+-1%3B+%0A++%7D%0A++%0A++public+static+void+main(String%5B%5D+args)%0A++%7B%0A++++int%5B%5D+numArray+%3D+%7B3,+-2,+9,+38,+-23%7D%3B%0A++++System.out.println(%22Tests+of+sequentialSearch%22)%3B%0A++++System.out.println(sequentialSearch(numArray,3))%3B%0A++++System.out.println(sequentialSearch(numArray,9))%3B%0A++++System.out.println(sequentialSearch(numArray,-23))%3B%0A++++System.out.println(sequentialSearch(numArray,99))%3B%0A++%7D%0A++%0A%7D&mode=display&curInstr=3>`_
 
@@ -148,41 +153,46 @@ Here is the same search with an ArrayList. The same algorithms can be used with 
     public class ArrayListSearcher
     {
 
-      /** Finds the index of a value in an ArrayList of integers.
-        * @param elements an array containing the items to be searched.
-        * @param target the item to be found in elements.
-        * @return an index of target in elements if found; -1 otherwise.
-        */
-      public static int sequentialSearch(ArrayList<Integer> elements, int target)
-      {
-        for (int j = 0; j < elements.size(); j++)
+        /**
+         * Finds the index of a value in an ArrayList of integers.
+         *
+         * @param elements an array containing the items to be searched.
+         * @param target the item to be found in elements.
+         * @return an index of target in elements if found; -1 otherwise.
+         */
+        public static int sequentialSearch(ArrayList<Integer> elements, int target)
         {
-          if (elements.get(j) == target)
-          {
-            return j;
-          }
+            for (int j = 0; j < elements.size(); j++)
+            {
+                if (elements.get(j) == target)
+                {
+                    return j;
+                }
+            }
+            return -1;
         }
-        return -1;
-      }
 
-      public static void main(String[] args)
-      {
-        ArrayList<Integer> numList = new ArrayList<Integer>();
-        numList.add(3);
-        numList.add(-2);
-        numList.add(9);
-        numList.add(38);
-        numList.add(-23);
-        System.out.println("Tests of sequentialSearch");
-        System.out.println(sequentialSearch(numList,3));
-        System.out.println(sequentialSearch(numList,9));
-        System.out.println(sequentialSearch(numList,-23));
-        System.out.println(sequentialSearch(numList,99));
-      }
+        public static void main(String[] args)
+        {
+            ArrayList<Integer> numList = new ArrayList<Integer>();
+            numList.add(3);
+            numList.add(-2);
+            numList.add(9);
+            numList.add(38);
+            numList.add(-23);
+            System.out.println("Tests of sequentialSearch");
+            System.out.println(sequentialSearch(numList, 3));
+            System.out.println(sequentialSearch(numList, 9));
+            System.out.println(sequentialSearch(numList, -23));
+            System.out.println(sequentialSearch(numList, 99));
+        }
     }
+
     ====
     import static org.junit.Assert.*;
-    import org.junit.*;;
+
+    import org.junit.*;
+
     import java.io.*;
 
     public class RunestoneTests extends CodeTestHelper
@@ -196,7 +206,6 @@ Here is the same search with an ArrayList. The same algorithms can be used with 
             assertTrue(passed);
         }
     }
-
 
 |Exercise| **Check Your Understanding**
 
@@ -237,47 +246,50 @@ Of course you can also look for a string in an array or list.  But, when you loo
   public class SearchTest
   {
 
-     public static int sequentialSearch(String[] elements, String target)
-     {
-        for (int j = 0; j < elements.length; j++)
-        {
-           if (elements[j].equals(target))
-           {
-              return j;
-           }
-       }
-       return -1;
-     }
+      public static int sequentialSearch(String[] elements, String target)
+      {
+          for (int j = 0; j < elements.length; j++)
+          {
+              if (elements[j].equals(target))
+              {
+                  return j;
+              }
+          }
+          return -1;
+      }
 
-     public static void main(String[] args)
-     {
-        String[] arr1 = {"blue", "red", "purple", "green"};
+      public static void main(String[] args)
+      {
+          String[] arr1 = {"blue", "red", "purple", "green"};
 
-        // test when the target is in the array
-        int index = sequentialSearch(arr1,"red");
-        System.out.println(index);
+          // test when the target is in the array
+          int index = sequentialSearch(arr1, "red");
+          System.out.println(index);
 
-        // test when the target is not in the array
-        index = sequentialSearch(arr1,"pink");
-        System.out.println(index);
-     }
+          // test when the target is not in the array
+          index = sequentialSearch(arr1, "pink");
+          System.out.println(index);
+      }
   }
+
   ====
   import static org.junit.Assert.*;
-    import org.junit.*;;
-    import java.io.*;
 
-    public class RunestoneTests extends CodeTestHelper
-    {
-        @Test
-        public void testMain() throws IOException
-        {
-            String output = getMethodOutput("main");
-            String expect = "1\n-1";
-            boolean passed = getResults(expect, output, "Expected output from main", true);
-            assertTrue(passed);
-        }
-    }
+  import org.junit.*;
+
+  import java.io.*;
+
+  public class RunestoneTests extends CodeTestHelper
+  {
+      @Test
+      public void testMain() throws IOException
+      {
+          String output = getMethodOutput("main");
+          String expect = "1\n-1";
+          boolean passed = getResults(expect, output, "Expected output from main", true);
+          assertTrue(passed);
+      }
+  }
 
 To see this executing using the Java Visualizer click on this `String-SeqSearch <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=++public+class+SearchTest%0A++%7B%0A%0A+++++public+static+int+sequentialSearch(String%5B%5D+elements,+String+target)%0A+++++%7B%0A++++++++for+(int+j+%3D+0%3B+j+%3C+elements.length%3B+j%2B%2B)%0A++++++++%7B%0A+++++++++++if+(elements%5Bj%5D.equals(target))%0A+++++++++++%7B%0A++++++++++++++return+j%3B%0A+++++++++++%7D+%0A+++++++%7D%0A+++++++return+-1%3B%0A+++++%7D%0A+++++%0A+++++public+static+void+main(String%5B%5D+args)%0A+++++%7B%0A++++++++String%5B%5D+arr1+%3D+%7B%22blue%22,+%22red%22,+%22purple%22,+%22green%22%7D%3B%0A++++++++%0A++++++++//+test+when+the+target+is+in+the+array%0A++++++++int+index+%3D+sequentialSearch(arr1,%22red%22)%3B%0A++++++++System.out.println(index)%3B%0A++++++++%0A++++++++//+test+when+the+target+is+not+in+the+array%0A++++++++index+%3D+sequentialSearch(arr1,%22pink%22)%3B%0A++++++++System.out.println(index)%3B%0A+++++%7D%0A++%7D&mode=display&curInstr=0>`_
 
@@ -304,64 +316,69 @@ The code for ``binarySearch`` below is from the AP CSA course description. A rec
   ~~~~
   public class SearchTest
   {
-     public static int binarySearch(int[] elements, int target) {
-        int left = 0;
-        int right = elements.length - 1;
-        while (left <= right)
-        {
-           int middle = (left + right) / 2;
-           if (target < elements[middle])
-           {
-              right = middle - 1;
-           }
-           else if (target > elements[middle])
-           {
-              left = middle + 1;
-           }
-           else {
-              return middle;
-           }
-         }
-         return -1;
-     }
+      public static int binarySearch(int[] elements, int target)
+      {
+          int left = 0;
+          int right = elements.length - 1;
+          while (left <= right)
+          {
+              int middle = (left + right) / 2;
+              if (target < elements[middle])
+              {
+                  right = middle - 1;
+              }
+              else if (target > elements[middle])
+              {
+                  left = middle + 1;
+              }
+              else
+              {
+                  return middle;
+              }
+          }
+          return -1;
+      }
 
-     public static void main(String[] args)
-     {
-        int[] arr1 = {-20, 3, 15, 81, 432};
+      public static void main(String[] args)
+      {
+          int[] arr1 = {-20, 3, 15, 81, 432};
 
-        // test when the target is in the middle
-        int index = binarySearch(arr1,15);
-        System.out.println(index);
+          // test when the target is in the middle
+          int index = binarySearch(arr1, 15);
+          System.out.println(index);
 
-        // test when the target is the first item in the array
-        index = binarySearch(arr1,-20);
-        System.out.println(index);
+          // test when the target is the first item in the array
+          index = binarySearch(arr1, -20);
+          System.out.println(index);
 
-        // test when the target is in the array - last
-        index = binarySearch(arr1,432);
-        System.out.println(index);
+          // test when the target is in the array - last
+          index = binarySearch(arr1, 432);
+          System.out.println(index);
 
-        // test when the target is not in the array
-        index = binarySearch(arr1,53);
-        System.out.println(index);
-     }
+          // test when the target is not in the array
+          index = binarySearch(arr1, 53);
+          System.out.println(index);
+      }
   }
+
   ====
   import static org.junit.Assert.*;
-    import org.junit.*;;
-    import java.io.*;
 
-    public class RunestoneTests extends CodeTestHelper
-    {
-        @Test
-        public void testMain() throws IOException
-        {
-            String output = getMethodOutput("main");
-            String expect = "2\n0\n4\n-1";
-            boolean passed = getResults(expect, output, "Expected output from main", true);
-            assertTrue(passed);
-        }
-    }
+  import org.junit.*;
+
+  import java.io.*;
+
+  public class RunestoneTests extends CodeTestHelper
+  {
+      @Test
+      public void testMain() throws IOException
+      {
+          String output = getMethodOutput("main");
+          String expect = "2\n0\n4\n-1";
+          boolean passed = getResults(expect, output, "Expected output from main", true);
+          assertTrue(passed);
+      }
+  }
 
 To see this executing using the Java Visualizer click on the following link: `BinarySearch Ex <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=++public+class+SearchTest%0A++%7B%0A+++++%0A+++++/**+%0A++++++*+Find+the+index+of+a+value+in+an+array+of+integers+sorted+in+ascending+order.%0A++++++*+%40param+elements+an+array+containing+the+items+to+be+searched.+Precondition%3A+items+in+elements+are+sorted+in+ascending+order.%0A++++++*+%40param+target+the+item+to+be+found+in+elements.%0A++++++*+%40return+an+index+of+target+in+elements+if+target+found%3B%0A++++++*+-1+other+wise.%0A++++++*/%0A+++++public+static+int+binarySearch(int%5B%5D+elements,+int+target)+%7B%0A++++++++int+left+%3D+0%3B%0A++++++++int+right+%3D+elements.length+-+1%3B%0A++++++++while+(left+%3C%3D+right)+%0A++++++++%7B%0A+++++++++++int+middle+%3D+(left+%2B+right)+/+2%3B+%0A+++++++++++if+(target+%3C+elements%5Bmiddle%5D)%0A+++++++++++%7B%0A++++++++++++++right+%3D+middle+-+1%3B%0A+++++++++++%7D%0A+++++++++++else+if+(target+%3E+elements%5Bmiddle%5D)+%0A+++++++++++%7B%0A++++++++++++++left+%3D+middle+%2B+1%3B+%0A+++++++++++%7D%0A+++++++++++else+%7B%0A++++++++++++++return+middle%3B+%0A+++++++++++%7D%0A+++++++++%7D%0A+++++++++return+-1%3B%0A++++++%7D%0A++++++%0A++++++public+static+void+main(String%5B%5D+args)%0A++++++%7B%0A+++++++++int%5B%5D+arr1+%3D+%7B-20,+3,+15,+81,+432%7D%3B%0A++++++++%0A+++++++++//+test+when+the+target+is+in+the+array%0A+++++++++int+index+%3D+binarySearch(arr1,-20)%3B%0A+++++++++System.out.println(index)%3B%0A++++++++%0A+++++++++//+test+when+the+target+is+not+in+the+array%0A+++++++++index+%3D+binarySearch(arr1,53)%3B%0A+++++++++System.out.println(index)%3B%0A+++++++%7D%0A++%7D%0A&mode=display&curInstr=0>`_
 
@@ -377,64 +394,69 @@ You can also use binary search with a string array.  But, when you look for a st
   ~~~~
   public class BinSearchStrings
   {
-     public static int binarySearch(String[] elements, String target) {
-        int left = 0;
-        int right = elements.length - 1;
-        while (left <= right)
-        {
-           int middle = (left + right) / 2;
-           if (target.compareTo(elements[middle]) < 0)
-           {
-              right = middle - 1;
-           }
-           else if (target.compareTo(elements[middle]) > 0)
-           {
-              left = middle + 1;
-           }
-           else {
-              return middle;
-           }
-         }
-         return -1;
-     }
+      public static int binarySearch(String[] elements, String target)
+      {
+          int left = 0;
+          int right = elements.length - 1;
+          while (left <= right)
+          {
+              int middle = (left + right) / 2;
+              if (target.compareTo(elements[middle]) < 0)
+              {
+                  right = middle - 1;
+              }
+              else if (target.compareTo(elements[middle]) > 0)
+              {
+                  left = middle + 1;
+              }
+              else
+              {
+                  return middle;
+              }
+          }
+          return -1;
+      }
 
-     public static void main(String[] args)
-     {
-        String[] arr1 = {"apple","banana","cherry","kiwi","melon"};
+      public static void main(String[] args)
+      {
+          String[] arr1 = {"apple", "banana", "cherry", "kiwi", "melon"};
 
-        // test when the target is in the middle
-        int index = binarySearch(arr1,"cherry");
-        System.out.println(index);
+          // test when the target is in the middle
+          int index = binarySearch(arr1, "cherry");
+          System.out.println(index);
 
-        // test when the target is the first item in the array
-        index = binarySearch(arr1,"apple");
-        System.out.println(index);
+          // test when the target is the first item in the array
+          index = binarySearch(arr1, "apple");
+          System.out.println(index);
 
-        // test when the target is in the array - last
-        index = binarySearch(arr1,"melon");
-        System.out.println(index);
+          // test when the target is in the array - last
+          index = binarySearch(arr1, "melon");
+          System.out.println(index);
 
-        // test when the target is not in the array
-        index = binarySearch(arr1,"pear");
-        System.out.println(index);
-     }
+          // test when the target is not in the array
+          index = binarySearch(arr1, "pear");
+          System.out.println(index);
+      }
   }
+
   ====
   import static org.junit.Assert.*;
-    import org.junit.*;;
-    import java.io.*;
 
-    public class RunestoneTests extends CodeTestHelper
-    {
-        @Test
-        public void testMain() throws IOException
-        {
-            String output = getMethodOutput("main");
-            String expect = "2\n0\n4\n-1";
-            boolean passed = getResults(expect, output, "Expected output from main", true);
-            assertTrue(passed);
-        }
-    }
+  import org.junit.*;
+
+  import java.io.*;
+
+  public class RunestoneTests extends CodeTestHelper
+  {
+      @Test
+      public void testMain() throws IOException
+      {
+          String output = getMethodOutput("main");
+          String expect = "2\n0\n4\n-1";
+          boolean passed = getResults(expect, output, "Expected output from main", true);
+          assertTrue(passed);
+      }
+  }
 
 Runtimes
 --------
