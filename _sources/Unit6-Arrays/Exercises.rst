@@ -220,7 +220,8 @@ These problems are similar to those you will see on the AP CSA exam.
    .. code-block:: java
 
      boolean temp = false;
-     for (int i = 0; i < a.length; i++) {
+     for (int i = 0; i < a.length; i++) 
+     {
         temp = (a[i] == val);
      }
      return temp;
@@ -247,17 +248,22 @@ You can step through the code above with the Java Visualizer by clicking the fol
 
      private int[] nums = {7, 10, 10, 15, 15, 15, 15, 10, 10, 10, 15, 10, 10};
 
-     public int findLongest(int target) {
+     public int findLongest(int target) 
+     {
         int lenCount = 0; // length of current consecutive numbers
         int maxLen = 0;   // max length of consecutive numbers
-        for (int k = 0; k < nums.length; k++) {
-           if (nums[k] == target) {
+        for (int k = 0; k < nums.length; k++) 
+        {
+           if (nums[k] == target) 
+           {
               lenCount++;
-           } else if (lenCount > maxLen) {
+           } else if (lenCount > maxLen) 
+           {
               maxLen = lenCount;
            }
         }
-        if (lenCount > maxLen) {
+        if (lenCount > maxLen) 
+        {
            maxLen = lenCount;
         }
         return maxLen;
@@ -287,9 +293,12 @@ You can step through the code above with the Java Visualizer by clicking the fol
 
      //precondition: myStuff contains
      //   integers in no particular order
-     public int mystery(int num) {
-        for (int k = myStuff.length - 1; k >= 0; k--) {
-           if (myStuff[k] < num) {
+     public int mystery(int num) 
+     {
+        for (int k = myStuff.length - 1; k >= 0; k--) 
+        {
+           if (myStuff[k] < num) 
+           {
                return k;
            }
         }
@@ -537,7 +546,8 @@ These problems are harder than most of those that you will usually see on the AP
 
      private int[] arr;
 
-     public int[] partialSum() {
+     public int[] partialSum() 
+     {
         int[] sum = new int[arr.length];
 
         for (int j = 0; j < sum.length; j++)

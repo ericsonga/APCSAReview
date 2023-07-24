@@ -118,7 +118,10 @@ Code Practice with Arrays
                   public static void main(String[] args)
                   {
                       int[] a1 = {1, 3, 7, 9, 15};
-                      for (int i = a1.length; i > 0; i--) System.out.print(arr[i] + ", ");
+                      for (int i = a1.length; i > 0; i--) 
+                      {
+                          System.out.print(arr[i] + ", ");
+                      }
                   }
               }
 
@@ -733,7 +736,10 @@ Code Practice with Arrays
               public class Test1
               {
 
-                  public static int findMin(int[] arr) {}
+                  public static int findMin(int[] arr) 
+                  {
+                    
+                  }
 
                   public static void main(String[] args)
                   {
@@ -914,7 +920,6 @@ Code Practice with Arrays
                   {
                       int[] arr = {20, 3, 18, 55, 4};
                       System.out.println(getAverage(arr));
-                      ;
                   }
               }
 
