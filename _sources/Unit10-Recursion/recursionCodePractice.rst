@@ -24,22 +24,25 @@ Code Practice for Recursion
                       System.out.println(findSum(5));
                   }
               }
+
               ====
               import static org.junit.Assert.*;
-               import org.junit.*;
-               import java.io.*;
-               public class RunestoneTests extends CodeTestHelper
-               {
-                   @Test
-                   public void testMain() throws IOException
-                   {
-                       String output = getMethodOutput("main");
-                       String expect = "15\n";
-                       boolean passed = getResults(expect, output, "Expected output from main");
-                       assertTrue(passed);
-                   }
-               }
 
+              import org.junit.*;
+
+              import java.io.*;
+
+              public class RunestoneTests extends CodeTestHelper
+              {
+                  @Test
+                  public void testMain() throws IOException
+                  {
+                      String output = getMethodOutput("main");
+                      String expect = "15\n";
+                      boolean passed = getResults(expect, output, "Expected output from main");
+                      assertTrue(passed);
+                  }
+              }
 
         .. tab:: Answer
 
@@ -53,10 +56,8 @@ Code Practice for Recursion
               {
                   public static int findSum(int n)
                   {
-                      if (n == 0)
-                          return 0;
-                      else
-                          return n + findSum(n - 1);
+                      if (n == 0) return 0;
+                      else return n + findSum(n - 1);
                   }
 
                   public static void main(String[] args)

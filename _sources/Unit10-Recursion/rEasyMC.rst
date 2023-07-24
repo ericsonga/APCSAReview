@@ -27,9 +27,14 @@ These problems are easier than most of those that you will usually see on the AP
 
       public static int factorial(int n)
       {
-         if (n == 0)
-            return 1;
-         else return n * factorial(n-1);
+          if (n == 0)
+          {
+              return 1;
+          }
+          else
+          {
+              return n * factorial(n-1);
+          }
       }
 
 .. mchoice:: qre_2
@@ -53,11 +58,14 @@ These problems are easier than most of those that you will usually see on the AP
 
       public String starString(int n)
       {
-         if (n == 0) {
-            return "*";
-         } else {
-            return starString(n - 1) + starString(n - 1);
-         }
+          if (n == 0)
+          {
+              return "*";
+          }
+          else
+          {
+              return starString(n - 1) + starString(n - 1);
+          }
       }
 
 .. mchoice:: qre_3
@@ -79,11 +87,18 @@ These problems are easier than most of those that you will usually see on the AP
 
       public static int fibonacci(int n)
       {
-         if (n == 0)
-            return 0;
-         else if (n == 1)
-            return 1;
-         else return fibonacci(n-1) + fibonacci(n-2);
+          if (n == 0)
+          {
+              return 0;
+          }
+          else if (n == 1)
+          {
+              return 1;
+          }
+          else
+          {
+              return fibonacci(n-1) + fibonacci(n-2);
+          }
       }
 
 .. mchoice:: qre_4
@@ -105,9 +120,12 @@ These problems are easier than most of those that you will usually see on the AP
 
       public static int multiplyEvens(int n)
       {
-         if (n == 1) {
-            return 2;
-         } else {
-            return 2 * n * multiplyEvens(n - 1);
-         }
+          if (n == 1)
+          {
+              return 2;
+          }
+          else
+          {
+              return 2 * n * multiplyEvens(n - 1);
+          }
       }

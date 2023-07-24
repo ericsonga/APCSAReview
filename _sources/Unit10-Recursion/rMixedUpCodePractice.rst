@@ -19,9 +19,11 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    {
    =====
        if(str.length() <= 1)
+       {
    =====
            return str;
    =====
+       }
        return reverse(str.substring(1)) + str.charAt(0);
    =====
    }
@@ -40,17 +42,23 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    {
    =====
        if(n == 0)
+       {
    =====
            return 0;
    =====
+       }
        else if(n == 1)
+       {
    =====
            return 1;
    =====
+       }
        else
+       {
    =====
            return fibonacci(n - 1) + fibonacci(n - 2);
    =====
+       }
    }
    =====
         return fibonacci(n - 1); #distractor
@@ -67,17 +75,23 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    {
    =====
        if(str.length == 0)
+       {
    =====
            return str;
    =====
+       }
        else if(str.charAt(0) ==  ' ')
+       {
    =====
            return "-" + spaceDash(str.substring(1));
    =====
+       }
        else
+       {
    =====
            return str.charAt(0) + spaceDash(str.substring(1));
    =====
+       }
    }
    =====
         return "-" + str.substring(1); #distractor
@@ -94,17 +108,23 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    {
    =====
        if(n == 0)
+       {
    =====
            return 0;
    =====
+       }
        else if(n % 10 == 2)
+       {
    =====
            return 1 + numberOf2s(n / 10);
    =====
+       }
        else
+       {
    =====
            return numberOf2s(n / 10);
    =====
+       }
    }
    =====
         return 1 + numberOf2s(n % 10); #distractor
@@ -121,13 +141,17 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    {
    =====
        if(n / 10 == 0)
+       {
    =====
            return n;
    =====
+       }
        else
+       {
    =====
            return sum(n / 10) + n % 10;
    =====
+       }
    }
    =====
         return 1 + sum(n % 10); #distractor
@@ -144,21 +168,32 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    {
    =====
        if(n / 10 == 0)
+       {
    =====
            if(n % 2 == 0)
+           {
    =====
               return 1;
    =====
-           else return 0;
+           }
+           else
+           {
+               return 0;
+           }
    =====
+       }
        else if((n % 10) % 2 == 0)
+       {
    =====
            return evenDigits(n / 10) + 1;
    =====
+       }
        else
+       {
    =====
            return evenDigits(n / 10);
    =====
+       }
    }
 
 .. parsonsprob:: ch12p2ex7muc
@@ -173,14 +208,17 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    {
    =====
        if(n == 1)
+       {
    =====
            return 1;
    =====
+       }
        else
+       {
    =====
            return n * factorial(n - 1);
    =====
+       }
    }
    =====
         return 1 + factorial(n % 10); #distractor
-

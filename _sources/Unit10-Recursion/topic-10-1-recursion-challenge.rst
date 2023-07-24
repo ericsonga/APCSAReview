@@ -35,9 +35,13 @@ Consider the following recursive method:
    public static int mystery(int n)
    {
        if (n == 0)
+       {
            return 1;
+       }
        else
+       {
            return 3 * mystery (n - 1);
+       }
    }
 
 The trace of this code for mystery(4) is shown below.
@@ -88,13 +92,21 @@ Consider the following recursive method:
 
    public static int strMethod(String str)
    {
-      if (str.length() == 1) return 0;
-      else
-      {
-         if (str.substring(0,1).equals("e")) return 1 +
-                              strMethod(str.substring(1));
-         else return strMethod(str.substring(1));
-      }
+       if (str.length() == 1)
+       {
+           return 0;
+       }
+       else
+       {
+           if (str.substring(0,1).equals("e"))
+           {
+               return 1 + strMethod(str.substring(1));
+           }
+           else
+           {
+               return strMethod(str.substring(1));
+           }
+       }
    }
 
 .. code-block:: java
