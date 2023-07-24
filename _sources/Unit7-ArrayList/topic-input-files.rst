@@ -301,12 +301,13 @@ Under the covers ``readAllLines`` is almost certainly using an ``ArrayList`` whi
    import org.junit.*;
    import java.io.*;
 
-   public RunestoneTests() 
-   {
-       super("ReadData");
-   }
    public class RunestoneTests extends CodeTestHelper
    {
+       public RunestoneTests() 
+       {
+           super("ReadData");
+       }
+   
        @Test
        public void testMain() throws IOException
        {
