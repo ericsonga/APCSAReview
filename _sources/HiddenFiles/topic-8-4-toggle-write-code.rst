@@ -14,11 +14,15 @@ This is the write code problems associated with the mixed up code problems.
 
         Fix the errors (marked by comments) in the code so that it correctly creates a 10x10 array called ``table`` filled with numbers from 0 to 99 in left-right top-bottom order and prints the output (in row-column order) with the numbers separated by tabs. Most of the errors are syntactical, but one is logical.
         ~~~~
-        public class Test1 {
-            public static void main(String[] args) {
+        public class Test1 
+        {
+            public static void main(String[] args) 
+            {
                 int[][] table = int[9][9]; // This line has errors
-                for (int row = 0; row < table.length(); row++) { // This line has an error
-                    for (int col = row; col < table[row].length(); col++) { // This line has errors
+                for (int row = 0; row < table.length(); row++)  // This line has an error
+                {
+                    for (int col = row; col < table[row].length(); col++)  // This line has errors
+                    {
                         table[row][col] = col + 10 * row;
                         System.out.print(table[row][col] + "\t");
                     }
@@ -67,11 +71,15 @@ This is the write code problems associated with the mixed up code problems.
 
         ~~~~
         public class Test1 {
-            public static void main(String[] args) {
+            public static void main(String[] args) 
+            {
                 int[][] checkerboard = new int[8][8];
-                for (int row = 0; row < checkerboard.length; row++) {
-                    for (int col = 0; col < checkerboard[row].length; col++) {
-                        if () { // How can we check if a cell should be 0 or 1?
+                for (int row = 0; row < checkerboard.length; row++) 
+                {
+                    for (int col = 0; col < checkerboard[row].length; col++) 
+                    {
+                        if ()  // How can we check if a cell should be 0 or 1?
+                        {
                             checkerboard[row][col] = 1;
                         } //end if
                         System.out.print(checkerboard[row][col] + " ");
@@ -117,11 +125,14 @@ This is the write code problems associated with the mixed up code problems.
 
         public class Test1
         {
-            public static int sumVals(int[][] nums) {
+            public static int sumVals(int[][] nums) 
+            {
                 int sum = 0;
 
-                for () {  // fill in this for loop header
-                    for () { // fill in this for loop header
+                for ()   // fill in this for loop header
+                {
+                    for ()  // fill in this for loop header
+                    {
                         sum += nums[row][col];
                     }
                 }
@@ -130,7 +141,8 @@ This is the write code problems associated with the mixed up code problems.
 
             } //end method
 
-            public static void main(String[] args) {
+            public static void main(String[] args) 
+            {
                 // You don't need to make any changes to this method
                 int[][] arr1 = { {-1, 2, 0}, {6, -4, 5}, {3, 4, 8} };
                 int out1 = sumVals(arr1);
@@ -171,7 +183,7 @@ This is the write code problems associated with the mixed up code problems.
             @Test
             public void test2()
             {
-                int[][] inArr = {{2, 4, 8, 10}, {6, 0, 4, 12}};
+                int[][] inArr = { {2, 4, 8, 10}, {6, 0, 4, 12}};
                 int expect = 46;
                 int output = Test1.sumVals(inArr);
 
@@ -343,7 +355,7 @@ This is the write code problems associated with the mixed up code problems.
 
             public static void main(String[] args)
             {
-                int[][] numbers = {{0, 1, 2}, {3, 1, 5}, {6, 1, 1}};
+                int[][] numbers = { {0, 1, 2}, {3, 1, 5}, {6, 1, 1}};
                 int output = numOccurrences(numbers, 1);
                 System.out.println(
                         "The number of times that 1 appears in the data set: " + output);
@@ -400,7 +412,7 @@ This is the write code problems associated with the mixed up code problems.
 
             public static void main(String[] args)
             {
-                int[][] test = {{0, 1, 2}, {3, 4, 5}, {6, 7, 8}};
+                int[][] test = { {0, 1, 2}, {3, 4, 5}, {6, 7, 8}};
                 int[] output = averageCols(test);
                 System.out.println("Averages: " + Arrays.toString(output));
             }
@@ -455,13 +467,13 @@ This is the write code problems associated with the mixed up code problems.
 
             public static void main(String[] args)
             {
-                int[][] arr1 = {{-1, 2, 0}, {6, -4, 5}, {3, 4, 8}};
+                int[][] arr1 = { {-1, 2, 0}, {6, -4, 5}, {3, 4, 8}};
                 int[][] out1 = oddRows(arr1);
 
                 // Arrays.deepToString is a method that prints 2d arrays nicely
                 System.out.println("oddRows(arr1) --> " + Arrays.deepToString(out1));
 
-                int[][] arr2 = {{7, -3}, {-5, 1}, {2, 4}, {8, 5}};
+                int[][] arr2 = { {7, -3}, {-5, 1}, {2, 4}, {8, 5}};
                 int[][] out2 = oddRows(arr2);
 
                 System.out.println("oddRows(arr2) --> " + Arrays.deepToString(out2));
@@ -496,7 +508,7 @@ This is the write code problems associated with the mixed up code problems.
             @Test
             public void test2()
             {
-                int[][] inArr = {{2, 4, 8, 10}, {6, 0, 4, 12}, {1, 3, 5, 7}, {8, 6, 4, 2}};
+                int[][] inArr = { {2, 4, 8, 10}, {6, 0, 4, 12}, {1, 3, 5, 7}, {8, 6, 4, 2}};
                 String expect = "[[6, 0, 4, 12], [8, 6, 4, 2]]";
                 String output = Arrays.deepToString(Test1.oddRows(inArr));
 
@@ -611,13 +623,13 @@ This is the write code problems associated with the mixed up code problems.
 
             public static void main(String[] args)
             {
-                int[][] mat1 = {{-1, 2, 0}, {6, -4, 5}, {3, 4, 8}};
+                int[][] mat1 = { {-1, 2, 0}, {6, -4, 5}, {3, 4, 8}};
                 int[] out1 = maxEachRow(mat1);
 
                 System.out.println("mat1 --> " + Arrays.deepToString(mat1));
                 System.out.println("maxEachRow(mat1) --> " + Arrays.toString(out1));
 
-                int[][] mat2 = {{7, -3}, {-5, 1}};
+                int[][] mat2 = { {7, -3}, {-5, 1}};
                 int[] out2 = maxEachRow(mat2);
 
                 System.out.println("mat2 --> " + Arrays.deepToString(mat2));
@@ -657,7 +669,7 @@ This is the write code problems associated with the mixed up code problems.
             @Test
             public void test2()
             {
-                int[][] inArr = {{2, 4, 8, 10}, {6, 0, 4, 12}};
+                int[][] inArr = { {2, 4, 8, 10}, {6, 0, 4, 12}};
                 String expect = "[10, 12]";
                 String output = Arrays.toString(Test1.maxEachRow(inArr));
 
