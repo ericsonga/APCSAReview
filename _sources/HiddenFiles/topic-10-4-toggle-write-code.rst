@@ -104,22 +104,26 @@ This is the write code problems associated with the mixed up code problems. Reme
 
         Fill in the ``multiply`` method. It should take in two non-negative integers and return their product, using the fact that multiplication is repeated addition (e.g., 3x4 = 3 + 3 + 3 + 3). Thus, ``multiply(3, 4)`` would return ``12``. Do NOT use multiplication; only use addition.
         ~~~~
-        public class ListTest {
+        public class ListTest 
+        {
+            public static int multiply(int a, int b) 
+            {
 
-            public static int multiply(int a, int b) {
-
-                if () { // YOUR CODE HERE - What's the base case condition?
+                if ()  // YOUR CODE HERE - What's the base case condition?
+                {
 
                     // YOUR CODE HERE - And what should we return in the base case?
 
                 }
-
-                else { // This is the recursive case
+                else 
+                {  
+                    // This is the recursive case
                     return multiply(a, b - 1) + a;
                 }
             }
 
-            public static void main(String[] args) {
+            public static void main(String[] args) 
+            {
                 System.out.println("Before: multiply(3, 4)");
                 System.out.println("After: " + multiply(3, 4));
             }
@@ -162,9 +166,12 @@ This is the write code problems associated with the mixed up code problems. Reme
             public static int sumElements(int[] arr, int index)
             {
 
-                if (index >= arr.length) { // This is the base case
+                if (index >= arr.length) // This is the base case
+                {
                     return 0;
-                } else { // This is the recursive case
+                } else 
+                {   
+                    // This is the recursive case
                     // YOUR CODE HERE
                 }
             }
@@ -233,7 +240,6 @@ This is the write code problems associated with the mixed up code problems. Reme
 
             public static void main(String[] args)
             {
-
                 String myText = "ab*c**d";
                 System.out.println("Before: " + myText);
 

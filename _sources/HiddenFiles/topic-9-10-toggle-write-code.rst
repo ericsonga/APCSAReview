@@ -19,7 +19,8 @@ This is the write code problems associated with the mixed up code problems.
             /* implementation not shown */
         }
 
-        public class Dog { // TODO: fix this line
+        public class Dog  // TODO: fix this line
+        {
             /* implementation not shown */
         }
 
@@ -177,7 +178,6 @@ This is the write code problems associated with the mixed up code problems.
         ~~~~
         class Person
         {
-
             // this class is complete
 
             private String firstName;
@@ -267,13 +267,11 @@ This is the write code problems associated with the mixed up code problems.
         ~~~~
         public class House
         {
-
             private int numWindows;
             private int numDoors;
 
             public House(int numWindows, int numDoors)
             {
-
                 this.numWindows = numWindows;
                 this.numDoors = numDoors;
             }
@@ -677,7 +675,6 @@ This is the write code problems associated with the mixed up code problems.
 
         public class Apple extends Fruit
         {
-
             private String variety;
 
             public Apple(int numCalories, String color, String variety)
