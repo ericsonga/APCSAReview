@@ -128,13 +128,13 @@ Click to reveal multiple choice questions that may help you write your solution.
 
         .. code-block:: java
 
-            public int getTotalBoxes() {
-                for (CookieOrder co : this.orders){
+            public int getTotalBoxes() 
+            {
+                for (CookieOrder co : this.orders)
+                {
                   int sum = sum + co.getNumBoxes();
                 }
-
                 return sum;
-
             }
 
 Mixed Up Code
@@ -152,11 +152,13 @@ Click to reveal the  Mixed Up Code for the solution to this problem.
 
       The method ``getTotalBoxes`` below contains the correct code for one solution to this problem, but it is mixed up.  Drag the needed code from the left to the right and put them in order with the correct indention so that the code would work correctly.
       -----
-      public int getTotalBoxes() {
+      public int getTotalBoxes() 
+      {
       =====
          int sum = 0;
       =====
-         for (CookieOrder co : this.orders) {
+         for (CookieOrder co : this.orders) 
+         {
       =====
             sum += co.getNumBoxes();
       =====
@@ -248,23 +250,37 @@ Solve Part A
 
            MasterOrder order = new MasterOrder();
 
-           if (order.getTotalBoxes() == 0) test1 = true;
+           if (order.getTotalBoxes() == 0) 
+           {
+               test1 = true;
+           }
            else
+           {
                System.out.println(
                        "Oops! Looks like your code doesn't properly check to see if"
                            + " the master order is empty.\n");
-
+           }
            order.addOrder(new CookieOrder("Raisin", 3));
            order.addOrder(new CookieOrder("Oatmeal", 8));
 
-           if (order.getTotalBoxes() == 11) test2 = true;
+           if (order.getTotalBoxes() == 11) 
+           {
+               test2 = true;
+           }
            else
+           {
                System.out.println(
                        "Oops! Looks like your code doesn't properly count the number"
                            + " of boxes in the master order.\n");
-
-           if (test1 && test2) System.out.println("Looks like your code works well!");
-           else System.out.println("Make some changes to your code, please.");
+            }
+           if (test1 && test2) 
+           {
+               System.out.println("Looks like your code works well!");
+           }
+           else 
+           {
+               System.out.println("Make some changes to your code, please.");
+           }
        }
    }
 

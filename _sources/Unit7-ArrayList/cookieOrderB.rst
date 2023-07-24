@@ -169,18 +169,23 @@ Click to reveal the Mixed Up Code for the solution to this problem.
 
       The method ``removeVariety`` below contains the correct code for one solution to this problem, but it is mixed up.  Drag the needed code from the left to the right and put them in order with the correct indention so that the code would work correctly.  There may be extra blocks that are not needed in a correct solution.
       -----
-      private int removeVariety(String cookieVar) {
+      private int removeVariety(String cookieVar) 
+      {
          int numBoxesRemoved = 0;
       =====
-         for (int i = this.orders.size() - 1; i >= 0; i--) {
+         for (int i = this.orders.size() - 1; i >= 0; i--) 
+         {
       =====
-         for (CookieOrder co : this.orders) { #distractor
+         for (CookieOrder co : this.orders) 
+         { #distractor
       =====
             CookieOrder thisOrder = this.orders.get(i);
       =====
-            if(cookieVar.equals(thisOrder.getVariety())) {
+            if(cookieVar.equals(thisOrder.getVariety())) 
+            {
       =====
-            if(cookieVar == thisOrder.getVariety()) { #paired
+            if(cookieVar == thisOrder.getVariety()) 
+            { #paired
       =====
                numBoxesRemoved += thisOrder.getNumBoxes();
                this.orders.remove(i);
@@ -287,21 +292,37 @@ Solve Part B
            order.addOrder(new CookieOrder("Sugar", 2));
 
            if (order.removeVariety("Raisin") == 3
-                   && order.removeVariety("Sugar") == 2) test1 = true;
+                   && order.removeVariety("Sugar") == 2) 
+           {
+                test1 = true;
+           }
            else
+           {           
                System.out.println(
                        "Oops! Looks like your code doesn't return the correct value"
                            + " for cookie order varieties that exist.\n");
+           }
 
-           if (order.removeVariety("Chocolate Chip") == 0) test2 = true;
+           if (order.removeVariety("Chocolate Chip") == 0) 
+           {
+                test2 = true;
+           }           
            else
+           {           
                System.out.println(
                        "Oops! Looks like your code doesn't return the correct value"
                            + " for cookie orders that don't exist in the master"
                            + " order.\n");
+           }
 
-           if (test1 && test2) System.out.println("Looks like your code works well!");
-           else System.out.println("Make some changes to your code, please.");
+           if (test1 && test2) 
+           {
+               System.out.println("Looks like your code works well!");
+           }
+           else
+           {            
+               System.out.println("Make some changes to your code, please.");
+           }
        }
    }
 
