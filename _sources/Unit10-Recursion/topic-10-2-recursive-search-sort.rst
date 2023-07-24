@@ -114,8 +114,8 @@ Here is the Java code for a recursive binary search:
   public class RecursiveBinarySearch
   {
       public static int recursiveBinarySearch(
-              int[] array, int start, int end, int target)
-              {
+          int[] array, int start, int end, int target)
+      {
           int middle = (start + end) / 2;
           // base case: check middle element
           if (target == array[middle])
@@ -195,81 +195,81 @@ To identify a merge sort look for the following:
 * mergeSortHelper is recursive
 
 .. activecode:: mergeSort
-  :language: java
+   :language: java
 
-  import java.util.Arrays;
+   import java.util.Arrays;
 
-  public class SortTest
-  {
-      public static void mergeSort(int[] elements)
-      {
-          int n = elements.length;
-          int[] temp = new int[n];
-          mergeSortHelper(elements, 0, n - 1, temp);
-      }
+   public class SortTest
+   {
+       public static void mergeSort(int[] elements)
+       {
+           int n = elements.length;
+           int[] temp = new int[n];
+           mergeSortHelper(elements, 0, n - 1, temp);
+       }
 
-      private static void mergeSortHelper(
-              int[] elements, int from, int to, int[] temp)
-              {
-          if (from < to)
-          {
-              int middle = (from + to) / 2;
-              mergeSortHelper(elements, from, middle, temp);
-              mergeSortHelper(elements, middle + 1, to, temp);
-              merge(elements, from, middle, to, temp);
-          }
-      }
+       private static void mergeSortHelper(
+           int[] elements, int from, int to, int[] temp)
+       {
+           if (from < to)
+           {
+               int middle = (from + to) / 2;
+               mergeSortHelper(elements, from, middle, temp);
+               mergeSortHelper(elements, middle + 1, to, temp);
+               merge(elements, from, middle, to, temp);
+           }
+       }
 
-      private static void merge(
-              int[] elements, int from, int mid, int to, int[] temp)
-              {
-          int i = from;
-          int j = mid + 1;
-          int k = from;
+       private static void merge(
+           int[] elements, int from, int mid, int to, int[] temp)
+       {
+           int i = from;
+           int j = mid + 1;
+           int k = from;
 
-          while (i <= mid && j <= to)
-          {
-              if (elements[i] < elements[j])
-              {
-                  temp[k] = elements[i];
-                  i++;
-              }
-              else
-              {
-                  temp[k] = elements[j];
-                  j++;
-              }
-              k++;
-          }
+           while (i <= mid && j <= to)
+           {
+               if (elements[i] < elements[j])
+               {
+                   temp[k] = elements[i];
+                   i++;
+               }
+               else
+               {
+                   temp[k] = elements[j];
+                   j++;
+               }
+               k++;
+           }
 
-          while (i <= mid)
-          {
-              temp[k] = elements[i];
-              i++;
-              k++;
-          }
+           while (i <= mid)
+           {
+               temp[k] = elements[i];
+               i++;
+               k++;
+           }
 
-          while (j <= to)
-          {
-              temp[k] = elements[j];
-              j++;
-              k++;
-          }
+           while (j <= to)
+           {
+               temp[k] = elements[j];
+               j++;
+               k++;
+           }
 
-          for (k = from; k <= to; k++)
-          {
-              elements[k] = temp[k];
-          }
-      }
+           for (k = from; k <= to; k++)
+           {
+               elements[k] = temp[k];
+           }
+       }
 
-      public static void main(String[] args)
-      {
-          int[] arr1 = {86, 3, 43, 5};
-          System.out.println(Arrays.toString(arr1));
-          mergeSort(arr1);
-          System.out.println(Arrays.toString(arr1));
-      }
-  }
+       public static void main(String[] args)
+       {
+           int[] arr1 = {86, 3, 43, 5};
+           System.out.println(Arrays.toString(arr1));
+           mergeSort(arr1);
+           System.out.println(Arrays.toString(arr1));
+       }
+   }
 
 You can see this executing using the |Java visualizer for merge sort|.
 

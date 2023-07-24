@@ -29,13 +29,13 @@ These problems are similar to those you will see on the AP CSA exam.
       //precondition:  x >=0
       public static void mystery (int x)
       {
-         System.out.print(x % 10);
+          System.out.print(x % 10);
 
-         if ((x / 10) != 0)
-         {
-            mystery(x / 10);
-         }
-         System.out.print(x % 10);
+          if ((x / 10) != 0)
+          {
+              mystery(x / 10);
+          }
+          System.out.print(x % 10);
       }
 
 You can step through the code using the Java Visualizer by clicking on the following link: `Q-11-7-1 <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+ClassNameHere+%7B%0A+++%0A+++public+static+void+mystery+(int+x)%0A+++%7B%0A+++++++++System.out.print(x+%25+10)%3B%0A%0A+++++++++if+((x+/+10)+!%3D+0)%0A+++++++++%7B%0A++++++++++++mystery(x+/+10)%3B%0A+++++++++%7D%0A+++++++++System.out.print(x+%25+10)%3B%0A+++%7D%0A+++%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++mystery(1234)%3B%0A++++++%0A+++%7D%0A%7D&mode=display&curInstr=0>`_.
@@ -61,10 +61,14 @@ You can step through the code using the Java Visualizer by clicking on the follo
 
       public static int mystery(int n)
       {
-         if (n == 0)
-            return 1;
-         else
-            return 3 * mystery (n - 1);
+          if (n == 0)
+          {
+              return 1;
+          }
+          else
+          {
+              return 3 * mystery (n - 1);
+          }
       }
 
 You can step through the code using the Java Visualizer by clicking on the following link: `Q-11-7-2 <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+ClassNameHere+%7B%0A+++%0A+++public+static+int+mystery(int+n)%0A+++%7B%0A+++++++++if+(n+%3D%3D+0)%0A++++++++++++return+1%3B%0A+++++++++else%0A++++++++++++return+3+*+mystery+(n+-+1)%3B%0A+++%7D%0A+++%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++System.out.println(mystery(5))%3B%0A++++++%0A+++%7D%0A%7D&mode=display&curInstr=0>`_.
@@ -91,9 +95,13 @@ You can step through the code using the Java Visualizer by clicking on the follo
       public static int product(int n)
       {
          if (n <= 1)
-            return 1;
+         {
+             return 1;
+         }
          else
-            return n * product(n - 2);
+         {
+             return n * product(n - 2);
+         }
       }
 
 You can step through the code using the Java Visualizer by clicking on the following link: `Q11-7-3 <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+ClassNameHere+%7B%0A+++%0A+++public+static+int+product(int+n)+%0A+++%7B%0A+++++++++if+(n+%3C%3D+1)%0A++++++++++++return+1%3B%0A+++++++++else%0A++++++++++++return+n+*+product(n+-+2)%3B%0A+++%7D%0A+++%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++System.out.println(product(5))%3B%0A++++++%0A+++%7D%0A%7D&mode=display&curInstr=0>`_.
@@ -120,10 +128,17 @@ You can step through the code using the Java Visualizer by clicking on the follo
       public static int f(int n)
       {
          if (n == 0)
-            return 0;
+         {
+             return 0;
+         }
          else if (n == 1)
-            return 1;
-         else return f(n-1) + f(n-2);
+         {
+             return 1;
+         }
+         else
+         {
+             return f(n-1) + f(n-2);
+         }
       }
 
 You can step through the code using the Java Visualizer by clicking on the following link: `Q11-7-4 <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+ClassNameHere+%7B%0A+++%0A+++public+static+int+f(int+n)%0A+++%7B%0A+++++++++if+(n+%3D%3D+0)%0A++++++++++++return+0%3B%0A+++++++++else+if+(n+%3D%3D+1)%0A++++++++++++return+1%3B%0A+++++++++else+return+f(n-1)+%2B+f(n-2)%3B%0A+++%7D%0A+++%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++System.out.println(f(5))%3B%0A++++++%0A+++%7D%0A%7D&mode=display&curInstr=0>`_.

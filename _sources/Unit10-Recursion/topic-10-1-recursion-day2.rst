@@ -81,10 +81,14 @@ Let's trace the execution of the factorial method defined below.
 
   public static int factorial(int n)
   {
-    if (n == 0)
-      return 1;
-    else
-      return n * factorial(n-1);
+      if (n == 0)
+      {
+          return 1;
+      }
+      else
+      {
+          return n * factorial(n-1);
+      }
   }
 
 What happens when we call ``factorial(0)``?  It will return 1 (line 4) since n is equal to 0.  How about ``factorial(1)``?  It will return ``1 * factorial(0)``.  We already know that ``factorial(0)`` returns 1, but the computer won't *remember* that.  It will execute ``factorial(0)`` and return the result (1).   So  ``factorial(1)`` returns ``1 * 1 which is 1``.
@@ -147,10 +151,14 @@ Another way to see the call stack in action is to download and use the Jeloit so
 
      public static int factorial(int n)
      {
-        if (n == 0)
-           return 1;
-        else
-           return n * factorial(n-1);
+         if (n == 0)
+         {
+             return 1;
+         }
+         else
+         {
+             return n * factorial(n-1);
+         }
      }
 
 .. mchoice:: qrb_6
@@ -173,9 +181,13 @@ Another way to see the call stack in action is to download and use the Jeloit so
      public static int mystery(int n)
      {
         if (n == 0)
+        {
            return 1;
+        }
         else
+        {
            return 2 * mystery (n - 1);
+        }
      }
 
 You can step through the code above using the Java Visualizer by clicking on the following link: `Ex-11-3-2 <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+Test+%7B%0A+++%0A+++public+static+int+mystery(int+n)+%0A+++%7B+%0A++++++++if+(n+%3D%3D+0)+%0A+++++++++++return+1%3B%0A++++++++else+%0A+++++++++++return+2+*+mystery+(n+-+1)%3B+%0A+++%7D+%0A+++%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++System.out.println(mystery(5))%3B%0A+++%7D%0A%7D&mode=display&curInstr=0>`_.
@@ -201,8 +213,11 @@ You can step through the code above using the Java Visualizer by clicking on the
 
      public static int mystery(int n, int a)
      {
-       if (n == 1) return a;
-       return a * mystery(n-1,a);
+         if (n == 1)
+         {
+             return a;
+         }
+         return a * mystery(n-1,a);
      }
 
 You can step through the code above using the Java Visualizer by clicking on the following link: `Ex-11-3-3 <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+Test+%7B%0A+++%0A+++public+static+int+mystery(int+n,+int+a)%0A+++%7B%0A+++++++if+(n+%3D%3D+1)+return+a%3B%0A+++++++return+a+*+mystery(n-1,a)%3B%0A+++%7D+%0A+++%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++System.out.println(mystery(4,3))%3B%0A+++%7D%0A%7D&mode=display&curInstr=0>`_.
@@ -216,9 +231,17 @@ Let's trace the execution of the bunny ears method defined below.
 
   public static int bunnyEars(int bunnies)
   {
-     if (bunnies == 0) return 0;
-     else if (bunnies == 1) return 2;
-     else return 2 + bunnyEars(bunnies - 1);
+     if (bunnies == 0)
+     {
+         return 0;
+     }
+     else if (bunnies == 1)
+     {
+         return 2;
+     }
+     else {
+         return 2 + bunnyEars(bunnies - 1);
+     }
   }
 
 What happens when we call ``bunnyEars(0)``?  It will return 0 since n is equal to 0 (line 3).  How about ``bunnyEars(1)``?  It will return 2 since n is equal to 1 (line 4). What about ``bunnyEars(5)``?
@@ -269,7 +292,8 @@ So ``bunnyEars(5)`` returns 10.  You can step through this code using the Java V
      public static void mystery (int x) {
         System.out.print(x % 10);
 
-        if ((x / 10) != 0) {
+        if ((x / 10) != 0)
+        {
            mystery(x / 10);
         }
         System.out.print(x % 10);
@@ -298,7 +322,10 @@ You can step through the code above using the Java Visualizer by clicking on the
 
      public static int mystery(String str)
      {
-        if (str.length() == 1) return 0;
+        if (str.length() == 1)
+        {
+            return 0;
+        }
         else
         {
            if (str.substring(0,1).equals("y")) return 1 +

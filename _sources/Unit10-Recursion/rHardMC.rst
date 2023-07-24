@@ -52,10 +52,14 @@ You can step through the code above by clicking on the following link `Ex-11-8-1
 
       public static int redo(int i, int j)
       {
-         if (i==0)
-            return 0;
-         else
-            return redo(i/j, j)+1;
+          if (i == 0)
+          {
+              return 0;
+          }
+          else
+          {
+              return redo(i / j, j) + 1;
+          }
       }
 
 You can step through the code above by clicking on the following link `Ex-11-8-2 <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+ClassNameHere+%7B%0A+++%0A+++public+static+int+redo(int+i,+int+j)%0A+++%7B%0A++++++if+(i%3D%3D0)%0A+++++++++return+0%3B%0A++++++else+%0A+++++++++return+redo(i/j,+j)%2B1%3B%0A+++%7D%0A+++%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++System.out.println(redo(82,3))%3B%0A+++%7D%0A%7D&mode=display&curInstr=0>`_.
