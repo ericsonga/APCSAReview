@@ -119,7 +119,7 @@ Please note that this is a difficult exam. We estimate that a score of about 50%
        :answer_b: x = 0;
        :answer_c: if (x < 0) x = 0;
        :answer_d: if (x > 0) x = -x; else x = 0;
-       :answer_e: if ( x < 0) x = 0; else x = -1;
+       :answer_e: if (x < 0) x = 0; else x = -1;
        :correct: b
        :feedback_a: Even if x is < 0, the above code will set it to 0.
        :feedback_b: No matter what x is set to originally, the code will reset it to 0.
@@ -131,7 +131,7 @@ Please note that this is a difficult exam. We estimate that a score of about 50%
 
        .. code-block:: java
 
-         if ( x > 0) x = -x;
+         if (x > 0) x = -x;
          if (x < 0) x = 0;
 
     .. mchoice:: pe2_6-15
@@ -543,36 +543,40 @@ Please note that this is a difficult exam. We estimate that a score of about 50%
 
          public class TimeRecord
          {
-           private int hours;
-           private int minutes; // 0<=minutes<60
+             private int hours;
+             private int minutes; // 0<=minutes<60
 
-           public TimeRecord(int h, int m)
-           {
-             hours = h;
-             minutes = m;
-           }
+             public TimeRecord(int h, int m)
+             {
+                 hours = h;
+                 minutes = m;
+             }
 
-           // postcondition: returns the
-           // number of hours
-           public int getHours()
-           { /* implementation not shown */ }
+             // postcondition: returns the
+             // number of hours
+             public int getHours()
+             {
+                 /* implementation not shown */
+             }
 
-           // postcondition: returns the number
-           // of minutes; 0 <= minutes < 60
-           public int getMinutes()
-           { /* implementation not shown */ }
+             // postcondition: returns the number
+             // of minutes; 0 <= minutes < 60
+             public int getMinutes()
+             {
+                 /* implementation not shown */
+             }
 
-           // precondition: h >= 0; m >= 0
-           // postcondition: adds h hours and
-           // m minutes to this TimeRecord
-           public void advance(int h, int m)
-           {
-             hours = hours + h;
-             minutes = minutes + m;
-             /* missing code */
-           }
+             // precondition: h >= 0; m >= 0
+             // postcondition: adds h hours and
+             // m minutes to this TimeRecord
+             public void advance(int h, int m)
+             {
+                 hours = hours + h;
+                 minutes = minutes + m;
+                 /* missing code */
+             }
 
-           // ... other methods not shown
+             // ... other methods not shown
          }
 
     .. mchoice:: pe2_20-17
@@ -594,36 +598,30 @@ Please note that this is a difficult exam. We estimate that a score of about 50%
 
          public class Base
          {
-            public void methodOne()
-            {
-              System.out.print("A");
-              methodTwo();
-            }
+             public void methodOne()
+             {
+                 System.out.print("A");
+                 methodTwo();
+             }
 
-            public void methodTwo()
-            {
-              System.out.print("B");
-            }
+             public void methodTwo()
+             {
+                 System.out.print("B");
+             }
          }
 
          public class Derived extends Base
          {
-            public void methodOne()
-            {
-               super.methodOne();
-               System.out.print("C");
-            }
+             public void methodOne()
+             {
+                 super.methodOne();
+                 System.out.print("C");
+             }
 
-            public void methodTwo()
-            {
-              super.methodTwo();
-              System.out.print("D");
-            }
+             public void methodTwo()
+             {
+                 super.methodTwo();
+                 System.out.print("D");
+             }
          }
-
-
-
-
-
-
 
