@@ -31,33 +31,33 @@ Code Practice with Object Oriented Concepts
               }
               ====
               import static org.junit.Assert.*;
-               import org.junit.*;
-               import java.io.*;
-               import java.util.List;
-               import java.util.ArrayList;
 
-               public class RunestoneTests extends CodeTestHelper
-               {
+              import org.junit.*;
 
-                 @Test
-                 public void testMain() throws IOException
-                 {
-                   String output = getMethodOutput("main");
-                   String expect = "Hello Matthew\n";
+              import java.io.*;
 
-                   boolean passed = getResults(expect, output, "Expected output from main");
-                   assertTrue(passed);
-                 }
+              public class RunestoneTests extends CodeTestHelper
+              {
 
-               @Test
-                 public void testtalk_name()
-                 {
-                   String target = "public static void talk(String *)";
-                   boolean passed = checkCodeContainsRegex("overloaded method talk with a String parameter",target);
-                   assertTrue(passed);
-                 }
-               }
+                  @Test
+                  public void testMain() throws IOException
+                  {
+                      String output = getMethodOutput("main");
+                      String expect = "Hello Matthew\n";
 
+                      boolean passed = getResults(expect, output, "Expected output from main");
+                      assertTrue(passed);
+                  }
+
+                  @Test
+                  public void testtalk_name()
+                  {
+                      String target = "public static void talk(String *)";
+                      boolean passed =
+                              checkCodeContainsRegex("overloaded method talk with a String parameter", target);
+                      assertTrue(passed);
+                  }
+              }
 
         .. tab:: Answer
 
@@ -126,36 +126,34 @@ Code Practice with Object Oriented Concepts
                       System.out.println("arf arf");
                   }
               }
+
               ====
               import static org.junit.Assert.*;
-               import org.junit.*;
-               import java.io.*;
-               import java.util.List;
-               import java.util.ArrayList;
 
-               public class RunestoneTests extends CodeTestHelper
-               {
+              import org.junit.*;
 
-                 @Test
-                 public void testMain() throws IOException
-                 {
-                   String output = getMethodOutput("main");
-                   String expect = "woof!\n" +
-                                   "arf arf\n";
-                   boolean passed = getResults(expect, output, "Expected output from main");
-                   assertTrue(passed);
-                 }
+              import java.io.*;
 
+              public class RunestoneTests extends CodeTestHelper
+              {
 
-               @Test
-                 public void testBeagleExtendsDog()
-                 {
-                   String target = "class Beagle extends Dog";
-                   boolean passed = checkCodeContains("class Beagle extends class Dog",target);
-                   assertTrue(passed);
-                 }
-               }
+                  @Test
+                  public void testMain() throws IOException
+                  {
+                      String output = getMethodOutput("main");
+                      String expect = "woof!\n" + "arf arf\n";
+                      boolean passed = getResults(expect, output, "Expected output from main");
+                      assertTrue(passed);
+                  }
 
+                  @Test
+                  public void testBeagleExtendsDog()
+                  {
+                      String target = "class Beagle extends Dog";
+                      boolean passed = checkCodeContains("class Beagle extends class Dog", target);
+                      assertTrue(passed);
+                  }
+              }
 
         .. tab:: Answer
 
@@ -231,61 +229,59 @@ Code Practice with Object Oriented Concepts
                       System.out.println(d3.equals(d4));
                   }
               }
+
               ====
               import static org.junit.Assert.*;
-               import org.junit.*;
-               import java.io.*;
-               import java.util.List;
-               import java.util.ArrayList;
 
-               public class RunestoneTests extends CodeTestHelper
-               {
+              import org.junit.*;
 
-                 @Test
-                 public void testMain() throws IOException
-                 {
-                   String output = getMethodOutput("main");
-                   String expect = "false\n" +
-                                   "false\n" +
-                                   "true\n" +
-                                   "true\n" ;
-                   boolean passed = getResults(expect, output, "Expected output from main");
-                   assertTrue(passed);
-                 }
+              import java.io.*;
 
-               @Test
-                 public void test1()
-                 {
-                   String target = "Dog * = (Dog)other";
+              public class RunestoneTests extends CodeTestHelper
+              {
 
-                   boolean passed = checkCodeContainsRegex("casting of Object other to type Dog", target);
-                   assertTrue(passed);
-                 }
+                  @Test
+                  public void testMain() throws IOException
+                  {
+                      String output = getMethodOutput("main");
+                      String expect = "false\n" + "false\n" + "true\n" + "true\n";
+                      boolean passed = getResults(expect, output, "Expected output from main");
+                      assertTrue(passed);
+                  }
 
-               @Test
-                 public void test2()
-                 {
-                   Dog d1 = new Dog("Rufus");
-                   Dog d2 = new Dog("Sally");
+                  @Test
+                  public void test1()
+                  {
+                      String target = "Dog * = (Dog)other";
 
-                   String result = String.valueOf(!(d1.equals(d2)));
+                      boolean passed = checkCodeContainsRegex("casting of Object other to type Dog", target);
+                      assertTrue(passed);
+                  }
 
-                   boolean passed = getResults("true", result, "Equals method test - not equals");
-                   assertTrue(passed);
-                 }
+                  @Test
+                  public void test2()
+                  {
+                      Dog d1 = new Dog("Rufus");
+                      Dog d2 = new Dog("Sally");
 
-                 @Test
-                 public void test3()
-                 {
-                   Dog d1 = new Dog("Rufus");
-                   Dog d3 = new Dog("Rufus");
+                      String result = String.valueOf(!(d1.equals(d2)));
 
-                   String result = String.valueOf((d1.equals(d3)));
+                      boolean passed = getResults("true", result, "Equals method test - not equals");
+                      assertTrue(passed);
+                  }
 
-                   boolean passed = getResults("true", result, "Equals method test - equals");
-                   assertTrue(passed);
-                 }
-               }
+                  @Test
+                  public void test3()
+                  {
+                      Dog d1 = new Dog("Rufus");
+                      Dog d3 = new Dog("Rufus");
+
+                      String result = String.valueOf((d1.equals(d3)));
+
+                      boolean passed = getResults("true", result, "Equals method test - equals");
+                      assertTrue(passed);
+                  }
+              }
 
         .. tab:: Answer
 
@@ -324,7 +320,6 @@ Code Practice with Object Oriented Concepts
                   }
               }
 
-
         .. tab:: Discussion
 
             .. disqus::
@@ -362,40 +357,40 @@ Code Practice with Object Oriented Concepts
               {
                   // ADD CODE HERE
               }
+
               ====
               import static org.junit.Assert.*;
-               import org.junit.*;
-               import java.io.*;
-               import java.util.List;
-               import java.util.ArrayList;
 
-               public class RunestoneTests extends CodeTestHelper
-               {
+              import org.junit.*;
 
-                 @Test
-                 public void testMain() throws IOException
-                 {
-                   String output = getMethodOutput("main");
-                   String expect = "tastes sweet!\n" +
-                                   "tastes chocolately\n";
-                   boolean passed = getResults(expect, output, "Expected output from main");
-                   assertTrue(passed);
-                 }
+              import java.io.*;
 
-               @Test
-                 public void test1()
-                 {
-                   String code = getCode();
-                   String target = "public String taste()";
+              public class RunestoneTests extends CodeTestHelper
+              {
 
-                   int num = countOccurencesRegex(code, target);
+                  @Test
+                  public void testMain() throws IOException
+                  {
+                      String output = getMethodOutput("main");
+                      String expect = "tastes sweet!\n" + "tastes chocolately\n";
+                      boolean passed = getResults(expect, output, "Expected output from main");
+                      assertTrue(passed);
+                  }
 
-                   boolean passed = (num == 2);
+                  @Test
+                  public void test1()
+                  {
+                      String code = getCode();
+                      String target = "public String taste()";
 
-                   getResults("2", ""+num, "2 taste methods", passed);
-                   assertTrue(passed);
-                 }
-               }
+                      int num = countOccurencesRegex(code, target);
+
+                      boolean passed = (num == 2);
+
+                      getResults("2", "" + num, "2 taste methods", passed);
+                      assertTrue(passed);
+                  }
+              }
 
         .. tab:: Answer
 
@@ -429,7 +424,6 @@ Code Practice with Object Oriented Concepts
                   }
               }
 
-
         .. tab:: Discussion
 
             .. disqus::
@@ -456,38 +450,38 @@ Code Practice with Object Oriented Concepts
 
                   public static void main(String[] args)
                   {
-                     greet();
-                     greet("Sansa");
+                      greet();
+                      greet("Sansa");
                   }
               }
+
               ====
               import static org.junit.Assert.*;
-               import org.junit.*;
-               import java.io.*;
-               import java.util.List;
-               import java.util.ArrayList;
 
-               public class RunestoneTests extends CodeTestHelper
-               {
+              import org.junit.*;
 
-                 @Test
-                 public void testMain() throws IOException
-                 {
-                   String output = getMethodOutput("main");
-                   String expect = "Hello\nHello Sansa";
-                   boolean passed = getResults(expect, output, "Expected output from main");
-                   assertTrue(passed);
-                 }
+              import java.io.*;
 
+              public class RunestoneTests extends CodeTestHelper
+              {
 
-                 @Test
-                 public void test1()
-                 {
-                   String target = "greet();";
-                   boolean passed = checkCodeContains("overridden greet method", target);
-                   assertTrue(passed);
-                 }
-               }
+                  @Test
+                  public void testMain() throws IOException
+                  {
+                      String output = getMethodOutput("main");
+                      String expect = "Hello\nHello Sansa";
+                      boolean passed = getResults(expect, output, "Expected output from main");
+                      assertTrue(passed);
+                  }
+
+                  @Test
+                  public void test1()
+                  {
+                      String target = "greet();";
+                      boolean passed = checkCodeContains("overridden greet method", target);
+                      assertTrue(passed);
+                  }
+              }
 
         .. tab:: Answer
 
@@ -512,8 +506,8 @@ Code Practice with Object Oriented Concepts
 
                   public static void main(String[] args)
                   {
-                     greet();
-                     greet("Sansa");
+                      greet();
+                      greet("Sansa");
                   }
               }
 
@@ -557,35 +551,34 @@ Code Practice with Object Oriented Concepts
                       System.out.println("I have the best dog!");
                   }
               }
+
               ====
               import static org.junit.Assert.*;
-               import org.junit.*;
-               import java.io.*;
-               import java.util.List;
-               import java.util.ArrayList;
 
-               public class RunestoneTests extends CodeTestHelper
-               {
+              import org.junit.*;
 
-                 @Test
-                 public void testMain() throws IOException
-                 {
-                   String output = getMethodOutput("main");
-                   String expect = "I have the best pet!\n" +
-                                   "I have the best dog!\n";
-                   boolean passed = getResults(expect, output, "Expected output from main");
-                   assertTrue(passed);
-                 }
+              import java.io.*;
 
+              public class RunestoneTests extends CodeTestHelper
+              {
 
-                 @Test
-                 public void test1()
-                 {
-                   String target = "super.brag();";
-                   boolean passed = checkCodeContains("super to override method brag", target);
-                   assertTrue(passed);
-                 }
-               }
+                  @Test
+                  public void testMain() throws IOException
+                  {
+                      String output = getMethodOutput("main");
+                      String expect = "I have the best pet!\n" + "I have the best dog!\n";
+                      boolean passed = getResults(expect, output, "Expected output from main");
+                      assertTrue(passed);
+                  }
+
+                  @Test
+                  public void test1()
+                  {
+                      String target = "super.brag();";
+                      boolean passed = checkCodeContains("super to override method brag", target);
+                      assertTrue(passed);
+                  }
+              }
 
         .. tab:: Answer
 
@@ -619,7 +612,6 @@ Code Practice with Object Oriented Concepts
                   }
               }
 
-
         .. tab:: Discussion
 
             .. disqus::
@@ -648,9 +640,15 @@ Code Practice with Object Oriented Concepts
                       this.age = age;
                   }
 
-                  public String getName() { return this.name; }
+                  public String getName()
+                  {
+                      return this.name;
+                  }
 
-                  public int getAge() { return this.age; }
+                  public int getAge()
+                  {
+                      return this.age;
+                  }
 
                   public String toString()
                   {
@@ -659,10 +657,10 @@ Code Practice with Object Oriented Concepts
 
                   public static void main(String[] args)
                   {
-                     Person p = new Person("Destini", 20);
-                     System.out.println(p);
-                     Teacher p2 = new Teacher("Erica", 55, "Masters in Teaching");
-                     System.out.println(p2);
+                      Person p = new Person("Destini", 20);
+                      System.out.println(p);
+                      Teacher p2 = new Teacher("Erica", 55, "Masters in Teaching");
+                      System.out.println(p2);
                   }
               }
 
@@ -670,7 +668,10 @@ Code Practice with Object Oriented Concepts
               {
                   String degree;
 
-                  public String getDegree() { return this.degree; }
+                  public String getDegree()
+                  {
+                      return this.degree;
+                  }
 
                   public String toString()
                   {
@@ -682,41 +683,38 @@ Code Practice with Object Oriented Concepts
                       // ADD CODE HERE
                   }
               }
+
               ====
               import static org.junit.Assert.*;
-               import org.junit.*;
-               import java.io.*;
-               import java.util.List;
-               import java.util.ArrayList;
 
-               public class RunestoneTests extends CodeTestHelper
-               {
+              import org.junit.*;
 
-                 @Test
-                 public void testMain() throws IOException
-                 {
-                   String output = getMethodOutput("main");
-                   String expect = "Destini 20\n" +
-                                   "Erica 55 Masters in Teaching\n";
-                   boolean passed = getResults(expect, output, "Expected output from main");
-                   assertTrue(passed);
-                 }
+              import java.io.*;
 
+              public class RunestoneTests extends CodeTestHelper
+              {
 
-                 @Test
-                 public void test1()
-                 {
-                   Teacher p2 = new Teacher("Erica", 55, "Masters in Teaching");
+                  @Test
+                  public void testMain() throws IOException
+                  {
+                      String output = getMethodOutput("main");
+                      String expect = "Destini 20\n" + "Erica 55 Masters in Teaching\n";
+                      boolean passed = getResults(expect, output, "Expected output from main");
+                      assertTrue(passed);
+                  }
 
-                   String output = p2.toString();
-                   String expect = "Erica 55 Masters in Teaching";
+                  @Test
+                  public void test1()
+                  {
+                      Teacher p2 = new Teacher("Erica", 55, "Masters in Teaching");
 
-                   boolean passed = getResults(output, expect, "Teacher class extends Person class");
-                   assertTrue(passed);
-                 }
-               }
+                      String output = p2.toString();
+                      String expect = "Erica 55 Masters in Teaching";
 
-
+                      boolean passed = getResults(output, expect, "Teacher class extends Person class");
+                      assertTrue(passed);
+                  }
+              }
 
         .. tab:: Answer
 
@@ -737,9 +735,15 @@ Code Practice with Object Oriented Concepts
                       this.age = age;
                   }
 
-                  public String getName() { return this.name; }
+                  public String getName()
+                  {
+                      return this.name;
+                  }
 
-                  public int getAge() { return this.age; }
+                  public int getAge()
+                  {
+                      return this.age;
+                  }
 
                   public String toString()
                   {
@@ -748,10 +752,10 @@ Code Practice with Object Oriented Concepts
 
                   public static void main(String[] args)
                   {
-                     Person p = new Person("Destini", 20);
-                     System.out.println(p);
-                     Teacher p2 = new Teacher("Erica", 55, "Masters in Teaching");
-                     System.out.println(p2);
+                      Person p = new Person("Destini", 20);
+                      System.out.println(p);
+                      Teacher p2 = new Teacher("Erica", 55, "Masters in Teaching");
+                      System.out.println(p2);
                   }
               }
 
@@ -759,7 +763,10 @@ Code Practice with Object Oriented Concepts
               {
                   String degree;
 
-                  public String getDegree() { return this.degree; }
+                  public String getDegree()
+                  {
+                      return this.degree;
+                  }
 
                   public String toString()
                   {
@@ -768,7 +775,7 @@ Code Practice with Object Oriented Concepts
 
                   public Teacher(String name, int age, String theDegree)
                   {
-                      super(name,age);
+                      super(name, age);
                       this.degree = theDegree;
                   }
               }
@@ -802,7 +809,10 @@ Code Practice with Object Oriented Concepts
 
                   // ADD CODE HERE
 
-                  public String toString() { return this.name + "\n" + this.address; }
+                  public String toString()
+                  {
+                      return this.name + "\n" + this.address;
+                  }
 
                   public static void main(String[] args)
                   {
@@ -811,50 +821,45 @@ Code Practice with Object Oriented Concepts
                       myStore.setName("Barbara's Store");
                       myStore.setAddress("555 Pine St.");
                       System.out.println(myStore);
-
                   }
               }
+
               ====
               import static org.junit.Assert.*;
-               import org.junit.*;
-               import java.io.*;
-               import java.util.List;
-               import java.util.ArrayList;
 
-               public class RunestoneTests extends CodeTestHelper
-               {
+              import org.junit.*;
 
-                 @Test
-                 public void testMain() throws IOException
-                 {
-                   String output = getMethodOutput("main");
-                   String expect = "Barb's Store\n" +
-                                   "333 Main St.\n" +
-                                   "Barbara's Store\n" +
-                                   "555 Pine St.\n";
+              import java.io.*;
 
-                   boolean passed = getResults(expect, output, "Expected output from main");
-                   assertTrue(passed);
-                 }
+              public class RunestoneTests extends CodeTestHelper
+              {
 
-                 @Test
-                 public void test1()
-                 {
-                   Store myStore = new Store("A Store", "An Address");
+                  @Test
+                  public void testMain() throws IOException
+                  {
+                      String output = getMethodOutput("main");
+                      String expect =
+                              "Barb's Store\n" + "333 Main St.\n" + "Barbara's Store\n" + "555 Pine St.\n";
 
-                   myStore.setName("Barbara's Store");
-                   myStore.setAddress("555 Pine St.");
+                      boolean passed = getResults(expect, output, "Expected output from main");
+                      assertTrue(passed);
+                  }
 
-                   String output = myStore.getName() + "\n" + myStore.getAddress();
-                   String expect = "Barbara's Store\n" + "555 Pine St.";
+                  @Test
+                  public void test1()
+                  {
+                      Store myStore = new Store("A Store", "An Address");
 
-                   boolean passed = getResults(output, expect, "testing class Store: setters & getters");
-                   assertTrue(passed);
-                 }
-               }
+                      myStore.setName("Barbara's Store");
+                      myStore.setAddress("555 Pine St.");
 
+                      String output = myStore.getName() + "\n" + myStore.getAddress();
+                      String expect = "Barbara's Store\n" + "555 Pine St.";
 
-
+                      boolean passed = getResults(output, expect, "testing class Store: setters & getters");
+                      assertTrue(passed);
+                  }
+              }
 
         .. tab:: Answer
 
@@ -875,12 +880,30 @@ Code Practice with Object Oriented Concepts
                       this.address = theAddress;
                   }
 
-                  public String getName() { return this.name; }
-                  public String getAddress() { return this.address; }
-                  public void setName(String theName) { this.name = theName; }
-                  public void setAddress(String theAddress) { this.address = theAddress; }
+                  public String getName()
+                  {
+                      return this.name;
+                  }
 
-                  public String toString() { return this.name + "\n" + this.address; }
+                  public String getAddress()
+                  {
+                      return this.address;
+                  }
+
+                  public void setName(String theName)
+                  {
+                      this.name = theName;
+                  }
+
+                  public void setAddress(String theAddress)
+                  {
+                      this.address = theAddress;
+                  }
+
+                  public String toString()
+                  {
+                      return this.name + "\n" + this.address;
+                  }
 
                   public static void main(String[] args)
                   {
@@ -889,10 +912,8 @@ Code Practice with Object Oriented Concepts
                       myStore.setName("Barbara's Store");
                       myStore.setAddress("555 Pine St.");
                       System.out.println(myStore);
-
                   }
               }
-
 
         .. tab:: Discussion
 
@@ -914,8 +935,16 @@ Code Practice with Object Oriented Concepts
               {
                   public String name;
                   public int numLegs;
-                  public void speak() { System.out.println("sniff");}
-                  public void eat() { System.out.println("crunch"); }
+
+                  public void speak()
+                  {
+                      System.out.println("sniff");
+                  }
+
+                  public void eat()
+                  {
+                      System.out.println("crunch");
+                  }
               }
 
               public class Dog extends Animal
@@ -929,46 +958,43 @@ Code Practice with Object Oriented Concepts
                       myDog.eat();
                   }
               }
+
               ====
               import static org.junit.Assert.*;
-               import org.junit.*;
 
-               import java.io.*;
-               import java.util.List;
-               import java.util.ArrayList;
+              import org.junit.*;
 
-               public class RunestoneTests extends CodeTestHelper
-               {
+              import java.io.*;
 
-                 @Test
-                 public void testMain() throws IOException
-                 {
-                   String output = getMethodOutput("main");
-                   String expect = "woof\n" +
-                                   "num num\n";
+              public class RunestoneTests extends CodeTestHelper
+              {
 
-                   boolean passed = getResults(expect, output, "Expected output from main");
-                   assertTrue(passed);
-                 }
+                  @Test
+                  public void testMain() throws IOException
+                  {
+                      String output = getMethodOutput("main");
+                      String expect = "woof\n" + "num num\n";
 
-                 @Test
-                 public void test1()
-                 {
-                   String target = " public void speak()";
-                   boolean passed = checkCodeContains("speak method", target);
-                   assertTrue(passed);
-                 }
+                      boolean passed = getResults(expect, output, "Expected output from main");
+                      assertTrue(passed);
+                  }
 
-                 @Test
-                 public void test2()
-                 {
-                   String target = " public void eat()";
-                   boolean passed = checkCodeContains("eat method", target);
-                   assertTrue(passed);
-                 }
-               }
+                  @Test
+                  public void test1()
+                  {
+                      String target = " public void speak()";
+                      boolean passed = checkCodeContains("speak method", target);
+                      assertTrue(passed);
+                  }
 
-
+                  @Test
+                  public void test2()
+                  {
+                      String target = " public void eat()";
+                      boolean passed = checkCodeContains("eat method", target);
+                      assertTrue(passed);
+                  }
+              }
 
         .. tab:: Answer
 
@@ -980,8 +1006,16 @@ Code Practice with Object Oriented Concepts
               {
                   public String name;
                   public int numLegs;
-                  public void speak() { System.out.println("sniff");}
-                  public void eat() { System.out.println("crunch"); }
+
+                  public void speak()
+                  {
+                      System.out.println("sniff");
+                  }
+
+                  public void eat()
+                  {
+                      System.out.println("crunch");
+                  }
               }
 
               public class Dog extends Animal
@@ -998,12 +1032,11 @@ Code Practice with Object Oriented Concepts
 
                   public static void main(String[] args)
                   {
-                     Dog myDog = new Dog();
-                     myDog.speak();
-                     myDog.eat();
+                      Dog myDog = new Dog();
+                      myDog.speak();
+                      myDog.eat();
                   }
               }
-
 
         .. tab:: Discussion
 
@@ -1039,8 +1072,8 @@ Code Practice with Object Oriented Concepts
 
                   public static void main(String[] args)
                   {
-                      Person p1 = new Person("Carlos",17);
-                      Person p2 = new Person("Lia",18);
+                      Person p1 = new Person("Carlos", 17);
+                      Person p2 = new Person("Lia", 18);
                       Person p3 = new Person("Asraf", 17);
                       Person p4 = new Person("Lia", 17);
                       Person p5 = new Person("Karla", 17);
@@ -1049,69 +1082,68 @@ Code Practice with Object Oriented Concepts
                       System.out.println(p3.compareTo(p1));
                       System.out.println(p4.compareTo(p3));
                       System.out.println(p4.compareTo(p5));
-                   }
+                  }
               }
+
               ====
               import static org.junit.Assert.*;
-               import org.junit.*;
-               import java.io.*;
-               import java.util.List;
-               import java.util.ArrayList;
 
-               public class RunestoneTests extends CodeTestHelper
-               {
+              import org.junit.*;
 
-                 @Test
-                 public void testMain() throws IOException
-                 {
-                   String output = getMethodOutput("main");
-                   String expect = "-1\n1\n-2\n11\n1\n";
+              import java.io.*;
 
-                   boolean passed = getResults(expect, output, "Expected output from main");
-                   assertTrue(passed);
-                 }
+              public class RunestoneTests extends CodeTestHelper
+              {
 
+                  @Test
+                  public void testMain() throws IOException
+                  {
+                      String output = getMethodOutput("main");
+                      String expect = "-1\n1\n-2\n11\n1\n";
 
-                 @Test
-                 public void test1()
-                 {
-                   Person p1 = new Person("Carlos",17);
-                   Person p2 = new Person("Lia",18);
-                   String output = String.valueOf(p1.compareTo(p2));
-                   String expect = "-1";
+                      boolean passed = getResults(expect, output, "Expected output from main");
+                      assertTrue(passed);
+                  }
 
-                   boolean passed = getResults(expect, output, "test1: compareTo method, ages different");
+                  @Test
+                  public void test1()
+                  {
+                      Person p1 = new Person("Carlos", 17);
+                      Person p2 = new Person("Lia", 18);
+                      String output = String.valueOf(p1.compareTo(p2));
+                      String expect = "-1";
 
-                   assertTrue(passed);
-                 }
+                      boolean passed = getResults(expect, output, "test1: compareTo method, ages different");
 
-                 @Test
-                 public void test2()
-                 {
-                   Person p2 = new Person("Lia",18);
-                   Person p3 = new Person("Asraf", 17);
-                   String output = String.valueOf(p2.compareTo(p3));
-                   String expect = "1";
+                      assertTrue(passed);
+                  }
 
-                   boolean passed = getResults(expect, output, "test2: compareTo method, ages different");
+                  @Test
+                  public void test2()
+                  {
+                      Person p2 = new Person("Lia", 18);
+                      Person p3 = new Person("Asraf", 17);
+                      String output = String.valueOf(p2.compareTo(p3));
+                      String expect = "1";
 
-                   assertTrue(passed);
-                 }
+                      boolean passed = getResults(expect, output, "test2: compareTo method, ages different");
 
-                 @Test
-                 public void test3()
-                 {
-                   Person p4 = new Person("Lia", 17);
-                   Person p5 = new Person("Karla", 17);
+                      assertTrue(passed);
+                  }
 
-                   String output = String.valueOf(p4.compareTo(p5));
-                   String expect = "1";
+                  @Test
+                  public void test3()
+                  {
+                      Person p4 = new Person("Lia", 17);
+                      Person p5 = new Person("Karla", 17);
 
-                   boolean passed = getResults(expect, output, "test2: compareTo method, ages same");
-                    assertTrue(passed);
-                 }
-               }
+                      String output = String.valueOf(p4.compareTo(p5));
+                      String expect = "1";
 
+                      boolean passed = getResults(expect, output, "test2: compareTo method, ages same");
+                      assertTrue(passed);
+                  }
+              }
 
         .. tab:: Answer
 
@@ -1132,15 +1164,12 @@ Code Practice with Object Oriented Concepts
                       this.age = age;
                   }
 
-
-
                   public int compareTo(Person other)
                   {
                       if (this.age != other.age)
                       {
                           return this.age - other.age;
                       }
-
                       else
                       {
                           return this.name.compareTo(other.name);
@@ -1149,8 +1178,8 @@ Code Practice with Object Oriented Concepts
 
                   public static void main(String[] args)
                   {
-                      Person p1 = new Person("Carlos",17);
-                      Person p2 = new Person("Lia",18);
+                      Person p1 = new Person("Carlos", 17);
+                      Person p2 = new Person("Lia", 18);
                       Person p3 = new Person("Asraf", 17);
                       Person p4 = new Person("Lia", 17);
                       Person p5 = new Person("Karla", 17);
@@ -1159,7 +1188,7 @@ Code Practice with Object Oriented Concepts
                       System.out.println(p3.compareTo(p1));
                       System.out.println(p4.compareTo(p3));
                       System.out.println(p4.compareTo(p5));
-                   }
+                  }
               }
 
         .. tab:: Discussion
@@ -1196,42 +1225,41 @@ Code Practice with Object Oriented Concepts
               {
                   // ADD CODE HERE
               }
+
               ====
               import static org.junit.Assert.*;
-               import org.junit.*;
-               import java.io.*;
-               import java.util.List;
-               import java.util.ArrayList;
 
-               public class RunestoneTests extends CodeTestHelper
-               {
+              import org.junit.*;
 
-                 @Test
-                 public void testMain() throws IOException
-                 {
-                   String output = getMethodOutput("main");
-                   String expect = "I'm a student\n";
+              import java.io.*;
 
-                   boolean passed = getResults(expect, output, "Expected output from main");
-                   assertTrue(passed);
-                 }
+              public class RunestoneTests extends CodeTestHelper
+              {
 
-               @Test
-                 public void test1()
-                 {
-                   String code = getCode();
-                   String target = "public void speak()";
+                  @Test
+                  public void testMain() throws IOException
+                  {
+                      String output = getMethodOutput("main");
+                      String expect = "I'm a student\n";
 
-                   int num = countOccurencesRegex(code, target);
+                      boolean passed = getResults(expect, output, "Expected output from main");
+                      assertTrue(passed);
+                  }
 
-                   boolean passed = (num == 2);
+                  @Test
+                  public void test1()
+                  {
+                      String code = getCode();
+                      String target = "public void speak()";
 
-                   getResults("2", ""+num, "2 speak methods", passed);
-                   assertTrue(passed);
-                 }
-               }
+                      int num = countOccurencesRegex(code, target);
 
+                      boolean passed = (num == 2);
 
+                      getResults("2", "" + num, "2 speak methods", passed);
+                      assertTrue(passed);
+                  }
+              }
 
         .. tab:: Answer
 

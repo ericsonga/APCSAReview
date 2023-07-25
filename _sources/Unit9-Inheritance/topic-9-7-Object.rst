@@ -80,89 +80,98 @@ each class the new ``toString`` method adds the new attributes from that class.
   ~~~~
   public class Person
   {
-       private String name;
-       public Person(String name)
-       {
+      private String name;
+
+      public Person(String name)
+      {
           this.name = name;
-       }
-       public String toString()
-       {
+      }
+
+      public String toString()
+      {
           return name;
-       }
-       public static void main(String[] args)
-       {
+      }
+
+      public static void main(String[] args)
+      {
           Person p = new Person("Sila");
           Student s = new Student("Tully", 1001);
-          System.out.println(p); //call Person toString
-          System.out.println(s);  //call Student toString
+          System.out.println(p); // call Person toString
+          System.out.println(s); // call Student toString
           // Uncomment the code below to test the APStudent class
           /*
           APStudent ap = new APStudent("Ayanna", 1002, 5);
           System.out.println(ap);
           */
-       }
-    }
+      }
+  }
 
-    class Student extends Person
-    {
-       private int id;
-       public Student(String name, int id)
-       {
+  class Student extends Person
+  {
+      private int id;
+
+      public Student(String name, int id)
+      {
           super(name);
           this.id = id;
-       }
-       public String toString()
-       {
-          return super.toString() + " " + id;
-       }
-    }
+      }
 
-    class APStudent extends Student
-    {
-       private int score;
-       public APStudent(String name, int id, int score)
-       {
+      public String toString()
+      {
+          return super.toString() + " " + id;
+      }
+  }
+
+  class APStudent extends Student
+  {
+      private int score;
+
+      public APStudent(String name, int id, int score)
+      {
           super(name, id);
           this.score = score;
-       }
-       // Add a toString() method here that calls the super class toString
+      }
+      // Add a toString() method here that calls the super class toString
 
-    }
+  }
+
     ====
     import static org.junit.Assert.*;
-     import org.junit.*;
-     import java.io.*;
 
-     public class RunestoneTests extends CodeTestHelper
-     {
-         public RunestoneTests() {
-             super("Person");
-         }
+    import org.junit.*;
 
-         @Test
-         public void test1()
-         {
-             String output = getMethodOutput("main");
-             String expect = "Sila\nTully 1001\nAyanna 1002 5";
+    import java.io.*;
 
-             boolean passed = getResults(expect, output, "Checking output from main()");
-             assertTrue(passed);
-         }
-          @Test
-         public void containsToString()
-         {
-           String code = getCode();
-           String target = "public String toString()";
+    public class RunestoneTests extends CodeTestHelper
+    {
+        public RunestoneTests()
+        {
+            super("Person");
+        }
 
-           int num = countOccurencesRegex(code, target);
-           boolean passed = (num >= 3);
+        @Test
+        public void test1()
+        {
+            String output = getMethodOutput("main");
+            String expect = "Sila\nTully 1001\nAyanna 1002 5";
 
-           getResults("3", ""+num, "3 toString methods", passed);
-           assertTrue(passed);
-         }
-     }
+            boolean passed = getResults(expect, output, "Checking output from main()");
+            assertTrue(passed);
+        }
 
+        @Test
+        public void containsToString()
+        {
+            String code = getCode();
+            String target = "public String toString()";
 
+            int num = countOccurencesRegex(code, target);
+            boolean passed = (num >= 3);
+
+            getResults("3", "" + num, "3 toString methods", passed);
+            assertTrue(passed);
+        }
+    }
 
 ``equals`` Method
 -----------------
@@ -208,14 +217,18 @@ object. In other words it is does the same test as ``==``.
            System.out.println(p3.equals(p4));
        }
    }
+
    ====
    import static org.junit.Assert.*;
+
    import org.junit.*;
+
    import java.io.*;
 
    public class RunestoneTests extends CodeTestHelper
    {
-       public RunestoneTests() {
+       public RunestoneTests()
+       {
            super("Person");
        }
 
@@ -227,7 +240,6 @@ object. In other words it is does the same test as ``==``.
 
            boolean passed = getResults(expect, output, "Checking output from main()", true);
            assertTrue(passed);
-
        }
    }
 
@@ -269,38 +281,41 @@ one.
    ~~~~
    public class StringTest
    {
-      public static void main(String[] args)
-      {
-         String s1 = "hi";
-         String s2 = "Hi";
-         String s3 = new String("hi");
-         System.out.println(s1.equals(s2));
-         System.out.println(s2.equals(s3));
-         System.out.println(s1.equals(s3));
-      }
+       public static void main(String[] args)
+       {
+           String s1 = "hi";
+           String s2 = "Hi";
+           String s3 = new String("hi");
+           System.out.println(s1.equals(s2));
+           System.out.println(s2.equals(s3));
+           System.out.println(s1.equals(s3));
+       }
    }
+
    ====
    import static org.junit.Assert.*;
-     import org.junit.*;
-     import java.io.*;
 
-     public class RunestoneTests extends CodeTestHelper
-     {
-         public RunestoneTests() {
-             super("StringTest");
-         }
+   import org.junit.*;
 
-         @Test
-         public void test1()
-         {
-             String output = getMethodOutput("main");
-             String expect = "false\nfalse\ntrue";
+   import java.io.*;
 
-             boolean passed = getResults(expect, output, "Checking output from main()", true);
-             assertTrue(passed);
+   public class RunestoneTests extends CodeTestHelper
+   {
+       public RunestoneTests()
+       {
+           super("StringTest");
+       }
 
-         }
-     }
+       @Test
+       public void test1()
+       {
+           String output = getMethodOutput("main");
+           String expect = "false\nfalse\ntrue";
+
+           boolean passed = getResults(expect, output, "Checking output from main()", true);
+           assertTrue(passed);
+       }
+   }
 
 However, overriding ``equals`` is a bit more involved than overriding
 ``toString``. While the ``toString`` method is only required to produce a
@@ -366,9 +381,9 @@ and in Spanish is what we call a “foot” in English.
        }
 
        /**
-        * Compares this word to the specified object. The result is true if and
-        * only if the argument is not null and is a Word object with the same
-        * spelling and language as this object.
+        * Compares this word to the specified object. The result is true if and only
+        * if the argument is not null and is a Word object with the same spelling and
+        * language as this object.
         */
        public boolean equals(Object other)
        {
@@ -394,7 +409,8 @@ and in Spanish is what we call a “foot” in English.
            // check if our two attributes are the same, using
            // equals to compare them because they are Strings.
            Word otherWord = (Word) other;
-           return spelling.equals(otherWord.spelling) && language.equals(otherWord.language);
+           return spelling.equals(otherWord.spelling)
+                   && language.equals(otherWord.language);
        }
 
        public static void main(String[] args)
@@ -410,28 +426,31 @@ and in Spanish is what we call a “foot” in English.
            System.out.println(p1.equals("pie"));
        }
    }
+
    ====
    import static org.junit.Assert.*;
-     import org.junit.*;
-     import java.io.*;
 
-     public class RunestoneTests extends CodeTestHelper
-     {
-         public RunestoneTests() {
-             super("Word");
-         }
+   import org.junit.*;
 
-         @Test
-         public void test1()
-         {
-             String output = getMethodOutput("main");
-             String expect = "false\nfalse\ntrue\ntrue\nfalse";
+   import java.io.*;
 
-             boolean passed = getResults(expect, output, "Checking output from main()", true);
-             assertTrue(passed);
+   public class RunestoneTests extends CodeTestHelper
+   {
+       public RunestoneTests()
+       {
+           super("Word");
+       }
 
-         }
-     }
+       @Test
+       public void test1()
+       {
+           String output = getMethodOutput("main");
+           String expect = "false\nfalse\ntrue\ntrue\nfalse";
+
+           boolean passed = getResults(expect, output, "Checking output from main()", true);
+           assertTrue(passed);
+       }
+   }
 
 The basic recipe for writing your own equals method, is:
 
@@ -510,15 +529,15 @@ the next step:
 
        public Account(String name, double balance)
        {
-          this.name = name;
-          this.balance = balance;
+           this.name = name;
+           this.balance = balance;
        }
 
        // Implement toString here
 
        public static void main(String[] args)
        {
-           Account acct1 = new Account("Armani Smith",1500);
+           Account acct1 = new Account("Armani Smith", 1500);
            System.out.println(acct1);
            // Uncomment this code to test SavingsAccount
            /*
@@ -533,68 +552,80 @@ the next step:
     * interest rate instance variable and write a constructor and a toString
     * method.
     */
-   class SavingsAccount
+   class SavingsAccount 
    {
-
+   
    }
+
    ====
    import static org.junit.Assert.*;
-     import org.junit.*;;
-     import java.io.*;
 
-     public class RunestoneTests extends CodeTestHelper
-     {
-         public RunestoneTests() {
-             super("Account");
-         }
+   import org.junit.*;
 
-         @Test
-         public void test1()
-         {
-             String output = getMethodOutput("main");
-             String expect = "Armani Smith, 1500.0\nDakota Jones, 1500.0, 4.5";
+   import java.io.*;
 
-             boolean passed = getResults(expect, output, "Checking output from main()");
-             assertTrue(passed);
-         }
+   public class RunestoneTests extends CodeTestHelper
+   {
+       public RunestoneTests()
+       {
+           super("Account");
+       }
 
-         @Test
-         public void test3()
-         {
-             String target = "public String toString()";
+       @Test
+       public void test1()
+       {
+           String output = getMethodOutput("main");
+           String expect = "Armani Smith, 1500.0\nDakota Jones, 1500.0, 4.5";
 
-             String code = getCode();
-             int index = code.indexOf("class SavingsAccount");
-             code = code.substring(index);
-             boolean passed = code.contains(target);
+           boolean passed = getResults(expect, output, "Checking output from main()");
+           assertTrue(passed);
+       }
 
-             getResults("true", ""+passed, "Checking that code contains toString() in SavingsAccount", passed);
-             assertTrue(passed);
-         }
+       @Test
+       public void test3()
+       {
+           String target = "public String toString()";
 
-         @Test
-         public void test30()
-         {
-             String target = "super.toString()";
+           String code = getCode();
+           int index = code.indexOf("class SavingsAccount");
+           code = code.substring(index);
+           boolean passed = code.contains(target);
 
-             String code = getCode();
-             int index = code.indexOf("class SavingsAccount");
-             code = code.substring(index);
+           getResults(
+                   "true",
+                   "" + passed,
+                   "Checking that code contains toString() in SavingsAccount",
+                   passed);
+           assertTrue(passed);
+       }
 
-             boolean passed = code.contains(target);
+       @Test
+       public void test30()
+       {
+           String target = "super.toString()";
 
-             getResults("true", ""+passed, "Checking that code contains call to super.toString() in SavingsAccount", passed);
-             assertTrue(passed);
-         }
-         @Test
-         public void containsExtends()
-         {
-                String target = "SavingsAccount extends Account";
-                boolean passed = checkCodeContains(target);
-                assertTrue(passed);
-         }
-     }
+           String code = getCode();
+           int index = code.indexOf("class SavingsAccount");
+           code = code.substring(index);
 
+           boolean passed = code.contains(target);
+
+           getResults(
+                   "true",
+                   "" + passed,
+                   "Checking that code contains call to super.toString() in SavingsAccount",
+                   passed);
+           assertTrue(passed);
+       }
+
+       @Test
+       public void containsExtends()
+       {
+           String target = "SavingsAccount extends Account";
+           boolean passed = checkCodeContains(target);
+           assertTrue(passed);
+       }
+   }
 
 Summary
 ---------

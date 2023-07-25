@@ -76,10 +76,9 @@ Notice that the opposite is not true. You cannot declare a variable of the subcl
 
 .. code-block:: java
 
-    // A subclass variable cannot hold the superclass object!
-    // A Square is-a Shape, but not all Shapes are Squares.
-    // Square q = new Shape(); // ERROR!!
-
+        // A subclass variable cannot hold the superclass object!
+        // A Square is-a Shape, but not all Shapes are Squares.
+        // Square q = new Shape(); // ERROR!!
 
 Why is using a superclass reference for subclass objects useful? Because now, we can write methods with parameters of type Shape or have arrays of type Shape and use them with any of its subclasses as seen in the next sections.
 
@@ -124,55 +123,64 @@ Notice that in the following code, the print method has a parameter of type ``Pe
   ~~~~
   public class Tester
   {
-       // This will implicitly call the toString() method of object p
-       public void print(Person p)
-       {
+      // This will implicitly call the toString() method of object p
+      public void print(Person p)
+      {
           System.out.println(p);
-       }
-       public static void main(String[] args)
-       {
+      }
+
+      public static void main(String[] args)
+      {
           Person p = new Person("Sila");
           Student s = new Student("Tully", 1001);
           Tester t = new Tester();
-          t.print(p); //call print with a Person
-          t.print(s); //call print with a Student
-       }
-    }
+          t.print(p); // call print with a Person
+          t.print(s); // call print with a Student
+      }
+  }
 
-    class Person
-    {
-       private String name;
-       public Person(String name)
-       {
+  class Person
+  {
+      private String name;
+
+      public Person(String name)
+      {
           this.name = name;
-       }
-       public String toString()
-       {
-          return name;
-       }
-    }
+      }
 
-    class Student extends Person
-    {
-       private int id;
-       public Student(String name, int id)
-       {
+      public String toString()
+      {
+          return name;
+      }
+  }
+
+  class Student extends Person
+  {
+      private int id;
+
+      public Student(String name, int id)
+      {
           super(name);
           this.id = id;
-       }
-       public String toString()
-       {
+      }
+
+      public String toString()
+      {
           return super.toString() + " " + id;
-       }
-    }
+      }
+  }
+
     ====
     import static org.junit.Assert.*;
-    import org.junit.*;;
+
+    import org.junit.*;
+
     import java.io.*;
 
     public class RunestoneTests extends CodeTestHelper
     {
-        public RunestoneTests() {
+        public RunestoneTests()
+        {
             super("Tester");
         }
 
@@ -184,7 +192,6 @@ Notice that in the following code, the print method has a parameter of type ``Pe
 
             boolean passed = getResults(expect, output, "Running main", true);
             assertTrue(passed);
-
         }
     }
 
@@ -226,48 +233,54 @@ objects. Notice that the loop works with a variable of type ``Pet`` because a
   ~~~~
   import java.util.*; // for ArrayList
 
-   public class Pet
-   {
-       private String name;
-       private String type;
+  public class Pet
+  {
+      private String name;
+      private String type;
 
-       public Pet(String n, String t)
-       {
+      public Pet(String n, String t)
+      {
           name = n;
           type = t;
-       }
-       public String toString()
-       {
-          return name + " is a " + type;
-       }
+      }
 
-       public static void main(String[] args)
-       {
-           ArrayList<Pet> petList = new ArrayList<Pet>();
-           petList.add(new Pet("Sammy","hamster"));
-           petList.add(new Dog("Fido"));
-           // This loop will work for all subclasses of Pet
-           for(Pet p : petList)
-           {
+      public String toString()
+      {
+          return name + " is a " + type;
+      }
+
+      public static void main(String[] args)
+      {
+          ArrayList<Pet> petList = new ArrayList<Pet>();
+          petList.add(new Pet("Sammy", "hamster"));
+          petList.add(new Dog("Fido"));
+          // This loop will work for all subclasses of Pet
+          for (Pet p : petList)
+          {
               System.out.println(p);
-           }
-       }
-    }
-    class Dog extends Pet
-    {
-       public Dog(String n)
-       {
-         super(n, "dog");
-       }
-    }
+          }
+      }
+  }
+
+  class Dog extends Pet
+  {
+      public Dog(String n)
+      {
+          super(n, "dog");
+      }
+  }
+
     ====
     import static org.junit.Assert.*;
-    import org.junit.*;;
+
+    import org.junit.*;
+
     import java.io.*;
 
     public class RunestoneTests extends CodeTestHelper
     {
-        public RunestoneTests() {
+        public RunestoneTests()
+        {
             super("Pet");
         }
 
@@ -279,7 +292,6 @@ objects. Notice that the loop works with a variable of type ``Pet`` because a
 
             boolean passed = getResults(expect, output, "Running main", true);
             assertTrue(passed);
-
         }
 
         @Test
@@ -292,7 +304,6 @@ objects. Notice that the loop works with a variable of type ``Pet`` because a
 
             getResults(expect, output, "Checking that a cat was added to the output", passed);
             assertTrue(passed);
-
         }
 
         @Test
@@ -302,7 +313,6 @@ objects. Notice that the loop works with a variable of type ``Pet`` because a
 
             boolean passed = checkCodeContains(target);
             assertTrue(passed);
-
         }
 
         @Test
@@ -312,7 +322,6 @@ objects. Notice that the loop works with a variable of type ``Pet`` because a
 
             boolean passed = checkCodeContains(target);
             assertTrue(passed);
-
         }
 
         @Test
@@ -322,10 +331,8 @@ objects. Notice that the loop works with a variable of type ``Pet`` because a
 
             boolean passed = checkCodeContains(target);
             assertTrue(passed);
-
         }
     }
-
 
 |Exercise| **Check your understanding**
 
@@ -389,218 +396,259 @@ In the ``DiscountedItem`` subclass,
   ~~~~
   import java.util.*;
 
-    /**
-       The ShoppingCart class has an ArrayList of Items.
-       You will write a new class DiscountedItem that extends Item.
-       This code is adapted from https://practiceit.cs.washington.edu/problem/view/bjp4/chapter9/e10-DiscountBill
-    */
+  /**
+   * The ShoppingCart class has an ArrayList of Items. You will write a new class
+   * DiscountedItem that extends Item. This code is adapted from
+   * https://practiceit.cs.washington.edu/problem/view/bjp4/chapter9/e10-DiscountBill
+   */
+  public class Tester
+  {
+      public static void main(String[] args)
+      {
+          ShoppingCart cart = new ShoppingCart();
+          cart.add(new Item("bread", 3.25));
+          cart.add(new Item("milk", 2.50));
 
-    public class Tester
-    {
-      public static void main(String[] args) {
-        ShoppingCart cart = new ShoppingCart();
-        cart.add(new Item("bread", 3.25));
-        cart.add(new Item("milk", 2.50));
+          // Uncomment these to test
+          // cart.add(new DiscountedItem("ice cream", 4.50, 1.50));
+          // cart.add(new DiscountedItem("apples", 1.35, 0.25));
 
-        // Uncomment these to test
-        //cart.add(new DiscountedItem("ice cream", 4.50, 1.50));
-        //cart.add(new DiscountedItem("apples", 1.35, 0.25));
-
-        cart.printOrder();
+          cart.printOrder();
       }
-    }
+  }
 
-    // DiscountedItem inherits from Item
-    class DiscountedItem extends Item
-    {
-        // add an instance variable for the discount
+  // DiscountedItem inherits from Item
+  class DiscountedItem extends Item
+  {
+      // add an instance variable for the discount
 
-        // Add constructors that call the super constructor
+      // Add constructors that call the super constructor
 
-        // Add get/set methods for discount
-        public double getDiscount()
-        {
+      // Add get/set methods for discount
+      public double getDiscount()
+      {
           return 0.0; // return discount here instead of 0
-        }
-
-        // Add a toString() method that returns a call to the super toString
-        // and then the discount in parentheses using the super.valueToString() method
-
-    }
-
-    class ShoppingCart
-    {
-        private ArrayList<Item> order;
-        private double total;
-        private double internalDiscount;
-
-        public ShoppingCart()
-        {
-            order = new ArrayList<Item>();
-            total = 0.0;
-            internalDiscount = 0.0;
-        }
-
-        public void add(Item i) {
-            order.add(i);
-            total += i.getPrice();
-            if (i instanceof DiscountedItem)
-               internalDiscount += ((DiscountedItem) i).getDiscount();
-        }
-
-       /** printOrder() will call toString() to print */
-        public void printOrder() {
-            System.out.println(this);
-        }
-
-        public String toString() {
-            return discountToString();
-        }
-
-        public String discountToString() {
-            return orderToString() + "\nSub-total: " + valueToString(total) + "\nDiscount: " + valueToString(internalDiscount) + "\nTotal: " + valueToString(total - internalDiscount);
-        }
-
-        private String valueToString(double value) {
-            value = Math.rint(value * 100) / 100.0;
-            String result = "" + Math.abs(value);
-            if(result.indexOf(".") == result.length() - 2) {
-                result += "0";
-            }
-            result = "$" + result;
-            return result;
-        }
-
-        public String orderToString() {
-            String build = "\nOrder Items:\n";
-            for(int i = 0; i < order.size(); i++) {
-                build += "   " + order.get(i);
-                if(i != order.size() - 1) {
-                    build += "\n";
-                }
-            }
-            return build;
-        }
       }
 
-      class Item {
-        private String name;
-        private double price;
+      // Add a toString() method that returns a call to the super toString
+      // and then the discount in parentheses using the super.valueToString() method
 
-        public Item()
-        {
+  }
+
+  class ShoppingCart
+  {
+      private ArrayList<Item> order;
+      private double total;
+      private double internalDiscount;
+
+      public ShoppingCart()
+      {
+          order = new ArrayList<Item>();
+          total = 0.0;
+          internalDiscount = 0.0;
+      }
+
+      public void add(Item i)
+      {
+          order.add(i);
+          total += i.getPrice();
+          if (i instanceof DiscountedItem)
+              internalDiscount += ((DiscountedItem) i).getDiscount();
+      }
+
+      /** printOrder() will call toString() to print */
+      public void printOrder()
+      {
+          System.out.println(this);
+      }
+
+      public String toString()
+      {
+          return discountToString();
+      }
+
+      public String discountToString()
+      {
+          return orderToString()
+                  + "\nSub-total: "
+                  + valueToString(total)
+                  + "\nDiscount: "
+                  + valueToString(internalDiscount)
+                  + "\nTotal: "
+                  + valueToString(total - internalDiscount);
+      }
+
+      private String valueToString(double value)
+      {
+          value = Math.rint(value * 100) / 100.0;
+          String result = "" + Math.abs(value);
+          if (result.indexOf(".") == result.length() - 2)
+          {
+              result += "0";
+          }
+          result = "$" + result;
+          return result;
+      }
+
+      public String orderToString()
+      {
+          String build = "\nOrder Items:\n";
+          for (int i = 0; i < order.size(); i++)
+          {
+              build += "   " + order.get(i);
+              if (i != order.size() - 1)
+              {
+                  build += "\n";
+              }
+          }
+          return build;
+      }
+  }
+
+  class Item
+  {
+      private String name;
+      private double price;
+
+      public Item()
+      {
           this.name = "";
           this.price = 0.0;
-        }
+      }
 
-        public Item(String name, double price) {
-                this.name = name;
-                this.price = price;
-        }
+      public Item(String name, double price)
+      {
+          this.name = name;
+          this.price = price;
+      }
 
-        public double getPrice() {
-                return price;
-        }
+      public double getPrice()
+      {
+          return price;
+      }
 
-        public String valueToString(double value) {
-                String result = "" + Math.abs(value);
-                if(result.indexOf(".") == result.length() - 2) {
-                    result += "0";
-                }
-                result = "$" + result;
-                return result;
-        }
+      public String valueToString(double value)
+      {
+          String result = "" + Math.abs(value);
+          if (result.indexOf(".") == result.length() - 2)
+          {
+              result += "0";
+          }
+          result = "$" + result;
+          return result;
+      }
 
-        public String toString() {
-                return name + " " + valueToString(price);
-        }
-       }
+      public String toString()
+      {
+          return name + " " + valueToString(price);
+      }
+  }
+
        ====
        import static org.junit.Assert.*;
-        import org.junit.*;;
-        import java.io.*;
 
-        public class RunestoneTests extends CodeTestHelper
-        {
-            public RunestoneTests() {
-                super("Tester");
-            }
+       import org.junit.*;
 
-            @Test
-            public void test1()
-            {
-                String output = getMethodOutput("main");
-                String expect = "Order Items:\n   bread $3.25\n   milk $2.50\n   ice cream $4.50 ($1.50)\n   apples $1.35 ($0.25)\nSub-total: $11.60\nDiscount: $1.75\nTotal: $9.85";
+       import java.io.*;
 
-                boolean passed = getResults(expect, output, "Running main", true);
-                assertTrue(passed);
+       public class RunestoneTests extends CodeTestHelper
+       {
+           public RunestoneTests()
+           {
+               super("Tester");
+           }
 
-            }
+           @Test
+           public void test1()
+           {
+               String output = getMethodOutput("main");
+               String expect =
+                       "Order Items:\n"
+                           + "   bread $3.25\n"
+                           + "   milk $2.50\n"
+                           + "   ice cream $4.50 ($1.50)\n"
+                           + "   apples $1.35 ($0.25)\n"
+                           + "Sub-total: $11.60\n"
+                           + "Discount: $1.75\n"
+                           + "Total: $9.85";
 
-            @Test
-            public void test2()
-            {
-                String output = getMethodOutput("main");
-                String expect = "Order Items:\n   bread $3.25\n   milk $2.50\n   ice cream $4.50 ($1.50)\n   apples $1.35 ($0.25)\nSub-total: $11.60\nDiscount: $1.75\nTotal: $9.85";
+               boolean passed = getResults(expect, output, "Running main", true);
+               assertTrue(passed);
+           }
 
-                boolean passed = output.contains("ice cream") && output.contains("apples");
+           @Test
+           public void test2()
+           {
+               String output = getMethodOutput("main");
+               String expect =
+                       "Order Items:\n"
+                           + "   bread $3.25\n"
+                           + "   milk $2.50\n"
+                           + "   ice cream $4.50 ($1.50)\n"
+                           + "   apples $1.35 ($0.25)\n"
+                           + "Sub-total: $11.60\n"
+                           + "Discount: $1.75\n"
+                           + "Total: $9.85";
 
-                getResults(expect, output, "Checking that DiscountedItem objects were added to ArrayList", passed);
-                assertTrue(passed);
+               boolean passed = output.contains("ice cream") && output.contains("apples");
 
-            }
+               getResults(
+                       expect,
+                       output,
+                       "Checking that DiscountedItem objects were added to ArrayList",
+                       passed);
+               assertTrue(passed);
+           }
 
-            @Test
-            public void test3()
-            {
-                String target = "String, double, double";
+           @Test
+           public void test3()
+           {
+               String target = "String, double, double";
 
-                boolean passed = getResults("pass", checkConstructor(target), "Checking constructor with arguments: " + target);
-                assertTrue(passed);
+               boolean passed =
+                       getResults(
+                               "pass",
+                               checkConstructor(target),
+                               "Checking constructor with arguments: " + target);
+               assertTrue(passed);
+           }
 
-            }
+           @Test
+           public void test4()
+           {
+               String target = "public double getDiscount()";
 
-            @Test
-            public void test4()
-            {
-                String target = "public double getDiscount()";
+               boolean passed = checkCodeContains(target);
+               assertTrue(passed);
+           }
 
-                boolean passed = checkCodeContains(target);
-                assertTrue(passed);
+           @Test
+           public void test5()
+           {
+               String target = "public String toString()";
 
-            }
+               boolean passed = checkCodeContains(target);
+               assertTrue(passed);
+           }
 
-            @Test
-            public void test5()
-            {
-                String target = "public String toString()";
+           @Test
+           public void test6()
+           {
+               String target = "super.toString()";
 
-                boolean passed = checkCodeContains(target);
-                assertTrue(passed);
+               boolean passed = checkCodeContains(target);
+               assertTrue(passed);
+           }
 
-            }
+           @Test
+           public void test7()
+           {
+               String target = "super.valueToString(*)";
 
-            @Test
-            public void test6()
-            {
-                String target = "super.toString()";
-
-                boolean passed = checkCodeContains(target);
-                assertTrue(passed);
-
-            }
-
-            @Test
-            public void test7()
-            {
-                String target = "super.valueToString(*)";
-
-                boolean passed = checkCodeContains(target);
-                assertTrue(passed);
-
-            }
-        }
-
+               boolean passed = checkCodeContains(target);
+               assertTrue(passed);
+           }
+       }
 
 Summary
 --------

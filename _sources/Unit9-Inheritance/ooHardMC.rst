@@ -25,31 +25,31 @@ These problems are harder than those that you will typically see on the AP CSA e
 
       public class Base
       {
-         public void methodOne()
-         {
-            System.out.print("A");
-            methodTwo();
-         }
+          public void methodOne()
+          {
+              System.out.print("A");
+              methodTwo();
+          }
 
-         public void methodTwo()
-         {
-            System.out.print("B");
-         }
+          public void methodTwo()
+          {
+              System.out.print("B");
+          }
       }
 
       public class Derived extends Base
       {
-         public void methodOne()
-         {
-            super.methodOne();
-            System.out.print("C");
-         }
+          public void methodOne()
+          {
+              super.methodOne();
+              System.out.print("C");
+          }
 
-         public void methodTwo()
-         {
-            super.methodTwo();
-            System.out.print("D");
-         }
+          public void methodTwo()
+          {
+              super.methodTwo();
+              System.out.print("D");
+          }
       }
 
 .. mchoice:: qooh_2
@@ -70,13 +70,15 @@ These problems are harder than those that you will typically see on the AP CSA e
 
    .. code-block:: java
 
-      public class Point2D {
+      public class Point2D 
+      {
          public int x;
          public int y;
 
          public Point2D() {}
 
-         public Point2D(int x,int y) {
+         public Point2D(int x,int y) 
+         {
             this.x = x;
             this.y = y;
          }
@@ -90,7 +92,10 @@ These problems are harder than those that you will typically see on the AP CSA e
          // other code
       }
 
-      I.  public Point3D() {}
+      I.  public Point3D() 
+          {
+          
+          }
       II. public Point3D(int x, int y, int z)
           {
              super(x,y);

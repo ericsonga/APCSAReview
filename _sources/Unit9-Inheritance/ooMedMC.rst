@@ -25,19 +25,25 @@ These problems are similar to those you will see on the AP CSA exam.
 
    .. code-block:: java
 
-      public class Student {
-         public String getFood() {
-            return "Pizza";
-         }
-         public String getInfo()  {
-            return this.getFood();
-         }
+      public class Student
+      {
+          public String getFood()
+          {
+              return "Pizza";
+          }
+
+          public String getInfo()
+          {
+              return this.getFood();
+          }
       }
 
-      public class GradStudent extends Student {
-         public String getFood() {
-            return "Taco";
-         }
+      public class GradStudent extends Student
+      {
+          public String getFood()
+          {
+              return "Taco";
+          }
       }
 
 .. mchoice:: qoom_2
@@ -278,6 +284,7 @@ These problems are similar to those you will see on the AP CSA exam.
             System.out.print("Lasagna ");
         }
     }
+
     public class MainClass
     {
         public static void main(String[] args)
@@ -285,3 +292,4 @@ These problems are similar to those you will see on the AP CSA exam.
             Garfield garfield = new Garfield();
         }
     }
+

@@ -56,87 +56,94 @@ In the following example the ``MeanGreeter`` inherits the ``greet()`` method fro
    ~~~~
    public class Greeter
    {
-      public String greet()
-      {
-         return "Hi";
-      }
+       public String greet()
+       {
+           return "Hi";
+       }
 
-      public static void main(String[] args)
-      {
-         Greeter g1 = new Greeter();
-         System.out.println(g1.greet());
-         Greeter g2 = new MeanGreeter();
-         System.out.println(g2.greet());
-      }
+       public static void main(String[] args)
+       {
+           Greeter g1 = new Greeter();
+           System.out.println(g1.greet());
+           Greeter g2 = new MeanGreeter();
+           System.out.println(g2.greet());
+       }
    }
 
    class MeanGreeter extends Greeter
    {
-      public String greet()
-      {
-         return "Go Away";
-      }
+       public String greet()
+       {
+           return "Go Away";
+       }
    }
+
    ====
    import static org.junit.Assert.*;
-    import org.junit.*;;
-    import java.io.*;
 
-    public class RunestoneTests extends CodeTestHelper
-    {
-        public RunestoneTests(){
-          super("Greeter");
-        }
+   import org.junit.*;
 
-        @Test
-        public void testChangedCode() {
-            String origCode = "public static void main(String[] args) { Greeter g1 = new Greeter(); System.out.println(g1.greet()); Greeter g2 = new MeanGreeter() System.out.println(g2.greet()); }";
+   import java.io.*;
 
-            boolean changed = codeChanged(origCode);
+   public class RunestoneTests extends CodeTestHelper
+   {
+       public RunestoneTests()
+       {
+           super("Greeter");
+       }
 
-            assertTrue(changed);
+       @Test
+       public void testChangedCode()
+       {
+           String origCode =
+                   "public static void main(String[] args) { Greeter g1 = new Greeter();"
+                       + " System.out.println(g1.greet()); Greeter g2 = new MeanGreeter()"
+                       + " System.out.println(g2.greet()); }";
 
-        }
+           boolean changed = codeChanged(origCode);
 
-        @Test
-        public void test2()
-        {
-            String code = getCode();
-            String target = "extends Greeter";
+           assertTrue(changed);
+       }
 
-            int num = countOccurences(code, target);
+       @Test
+       public void test2()
+       {
+           String code = getCode();
+           String target = "extends Greeter";
 
-            boolean passed = num >= 2;
-            getResults("2", ""+num, "Testing code for " + target);
-            assertTrue(passed);
-        }
+           int num = countOccurences(code, target);
 
-        @Test
-        public void test3()
-        {
-            String code = getCode();
-            String target = "public String greet()";
+           boolean passed = num >= 2;
+           getResults("2", "" + num, "Testing code for " + target);
+           assertTrue(passed);
+       }
 
-            int num = countOccurences(code, target);
+       @Test
+       public void test3()
+       {
+           String code = getCode();
+           String target = "public String greet()";
 
-            boolean passed = num >= 3;
-            getResults("3", ""+num, "Testing code for " + target);
-            assertTrue(passed);
-        }
+           int num = countOccurences(code, target);
 
-        @Test
-        public void test4()
-        {
-            String code = getCode();
-            String target = ".greet()";
+           boolean passed = num >= 3;
+           getResults("3", "" + num, "Testing code for " + target);
+           assertTrue(passed);
+       }
 
-            int num = countOccurences(code, target);
+       @Test
+       public void test4()
+       {
+           String code = getCode();
+           String target = ".greet()";
 
-            boolean passed = num >= 3;
-            getResults("3", ""+num, "Testing code for " + target);
-            assertTrue(passed);
-        }
-    }
+           int num = countOccurences(code, target);
+
+           boolean passed = num >= 3;
+           getResults("3", "" + num, "Testing code for " + target);
+           assertTrue(passed);
+       }
+   }
 
 .. note::
 
@@ -177,62 +184,68 @@ In the example below the ``greet(String who)`` method overloads the ``greet()`` 
    ~~~~
    public class Greeter
    {
-      public String greet()
-      {
-         return "Hi";
-      }
+       public String greet()
+       {
+           return "Hi";
+       }
 
-      public String greet(String who)
-      {
-         return "Hello " + who;
-      }
+       public String greet(String who)
+       {
+           return "Hello " + who;
+       }
 
-      public static void main(String[] args)
-      {
-         Greeter g1 = new Greeter();
-         System.out.println(g1.greet("Sam"));
-         Greeter g2 = new MeanGreeter();
-         System.out.println(g2.greet("Nimish"));
-      }
+       public static void main(String[] args)
+       {
+           Greeter g1 = new Greeter();
+           System.out.println(g1.greet("Sam"));
+           Greeter g2 = new MeanGreeter();
+           System.out.println(g2.greet("Nimish"));
+       }
    }
 
    class MeanGreeter extends Greeter
    {
-      public String greet()
-      {
-         return "Go away";
-      }
+       public String greet()
+       {
+           return "Go away";
+       }
    }
+
    ====
    import static org.junit.Assert.*;
-    import org.junit.*;;
-    import java.io.*;
 
-    public class RunestoneTests extends CodeTestHelper
-    {
-      public RunestoneTests(){
-        super("Greeter");
-      }
-        @Test
-        public void testMain() throws IOException
-        {
-            String output = getMethodOutput("main");
-            String expect = "Hello Sam\nGo away Nimish";
-            boolean passed = getResults(expect, output, "Expected output from main");
-            assertTrue(passed);
-        }
+   import org.junit.*;
 
-        @Test
-        public void testCodeContains(){
-         String code = removeSpaces(getCode());
-         String target = removeSpaces("public String greet(String");
+   import java.io.*;
 
-         int num = countOccurences(code, target);
-         boolean passed = num >= 2;
-         getResults("2", ""+num, "Testing code for  number of greet methods");
-         assertTrue(passed);
-        }
-    }
+   public class RunestoneTests extends CodeTestHelper
+   {
+       public RunestoneTests()
+       {
+           super("Greeter");
+       }
+
+       @Test
+       public void testMain() throws IOException
+       {
+           String output = getMethodOutput("main");
+           String expect = "Hello Sam\nGo away Nimish";
+           boolean passed = getResults(expect, output, "Expected output from main");
+           assertTrue(passed);
+       }
+
+       @Test
+       public void testCodeContains()
+       {
+           String code = removeSpaces(getCode());
+           String target = removeSpaces("public String greet(String");
+
+           int num = countOccurences(code, target);
+           boolean passed = num >= 2;
+           getResults("2", "" + num, "Testing code for  number of greet methods");
+           assertTrue(passed);
+       }
+   }
 
 .. note::
 
@@ -256,37 +269,40 @@ In the example below the ``greet(String who)`` method overloads the ``greet()`` 
 
       public class Person
       {
-         private String name = null;
+          private String name = null;
 
-         public Person(String theName)
-         {
-            name = theName;
-         }
+          public Person(String theName)
+          {
+              name = theName;
+          }
 
-         public String getFood()
-         {
-            return "Hamburger";
-         }
+          public String getFood()
+          {
+              return "Hamburger";
+          }
       }
 
       public class Student extends Person
       {
-         private int id;
-         private static int nextId = 0;
+          private int id;
+          private static int nextId = 0;
 
-         public Student(String theName)
-         {
-           super(theName);
-           id = nextId;
-           nextId++;
-         }
+          public Student(String theName)
+          {
+              super(theName);
+              id = nextId;
+              nextId++;
+          }
 
-         public int getId() {return id;}
+          public int getId()
+          {
+              return id;
+          }
 
-         public void setId (int theId)
-         {
-            this.id = theId;
-         }
+          public void setId(int theId)
+          {
+              this.id = theId;
+          }
       }
 
 You can step through an example of this in the Java Visualizer by clicking on the following link `Override Example <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+Person+%0A%7B%0A+++private+String+name+%3D+null%3B%0A+++++++++%0A+++public+Person(String+theName)%0A+++%7B%0A++++++name+%3D+theName%3B%0A+++%7D%0A+++++++++%0A+++public+String+getFood()+%0A+++%7B%0A++++++return+%22Hamburger%22%3B%0A+++%7D%0A+++%0A+++public+static+void+main(String%5B%5D+args)%0A+++%7B%0A++++++%0A++++++Person+p+%3D+new+Student(%22Jamal%22)%3B%0A++++++System.out.println(p.getFood())%3B%0A+++%7D%0A%7D%0A++++++++%0Aclass+Student+extends+Person%0A%7B%0A+++private+int+id%3B%0A+++private+static+int+nextId+%3D+0%3B%0A+++++++++%0A+++public+Student(String+theName)%0A+++%7B%0A++++++super(theName)%3B%0A++++++id+%3D+nextId%3B%0A++++++nextId%2B%2B%3B%0A+++%7D%0A+++++++++%0A+++public+int+getId()+%7Breturn+id%3B%7D%0A+++++++++%0A+++public+void+setId+(int+theId)+%0A+++%7B%0A++++++this.id+%3D+theId%3B%0A+++%7D%0A+++%0A+++public+String+getFood()+%0A+++%7B%0A++++++return+%22Pizza%22%3B%0A+++%7D%0A%7D&mode=display&curInstr=19>`_.
@@ -309,36 +325,40 @@ You can step through an example of this in the Java Visualizer by clicking on th
 
       public class Person
       {
-         private String name = null;
+          private String name = null;
 
-         public Person(String theName)
-         {
-            name = theName;
-         }
+          public Person(String theName)
+          {
+              name = theName;
+          }
 
-         public String getFood()
-         {
-            return "Hamburger";
-         }
+          public String getFood()
+          {
+              return "Hamburger";
+          }
       }
 
       public class Student extends Person
       {
-         private int id;
-         private static int nextId = 0;
+          private int id;
+          private static int nextId = 0;
 
-         public Student(String theName)
-         {
-           super(theName);
-           id = nextId;
-           nextId++;
-         }
+          public Student(String theName)
+          {
+              super(theName);
+              id = nextId;
+              nextId++;
+          }
 
-         public int getId() {return id;}
-         public void setId (int theId)
-         {
-            this.id = theId;
-         }
+          public int getId()
+          {
+              return id;
+          }
+
+          public void setId(int theId)
+          {
+              this.id = theId;
+          }
       }
 
 You can step through an example of this using the Java Visualizer by clicking on the following link `Overload Example <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+Person+%0A%7B%0A+++private+String+name+%3D+null%3B%0A+++++++++%0A+++public+Person(String+theName)%0A+++%7B%0A++++++name+%3D+theName%3B%0A+++%7D%0A+++++++++%0A+++public+String+getFood()+%0A+++%7B%0A++++++return+%22Hamburger%22%3B%0A+++%7D%0A+++%0A+++public+String+getFood(boolean+veggieOnly)%0A+++%7B%0A++++++if+(veggieOnly)%0A++++++%7B%0A+++++++++return+%22Grilled+Cheese%22%3B%0A++++++%7D%0A++++++return+getFood()%3B%0A++++++%0A+++%7D%0A+++%0A+++public+static+void+main(String%5B%5D+args)%0A+++%7B%0A++++++%0A++++++Person+p+%3D+new+Person(%22Jamal%22)%3B%0A++++++System.out.println(p.getFood(true))%3B%0A+++%7D%0A%7D%0A++++++++%0Aclass+Student+extends+Person%0A%7B%0A+++private+int+id%3B%0A+++private+static+int+nextId+%3D+0%3B%0A+++++++++%0A+++public+Student(String+theName)%0A+++%7B%0A++++++super(theName)%3B%0A++++++id+%3D+nextId%3B%0A++++++nextId%2B%2B%3B%0A+++%7D%0A+++++++++%0A+++public+int+getId()+%7Breturn+id%3B%7D%0A+++++++++%0A+++public+void+setId+(int+theId)+%0A+++%7B%0A++++++this.id+%3D+theId%3B%0A+++%7D%0A+++%0A+++public+String+getFood()+%0A+++%7B%0A++++++return+%22Pizza%22%3B%0A+++%7D%0A%7D&mode=display&curInstr=9>`_.
@@ -367,68 +387,73 @@ For example, if a parent has a private instance variables, ``name``, then the pa
   ~~~~
   class Person
   {
-     private String name;
+      private String name;
 
-     public String getName()
-     {
-        return name;
-     }
+      public String getName()
+      {
+          return name;
+      }
 
-     public boolean setName(String theNewName)
-     {
-        if (theNewName != null)
-        {
-           this.name = theNewName;
-           return true;
-        }
-        return false;
-     }
+      public boolean setName(String theNewName)
+      {
+          if (theNewName != null)
+          {
+              this.name = theNewName;
+              return true;
+          }
+          return false;
+      }
   }
 
   public class Employee extends Person
   {
 
-     private static int nextId = 1;
-     private int id;
+      private static int nextId = 1;
+      private int id;
 
-     public Employee()
-     {
-        id = nextId;
-        nextId++;
-     }
+      public Employee()
+      {
+          id = nextId;
+          nextId++;
+      }
 
-     public int getId()
-     {
-        return id;
-     }
+      public int getId()
+      {
+          return id;
+      }
 
-     public static void main(String[] args)
-     {
-        Employee emp = new Employee();
-        emp.setName("Dina");
-        System.out.println(emp.getName());
-        System.out.println(emp.getId());
-     }
+      public static void main(String[] args)
+      {
+          Employee emp = new Employee();
+          emp.setName("Dina");
+          System.out.println(emp.getName());
+          System.out.println(emp.getId());
+      }
   }
+
   ====
   import static org.junit.Assert.*;
-    import org.junit.*;;
-    import java.io.*;
 
-    public class RunestoneTests extends CodeTestHelper
-    {
-      public RunestoneTests(){
-        super("Employee");
+  import org.junit.*;
+
+  import java.io.*;
+
+  public class RunestoneTests extends CodeTestHelper
+  {
+      public RunestoneTests()
+      {
+          super("Employee");
       }
-        @Test
-        public void testMain() throws IOException
-        {
-            String output = getMethodOutput("main");
-            String expect = "Dina\n1";
-            boolean passed = getResults(expect, output, "Expected output from main", true);
-            assertTrue(passed);
-        }
-    }
+
+      @Test
+      public void testMain() throws IOException
+      {
+          String output = getMethodOutput("main");
+          String expect = "Dina\n1";
+          boolean passed = getResults(expect, output, "Expected output from main", true);
+          assertTrue(passed);
+      }
+  }
 
 |Exercise| **Check your understanding**
 
@@ -450,31 +475,31 @@ For example, if a parent has a private instance variables, ``name``, then the pa
 
       class Item
       {
-         private int x;
+          private int x;
 
-         public void setX(int theX)
-         {
-            x = theX;
-         }
-         // ... other methods not shown
+          public void setX(int theX)
+          {
+              x = theX;
+          }
+          // ... other methods not shown
       }
 
       public class EnhancedItem extends Item
       {
-         private int y;
+          private int y;
 
-         public void setY(int theY)
-         {
-            y = theY;
-         }
+          public void setY(int theY)
+          {
+              y = theY;
+          }
 
-         // ... other methods not shown
+          // ... other methods not shown
 
-         public static void main(String[] args)
-         {
-            EnhancedItem currItem = new EnhancedItem();
-            // missing code
-         }
+          public static void main(String[] args)
+          {
+              EnhancedItem currItem = new EnhancedItem();
+              // missing code
+          }
       }
 
 You can step through this code in the Java Visualizer by clicking on the following link `Private Fields Example <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=class+Item%0A%7B%0A+++private+int+x%3B%0A%0A+++public+void+setX(int+theX)%0A+++%7B%0A++++++x+%3D+theX%3B%0A+++%7D%0A+++//+...+other+methods+not+shown%0A%7D%0A%0Apublic+class+EnhancedItem+extends+Item%0A%7B%0A+++private+int+y%3B%0A%0A+++public+void+setY(int+theY)%0A+++%7B%0A++++++y+%3D+theY%3B%0A+++%7D%0A%0A+++//+...+other+methods+not+shown%0A+++%0A+++public+static+void+main(String%5B%5D+args)%0A+++%7B%0A++++++EnhancedItem+currItem+%3D+new+EnhancedItem()%3B%0A++++++currItem.setX(3)%3B%0A++++++//+currItem.setY(2)%3B%0A++++++//+currItem.x+%3D+3%3B%0A++++++//+currItem.y+%3D+2%3B%0A+++%7D%0A+%7D&mode=display&curInstr=10>`_.
@@ -510,27 +535,32 @@ The following Pet class keeps track of a pet's name and type and has a construct
 
        public Pet(String n, String t)
        {
-          name = n;
-          type = t;
+           name = n;
+           type = t;
        }
-       public String getType(){
-         return type;
+
+       public String getType()
+       {
+           return type;
        }
-       public String getName(){
-         return name;
+
+       public String getName()
+       {
+           return name;
        }
 
        public void speak()
        {
-         System.out.println("grr!");
+           System.out.println("grr!");
        }
+
        public static void main(String[] args)
        {
-           Pet p = new Pet("Sammy","hamster");
+           Pet p = new Pet("Sammy", "hamster");
            System.out.println(p.getType());
            p.speak();
 
-          /* Dog d = new Dog("Fido");
+           /* Dog d = new Dog("Fido");
            System.out.println(d.getType());
            d.speak();
            Cat c = new Cat("Fluffy");
@@ -538,25 +568,28 @@ The following Pet class keeps track of a pet's name and type and has a construct
            c.speak();
            */
        }
-    }
+   }
 
-    // Complete the Dog class
-    class Dog
-    {
+   // Complete the Dog class
+   class Dog 
+   {
+   
+   }
+
+   // Add a Cat class
 
 
-    }
-
-    // Add a Cat class
-
-    ====
+   ====
     import static org.junit.Assert.*;
-    import org.junit.*;;
+
+    import org.junit.*;
+
     import java.io.*;
 
     public class RunestoneTests extends CodeTestHelper
     {
-        public RunestoneTests() {
+        public RunestoneTests()
+        {
             super("Pet");
         }
 
@@ -579,7 +612,7 @@ The following Pet class keeps track of a pet's name and type and has a construct
             int num = countOccurences(code, target);
 
             boolean passed = num >= 2;
-            getResults("2", ""+num, "Testing code for " + target, passed);
+            getResults("2", "" + num, "Testing code for " + target, passed);
             assertTrue(passed);
         }
 
@@ -592,7 +625,7 @@ The following Pet class keeps track of a pet's name and type and has a construct
             int num = countOccurences(code, target);
 
             boolean passed = num >= 2;
-            getResults("2", ""+num, "Testing code for " + target, passed);
+            getResults("2", "" + num, "Testing code for " + target, passed);
             assertTrue(passed);
         }
 
@@ -604,7 +637,7 @@ The following Pet class keeps track of a pet's name and type and has a construct
 
             int num = countOccurences(code, target);
             boolean passed = num >= 2;
-            getResults("2", ""+num, "Testing code for " + target);
+            getResults("2", "" + num, "Testing code for " + target);
             assertTrue(passed);
         }
     }
