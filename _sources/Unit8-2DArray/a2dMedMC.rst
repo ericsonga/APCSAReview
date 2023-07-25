@@ -55,14 +55,18 @@ You can step through this code using the following link `Example-9-8-1 <http://c
    .. code-block:: java
 
       int [][] mat = new int [4][3];
-      for (int row = 0; row < mat.length; row++) {
-         for (int col = 0; col < mat[0].length; col++) {
+      for (int row = 0; row < mat.length; row++) 
+      {
+         for (int col = 0; col < mat[0].length; col++) 
+         {
             if (row < col)
                mat[row][col] = 1;
             else if (row == col)
                mat[row][col] = 2;
             else
-               mat[row][col] = 3; } }
+               mat[row][col] = 3; 
+         } 
+      }
 
 You can step through this code using the following link `Example-9-8-2 <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+ClassNameHere+%7B%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++%0A++++++int+%5B%5D%5B%5D+mat+%3D+new+int+%5B4%5D%5B3%5D%3B%0A++++++for+(int+row+%3D+0%3B+row+%3C+mat.length%3B+row%2B%2B)+%7B+%0A+++++++++for+(int+col+%3D+0%3B+col+%3C+mat%5B0%5D.length%3B+col%2B%2B)+%7B+%0A++++++++++++if+(row+%3C+col)+%0A+++++++++++++++mat%5Brow%5D%5Bcol%5D+%3D+1%3B%0A++++++++++++else+if+(row+%3D%3D+col)++++%0A+++++++++++++++mat%5Brow%5D%5Bcol%5D+%3D+2%3B+%0A++++++++++++else+%0A+++++++++++++++mat%5Brow%5D%5Bcol%5D+%3D+3%3B+%7D+%7D+%0A++++++%0A++++++%0A+++%7D%0A%7D&mode=display&curInstr=0>`_.
 
@@ -87,7 +91,8 @@ You can step through this code using the following link `Example-9-8-2 <http://c
       int[][] m = { {1,1,1,1},{1,2,3,4},{2,2,2,2},{2,4,6,8}};
 
       int sum = 0;
-      for (int k = 0; k < m.length; k++) {
+      for (int k = 0; k < m.length; k++) 
+      {
           sum = sum + m[m.length-1-k][1];
       }
 

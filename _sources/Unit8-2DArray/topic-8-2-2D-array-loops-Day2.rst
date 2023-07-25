@@ -206,14 +206,9 @@ You can loop through just part of a 2D array. You can change the starting value 
    ~~~~
    public class Count
    {
-       public static int countValues(
-               int value,
-               int[][] a,
-               int rowStart,
-               int rowEnd,
-               int colStart,
-               int colEnd)
-               {
+       public static int countValues(int value, int[][] a, int rowStart, 
+                                  int rowEnd, int colStart, int colEnd)
+       {
            int count = 0;
            for (int row = rowStart; row <= rowEnd; row++)
            {

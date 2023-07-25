@@ -27,8 +27,10 @@ These problems are harder than those that you will typically see on the AP CSA e
 
       int[][] arr = { {3,2,1},{1,2,3}};
       int value = 0;
-      for (int row = 1; row < arr.length; row++) {
-         for (int col = 1; col < arr[0].length; col++) {
+      for (int row = 1; row < arr.length; row++) 
+      {
+         for (int col = 1; col < arr[0].length; col++) 
+         {
             if (arr[row][col] % 2 == 1)
             {
                 arr[row][col] = arr[row][col] + 1;
@@ -61,12 +63,15 @@ To step through this code in the Java Visualizer click on the following link: `H
    .. code-block:: java
      :linenos:
 
-     public int findMax(int[][] imagePixels) {
+     public int findMax(int[][] imagePixels) 
+     {
         int r, c;
         int i, iMax = 0;
 
-        for (r = 0; r < imagePixels.length; r++) {
-           for (c = 0; c < imagePixels[0].length; c++) {
+        for (r = 0; r < imagePixels.length; r++) 
+        {
+           for (c = 0; c < imagePixels[0].length; c++) 
+           {
               i = imagePixels[r][c];
               if (i > iMax)
                  iMax = i;
@@ -77,4 +82,3 @@ To step through this code in the Java Visualizer click on the following link: `H
 
 
 
-.. broken link For more practice with 2D arrays see http://coweb.cc.gatech.edu/ice-gt/1277 Question 4 from 2012 and Question 4 from 2011.
