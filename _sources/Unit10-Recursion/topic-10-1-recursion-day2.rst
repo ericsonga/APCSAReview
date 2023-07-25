@@ -328,9 +328,14 @@ You can step through the code above using the Java Visualizer by clicking on the
         }
         else
         {
-           if (str.substring(0,1).equals("y")) return 1 +
-                                mystery(str.substring(1));
-           else return mystery(str.substring(1));
+           if (str.substring(0,1).equals("y")) 
+           {
+               return 1 + mystery(str.substring(1));
+           }
+           else 
+           {
+               return mystery(str.substring(1));
+           }
         }
      }
 
