@@ -10,10 +10,6 @@ Class Periods: 14-15
 AP CSA Exam Weighting: 5-10%
 
 
-.. Moving first 2 lessons to Unit 5
-   objectObasics.rst
-   objects&Classes.rst
-
 .. toctree::
    :maxdepth: 3
 
@@ -26,6 +22,7 @@ AP CSA Exam Weighting: 5-10%
    topic-9-7-Object.rst
    ooSummary.rst
    freeResponse.rst
+   ooParsonsPractice.rst
    topic-9-10-toggle-problems.rst
    ooCodePractice.rst
    Exercises.rst
