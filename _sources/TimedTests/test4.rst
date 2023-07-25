@@ -57,21 +57,25 @@ Click the |start| button when you are ready to begin the exam, but only then as 
 
        .. code-block:: java
 
-         public class C1 {
+         public class C1 
+         {
             private int num;
             private String name;
 
-            public C1(int theNum) {
+            public C1(int theNum) 
+            {
                num = theNum;
             }
 
-            public C1(String theName) {
+            public C1(String theName) 
+            {
                name = theName;
             }
             // other methods not shown
          }
 
-         public class C2 extends C1 {
+         public class C2 extends C1 
+         {
          // methods not shown
          }
 
@@ -112,16 +116,19 @@ Click the |start| button when you are ready to begin the exam, but only then as 
 
        .. code-block:: java
 
-         public static void sort(int[] a) {
+         public static void sort(int[] a) 
+         {
             int maxCompare = a.length - 1;
             int savedIndex = 0;
             int numSteps = 0;
             int temp = 0;
 
-            for (int i = maxCompare; i > 0; i--) {
+            for (int i = maxCompare; i > 0; i--) 
+            {
                savedIndex = i;
 
-               for (int j = i - 1; j >= 0; j--) {
+               for (int j = i - 1; j >= 0; j--) 
+               {
                  /* missing code */
                }
 
@@ -274,13 +281,16 @@ Click the |start| button when you are ready to begin the exam, but only then as 
                else
                   System.out.println("B");
             }
-            else if ((num2 < 0) && (num1 < 0)) {
+            else if ((num2 < 0) && (num1 < 0)) 
+            {
                System.out.println("C");
             }
-            else if (num2 < 0) {
+            else if (num2 < 0) 
+            {
                System.out.println("D");
             }
-            else {
+            else 
+            {
                System.out.println("E");
             }
          }
@@ -377,12 +387,14 @@ Click the |start| button when you are ready to begin the exam, but only then as 
 
          public static int mystery(String str)
          {
-            if (str.length() == 0) return 0;
+            if (str.length() == 0) 
+                return 0;
             else
             {
-               if (str.substring(0,1).equals("x")) return 1 +
-                                mystery(str.substring(1));
-               else return mystery(str.substring(1));
+               if (str.substring(0,1).equals("x")) 
+                   return 1 + mystery(str.substring(1));
+               else 
+                   return mystery(str.substring(1));
             }
          }
 
@@ -515,17 +527,21 @@ Click the |start| button when you are ready to begin the exam, but only then as 
 
          private int[] arr;
 
-         public int mystery(int low, int high, int num) {
+         public int mystery(int low, int high, int num) 
+         {
 
             int mid = (low+high) / 2;
 
-            if (low > high) {
+            if (low > high) 
+            {
                return -1;
             }
-            else if (arr[mid] < num) {
+            else if (arr[mid] < num) 
+            {
                return mystery(mid +1, high, num);
             }
-            else if (arr[mid] > num) {
+            else if (arr[mid] > num) 
+            {
                return mystery(low, mid - 1, num);
             }
             else

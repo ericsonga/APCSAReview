@@ -180,7 +180,7 @@ Click the |start| button when you are ready to begin the exam, but only then as 
        :feedback_d: This would be true if the test method took a SportsCar object and a Vehicle object.
        :feedback_e: The test method takes a Car object and a SportsCar object.  Only this answer correctly passes a SportsCar object as the second parameter.  You can use a SportsCar object as a Car object since it is a subclass of Car.  The test method can be called on any child of Vehicle.
 
-       Which of the following is a correct call to test?
+       Which of the following is a correct call to the ``test`` method?
 
        .. code-block:: java
 
@@ -193,11 +193,11 @@ Click the |start| button when you are ready to begin the exam, but only then as 
 
           public class SportsCar extends Car {}
 
-          public class VechicleTest
+          public class VehicleTest
           {
               public static void main(String[] args)
               {
-                  Vechicle v = new Vechicle();
+                  Vehicle v = new Vehicle();
                   Car c = new Car();
                   SportsCar sporty = new SportsCar();
               }
@@ -222,8 +222,10 @@ Click the |start| button when you are ready to begin the exam, but only then as 
 
           public static int recur(int n)
           {
-             if (n <= 1) return 1;
-             else return (recur(n-1) + recur(n-2));
+             if (n <= 1) 
+                 return 1;
+             else 
+                 return (recur(n-1) + recur(n-2));
           }
 
 
@@ -339,14 +341,16 @@ Click the |start| button when you are ready to begin the exam, but only then as 
 
        .. code-block:: java
 
-          public class Animal {
+          public class Animal 
+          {
              // constructors not shown
              public void eat()
              { // code not shown
              }
           }
 
-          public class Bear extends Animal {
+          public class Bear extends Animal 
+          {
              // constructors not shown
              public void growl()
              { // code not shown
@@ -408,10 +412,12 @@ Click the |start| button when you are ready to begin the exam, but only then as 
        .. code-block:: java
 
           //precondition: x >=0
-          public static void mystery (int x) {
+          public static void mystery (int x) 
+          {
              System.out.print(x % 10);
 
-             if ((x / 10) != 0) {
+             if ((x / 10) != 0) 
+             {
                 mystery(x / 10);
              }
              System.out.print(x % 10);
@@ -453,7 +459,8 @@ Click the |start| button when you are ready to begin the exam, but only then as 
           int count = 0;
           for ( int testVal : a)
           {
-             if ( testVal == val ) count++;
+             if ( testVal == val ) 
+                 count++;
           }
           temp = count > 1;
           return temp;
@@ -476,7 +483,8 @@ Click the |start| button when you are ready to begin the exam, but only then as 
 
        .. code-block:: java
 
-          for (int j = 1; j <=5; j++) {
+          for (int j = 1; j <=5; j++) 
+          {
              for (int k = 1; k < 3; k++)
                 System.out.print(j * k + " ");
           }
@@ -499,7 +507,8 @@ Click the |start| button when you are ready to begin the exam, but only then as 
 
        .. code-block:: java
 
-          public void sample(int num1, int num2) {
+          public void sample(int num1, int num2) 
+          {
              int result = 99;
              if (num1==num2) {result = 0;}
              else if (num1>num2){result = 1;}
@@ -507,7 +516,8 @@ Click the |start| button when you are ready to begin the exam, but only then as 
              System.out.println(result);
           }
 
-          public void method1(int num1, int num2) {
+          public void method1(int num1, int num2) 
+          {
              int result=99;
              if (num1 == num2) {result = 0;}
              else {
@@ -517,7 +527,8 @@ Click the |start| button when you are ready to begin the exam, but only then as 
              System.out.println(result);
           }
 
-          public void method2(int num1, int num2) {
+          public void method2(int num1, int num2) 
+          {
              int result = 99;
              if (num1 == num2) {result = 0;}
              if (num1 >= num2) {result = 1;}
@@ -525,7 +536,8 @@ Click the |start| button when you are ready to begin the exam, but only then as 
              System.out.println(result);
           }
 
-          public void method3(int num1, int num2) {
+          public void method3(int num1, int num2) 
+          {
              int result = 99 ;
              if (num1 == num2) {result = 0;}
              if (num1 > num2) {result = 1;}
@@ -585,11 +597,3 @@ Click the |start| button when you are ready to begin the exam, but only then as 
           II. s1 == s2
           III. s2.equals(s3);
           IV. s2 == s3;
-
-
-
-
-
-
-
-
