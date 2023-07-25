@@ -23,17 +23,20 @@ This is the write code problems associated with the mixed up code problems.
 
                 // Add your code here
 
-
             }
-         }
-         ====
-         import static org.junit.Assert.*;
-         import org.junit.*;
-         import java.io.*;
+        }
 
-         public class RunestoneTests extends CodeTestHelper
-         {
-            public RunestoneTests() {
+         ====
+        import static org.junit.Assert.*;
+
+        import org.junit.*;
+
+        import java.io.*;
+
+        public class RunestoneTests extends CodeTestHelper
+        {
+            public RunestoneTests()
+            {
                 super("Test1");
             }
 
@@ -52,7 +55,7 @@ This is the write code problems associated with the mixed up code problems.
             {
                 String code = getCodeWithoutComments();
                 int count = countOccurences(code, "if");
-                boolean passed = getResults(""+2, ""+count, "Counting number of ifs");
+                boolean passed = getResults("" + 2, "" + count, "Counting number of ifs");
                 assertTrue(passed);
             }
 
@@ -61,7 +64,7 @@ This is the write code problems associated with the mixed up code problems.
             {
                 String code = getCodeWithoutComments();
                 int count = countOccurences(code, "else");
-                boolean passed = getResults(""+2, ""+count, "Counting number of elses");
+                boolean passed = getResults("" + 2, "" + count, "Counting number of elses");
                 assertTrue(passed);
             }
 
@@ -70,11 +73,10 @@ This is the write code problems associated with the mixed up code problems.
             {
                 String code = getCodeWithoutComments();
                 int count = countOccurences(code, "else if");
-                boolean passed = getResults(""+1, ""+count, "Counting number of else ifs");
+                boolean passed = getResults("" + 1, "" + count, "Counting number of else ifs");
                 assertTrue(passed);
             }
         }
-
 
 .. activecode:: u3_muc_wc2
         :language: java
@@ -87,24 +89,28 @@ This is the write code problems associated with the mixed up code problems.
         {
             public static void main(String[] args)
             {
-               boolean homeworkLeft = false;
-               boolean cleaned = true;
-               // Add your code here
-
+                boolean homeworkLeft = false;
+                boolean cleaned = true;
+                // Add your code here
 
             }
         }
+
         ====
         // ch4ex2muc
         import static org.junit.Assert.*;
+
         import org.junit.*;
+
         import java.io.*;
 
         public class RunestoneTests extends CodeTestHelper
         {
-            public RunestoneTests() {
+            public RunestoneTests()
+            {
                 super("Test1");
             }
+
             @Test
             public void test1()
             {
@@ -114,12 +120,13 @@ This is the write code problems associated with the mixed up code problems.
                 boolean passed = getResults(expect, output, "Running main");
                 assertTrue(passed);
             }
-             @Test
+
+            @Test
             public void test2()
             {
                 String code = getCodeWithoutComments();
                 int count = countOccurences(code, "if");
-                boolean passed = getResults(""+1, ""+count, "Counting number of ifs");
+                boolean passed = getResults("" + 1, "" + count, "Counting number of ifs");
                 assertTrue(passed);
             }
 
@@ -128,11 +135,9 @@ This is the write code problems associated with the mixed up code problems.
             {
                 String code = getCodeWithoutComments();
                 int count = countOccurences(code, "else");
-                boolean passed = getResults(""+1, ""+count, "Counting number of elses");
+                boolean passed = getResults("" + 1, "" + count, "Counting number of elses");
                 assertTrue(passed);
             }
-
-
         }
 
 .. activecode:: u3_muc_wc3
@@ -146,24 +151,28 @@ This is the write code problems associated with the mixed up code problems.
         {
             public static void main(String[] args)
             {
-               int x = 3;
+                int x = 3;
 
-               // Add your code here
-
+                // Add your code here
 
             }
         }
+
         ====
         import static org.junit.Assert.*;
-        import org.junit.*;;
+
+        import org.junit.*;
+
         import java.io.*;
 
         public class RunestoneTests extends CodeTestHelper
         {
-            public RunestoneTests() {
+            public RunestoneTests()
+            {
                 super("Test1");
             }
-           @Test
+
+            @Test
             public void test1()
             {
                 String output = getMethodOutput("main");
@@ -172,12 +181,13 @@ This is the write code problems associated with the mixed up code problems.
                 boolean passed = getResults(expect, output, "Running main");
                 assertTrue(passed);
             }
-             @Test
+
+            @Test
             public void test2()
             {
                 String code = getCodeWithoutComments();
                 int count = countOccurences(code, "if");
-                boolean passed = getResults(""+1, ""+count, "Counting number of ifs");
+                boolean passed = getResults("" + 1, "" + count, "Counting number of ifs");
                 assertTrue(passed);
             }
 
@@ -186,19 +196,17 @@ This is the write code problems associated with the mixed up code problems.
             {
                 String code = getCodeWithoutComments();
                 int count = countOccurences(code, "else");
-                boolean passed = getResults(""+1, ""+count, "Counting number of elses");
+                boolean passed = getResults("" + 1, "" + count, "Counting number of elses");
                 assertTrue(passed);
             }
+
             @Test
             public void test4()
             {
                 boolean passed = checkCodeContains("x >= 1 && x <= 10");
                 assertTrue(passed);
             }
-
-
         }
-
 
 .. activecode:: u3_muc_wc4
         :language: java
@@ -209,21 +217,25 @@ This is the write code problems associated with the mixed up code problems.
         ~~~~
         public class Test1
         {
-           public static void main(String[] args)
-           {
-               String message = "Is that the phone ringing?";
-               // Add your code here
+            public static void main(String[] args)
+            {
+                String message = "Is that the phone ringing?";
+                // Add your code here
 
-           }
+            }
         }
+
         ====
         import static org.junit.Assert.*;
-        import org.junit.*;;
+
+        import org.junit.*;
+
         import java.io.*;
 
         public class RunestoneTests extends CodeTestHelper
         {
-            public RunestoneTests() {
+            public RunestoneTests()
+            {
                 super("Test1");
             }
 
@@ -242,7 +254,7 @@ This is the write code problems associated with the mixed up code problems.
             {
                 String code = getCodeWithoutComments();
                 int count = countOccurences(code, "if");
-                boolean passed = getResults(""+1, ""+count, "Counting number of ifs");
+                boolean passed = getResults("" + 1, "" + count, "Counting number of ifs");
                 assertTrue(passed);
             }
 
@@ -252,7 +264,6 @@ This is the write code problems associated with the mixed up code problems.
                 boolean passed = checkCodeContains(".indexOf(\"ringing\"");
                 assertTrue(passed);
             }
-
         }
 
 .. activecode:: u3_muc_wc5
@@ -271,14 +282,18 @@ This is the write code problems associated with the mixed up code problems.
 
             }
         }
+
         ====
         import static org.junit.Assert.*;
-        import org.junit.*;;
+
+        import org.junit.*;
+
         import java.io.*;
 
         public class RunestoneTests extends CodeTestHelper
         {
-            public RunestoneTests() {
+            public RunestoneTests()
+            {
                 super("Test1");
             }
 
@@ -298,7 +313,7 @@ This is the write code problems associated with the mixed up code problems.
                 String code = getCodeWithoutComments();
                 int count = countOccurences(code, ".equals(");
                 boolean passed = count >= 2;
-                passed = getResults(""+2, ""+count, "Counting number of calls to .equals()", passed);
+                passed = getResults("" + 2, "" + count, "Counting number of calls to .equals()", passed);
                 assertTrue(passed);
             }
 
@@ -308,7 +323,6 @@ This is the write code problems associated with the mixed up code problems.
                 boolean passed = checkCodeContains("||");
                 assertTrue(passed);
             }
-
         }
 
 .. activecode:: u3_muc_wc6
@@ -326,14 +340,18 @@ This is the write code problems associated with the mixed up code problems.
                 // Add your code here
             }
         }
+
         ====
         import static org.junit.Assert.*;
-        import org.junit.*;;
+
+        import org.junit.*;
+
         import java.io.*;
 
         public class RunestoneTests extends CodeTestHelper
         {
-            public RunestoneTests() {
+            public RunestoneTests()
+            {
                 super("Test1");
             }
 
@@ -354,7 +372,6 @@ This is the write code problems associated with the mixed up code problems.
                 assertTrue(passed);
             }
 
-
             @Test
             public void test3()
             {
@@ -374,18 +391,22 @@ This is the write code problems associated with the mixed up code problems.
         {
             public static void main(String[] args)
             {
-               boolean weekend = false;
-               // Add your code here
+                boolean weekend = false;
+                // Add your code here
             }
         }
+
         ====
         import static org.junit.Assert.*;
-        import org.junit.*;;
+
+        import org.junit.*;
+
         import java.io.*;
 
         public class RunestoneTests extends CodeTestHelper
         {
-            public RunestoneTests() {
+            public RunestoneTests()
+            {
                 super("Test1");
             }
 
@@ -411,7 +432,7 @@ This is the write code problems associated with the mixed up code problems.
             {
                 String code = getCodeWithoutComments();
                 int count = countOccurences(code, "if");
-                boolean passed = getResults(""+1, ""+count, "Counting number of ifs");
+                boolean passed = getResults("" + 1, "" + count, "Counting number of ifs");
                 assertTrue(passed);
             }
 
@@ -420,13 +441,10 @@ This is the write code problems associated with the mixed up code problems.
             {
                 String code = getCodeWithoutComments();
                 int count = countOccurences(code, "else");
-                boolean passed = getResults(""+1, ""+count, "Counting number of elses");
+                boolean passed = getResults("" + 1, "" + count, "Counting number of elses");
                 assertTrue(passed);
             }
-
         }
-
-
 
 .. activecode:: u3_muc_wc8
         :language: java
@@ -444,14 +462,18 @@ This is the write code problems associated with the mixed up code problems.
                 // Add your code here
             }
         }
+
         ====
         import static org.junit.Assert.*;
-        import org.junit.*;;
+
+        import org.junit.*;
+
         import java.io.*;
 
         public class RunestoneTests extends CodeTestHelper
         {
-            public RunestoneTests() {
+            public RunestoneTests()
+            {
                 super("Test1");
             }
 
@@ -477,7 +499,7 @@ This is the write code problems associated with the mixed up code problems.
             {
                 String code = getCodeWithoutComments();
                 int count = countOccurences(code, "if");
-                boolean passed = getResults(""+1, ""+count, "Counting number of ifs");
+                boolean passed = getResults("" + 1, "" + count, "Counting number of ifs");
                 assertTrue(passed);
             }
 
@@ -486,12 +508,10 @@ This is the write code problems associated with the mixed up code problems.
             {
                 String code = getCodeWithoutComments();
                 int count = countOccurences(code, "else");
-                boolean passed = getResults(""+1, ""+count, "Counting number of elses");
+                boolean passed = getResults("" + 1, "" + count, "Counting number of elses");
                 assertTrue(passed);
             }
         }
-
-
 
 .. activecode:: u3_muc_wc9
         :language: java
@@ -505,20 +525,24 @@ This is the write code problems associated with the mixed up code problems.
             public static void main(String[] args)
             {
                 String name = "Julian";
-                String firstLetter = name.substring(0,1);
+                String firstLetter = name.substring(0, 1);
                 String lowerFirst = firstLetter.toLowerCase();
 
                 // Add your code here
             }
         }
+
         ====
         import static org.junit.Assert.*;
-        import org.junit.*;;
+
+        import org.junit.*;
+
         import java.io.*;
 
         public class RunestoneTests extends CodeTestHelper
         {
-            public RunestoneTests() {
+            public RunestoneTests()
+            {
                 super("Test1");
             }
 
@@ -539,22 +563,21 @@ This is the write code problems associated with the mixed up code problems.
                 int count = countOccurences(code, "substring(0,1)");
                 boolean passed = count >= 1;
 
-                getResults("1 or more", ""+count, "Counting number of substring(0, 1)", passed);
+                getResults("1 or more", "" + count, "Counting number of substring(0, 1)", passed);
                 assertTrue(passed);
             }
 
-           @Test
+            @Test
             public void test3()
             {
                 String code = getCodeWithoutComments();
                 int count = countOccurences(code, ".equals(");
                 boolean passed = count == 5;
 
-                getResults("1 or more", ""+count, "Counting number of .equals()", passed);
+                getResults("1 or more", "" + count, "Counting number of .equals()", passed);
                 assertTrue(passed);
             }
         }
-
 
 .. activecode:: u3_muc_wc10
         :language: java
@@ -571,14 +594,18 @@ This is the write code problems associated with the mixed up code problems.
                 // Add your code here
             }
         }
+
         ====
         import static org.junit.Assert.*;
-        import org.junit.*;;
+
+        import org.junit.*;
+
         import java.io.*;
 
         public class RunestoneTests extends CodeTestHelper
         {
-            public RunestoneTests() {
+            public RunestoneTests()
+            {
                 super("Test1");
             }
 
@@ -597,7 +624,7 @@ This is the write code problems associated with the mixed up code problems.
             {
                 String code = getCodeWithoutComments();
                 int count = countOccurences(code, "if");
-                boolean passed = getResults(""+4, ""+count, "Counting number of ifs");
+                boolean passed = getResults("" + 4, "" + count, "Counting number of ifs");
                 assertTrue(passed);
             }
 
@@ -606,7 +633,7 @@ This is the write code problems associated with the mixed up code problems.
             {
                 String code = getCodeWithoutComments();
                 int count = countOccurences(code, "else");
-                boolean passed = getResults(""+4, ""+count, "Counting number of elses");
+                boolean passed = getResults("" + 4, "" + count, "Counting number of elses");
                 assertTrue(passed);
             }
 
@@ -615,7 +642,8 @@ This is the write code problems associated with the mixed up code problems.
             {
                 String code = getCodeWithoutComments();
                 int count = countOccurences(code, "else if");
-                boolean passed = getResults(""+3, ""+count, "Counting number of else ifs");
+                boolean passed = getResults("" + 3, "" + count, "Counting number of else ifs");
                 assertTrue(passed);
             }
         }
+

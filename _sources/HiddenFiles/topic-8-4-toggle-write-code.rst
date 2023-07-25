@@ -14,11 +14,15 @@ This is the write code problems associated with the mixed up code problems.
 
         Fix the errors (marked by comments) in the code so that it correctly creates a 10x10 array called ``table`` filled with numbers from 0 to 99 in left-right top-bottom order and prints the output (in row-column order) with the numbers separated by tabs. Most of the errors are syntactical, but one is logical.
         ~~~~
-        public class Test1 {
-            public static void main(String[] args) {
+        public class Test1 
+        {
+            public static void main(String[] args) 
+            {
                 int[][] table = int[9][9]; // This line has errors
-                for (int row = 0; row < table.length(); row++) { // This line has an error
-                    for (int col = row; col < table[row].length(); col++) { // This line has errors
+                for (int row = 0; row < table.length(); row++)  // This line has an error
+                {
+                    for (int col = row; col < table[row].length(); col++)  // This line has errors
+                    {
                         table[row][col] = col + 10 * row;
                         System.out.print(table[row][col] + "\t");
                     }
@@ -27,12 +31,15 @@ This is the write code problems associated with the mixed up code problems.
         }
         ====
         import static org.junit.Assert.*;
-        import org.junit.*;;
+
+        import org.junit.*;
+
         import java.io.*;
 
         public class RunestoneTests extends CodeTestHelper
         {
-            public RunestoneTests() {
+            public RunestoneTests()
+            {
                 super("Test1");
             }
 
@@ -40,14 +47,18 @@ This is the write code problems associated with the mixed up code problems.
             public void test1()
             {
                 String output = getMethodOutput("main");
-                String expect = "0   1   2   3   4   5   6   7   8   9   10  11  12  13  14  15  16  17  18  19  20  21  22  23  24  25  26  27  28  29  30  31  32  33  34  35  36   37  38  39  40  41  42  43  44  45  46  47  48  49  50  51  52  53  54  55  56  57  58  59  60  61  62  63  64  65  66  67  68  69  70  71  72  73  74   75  76  77  78  79  80  81  82  83  84  85  86  87  88  89  90  91  92  93  94  95  96  97  98  99";
+                String expect =
+                        "0   1   2   3   4   5   6   7   8   9   10  11  12  13  14  15  16  17  18  19  20"
+                            + "  21  22  23  24  25  26  27  28  29  30  31  32  33  34  35  36   37  38 "
+                            + " 39  40  41  42  43  44  45  46  47  48  49  50  51  52  53  54  55  56  57 "
+                            + " 58  59  60  61  62  63  64  65  66  67  68  69  70  71  72  73  74   75  76"
+                            + "  77  78  79  80  81  82  83  84  85  86  87  88  89  90  91  92  93  94  95"
+                            + "  96  97  98  99";
 
                 boolean passed = getResults(expect, output, "Running main");
                 assertTrue(passed);
             }
-
         }
-
 
 .. activecode:: u8_muc_wc2
         :language: java
@@ -60,11 +71,15 @@ This is the write code problems associated with the mixed up code problems.
 
         ~~~~
         public class Test1 {
-            public static void main(String[] args) {
+            public static void main(String[] args) 
+            {
                 int[][] checkerboard = new int[8][8];
-                for (int row = 0; row < checkerboard.length; row++) {
-                    for (int col = 0; col < checkerboard[row].length; col++) {
-                        if () { // How can we check if a cell should be 0 or 1?
+                for (int row = 0; row < checkerboard.length; row++) 
+                {
+                    for (int col = 0; col < checkerboard[row].length; col++) 
+                    {
+                        if ()  // How can we check if a cell should be 0 or 1?
+                        {
                             checkerboard[row][col] = 1;
                         } //end if
                         System.out.print(checkerboard[row][col] + " ");
@@ -74,12 +89,15 @@ This is the write code problems associated with the mixed up code problems.
         }
         ====
         import static org.junit.Assert.*;
-        import org.junit.*;;
+
+        import org.junit.*;
+
         import java.io.*;
 
         public class RunestoneTests extends CodeTestHelper
         {
-            public RunestoneTests() {
+            public RunestoneTests()
+            {
                 super("Test1");
             }
 
@@ -87,7 +105,9 @@ This is the write code problems associated with the mixed up code problems.
             public void test1()
             {
                 String output = getMethodOutput("main");
-                String expect = "1 0 1 0 1 0 1 0 0 1 0 1 0 1 0 1 1 0 1 0 1 0 1 0 0 1 0 1 0 1 0 1 1 0 1 0 1 0 1 0 0 1 0 1 0 1 0 1 1 0 1 0 1 0 1 0 0 1 0 1 0 1 0 1";
+                String expect =
+                        "1 0 1 0 1 0 1 0 0 1 0 1 0 1 0 1 1 0 1 0 1 0 1 0 0 1 0 1 0 1 0 1 1 0 1 0 1 0 1 0 0"
+                            + " 1 0 1 0 1 0 1 1 0 1 0 1 0 1 0 0 1 0 1 0 1 0 1";
 
                 boolean passed = getResults(expect, output, "Running main");
                 assertTrue(passed);
@@ -105,11 +125,14 @@ This is the write code problems associated with the mixed up code problems.
 
         public class Test1
         {
-            public static int sumVals(int[][] nums) {
+            public static int sumVals(int[][] nums) 
+            {
                 int sum = 0;
 
-                for () {  // fill in this for loop header
-                    for () { // fill in this for loop header
+                for ()   // fill in this for loop header
+                {
+                    for ()  // fill in this for loop header
+                    {
                         sum += nums[row][col];
                     }
                 }
@@ -118,7 +141,8 @@ This is the write code problems associated with the mixed up code problems.
 
             } //end method
 
-            public static void main(String[] args) {
+            public static void main(String[] args) 
+            {
                 // You don't need to make any changes to this method
                 int[][] arr1 = { {-1, 2, 0}, {6, -4, 5}, {3, 4, 8} };
                 int out1 = sumVals(arr1);
@@ -133,14 +157,16 @@ This is the write code problems associated with the mixed up code problems.
         }
         ====
         import static org.junit.Assert.*;
-        import org.junit.*;;
-        import java.io.*;
 
+        import org.junit.*;
+
+        import java.io.*;
         import java.util.Arrays;
 
         public class RunestoneTests extends CodeTestHelper
         {
-            public RunestoneTests() {
+            public RunestoneTests()
+            {
                 super("Test1");
             }
 
@@ -157,26 +183,27 @@ This is the write code problems associated with the mixed up code problems.
             @Test
             public void test2()
             {
-                int[][] inArr = { {2, 4, 8, 10}, {6, 0, 4, 12} };
+                int[][] inArr = { {2, 4, 8, 10}, {6, 0, 4, 12}};
                 int expect = 46;
                 int output = Test1.sumVals(inArr);
 
                 String input = stringify2DArray(inArr);
-                //String output = Arrays.toString(outArr);
-                //String expect = Arrays.toString(expArr);
+                // String output = Arrays.toString(outArr);
+                // String expect = Arrays.toString(expArr);
 
-                boolean passed = getResults(""+expect, ""+output, "Running sumVals() with " + input);
+                boolean passed = getResults("" + expect, "" + output, "Running sumVals() with " + input);
                 assertTrue(passed);
             }
 
-            private String stringify2DArray(int[][] mat) {
+            private String stringify2DArray(int[][] mat)
+            {
                 String output = "[";
 
-                for (int i = 0; i < mat.length; i++) {
+                for (int i = 0; i < mat.length; i++)
+                {
                     output += Arrays.toString(mat[i]);
 
-                    if (i < mat.length - 1)
-                        output += ", ";
+                    if (i < mat.length - 1) output += ", ";
                 }
 
                 return output + "]";
@@ -192,20 +219,29 @@ This is the write code problems associated with the mixed up code problems.
         ~~~~
         import java.util.Arrays;
 
-        public class Test1 {
+        public class Test1
+        {
 
-            public static void flipImage(String[][] image) {
-                for (int row=0; row<image.length; row++) {
-                    for (int col=0; col<image[0].length/2; col++) {
+            public static void flipImage(String[][] image)
+            {
+                for (int row = 0; row < image.length; row++)
+                {
+                    for (int col = 0; col < image[0].length / 2; col++)
+                    {
                         // YOUR CODE HERE
-                        // Hint: this inside loop only goes until image[0].length/2 and that's all you need
+                        // Hint: this inside loop only goes until image[0].length/2 and
+                        // that's all you need
                         // Think about swapping two elements
-                    } //end inner loop
-                } //end outer loop
-            } //end method
+                    } // end inner loop
+                } // end outer loop
+            } // end method
 
-            public static void main(String[] args) {
-                String [][]test = { {"this", "is", "a", "test"}, {"hello", "world", "good", "luck"} };
+            public static void main(String[] args)
+            {
+                String[][] test =
+                {
+                    {"this", "is", "a", "test"}, {"hello", "world", "good", "luck"}
+                };
                 System.out.println("Before: " + Arrays.deepToString(test));
                 flipImage(test);
                 System.out.println("After: " + Arrays.deepToString(test));
@@ -214,12 +250,15 @@ This is the write code problems associated with the mixed up code problems.
 
         ====
         import static org.junit.Assert.*;
+
         import org.junit.*;
+
         import java.io.*;
 
         public class RunestoneTests extends CodeTestHelper
         {
-            public RunestoneTests() {
+            public RunestoneTests()
+            {
                 super("Test1");
             }
 
@@ -227,12 +266,13 @@ This is the write code problems associated with the mixed up code problems.
             public void test1()
             {
                 String output = getMethodOutput("main");
-                String expect = "Before: [[this, is, a, test], [hello, world, good, luck]]\nAfter: [[test, a, is, this], [luck, good, world, hello]]";
+                String expect =
+                        "Before: [[this, is, a, test], [hello, world, good, luck]]\n"
+                            + "After: [[test, a, is, this], [luck, good, world, hello]]";
 
                 boolean passed = getResults(expect, output, "Running main");
                 assertTrue(passed);
             }
-
         }
 
 .. activecode:: u8_muc_wc5
@@ -244,30 +284,42 @@ This is the write code problems associated with the mixed up code problems.
         ~~~~
         import java.util.Arrays;
 
-        public class Test1 {
-            public static void makeEvenNumsZero(int[][] nums) {
+        public class Test1
+        {
+            public static void makeEvenNumsZero(int[][] nums)
+            {
 
                 // YOUR CODE HERE
 
             }
 
             // necessary main method
-            public static void main(String[] args) {
-                int[][] a = { {1,2,3,4,}, {4,3,2,1}, {0,9,4,5} };
+            public static void main(String[] args)
+            {
+                int[][] a =
+                {
+                    {
+                        1, 2, 3, 4,
+                    },
+                    {4, 3, 2, 1},
+                    {0, 9, 4, 5}
+                };
                 makeEvenNumsZero(a);
                 System.out.println(Arrays.deepToString(a));
             }
         }
+
         ====
         import static org.junit.Assert.*;
-        import org.junit.*;
-        import java.io.*;
 
-        import java.util.Arrays;
+        import org.junit.*;
+
+        import java.io.*;
 
         public class RunestoneTests extends CodeTestHelper
         {
-            public RunestoneTests() {
+            public RunestoneTests()
+            {
                 super("MakeEvenNumbersZero");
             }
 
@@ -280,7 +332,6 @@ This is the write code problems associated with the mixed up code problems.
                 boolean passed = getResults(expect, output, "Running main");
                 assertTrue(passed);
             }
-
         }
 
 .. activecode:: u8_muc_wc6
@@ -290,29 +341,38 @@ This is the write code problems associated with the mixed up code problems.
 
         Fill in the ``numOccurrences`` method. It should take in a two-dimension ``int`` array ``nums`` and an ``int`` ``desired`` and return the number of times that ``desired`` appears in ``nums``. E.g., with ``{ {3, 1, 2}, {3, 4, 1} }`` as ``nums``, ``numOccurrences(nums, 1)`` should return ``2``.
         ~~~~
-        public class Test1 {
+        public class Test1
+        {
 
-            public static int numOccurrences(int[][] nums, int desired) {
+            public static int numOccurrences(int[][] nums, int desired)
+            {
                 int occurrences = 0;
 
                 // YOUR CODE HERE //
 
                 return occurrences;
             }
-            public static void main(String[] args) {
-                int[][] numbers = { {0,1,2}, {3,1,5}, {6,1,1} };
+
+            public static void main(String[] args)
+            {
+                int[][] numbers = { {0, 1, 2}, {3, 1, 5}, {6, 1, 1}};
                 int output = numOccurrences(numbers, 1);
-                System.out.println("The number of times that 1 appears in the data set: " + output);
+                System.out.println(
+                        "The number of times that 1 appears in the data set: " + output);
             }
         }
+
         ====
         import static org.junit.Assert.*;
-        import org.junit.*;;
+
+        import org.junit.*;
+
         import java.io.*;
 
         public class RunestoneTests extends CodeTestHelper
         {
-            public RunestoneTests() {
+            public RunestoneTests()
+            {
                 super("Test1");
             }
 
@@ -336,35 +396,39 @@ This is the write code problems associated with the mixed up code problems.
         ~~~~
         import java.util.Arrays;
 
-        public class Test1 {
+        public class Test1
+        {
 
-            public static int[] averageCols(int[][] nums) {
+            public static int[] averageCols(int[][] nums)
+            {
 
                 int[] averages = new int[nums[0].length];
 
-                // Hint: Instead of iterating through rows then columns like we normally do, try iterating by columns then rows
+                // Hint: Instead of iterating through rows then columns like we normally
+                // do, try iterating by columns then rows
 
                 return averages;
+            } // end method
 
-            } //end method
-
-            public static void main(String[] args) {
-                int[][] test = { {0,1,2}, {3,4,5}, {6,7,8} };
+            public static void main(String[] args)
+            {
+                int[][] test = { {0, 1, 2}, {3, 4, 5}, {6, 7, 8}};
                 int[] output = averageCols(test);
                 System.out.println("Averages: " + Arrays.toString(output));
             }
-
         }
+
         ====
         import static org.junit.Assert.*;
-        import org.junit.*;
-        import java.io.*;
 
-        import java.util.Arrays;
+        import org.junit.*;
+
+        import java.io.*;
 
         public class RunestoneTests extends CodeTestHelper
         {
-            public RunestoneTests() {
+            public RunestoneTests()
+            {
                 super("Test1");
             }
 
@@ -391,38 +455,43 @@ This is the write code problems associated with the mixed up code problems.
         public class Test1
         {
 
-            public static int[][] oddRows(int[][] nums) {
+            public static int[][] oddRows(int[][] nums)
+            {
 
                 int[][] odds = new int[nums.length / 2][nums[0].length];
 
                 // YOUR CODE HERE
 
                 return odds;
-            } //end method
+            } // end method
 
-            public static void main(String[] args) {
-                int[][] arr1 = { {-1, 2, 0}, {6, -4, 5}, {3, 4, 8} };
+            public static void main(String[] args)
+            {
+                int[][] arr1 = { {-1, 2, 0}, {6, -4, 5}, {3, 4, 8}};
                 int[][] out1 = oddRows(arr1);
 
                 // Arrays.deepToString is a method that prints 2d arrays nicely
                 System.out.println("oddRows(arr1) --> " + Arrays.deepToString(out1));
 
-                int[][] arr2 = { {7, -3}, {-5, 1}, {2, 4}, {8, 5} };
+                int[][] arr2 = { {7, -3}, {-5, 1}, {2, 4}, {8, 5}};
                 int[][] out2 = oddRows(arr2);
 
                 System.out.println("oddRows(arr2) --> " + Arrays.deepToString(out2));
             }
         }
+
         ====
         import static org.junit.Assert.*;
-        import org.junit.*;;
-        import java.io.*;
 
+        import org.junit.*;
+
+        import java.io.*;
         import java.util.Arrays;
 
         public class RunestoneTests extends CodeTestHelper
         {
-            public RunestoneTests() {
+            public RunestoneTests()
+            {
                 super("Test1");
             }
 
@@ -439,13 +508,13 @@ This is the write code problems associated with the mixed up code problems.
             @Test
             public void test2()
             {
-                int[][] inArr = { {2, 4, 8, 10}, {6, 0, 4, 12}, {1, 3, 5, 7}, {8, 6, 4, 2} };
+                int[][] inArr = { {2, 4, 8, 10}, {6, 0, 4, 12}, {1, 3, 5, 7}, {8, 6, 4, 2}};
                 String expect = "[[6, 0, 4, 12], [8, 6, 4, 2]]";
                 String output = Arrays.deepToString(Test1.oddRows(inArr));
 
                 String input = Arrays.deepToString(inArr);
-                //String output = Arrays.toString(outArr);
-                //String expect = Arrays.toString(expArr);
+                // String output = Arrays.toString(outArr);
+                // String expect = Arrays.toString(expArr);
 
                 boolean passed = getResults(expect, output, "Running oddRows() with " + input);
                 assertTrue(passed);
@@ -464,35 +533,41 @@ This is the write code problems associated with the mixed up code problems.
         public class Test1
         {
 
-            public static String[] breakIntoLetters(String[][] words) {
+            public static String[] breakIntoLetters(String[][] words)
+            {
 
                 // YOUR CODE HERE
 
-            } //end method
+            } // end method
 
-            public static void main(String[] args) {
-                String[][] mat1 = { {"b", "a", "t", "h"},
-                                                {"t", "e", "n", "s"},
-                                                {"j", "a", "c", "k"},
-                                                {"l", "a", "z", "y"} };
+            public static void main(String[] args)
+            {
+                String[][] mat1 =
+                {
+                    {"b", "a", "t", "h"},
+                    {"t", "e", "n", "s"},
+                    {"j", "a", "c", "k"},
+                    {"l", "a", "z", "y"}
+                };
                 String[] out1 = breakIntoLetters(mat1);
 
                 System.out.println("mat1 --> " + Arrays.deepToString(mat1));
                 System.out.println("breakIntoLetters(mat1) --> " + Arrays.toString(out1));
-
             }
-
         }
+
         ====
         import static org.junit.Assert.*;
-        import org.junit.*;;
-        import java.io.*;
 
+        import org.junit.*;
+
+        import java.io.*;
         import java.util.Arrays;
 
         public class RunestoneTests extends CodeTestHelper
         {
-            public RunestoneTests() {
+            public RunestoneTests()
+            {
                 super("Test1");
             }
 
@@ -500,7 +575,9 @@ This is the write code problems associated with the mixed up code problems.
             public void test1()
             {
                 String output = getMethodOutput("main");
-                String expect = "mat1 --> [[b, a, t, h], [t, e, n, s], [j, a, c, k], [l, a, z, y]]\nbreakIntoLetters(mat1) --> [bath, tens, jack, lazy]";
+                String expect =
+                        "mat1 --> [[b, a, t, h], [t, e, n, s], [j, a, c, k], [l, a, z, y]]\n"
+                            + "breakIntoLetters(mat1) --> [bath, tens, jack, lazy]";
 
                 boolean passed = getResults(expect, output, "Running main");
                 assertTrue(passed);
@@ -509,19 +586,20 @@ This is the write code problems associated with the mixed up code problems.
             @Test
             public void test2()
             {
-                String[][] inArr = {"computer".split(""), "science".split(""), "rocks".split(""),};
+                String[][] inArr =
+                {
+                    "computer".split(""), "science".split(""), "rocks".split(""),
+                };
                 String expect = "[computer, science, rocks]";
                 String output = Arrays.toString(Test1.breakIntoLetters(inArr));
 
                 String input = Arrays.deepToString(inArr);
-                //String output = Arrays.toString(outArr);
-                //String expect = Arrays.toString(expArr);
+                // String output = Arrays.toString(outArr);
+                // String expect = Arrays.toString(expArr);
 
                 boolean passed = getResults(expect, output, "Running breakIntoLetters() with " + input);
-                assertTrue(passed);/**/
+                assertTrue(passed); /**/
             }
-
-
         }
 
 .. activecode:: u8_muc_wc10
@@ -536,37 +614,41 @@ This is the write code problems associated with the mixed up code problems.
         public class Test1
         {
 
-            public static int[] maxEachRow(int[][] nums) {
+            public static int[] maxEachRow(int[][] nums)
+            {
 
                 // YOUR CODE HERE
 
-            } //end method
+            } // end method
 
-            public static void main(String[] args) {
-                int[][] mat1 = { {-1, 2, 0}, {6, -4, 5}, {3, 4, 8} };
+            public static void main(String[] args)
+            {
+                int[][] mat1 = { {-1, 2, 0}, {6, -4, 5}, {3, 4, 8}};
                 int[] out1 = maxEachRow(mat1);
 
                 System.out.println("mat1 --> " + Arrays.deepToString(mat1));
                 System.out.println("maxEachRow(mat1) --> " + Arrays.toString(out1));
 
-                int[][] mat2 = { {7, -3}, {-5, 1} };
+                int[][] mat2 = { {7, -3}, {-5, 1}};
                 int[] out2 = maxEachRow(mat2);
 
                 System.out.println("mat2 --> " + Arrays.deepToString(mat2));
                 System.out.println("maxEachRow(mat2) --> " + Arrays.toString(out2));
             }
-
         }
+
         ====
         import static org.junit.Assert.*;
-        import org.junit.*;;
-        import java.io.*;
 
+        import org.junit.*;
+
+        import java.io.*;
         import java.util.Arrays;
 
         public class RunestoneTests extends CodeTestHelper
         {
-            public RunestoneTests() {
+            public RunestoneTests()
+            {
                 super("Test1");
             }
 
@@ -574,7 +656,11 @@ This is the write code problems associated with the mixed up code problems.
             public void test1()
             {
                 String output = getMethodOutput("main");
-                String expect = "mat1 --> [[-1, 2, 0], [6, -4, 5], [3, 4, 8]]\nmaxEachRow(mat1) --> [2, 6, 8]\nmat2 --> [[7, -3], [-5, 1]]\nmaxEachRow(mat2) --> [7, 1]";
+                String expect =
+                        "mat1 --> [[-1, 2, 0], [6, -4, 5], [3, 4, 8]]\n"
+                            + "maxEachRow(mat1) --> [2, 6, 8]\n"
+                            + "mat2 --> [[7, -3], [-5, 1]]\n"
+                            + "maxEachRow(mat2) --> [7, 1]";
 
                 boolean passed = getResults(expect, output, "Running main");
                 assertTrue(passed);
@@ -583,15 +669,16 @@ This is the write code problems associated with the mixed up code problems.
             @Test
             public void test2()
             {
-                int[][] inArr = { {2, 4, 8, 10}, {6, 0, 4, 12} };
+                int[][] inArr = { {2, 4, 8, 10}, {6, 0, 4, 12}};
                 String expect = "[10, 12]";
                 String output = Arrays.toString(Test1.maxEachRow(inArr));
 
                 String input = Arrays.deepToString(inArr);
-                //String output = Arrays.toString(outArr);
-                //String expect = Arrays.toString(expArr);
+                // String output = Arrays.toString(outArr);
+                // String expect = Arrays.toString(expArr);
 
                 boolean passed = getResults(expect, output, "Running maxEachRow() with " + input);
                 assertTrue(passed);
             }
         }
+

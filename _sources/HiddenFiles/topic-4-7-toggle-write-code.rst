@@ -26,12 +26,15 @@ This is the write code problems associated with the mixed up code problems.
         ====
         // ch6ex1muc
         import static org.junit.Assert.*;
-        import org.junit.*;;
+
+        import org.junit.*;
+
         import java.io.*;
 
         public class RunestoneTests extends CodeTestHelper
         {
-            public RunestoneTests() {
+            public RunestoneTests()
+            {
                 super("Test1");
             }
 
@@ -56,8 +59,6 @@ This is the write code problems associated with the mixed up code problems.
             }
         }
 
-
-
 .. activecode:: u4_muc_wc2
         :language: java
         :practice: T
@@ -73,19 +74,25 @@ This is the write code problems associated with the mixed up code problems.
 
             }
         }
+
         ====
         // ch6ex2muc
         import static org.junit.Assert.*;
+
         import org.junit.*;
+
         import java.io.*;
 
-        public class RunestoneTests extends CodeTestHelper {
-            public RunestoneTests() {
+        public class RunestoneTests extends CodeTestHelper
+        {
+            public RunestoneTests()
+            {
                 super("Test1");
             }
 
             @Test
-            public void test1() {
+            public void test1()
+            {
                 String output = getMethodOutput("main");
                 String expect = "15\n14\n13\n12\n11\n10\n9\n8\n7\n6\n5\n4\n3\n2\n1\n0";
 
@@ -94,7 +101,8 @@ This is the write code problems associated with the mixed up code problems.
             }
 
             @Test
-            public void test2() {
+            public void test2()
+            {
                 String code = getCodeWithoutComments();
                 int count = countOccurences(code, "while") + countOccurences(code, "for");
                 boolean passed = count > 0;
@@ -102,8 +110,6 @@ This is the write code problems associated with the mixed up code problems.
                 assertTrue(passed);
             }
         }
-
-
 
 .. activecode:: u4_muc_wc3
         :language: java
@@ -120,19 +126,25 @@ This is the write code problems associated with the mixed up code problems.
 
             }
         }
+
         ====
         // ch6ex3muc
         import static org.junit.Assert.*;
-        import org.junit.*;;
+
+        import org.junit.*;
+
         import java.io.*;
 
-        public class RunestoneTests extends CodeTestHelper {
-            public RunestoneTests() {
+        public class RunestoneTests extends CodeTestHelper
+        {
+            public RunestoneTests()
+            {
                 super("Test1");
             }
 
             @Test
-            public void test1() {
+            public void test1()
+            {
                 String output = getMethodOutput("main");
                 String expect = "0\n5\n10\n15\n20\n25\n30\n35\n40\n45\n50";
 
@@ -141,7 +153,8 @@ This is the write code problems associated with the mixed up code problems.
             }
 
             @Test
-            public void test2() {
+            public void test2()
+            {
                 String code = getCodeWithoutComments();
                 int count = countOccurences(code, "while") + countOccurences(code, "for");
                 boolean passed = count > 0;
@@ -149,8 +162,6 @@ This is the write code problems associated with the mixed up code problems.
                 assertTrue(passed);
             }
         }
-
-
 
 .. activecode:: u4_muc_wc4
         :language: java
@@ -167,19 +178,25 @@ This is the write code problems associated with the mixed up code problems.
 
             }
         }
+
         ====
         // ch6ex4muc
         import static org.junit.Assert.*;
-        import org.junit.*;;
+
+        import org.junit.*;
+
         import java.io.*;
 
-        public class RunestoneTests extends CodeTestHelper {
-            public RunestoneTests() {
+        public class RunestoneTests extends CodeTestHelper
+        {
+            public RunestoneTests()
+            {
                 super("Test1");
             }
 
             @Test
-            public void test1() {
+            public void test1()
+            {
                 String output = getMethodOutput("main");
                 String expect = "0\n20\n40\n60\n80\n100";
 
@@ -188,7 +205,8 @@ This is the write code problems associated with the mixed up code problems.
             }
 
             @Test
-            public void test2() {
+            public void test2()
+            {
                 String code = getCodeWithoutComments();
                 int count = countOccurences(code, "while") + countOccurences(code, "for");
                 boolean passed = count > 0;
@@ -212,19 +230,25 @@ This is the write code problems associated with the mixed up code problems.
 
             }
         }
+
         ====
         // ch6ex5muc
         import static org.junit.Assert.*;
-        import org.junit.*;;
+
+        import org.junit.*;
+
         import java.io.*;
 
-        public class RunestoneTests extends CodeTestHelper {
-            public RunestoneTests() {
+        public class RunestoneTests extends CodeTestHelper
+        {
+            public RunestoneTests()
+            {
                 super("Test1");
             }
 
             @Test
-            public void test1() {
+            public void test1()
+            {
                 String output = getMethodOutput("main");
                 String expect = "100\n90\n80\n70\n60\n50\n40\n30\n20\n10\n0";
 
@@ -233,7 +257,8 @@ This is the write code problems associated with the mixed up code problems.
             }
 
             @Test
-            public void test2() {
+            public void test2()
+            {
                 String code = getCodeWithoutComments();
                 int count = countOccurences(code, "while") + countOccurences(code, "for");
                 boolean passed = count > 0;
@@ -241,8 +266,6 @@ This is the write code problems associated with the mixed up code problems.
                 assertTrue(passed);
             }
         }
-
-
 
 .. activecode:: u4_muc_wc7
         :language: java
@@ -259,19 +282,25 @@ This is the write code problems associated with the mixed up code problems.
 
             }
         }
+
         ====
         // ch6ex7muc
         import static org.junit.Assert.*;
-        import org.junit.*;;
+
+        import org.junit.*;
+
         import java.io.*;
 
-        public class RunestoneTests extends CodeTestHelper {
-            public RunestoneTests() {
+        public class RunestoneTests extends CodeTestHelper
+        {
+            public RunestoneTests()
+            {
                 super("Test1");
             }
 
             @Test
-            public void test1() {
+            public void test1()
+            {
                 String output = getMethodOutput("main");
                 String expect = "******\n******\n******";
 
@@ -280,7 +309,8 @@ This is the write code problems associated with the mixed up code problems.
             }
 
             @Test
-            public void test2() {
+            public void test2()
+            {
                 String code = getCodeWithoutComments();
                 int count = countOccurences(code, "while") + countOccurences(code, "for");
                 boolean passed = count == 2;
@@ -288,8 +318,6 @@ This is the write code problems associated with the mixed up code problems.
                 assertTrue(passed);
             }
         }
-
-
 
 .. activecode:: u4_muc_wc8
         :language: java
@@ -306,19 +334,25 @@ This is the write code problems associated with the mixed up code problems.
 
             }
         }
+
         ====
         // ch6ex8muc
         import static org.junit.Assert.*;
-        import org.junit.*;;
+
+        import org.junit.*;
+
         import java.io.*;
 
-        public class RunestoneTests extends CodeTestHelper {
-            public RunestoneTests() {
+        public class RunestoneTests extends CodeTestHelper
+        {
+            public RunestoneTests()
+            {
                 super("Test1");
             }
 
             @Test
-            public void test1() {
+            public void test1()
+            {
                 String output = getMethodOutput("main");
                 String expect = "1\n22\n333";
 
@@ -327,7 +361,8 @@ This is the write code problems associated with the mixed up code problems.
             }
 
             @Test
-            public void test2() {
+            public void test2()
+            {
                 String code = getCodeWithoutComments();
                 int count = countOccurences(code, "while") + countOccurences(code, "for");
                 boolean passed = count == 2;
@@ -335,7 +370,6 @@ This is the write code problems associated with the mixed up code problems.
                 assertTrue(passed);
             }
         }
-
 
 .. activecode:: u4_muc_wc9
         :language: java
@@ -352,19 +386,25 @@ This is the write code problems associated with the mixed up code problems.
 
             }
         }
+
         ====
         // ch6ex9muc
         import static org.junit.Assert.*;
-        import org.junit.*;;
+
+        import org.junit.*;
+
         import java.io.*;
 
-        public class RunestoneTests extends CodeTestHelper {
-            public RunestoneTests() {
+        public class RunestoneTests extends CodeTestHelper
+        {
+            public RunestoneTests()
+            {
                 super("Test1");
             }
 
             @Test
-            public void test1() {
+            public void test1()
+            {
                 String output = getMethodOutput("main");
                 String expect = "11111\n22222\n33333\n44444\n55555";
 
@@ -373,7 +413,8 @@ This is the write code problems associated with the mixed up code problems.
             }
 
             @Test
-            public void test2() {
+            public void test2()
+            {
                 String code = getCodeWithoutComments();
                 int count = countOccurences(code, "while") + countOccurences(code, "for");
                 boolean passed = count >= 2;
@@ -381,8 +422,6 @@ This is the write code problems associated with the mixed up code problems.
                 assertTrue(passed);
             }
         }
-
-
 
 .. activecode:: u4_muc_wc10
         :language: java
@@ -399,19 +438,25 @@ This is the write code problems associated with the mixed up code problems.
 
             }
         }
+
         ====
         // ch6ex10muc
         import static org.junit.Assert.*;
-        import org.junit.*;;
+
+        import org.junit.*;
+
         import java.io.*;
 
-        public class RunestoneTests extends CodeTestHelper {
-            public RunestoneTests() {
+        public class RunestoneTests extends CodeTestHelper
+        {
+            public RunestoneTests()
+            {
                 super("Test1");
             }
 
             @Test
-            public void test1() {
+            public void test1()
+            {
                 String output = getMethodOutput("main");
                 String expect = "11111\n2222\n333\n44\n5";
 
@@ -420,7 +465,8 @@ This is the write code problems associated with the mixed up code problems.
             }
 
             @Test
-            public void test2() {
+            public void test2()
+            {
                 String code = getCodeWithoutComments();
                 int count = countOccurences(code, "while") + countOccurences(code, "for");
                 boolean passed = count >= 2;
