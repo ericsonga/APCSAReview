@@ -25,12 +25,13 @@ AP CSA Exam Weighting: 5-7.5%
    topic-5-9-this.rst
    topic-5-10-social-impacts.rst
    topic-5-11-summary.rst
+   topic-parsons-practice.rst
+   topic-toggle-problems.rst
    Exercises.rst
-   topic-5-18-toggle-problems.rst
+   midterm_unit5.rst
    FRQstepTracker.rst
    timeFRQ.rst
    APLine.rst
-   midterm_unit5.rst
    CBLabs.rst
    community-challenge.rst
 
