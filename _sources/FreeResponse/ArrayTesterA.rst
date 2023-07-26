@@ -93,7 +93,7 @@ Try and Solve It
        // Main method to test getColumn method
        public static void main(String[] args)
        {
-           int[][] arr2D = {{0, 1, 2}, {3, 4, 5}, {6, 7, 8}, {9, 5, 3}};
+           int[][] arr2D = { {0, 1, 2}, {3, 4, 5}, {6, 7, 8}, {9, 5, 3}};
            int[] result = ArrayTester.getColumn(arr2D, 1);
            System.out.println(
                    "It should print the values from the second column: 1 4 7 5.");
@@ -140,7 +140,7 @@ Try and Solve It
        {
            boolean passed = false;
 
-           int[][] arr2D = {{0, 1, 2}, {3, 4, 5}, {6, 7, 8}, {9, 5, 3}};
+           int[][] arr2D = { {0, 1, 2}, {3, 4, 5}, {6, 7, 8}, {9, 5, 3}};
 
            String arrayStr = "[[0, 1, 2],\n [3, 4, 5],\n [6, 7, 8],\n [9, 5, 3]]";
 
@@ -162,7 +162,7 @@ Try and Solve It
        {
            boolean passed = false;
 
-           int[][] arr2D = {{0, 1, 2, 3, 4, 5}, {6, 7, 8, 9, 5, 3}};
+           int[][] arr2D = { {0, 1, 2, 3, 4, 5}, {6, 7, 8, 9, 5, 3}};
 
            String arrayStr = "[[0, 1, 2, 3, 4, 5],\n [6, 7, 8, 9, 5, 3]]";
 

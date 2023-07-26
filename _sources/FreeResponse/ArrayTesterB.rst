@@ -60,7 +60,7 @@ Try and Solve It
        // Main method to test getColumn method
        public static void main(String[] args)
        {
-           int[][] arr2D = {{1, 2, 3}, {2, 3, 1}, {3, 1, 2}};
+           int[][] arr2D = { {1, 2, 3}, {2, 3, 1}, {3, 1, 2}};
            boolean test = isLatin(arr2D);
            System.out.println(
                    "If isLatin is implemented correctly, then test should be true:"
@@ -155,7 +155,7 @@ Try and Solve It
          {
              boolean passed = false;
 
-             int[][] arr2D = {{1, 2, 3}, {2, 3, 1}, {3, 1, 2}};
+             int[][] arr2D = { {1, 2, 3}, {2, 3, 1}, {3, 1, 2}};
 
              String arrayStr = "[[1, 2, 3],\n [2, 3, 1],\n [3, 1, 2]]";
 
@@ -175,7 +175,7 @@ Try and Solve It
          {
              boolean passed = false;
 
-             int[][] arr2D = {{1, 2, 3}, {2, 3, 1}, {7, 8, 9}};
+             int[][] arr2D = { {1, 2, 3}, {2, 3, 1}, {7, 8, 9}};
 
              String arrayStr = "[[1, 2, 3],\n [2, 3, 1],\n [7, 8, 9]]";
 
