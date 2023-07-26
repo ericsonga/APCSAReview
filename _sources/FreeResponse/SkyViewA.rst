@@ -31,40 +31,46 @@ SkyView class, shown below. In this question you will write a constructor and a 
 
    public class SkyView
    {
-       /** A rectangular array that holds the data representing a rectangular
-        *  area of the sky. */
+       /**
+        * A rectangular array that holds the data representing a rectangular area of
+        * the sky.
+        */
        private double[][] view;
 
-       /** Constructs a SkyView object from a 1-dimensional array of scan data.
-         * @param numRows the number of rows represented in the view
-         * Precondition: numRows > 0
-         * @param numCols the number of columns represented in the view
-         * Precondition: numCols > 0
-         * @param scanned the scan data received from the telescope, stored in
-         *        telescope order
-         * Precondition: scanned.length == numRows * numCols
-         * Postcondition: view has been created as a rectangular
-         *        2-dimensional array
-         * with numRows rows and numCols columns and the values in
-         * scanned have been copied to view and are ordered as
-         * in the original rectangular area of sky.
-         */
+       /**
+        * Constructs a SkyView object from a 1-dimensional array of scan data.
+        *
+        * @param numRows the number of rows represented in the view Precondition:
+        *     numRows > 0
+        * @param numCols the number of columns represented in the view Precondition:
+        *     numCols > 0
+        * @param scanned the scan data received from the telescope, stored in
+        *     telescope order Precondition: scanned.length == numRows * numCols
+        *     Postcondition: view has been created as a rectangular 2-dimensional
+        *     array with numRows rows and numCols columns and the values in scanned
+        *     have been copied to view and are ordered as in the original rectangular
+        *     area of sky.
+        */
        public SkyView(int numRows, int numCols, double[] scanned)
-       { /* to be implemented in part (a) */ }
+       {
+           /* to be implemented in part (a) */
+       }
 
-
-       /** Returns the average of the values in a rectangular section of view.
-         * @param startRow the first row index of the section
-         * @param endRow the last row index of the section
-         * @param startCol the first column index of the section
-         * @param endCol the last column index of the section
-         * Precondition: 0 <= startRow <= endRow < view.length
-         * Precondition: 0 <= startCol <= endCol < view[0].length
-         * @return the average of the values in the specified section of view
-         */
-       public double getAverage(int startRow, int endRow,
-                                int startCol, int endCol)
-       { /* to be implemented in part (b) */ }
+       /**
+        * Returns the average of the values in a rectangular section of view.
+        *
+        * @param startRow the first row index of the section
+        * @param endRow the last row index of the section
+        * @param startCol the first column index of the section
+        * @param endCol the last column index of the section Precondition: 0 <=
+        *     startRow <= endRow < view.length Precondition: 0 <= startCol <= endCol <
+        *     view[0].length
+        * @return the average of the values in the specified section of view
+        */
+       public double getAverage(int startRow, int endRow, int startCol, int endCol)
+       {
+           /* to be implemented in part (b) */
+       }
 
        // There may be other instance variables, constructors, and methods
    }
@@ -126,27 +132,32 @@ The code below declares the class, the view, and a constructor for you to finish
    {
        private double[][] view;
 
-       /** Constructs a SkyView object from a 1-dimensional array of scan data.
-         * @param numRows the number of rows represented in the view
-         * Precondition: numRows > 0
-         * @param numCols the number of columns represented in the view
-         * Precondition: numCols > 0
-         * @param scanned the scan data received from the telescope, stored in telescope order
-         * Precondition: scanned.length == numRows * numCols
-         * Postcondition: view has been created as a rectangular 2-dimensional array
-         * with numRows rows and numCols columns and the values in
-         * scanned have been copied to view and are ordered as
-         * in the original rectangular area of sky.
-         */
+       /**
+        * Constructs a SkyView object from a 1-dimensional array of scan data.
+        *
+        * @param numRows the number of rows represented in the view Precondition:
+        *     numRows > 0
+        * @param numCols the number of columns represented in the view Precondition:
+        *     numCols > 0
+        * @param scanned the scan data received from the telescope, stored in
+        *     telescope order Precondition: scanned.length == numRows * numCols
+        *     Postcondition: view has been created as a rectangular 2-dimensional
+        *     array with numRows rows and numCols columns and the values in scanned
+        *     have been copied to view and are ordered as in the original rectangular
+        *     area of sky.
+        */
        public SkyView(int numRows, int numCols, double[] scanned)
        {
-          //*** Write the constructor! ***
+           // *** Write the constructor! ***
        }
 
        /** This is a main method for testing the class */
        public static void main(String[] args)
        {
-           double[] values = {0.3, 0.7, 0.8, 0.4, 1.4, 1.1, 0.2, 0.5, 0.1, 1.6, 0.6, 0.9};
+           double[] values =
+           {
+               0.3, 0.7, 0.8, 0.4, 1.4, 1.1, 0.2, 0.5, 0.1, 1.6, 0.6, 0.9
+           };
            SkyView sView = new SkyView(4, 3, values);
            System.out.println("It should print the following:");
            System.out.println("0.3, 0.7, 0.8,");
@@ -162,7 +173,7 @@ The code below declares the class, the view, and a constructor for you to finish
                    System.out.print(sView.view[row][col] + ", ");
                }
                System.out.println();
-            }
+           }
 
            System.out.println();
 
@@ -181,12 +192,11 @@ The code below declares the class, the view, and a constructor for you to finish
                    System.out.print(sView.view[row][col] + ", ");
                }
                System.out.println();
-            }
+           }
+       } // end of main
 
-        } // end of main
-
-        public String toString()
-        {
+       public String toString()
+       {
            String output = "";
            for (int row = 0; row < view.length; row++)
            {
@@ -195,50 +205,57 @@ The code below declares the class, the view, and a constructor for you to finish
                    output += view[row][col] + ", ";
                }
                output += "\n";
-            }
+           }
            return output;
-        }
+       }
    } // end of class
+
    ====
    import static org.junit.Assert.*;
-     import org.junit.*;
-     import java.io.*;
 
-     //import java.util.Arrays;
-     //import java.util.ArrayList;
+   import org.junit.*;
 
-     public class RunestoneTests extends CodeTestHelper
-     {
-         public RunestoneTests() {
-             super("SkyView");
-             //CodeTestHelper.sort = true;
-         }
+   import java.io.*;
 
-         @Test
-         public void testMain1() {
-             boolean passed = false;
+   // import java.util.Arrays;
+   // import java.util.ArrayList;
 
-             double[] val2 = {0.3, 0.7, 0.4, 0.8, 1.4, 1.1};
-             SkyView sView = new SkyView(3, 2, val2);
-             String expect = "0.3, 0.7,\n0.8, 0.4,\n1.4, 1.1,";
+   public class RunestoneTests extends CodeTestHelper
+   {
+       public RunestoneTests()
+       {
+           super("SkyView");
+           // CodeTestHelper.sort = true;
+       }
 
-             String output = sView.toString().trim();
+       @Test
+       public void testMain1()
+       {
+           boolean passed = false;
 
-             passed = getResults(expect, output, "Checking for expected output");
-             assertTrue(passed);
-         }
+           double[] val2 = {0.3, 0.7, 0.4, 0.8, 1.4, 1.1};
+           SkyView sView = new SkyView(3, 2, val2);
+           String expect = "0.3, 0.7,\n0.8, 0.4,\n1.4, 1.1,";
 
-         @Test
-         public void testMain2() {
-             boolean passed = false;
+           String output = sView.toString().trim();
 
-             double[] val2 = {0.3, 0.7, 0.4, 0.8, 1.4, 1.1};
-             SkyView sView = new SkyView(2, 3, val2);
-             String expect = "0.3, 0.7, 0.4, \n1.1, 1.4, 0.8,";
+           passed = getResults(expect, output, "Checking for expected output");
+           assertTrue(passed);
+       }
 
-             String output = sView.toString().trim();
+       @Test
+       public void testMain2()
+       {
+           boolean passed = false;
 
-             passed = getResults(expect, output, "Checking for expected output");
-             assertTrue(passed);
-         }
-     }
+           double[] val2 = {0.3, 0.7, 0.4, 0.8, 1.4, 1.1};
+           SkyView sView = new SkyView(2, 3, val2);
+           String expect = "0.3, 0.7, 0.4, \n1.1, 1.4, 0.8,";
+
+           String output = sView.toString().trim();
+
+           passed = getResults(expect, output, "Checking for expected output");
+           assertTrue(passed);
+       }
+   }
+

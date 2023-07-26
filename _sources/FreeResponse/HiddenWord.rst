@@ -79,60 +79,80 @@ The code below has comments to help you get started.  It also has a main method 
    } // end of class
    ====
    import static org.junit.Assert.*;
-     import org.junit.*;
-     import java.io.*;
 
-     //import java.util.Arrays;
-     //import java.util.ArrayList;
+   import org.junit.*;
 
-     public class RunestoneTests extends CodeTestHelper
-     {
-         public RunestoneTests() {
-             super("HiddenWord");
-             //CodeTestHelper.sort = true;
-         }
+   import java.io.*;
 
-         @Test
-         public void testMain1() {
-             boolean passed = false;
+   // import java.util.Arrays;
+   // import java.util.ArrayList;
 
-             String expect = "+A+++ it should print +A+++\nH**** it should print H****\nH*++* it should print H*++*\nHAR*S it should print HAR*S\nHARPS it should print HARPS";
+   public class RunestoneTests extends CodeTestHelper
+   {
+       public RunestoneTests()
+       {
+           super("HiddenWord");
+           // CodeTestHelper.sort = true;
+       }
 
-             String output = getMethodOutput("main");
+       @Test
+       public void testMain1()
+       {
+           boolean passed = false;
 
-             passed = getResults(expect, output, "Checking for expected output from main");
-             assertTrue(passed);
-         }
+           String expect =
+                   "+A+++ it should print +A+++\n"
+                       + "H**** it should print H****\n"
+                       + "H*++* it should print H*++*\n"
+                       + "HAR*S it should print HAR*S\n"
+                       + "HARPS it should print HARPS";
 
-         @Test
-         public void testMain2() {
-             boolean passed = false;
+           String output = getMethodOutput("main");
 
-             String word = "CSAWESOME";
-             String hint = "CSCSCSZZZ";
+           passed = getResults(expect, output, "Checking for expected output from main");
+           assertTrue(passed);
+       }
 
-             HiddenWord puzzle = new HiddenWord(word);
+       @Test
+       public void testMain2()
+       {
+           boolean passed = false;
 
-             String output = puzzle.getHint(hint);
-             String expect = "CS+++S***";
+           String word = "CSAWESOME";
+           String hint = "CSCSCSZZZ";
 
-             passed = getResults(expect, output, "Checking for expected output \"" + word + "\" with hint \""+ hint + "\"");
-             assertTrue(passed);
-         }
+           HiddenWord puzzle = new HiddenWord(word);
 
-         @Test
-         public void testMain3() {
-             boolean passed = false;
+           String output = puzzle.getHint(hint);
+           String expect = "CS+++S***";
 
-             String word = "CSAWESOME";
-             String hint = "EZZZZSOME";
+           passed =
+                   getResults(
+                           expect,
+                           output,
+                           "Checking for expected output \"" + word + "\" with hint \"" + hint + "\"");
+           assertTrue(passed);
+       }
 
-             HiddenWord puzzle = new HiddenWord(word);
+       @Test
+       public void testMain3()
+       {
+           boolean passed = false;
 
-             String output = puzzle.getHint(hint);
-             String expect = "+****SOME";
+           String word = "CSAWESOME";
+           String hint = "EZZZZSOME";
 
-             passed = getResults(expect, output, "Checking for expected output \"" + word + "\" with hint \""+ hint + "\"");
-             assertTrue(passed);
-         }
-     }
+           HiddenWord puzzle = new HiddenWord(word);
+
+           String output = puzzle.getHint(hint);
+           String expect = "+****SOME";
+
+           passed =
+                   getResults(
+                           expect,
+                           output,
+                           "Checking for expected output \"" + word + "\" with hint \"" + hint + "\"");
+           assertTrue(passed);
+       }
+   }
+
