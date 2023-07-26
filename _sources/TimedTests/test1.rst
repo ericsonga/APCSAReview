@@ -83,7 +83,8 @@ Click the |start| button when you are ready to begin the exam, but only then as 
 
       .. code-block:: java
 
-        for (int j = 1; j <= 3; j++) {
+        for (int j = 1; j <= 3; j++) 
+        {
            for (int k = 1; k < 4; k++)
               System.out.print(j * k + " ");
         }
@@ -107,8 +108,10 @@ Click the |start| button when you are ready to begin the exam, but only then as 
 
         public int mystery(int n)
         {
-           if (n == 0) return 1;
-           else return 2 * mystery (n - 1);
+           if (n == 0) 
+               return 1;
+           else 
+               return 2 * mystery (n - 1);
         }
 
 
@@ -201,8 +204,10 @@ Click the |start| button when you are ready to begin the exam, but only then as 
 
          I.
 
-         for (int i = 0; i < 5; i++) {
-            for (int j = 0; j < i; j++) {
+         for (int i = 0; i < 5; i++) 
+         {
+            for (int j = 0; j < i; j++) 
+            {
                System.out.print(i);
             }
             System.out.println();
@@ -210,8 +215,10 @@ Click the |start| button when you are ready to begin the exam, but only then as 
 
          II.
 
-         for (int i = 1; i < 5; i++) {
-            for (int j = i; j > 0; j--) {
+         for (int i = 1; i < 5; i++) 
+         {
+            for (int j = i; j > 0; j--) 
+            {
                System.out.print(i);
             }
             System.out.println();
@@ -219,8 +226,10 @@ Click the |start| button when you are ready to begin the exam, but only then as 
 
          III.
 
-         for (int i  = 1; i <= 5; i++) {
-            for (int j = i; j > 0; j--) {
+         for (int i  = 1; i <= 5; i++) 
+         {
+            for (int j = i; j > 0; j--) 
+            {
                System.out.print(i);
             }
             System.out.println();
@@ -228,16 +237,20 @@ Click the |start| button when you are ready to begin the exam, but only then as 
 
          IV.
 
-         for (int i = 1; i < 6; i++) {
-            for (int j = 0; j < i; j++) {
+         for (int i = 1; i < 6; i++) 
+         {
+            for (int j = 0; j < i; j++) 
+            {
                System.out.println(i);
             }
          }
 
          V.
 
-         for (int i = 0; i < 5; i++) {
-            for (int j = 0; j < i; j++) {
+         for (int i = 0; i < 5; i++) 
+         {
+            for (int j = 0; j < i; j++) 
+            {
                System.out.print(i+1);
             }
             System.out.println();
@@ -365,7 +378,7 @@ Click the |start| button when you are ready to begin the exam, but only then as 
 
             // postcondition: returns the number of hours
             public int getHours()
-               { /* implementation not shown */ }
+            { /* implementation not shown */ }
 
             // postcondition: returns the number
             // of minutes; 0 <= minutes < 60
@@ -699,46 +712,23 @@ Click the |start| button when you are ready to begin the exam, but only then as 
 
          public static void conditionTest(int num1, int num2)
          {
-            if ((num1 > 0) && (num2 > 0)) {
+            if ((num1 > 0) && (num2 > 0)) 
+            {
                if (num1 > num2)
                   System.out.println("A");
                else
                   System.out.println("B");
             }
-            else if ((num2 < 0) || (num1 < 0)) {
+            else if ((num2 < 0) || (num1 < 0)) 
+            {
                 System.out.println("C");
             }
-            else if (num2 < 0) {
+            else if (num2 < 0) 
+            {
                System.out.println("D");
             }
-            else {
+            else 
+            {
                System.out.println("E");
             }
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
