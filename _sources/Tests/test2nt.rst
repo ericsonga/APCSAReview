@@ -281,18 +281,18 @@ The following problems are similar to what you might see on the AP CSA exam.  Pl
 
       public class Cat
       {
-         public String display()
-         {
-            System.out.print("Cats! ");
-         }
+          public String display()
+          {
+              System.out.print("Cats! ");
+          }
       }
 
       public class FluffyCat extends Cat
       {
-         public String display()
-         {
-            System.out.print("Cool!");
-         }
+          public String display()
+          {
+              System.out.print("Cool!");
+          }
       }
 
 .. mchoice:: qtnt2_10
@@ -487,19 +487,19 @@ The following problems are similar to what you might see on the AP CSA exam.  Pl
 
       public class Car
       {
-         public void drive()
-         {
-            System.out.print("Vroom vroom! ");
-         }
+          public void drive()
+          {
+              System.out.print("Vroom vroom! ");
+          }
       }
 
       public class Minivan extends Car
       {
-         public void drive()
-         {
-            super.drive();
-            System.out.print(" Let's go! ");
-         }
+          public void drive()
+          {
+              super.drive();
+              System.out.print(" Let's go! ");
+          }
       }
 
 .. mchoice:: qtnt2_17

@@ -185,9 +185,11 @@ The following problems are similar to what you might see on the AP CSA exam.  Pl
       .. code-block:: java
 
         int x = 10, y = 0;
-        while(x > 5){
+        while(x > 5)
+        {
             y = 3;
-            while(y < x){
+            while(y < x)
+            {
                 y *= 2;
                 if( y % x == 1)
                     y += x;
@@ -228,14 +230,14 @@ The following problems are similar to what you might see on the AP CSA exam.  Pl
       :feedback_d: it is <= k so inclusive of k
       :feedback_e: max of k -1 iterations
 
-      Consider the folllowing code segment. Assume ``k`` is some positive integer greater than 2. How many times will "SMALL" be printed?
+      Consider the following code segment. Assume ``k`` is some positive integer greater than 2. How many times will "SMALL" be printed?
 
       .. code-block:: Java
 
         for(int i = 2; i <= k; i++)
         {
             if(arr[i] < someValue)
-                System.out.print("SMALL");
+               System.out.print("SMALL");
         }
 
 .. mchoice:: qtnt5_11
@@ -392,33 +394,41 @@ The following problems are similar to what you might see on the AP CSA exam.  Pl
 
     .. code-block:: java
 
-        class Dog{
+        class Dog
+        {
 
-          public void act(){
-              System.out.print("run ");
-              eat();
-          }
-          public void eat(){
-              System.out.print("eat ");
-          }
+            public void act()
+            {
+                System.out.print("run ");
+                eat();
+            }
+
+            public void eat()
+            {
+                System.out.print("eat ");
+            }
         }
 
-        public class UnderDog extends Dog{
+        public class UnderDog extends Dog
+        {
 
-          public void act(){
-              super.act();
-              System.out.print("sleep ");
-          }
+            public void act()
+            {
+                super.act();
+                System.out.print("sleep ");
+            }
 
-          public void eat(){
-              super.eat();
-              System.out.print("bark ");
-          }
+            public void eat()
+            {
+                super.eat();
+                System.out.print("bark ");
+            }
 
-          public static void main(String[] args){
-              Dog fido = new UnderDog();
-              fido.act();
-          }
+            public static void main(String[] args)
+            {
+                Dog fido = new UnderDog();
+                fido.act();
+            }
         }
 
 .. mchoice:: qtnt5_17

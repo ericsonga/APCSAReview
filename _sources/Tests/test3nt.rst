@@ -339,7 +339,11 @@ The following problems are similar to what you might see on the AP CSA exam.  Pl
               name = "Animal";
           }
 
-          public String makeNoise() { return ""; };
+          public String makeNoise()
+          {
+              return "";
+          }
+          ;
 
           public String getName()
           {
@@ -366,12 +370,10 @@ The following problems are similar to what you might see on the AP CSA exam.  Pl
 
           public static void main(String[] args)
           {
-             Animal piglet = new Pig("Piglet");
-             System.out.print(piglet.getName());
+              Animal piglet = new Pig("Piglet");
+              System.out.print(piglet.getName());
           }
       }
-
-
 
 .. mchoice:: qtnt3_11
    :answer_a: arr[i] / 2 = 2

@@ -531,7 +531,7 @@ The following problems are similar to what you might see on the AP CSA exam.  Pl
 
           public Student(String theName, int theAge, int theGrade)
           {
-              super (theName, theAge);
+              super(theName, theAge);
               grade = theGrade;
           }
 
@@ -555,8 +555,6 @@ The following problems are similar to what you might see on the AP CSA exam.  Pl
               grade++;
           }
       }
-
-
 
 .. mchoice:: qtnt4_19
    :answer_a: I only
