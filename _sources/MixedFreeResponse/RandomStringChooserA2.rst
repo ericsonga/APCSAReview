@@ -76,54 +76,80 @@ The code below has comments to help you get started.  It also has a main method 
    } // end of class
    ====
    import static org.junit.Assert.*;
-     import org.junit.*;
-     import java.io.*;
 
+   import org.junit.*;
 
-     public class RunestoneTests extends CodeTestHelper
-     {
-         public RunestoneTests() {
-             super("RandomStringChooser");
-             //CodeTestHelper.sort = true;
-         }
+   import java.io.*;
 
-         @Test
-         public void testMain1() {
-             boolean passed = false;
+   public class RunestoneTests extends CodeTestHelper
+   {
+       public RunestoneTests()
+       {
+           super("RandomStringChooser");
+           // CodeTestHelper.sort = true;
+       }
 
-             String expect = "It should print the words in the array in a random order and then NONE twice\non \nbus \nwheels \nthe \nNONE \nNONE";
+       @Test
+       public void testMain1()
+       {
+           boolean passed = false;
 
-             String output1 = getMethodOutput("main");
+           String expect =
+                   "It should print the words in the array in a random order and then NONE twice\n"
+                       + "on \n"
+                       + "bus \n"
+                       + "wheels \n"
+                       + "the \n"
+                       + "NONE \n"
+                       + "NONE";
 
-             expect = expect.substring(expect.indexOf("\n")+1);
-             output1 = output1.substring(output1.indexOf("\n")+1);
+           String output1 = getMethodOutput("main");
 
-             int num1 = countOccurences(output1, "wheels");
-             int num2 = countOccurences(output1, "on");
-             int num3 = countOccurences(output1, "the");
-             int num4 = countOccurences(output1, "bus");
-             int num5 = countOccurences(output1, "NONE");
+           expect = expect.substring(expect.indexOf("\n") + 1);
+           output1 = output1.substring(output1.indexOf("\n") + 1);
 
-             passed = num1 == 1 && num2 == 1 && num3 == 1 && num4 == 1 && num5 == 2;
+           int num1 = countOccurences(output1, "wheels");
+           int num2 = countOccurences(output1, "on");
+           int num3 = countOccurences(output1, "the");
+           int num4 = countOccurences(output1, "bus");
+           int num5 = countOccurences(output1, "NONE");
 
-             getResults(expect, output1, "Checking that each word is in output correct number of times", passed);
-             assertTrue(passed);
-         }
+           passed = num1 == 1 && num2 == 1 && num3 == 1 && num4 == 1 && num5 == 2;
 
-         @Test
-         public void testMain2() {
-             boolean passed = false;
+           getResults(
+                   expect,
+                   output1,
+                   "Checking that each word is in output correct number of times",
+                   passed);
+           assertTrue(passed);
+       }
 
-             String expect = "It should print the words in the array in a random order and then NONE twice\non \nbus \nwheels \nthe \nNONE \nNONE";
+       @Test
+       public void testMain2()
+       {
+           boolean passed = false;
 
-             String output1 = getMethodOutput("main");
-             String output2 = getMethodOutput("main");
-             String output3 = getMethodOutput("main");
+           String expect =
+                   "It should print the words in the array in a random order and then NONE twice\n"
+                       + "on \n"
+                       + "bus \n"
+                       + "wheels \n"
+                       + "the \n"
+                       + "NONE \n"
+                       + "NONE";
 
-             passed = !output1.equals(output2) || !output2.equals(output3) || !output1.equals(output3);
+           String output1 = getMethodOutput("main");
+           String output2 = getMethodOutput("main");
+           String output3 = getMethodOutput("main");
 
-             getResults("Different results each time", "Same results each time", "Checking for random order", passed);
-                 assertTrue(passed);
+           passed = !output1.equals(output2) || !output2.equals(output3) || !output1.equals(output3);
 
-         }
-     }
+           getResults(
+                   "Different results each time",
+                   "Same results each time",
+                   "Checking for random order",
+                   passed);
+           assertTrue(passed);
+       }
+   }
+
