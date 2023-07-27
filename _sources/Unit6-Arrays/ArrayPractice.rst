@@ -182,7 +182,10 @@ Code Practice with Arrays
                   public static void main(String[] args)
                   {
                       int[] a1 = {1, 3, 7, 9, 15};
-                      for (int i = a1.length - 1; i >= 0; i--) System.out.print(a1[i] + ", ");
+                      for (int i = a1.length - 1; i >= 0; i--) 
+                      {
+                          System.out.print(a1[i] + ", ");
+                      }
                   }
               }
 
@@ -286,7 +289,10 @@ Code Practice with Arrays
                   public static void main(String[] args)
                   {
                       int[] a1 = {0, 3, 6, 7, 9, 10};
-                      for (int value : a1) {}
+                      for (int value : a1) 
+                      {
+                          // your code here
+                      }
                   }
               }
 
@@ -519,7 +525,10 @@ Code Practice with Arrays
                       int sum = 0;
                       for (int value : arr)
                       {
-                          if (value >= 0) sum = sum + value;
+                          if (value >= 0)
+                          {
+                               sum = sum + value;
+                          }
                       }
                       return sum;
                   }

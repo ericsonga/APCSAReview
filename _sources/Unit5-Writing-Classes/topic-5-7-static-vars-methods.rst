@@ -159,7 +159,10 @@ Another common use for static variables is the keep track of a minimum or maximu
            public Temperature(double t)
            {
                temperature = t;
-               if (t > maxTemp) maxTemp = t;
+               if (t > maxTemp)
+               {
+                    maxTemp = t;
+               }
            }
 
            public static void main(String[] args)
@@ -215,7 +218,10 @@ You can see this code in action in the |visualizer2|.
       public Temperature(double t)
       {
           temperature = t;
-          if (t > maxTemp) maxTemp = t;
+          if (t > maxTemp)
+          {
+               maxTemp = t;
+          }
       }
 
       public static printMax()

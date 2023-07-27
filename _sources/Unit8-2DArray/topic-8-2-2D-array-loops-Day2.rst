@@ -214,7 +214,10 @@ You can loop through just part of a 2D array. You can change the starting value 
            {
                for (int col = colStart; col <= colEnd; col++)
                {
-                   if (a[row][col] == value) count++;
+                   if (a[row][col] == value)
+                   {
+                        count++;
+                   }
                }
            }
            return count;
@@ -267,7 +270,10 @@ Here is a linear search algorithm where we access each row and then apply a line
            {
                for (int col = 0; col < array[0].length; col++)
                {
-                   if (array[row][col] == value) found = true;
+                   if (array[row][col] == value)
+                   {
+                        found = true;
+                   }
                }
            }
            return found;

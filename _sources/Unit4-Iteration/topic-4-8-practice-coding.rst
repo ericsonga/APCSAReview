@@ -666,8 +666,14 @@ Coding Practice with Loops
                   {
                       for (int x = 10; x >= 1; x--)
                       {
-                          if (x % 2 == 0) System.out.println(x + " is even");
-                          else System.out.println(x + " is odd");
+                          if (x % 2 == 0) 
+                          {
+                              System.out.println(x + " is even");
+                          }
+                          else 
+                          { 
+                              System.out.println(x + " is odd");
+                          }
                       }
                   }
               }

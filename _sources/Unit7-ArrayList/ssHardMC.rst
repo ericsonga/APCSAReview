@@ -196,7 +196,10 @@ You can step through the code above by clicking on the following link `Ex-12-8-4
          {
              for (int i = 2; i < n; i++)
              {
-                 if (n % i == 0) return false;
+                 if (n % i == 0)
+                 {
+                      return false;
+                 }
              }
              return true;
          }
@@ -251,7 +254,10 @@ You can step through the code above by clicking on the following link `Ex-12-8-5
                   first = 0;
                   for (j = 1; j <= i; j++)
                   {
-                      if (grades[j] < grades[first]) first = j;
+                      if (grades[j] < grades[first])
+                      {
+                           first = j;
+                      }
                   }
                   temp = grades[first];
                   grades[first] = grades[i];

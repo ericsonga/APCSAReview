@@ -77,8 +77,14 @@ The code below has a main method for testing the ``highestScoringStudent`` metho
            double score = 0;
            for (int i = 0; i < key.size(); i++)
            {
-               if (key.get(i).equals(answers.get(i))) score = score + 1.0;
-               else if (!answers.get(i).equals("?")) score = score - 0.25;
+               if (key.get(i).equals(answers.get(i)))
+               {
+                    score = score + 1.0;
+               }
+               else if (!answers.get(i).equals("?"))
+               {
+                    score = score - 0.25;
+               }
            }
            return score;
        }
