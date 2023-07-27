@@ -518,7 +518,9 @@ Click the |start| button when you are ready to begin the exam, but only then as 
              {
                  result = 1;
              }
-             else {result = -1;}
+             else {
+                 result = -1;
+             }
              System.out.println(result);
           }
 
@@ -534,7 +536,10 @@ Click the |start| button when you are ready to begin the exam, but only then as 
                 {
                      result = 1;
                 }
-                else {result = -1;}
+                else
+                {
+                    result = -1;
+                }
              }
              System.out.println(result);
           }
@@ -550,7 +555,10 @@ Click the |start| button when you are ready to begin the exam, but only then as 
              {
                   result = 1;
              }
-             else {result = -1;}
+             else
+             {
+                 result = -1;
+             }
              System.out.println(result);
           }
 
