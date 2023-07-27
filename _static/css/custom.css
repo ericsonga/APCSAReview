@@ -169,3 +169,14 @@ div.highlight-java + p,
 .ac_actions {
   flex-wrap: wrap;
 }
+
+/* To unsquish bottom of unit test results box */
+.unittest-results {
+    margin-bottom: 8px;
+}
+
+/* For tables in the FRQs (default 0) */
+.ptx-runestone-container td, .ptx-runestone-container th, 
+.runestone-sphinx td, .runestone-sphinx th {
+    padding: 5px;
+}
