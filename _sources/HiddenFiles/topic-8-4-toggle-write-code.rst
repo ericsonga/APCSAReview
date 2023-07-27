@@ -203,7 +203,12 @@ This is the write code problems associated with the mixed up code problems.
                 {
                     output += Arrays.toString(mat[i]);
 
-                    if (i < mat.length - 1) output += ", ";
+                    if (i < mat.length - 1)
+                    {
+                         output += ", ";
+                    }
+
+
                 }
 
                 return output + "]";

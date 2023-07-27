@@ -510,19 +510,36 @@ Click the |start| button when you are ready to begin the exam, but only then as 
           public void sample(int num1, int num2) 
           {
              int result = 99;
-             if (num1==num2) {result = 0;}
-             else if (num1>num2){result = 1;}
-             else {result = -1;}
+             if (num1==num2)
+             {
+                  result = 0;
+             }
+             else if (num1>num2)
+             {
+                 result = 1;
+             }
+             else {
+                 result = -1;
+             }
              System.out.println(result);
           }
 
           public void method1(int num1, int num2) 
           {
              int result=99;
-             if (num1 == num2) {result = 0;}
+             if (num1 == num2)
+             {
+                  result = 0;
+             }
              else {
-                if(num1 > num2) {result = 1;}
-                else {result = -1;}
+                if(num1 > num2)
+                {
+                     result = 1;
+                }
+                else
+                {
+                    result = -1;
+                }
              }
              System.out.println(result);
           }
@@ -530,18 +547,36 @@ Click the |start| button when you are ready to begin the exam, but only then as 
           public void method2(int num1, int num2) 
           {
              int result = 99;
-             if (num1 == num2) {result = 0;}
-             if (num1 >= num2) {result = 1;}
-             else {result = -1;}
+             if (num1 == num2)
+             {
+                  result = 0;
+             }
+             if (num1 >= num2)
+             {
+                  result = 1;
+             }
+             else
+             {
+                 result = -1;
+             }
              System.out.println(result);
           }
 
           public void method3(int num1, int num2) 
           {
              int result = 99 ;
-             if (num1 == num2) {result = 0;}
-             if (num1 > num2) {result = 1;}
-             if (num1 < num2) {result = -1;}
+             if (num1 == num2)
+             {
+                  result = 0;
+             }
+             if (num1 > num2)
+             {
+                  result = 1;
+             }
+             if (num1 < num2)
+             {
+                  result = -1;
+             }
              System.out.println(result);
           }
 

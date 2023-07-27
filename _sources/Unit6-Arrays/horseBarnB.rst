@@ -168,8 +168,14 @@ Try to write the code for the method ``consolidate`` in the ``HorseBarn`` class.
            {
                h = spaces[i];
                result = result + "space " + i + " has ";
-               if (h == null) result = result + " null \n";
-               else result = result + h.toString() + "\n";
+               if (h == null)
+               {
+                   result = result + " null \n";
+               }
+               else 
+               {
+                   result = result + h.toString() + "\n";
+               }
            }
            return result;
        }

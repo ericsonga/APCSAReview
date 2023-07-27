@@ -322,8 +322,10 @@ Try and Solve It
            {
                String letter1 = word.substring(i, i + 1);
                String letter2 = "";
-               if (i < word.length() - 1) letter2 = word.substring(i + 1, i + 2);
-
+               if (i < word.length() - 1) 
+               {
+                   letter2 = word.substring(i + 1, i + 2);
+               }
                if (letter1.equals("A")
                        && !letter2.equals("A")
                        && !letter2.equals(""))

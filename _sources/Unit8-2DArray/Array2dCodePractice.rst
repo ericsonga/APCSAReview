@@ -734,7 +734,12 @@ Code Practice with 2D Arrays
                       {
                           for (int col = 0; col < array[0].length; col++)
                           {
-                              if (array[row][col] == 7) count++;
+                              if (array[row][col] == 7)
+                              {
+                                   count++;
+                              }
+
+
                           }
                       }
 

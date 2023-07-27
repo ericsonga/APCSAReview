@@ -377,14 +377,17 @@ Try And Solve It
            ciph.fillBlock("There's 1");
 
            if ((ciph.letterBlock[0][2]).equals("e")
-                   && (ciph.letterBlock[2][1]).equals(" ")) test1 = true;
+                   && (ciph.letterBlock[2][1]).equals(" ")) 
+               test1 = true;
            else
                System.out.println(
                        "Oops! Looks like your code doesn't properly insert the given"
                            + " String.\n");
 
-           if (test1) System.out.println("Looks like your code works well!");
-           else System.out.println("Make a few changes, please.");
+           if (test1) 
+               System.out.println("Looks like your code works well!");
+           else 
+               System.out.println("Make a few changes, please.");
        }
    }
 

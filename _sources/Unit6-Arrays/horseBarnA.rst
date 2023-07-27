@@ -182,8 +182,14 @@ Try to write the code for the method ``findHorseSpace`` in the ``HorseBarn`` cla
            {
                h = spaces[i];
                result = result + "space " + i + " has ";
-               if (h == null) result = result + " null \n";
-               else result = result + h.toString() + "\n";
+               if (h == null)
+               {
+                    result = result + " null \n";
+               }
+               else 
+               {
+                   result = result + h.toString() + "\n";
+               }
            }
            return result;
        }

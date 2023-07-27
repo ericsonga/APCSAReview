@@ -529,27 +529,44 @@ Write the method ``getEmptyLocations`` in the code below.
        {
            // reduce mod 360 and round to closest multiple of 45
            int adjustedDirection = (direction + HALF_RIGHT / 2) % FULL_CIRCLE;
-           if (adjustedDirection < 0) adjustedDirection += FULL_CIRCLE;
-
+           if (adjustedDirection < 0)
+           {
+                adjustedDirection += FULL_CIRCLE;
+           }
            adjustedDirection = (adjustedDirection / HALF_RIGHT) * HALF_RIGHT;
            int dc = 0;
            int dr = 0;
-           if (adjustedDirection == EAST) dc = 1;
+           if (adjustedDirection == EAST)
+           {
+                dc = 1;
+           }
            else if (adjustedDirection == SOUTHEAST)
            {
                dc = 1;
                dr = 1;
-           } else if (adjustedDirection == SOUTH) dr = 1;
+           } 
+           else if (adjustedDirection == SOUTH)
+           {
+               dr = 1;
+           }
            else if (adjustedDirection == SOUTHWEST)
            {
                dc = -1;
                dr = 1;
-           } else if (adjustedDirection == WEST) dc = -1;
+           } 
+           else if (adjustedDirection == WEST)
+           {
+               dc = -1;
+           }
            else if (adjustedDirection == NORTHWEST)
            {
                dc = -1;
                dr = -1;
-           } else if (adjustedDirection == NORTH) dr = -1;
+           }
+           else if (adjustedDirection == NORTH)
+           {
+               dr = -1;
+           }
            else if (adjustedDirection == NORTHEAST)
            {
                dc = 1;
@@ -578,7 +595,12 @@ Write the method ``getEmptyLocations`` in the code below.
            // prepare for truncating division by 45 degrees
            compassAngle += HALF_RIGHT / 2;
            // wrap negative angles
-           if (compassAngle < 0) compassAngle += FULL_CIRCLE;
+           if (compassAngle < 0)
+           {
+                compassAngle += FULL_CIRCLE;
+           }
+
+
            // round to nearest multiple of 45
            return (compassAngle / HALF_RIGHT) * HALF_RIGHT;
        }
@@ -592,7 +614,10 @@ Write the method ``getEmptyLocations`` in the code below.
         */
        public boolean equals(Object other)
        {
-           if (!(other instanceof Location)) return false;
+           if (!(other instanceof Location))
+           {
+                return false;
+           }
 
            Location otherLoc = (Location) other;
            return getRow() == otherLoc.getRow() && getCol() == otherLoc.getCol();
@@ -698,7 +723,8 @@ Write the method ``getEmptyLocations`` in the code below.
                {
                    // If there's an object at this location, put it in the array.
                    Location loc = new Location(r, c);
-                   if (get(loc) != null) theLocations.add(loc);
+                   if (get(loc) != null) 
+                       theLocations.add(loc);
                }
            }
 
@@ -767,7 +793,8 @@ Write the method ``getEmptyLocations`` in the code below.
            for (int i = 0; i < Location.FULL_CIRCLE / Location.HALF_RIGHT; i++)
            {
                Location neighborLoc = loc.getAdjacentLocation(d);
-               if (isValid(neighborLoc)) locs.add(neighborLoc);
+               if (isValid(neighborLoc)) 
+                   locs.add(neighborLoc);
                d = d + Location.HALF_RIGHT;
            }
            return locs;
@@ -778,17 +805,20 @@ Write the method ``getEmptyLocations`` in the code below.
            ArrayList<Location> locs = new ArrayList<Location>();
            for (Location neighborLoc : getValidAdjacentLocations(loc))
            {
-               if (get(neighborLoc) == null) locs.add(neighborLoc);
+               if (get(neighborLoc) == null) 
+                   locs.add(neighborLoc);
            }
            return locs;
        }
+
 
        public ArrayList<Location> getOccupiedAdjacentLocations(Location loc)
        {
            ArrayList<Location> locs = new ArrayList<Location>();
            for (Location neighborLoc : getValidAdjacentLocations(loc))
            {
-               if (get(neighborLoc) != null) locs.add(neighborLoc);
+               if (get(neighborLoc) != null) 
+                   locs.add(neighborLoc);
            }
            return locs;
        }
@@ -805,7 +835,8 @@ Write the method ``getEmptyLocations`` in the code below.
            String s = "{";
            for (Location loc : getOccupiedLocations())
            {
-               if (s.length() > 1) s += ", ";
+               if (s.length() > 1) 
+                   s += ", ";
                s += loc + "=" + get(loc);
            }
            return s + "}";

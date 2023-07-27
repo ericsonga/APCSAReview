@@ -107,7 +107,10 @@ Click the "Start" button when you are ready to begin the exam, but only then as 
         int count = 0;
         for (int i = 0; i < b.length; i++)
         {
-           if (b[i] == true) count++;
+           if (b[i] == true)
+           {
+                count++;
+           }
         }
 
 

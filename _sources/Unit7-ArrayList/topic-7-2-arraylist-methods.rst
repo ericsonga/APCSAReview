@@ -148,7 +148,10 @@ You can add values to an ArrayList by using the method ``add(obj)`` which will a
            String longest = lines[0];
            for (int i = 0; i < lines.length; i++)
            {
-               if (lines[i].length() > longest.length()) longest = lines[i];
+               if (lines[i].length() > longest.length())
+               {
+                    longest = lines[i];
+               }
            }
 
            boolean passed = output.matches("[\\s\\S]+" + searchString + "[\\s\\S]*");
