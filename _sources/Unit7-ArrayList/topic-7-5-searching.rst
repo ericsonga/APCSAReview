@@ -671,12 +671,7 @@ Run your code with the following test cases and record the runtime for each word
 
     <iframe height="400px" width="100%" src="https://docs.google.com/document/d/1VrQf7wFIEIu7qfOg7FYUTeNWrdrRsPw4eJSdehhz4dM/edit?usp=sharing&rm=minimal" style="max-width:90%; margin-left:5%" ></iframe>
 
-
-
-
-Next, write a ``binarySpellCheck(word)`` method using the code above as a guide. Add in a counter variable, and increment it in the binary search loop after finding the middle of the list, and print it out before returning true or false. Change the ``main`` method to call the binarySpellCheck method instead of the linearSpellCheck method, and try all the same test case words again. Record the runtimes for binary search and compare with the linear search times. What do you notice? Which one was faster in general? Were there some cases where each was faster? How fast were they with misspelled words? Record your answers in the window below.
-
-
+What do you notice? Which one was faster in general? Were there some cases where each was faster? How fast were they with misspelled words? Record your answers in the window below.
 
 .. shortanswer:: challenge7-5-binary-search
 
