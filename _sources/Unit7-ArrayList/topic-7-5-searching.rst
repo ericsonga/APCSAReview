@@ -138,7 +138,7 @@ Sequential or linear search can be used to find a value in *unsorted* data. It u
       }
   }
 
-Here is the same search with an ArrayList. The same algorithms can be used with arrays or ArrayLists, but notice that size() and get(i) is used with ArrayLists instead of length and [i] which are used in arrays. Many of our examples will use arrays for simplicity since with arrays, we know how many items we have and the size won't change during runtime. There are methods such as ``contains`` that can be used in ArrayLists instead of writing your own algorithms. However, they are not in the AP CSA Java subset.
+Here is the same search with an ``ArrayList``. The same algorithms can be used with arrays or ``ArrayList``\ s, but notice that ``size()`` and ``get(i)`` are used with ``ArrayList``\ s instead of ``length`` and ``[i]`` which are used in arrays. Many of our examples will use arrays for simplicity since with arrays, we know how many items we have and the size won't change during runtime. There are methods such as ``contains`` that can be used in ArrayLists instead of writing your own algorithms. However, they are not in the AP CSA Java subset.
 
 .. activecode:: seqSearchList
     :language: java
