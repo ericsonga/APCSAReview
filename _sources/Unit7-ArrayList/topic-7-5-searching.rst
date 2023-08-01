@@ -298,7 +298,7 @@ Binary Search
    single: binary search
    pair: search; binary
 
-How do you search for something in a phone book or dictionary that is in alphabetical order? If you're looking for something beginning with M, you wouldn't want to start with page 1. You would probably start somewhere in the middle of the book. This is the idea behind **binary search**.
+How do you search for something in a phone book or dictionary that is in alphabetical or numerical order? If you're looking for something beginning with M or on page 100 in a 200 page book, you wouldn't want to start with page 1. You would probably start looking somewhere in the middle of the book. This is the idea behind **binary search**.
 
 If your array or list is already in order (sorted), it’s faster to find an element using binary search. Binary search can only be used if the data is sorted.
 
@@ -555,9 +555,11 @@ Runtimes can be described with mathematical functions. For an array of size n, l
 
    <a href= "https://docs.google.com/document/d/1VrQf7wFIEIu7qfOg7FYUTeNWrdrRsPw4eJSdehhz4dM/edit?usp=sharing" style="text-decoration:underline" target="_blank" >Google document</a>
 
-Let's go back to the spellchecker that we created in Unit 6. Remember that it used linear search to find a word in the dictionary. The dictionary file is actually in alphabetical order though, so we could have used a much faster binary search.
+Let's go back to the spellchecker that we created in Unit 6. Here is a version of the spellchecker below that reads the dictionary file into an ``ArrayList``. The advantage of using an ``ArrayList`` instead of an array for the dictionary is that we do not need to know or declare the size of the dictionary in advance.  
 
-Here is a version of the spellchecker below that reads the dictionary file into an ``ArrayList``. Write a linear search method and a binary search method to search for a given word in the dictionary using the code in this lesson as a guide. You will need to use ``size`` and ``get(i)`` instead of [] to get an element in the ``ArrayList`` dictionary at index i. You will need to use the ``equals`` and ``compareTo`` methods to compare Strings. Have the methods return a count of how many words they had to check before finding the word or returning. 
+In Unit 6, we used linear search to find a word in the dictionary. However, the dictionary file is actually in alphabetical order.  We could have used a much faster binary search algorithm! Let's see how much faster we can make it. 
+
+Write a linear search method and a binary search method to search for a given word in the dictionary using the code in this lesson as a guide. You will need to use ``size`` and ``get(i)`` instead of [] to get an element in the ``ArrayList`` dictionary at index i. You will need to use the ``equals`` and ``compareTo`` methods to compare Strings. Have the methods return a count of how many words they had to check before finding the word or returning. 
 
 .. activecode:: challenge7-5-search-coding
     :language: java
