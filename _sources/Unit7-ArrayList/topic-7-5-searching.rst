@@ -76,7 +76,7 @@ Sequential Search
    pair: search; sequential
    pair: search; linear
 
-Sequential or linear search can be used to find a value in *unsorted* data. It usually starts at the first element and walks through the array or list until it finds the value it is looking for and returns the index it found it at, or it loops until the end of the array or list and then it returns a -1 to show that it didn't find the value in the array or list. Click on *Show CodeLens* below to see linear search in action.
+Sequential or linear search can be used to find a value in *unsorted* data. It usually starts at the first element and walks through the array or list until it finds the value it is looking for and returns its index it. If it reaches the end of the array or list without finding the value, the search method usually returns a -1 to show that it didn't find the value in the array or list. Click on *Show CodeLens* below to see linear search in action.
 
 
 
