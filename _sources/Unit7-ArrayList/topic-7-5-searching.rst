@@ -582,14 +582,14 @@ Here is a version of the spellchecker below that reads the dictionary file into 
         }
 
         /**
-         * Write a linearSearch(word) method that finds the index 
-         * of a value in the ArrayList dictionary.
+         * Write a linearSearch(word) method that finds a word
+         * in the ArrayList dictionary. It should also keep 
+         * a count of the number of words checked.
          *
          * @param String word to be found in elements.
-         * @return an index of target in elements if found; 
-         *         the size of the dictionary otherwise.
+         * @return a count of how many words checked before returning.
          */
-        public int linearSearch(String target)
+        public int linearSearch(String word)
         {
            
         }
@@ -602,12 +602,12 @@ Here is a version of the spellchecker below that reads the dictionary file into 
          * @param String word to be found in elements.
          * @return a count of how many words checked before returning.
          */
-        public int binarySearch(String target)
+        public int binarySearch(String word)
         {
            
         }
 
-        public static void main(String[] args)
+        public static void main(String[] args) throws IOException
         {
             SpellChecker checker = new SpellChecker();
             String word = "catz";
@@ -636,7 +636,7 @@ Here is a version of the spellchecker below that reads the dictionary file into 
        {
            Object[] args = {"medium"};
            String output = getMethodOutput("linearSearch", args);
-           String expect = "67510";
+           String expect = "5549";
 
            boolean passed =
                    getResults(
@@ -652,7 +652,7 @@ Here is a version of the spellchecker below that reads the dictionary file into 
        {
            Object[] args = {"medium"};
            String output = getMethodOutput("binarySearch", args);
-           String expect = "17";
+           String expect = "13";
 
            boolean passed =
                    getResults(
