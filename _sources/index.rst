@@ -106,7 +106,7 @@ If you see errors or bugs, please report them with this |errors form|. If you ar
 
 (last revised 7/24/2023)
 
-© Copyright 2015 Barb Ericson, Univ. Michigan, 2019 revised by Beryl Hoffman (Elms College). Created using `Runestone  <http://runestone.academy>`_.
+© Copyright 2014-2023 Barb Ericson, Univ. Michigan; 2019-2023 Beryl Hoffman,
+Elms College; 2023 Peter Seibel, Berkeley High School. All rights reserved.
 
-
-
+Created using `Runestone  <http://runestone.academy>`_.
