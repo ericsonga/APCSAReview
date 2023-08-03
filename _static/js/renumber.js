@@ -3,6 +3,10 @@
 // correspond to the order give by the College Board in the CED. For now the
 // funny numbers are commented out because I haven't added those chapters yet.
 
+// Set this to true to skip renumbering things if they won't actually change.
+// You'll still get the small table of contents built from the actual TOC.
+const skipRenumbering = true;
+
 const numbers = [
   // add a unit 0 to the toctree and then uncomment the next line
   // "0",
@@ -90,10 +94,12 @@ const buildSmallTOC = () => {
 
 window.addEventListener("DOMContentLoaded", (event) => {
 
-  // Renumbering of the TOC and section headers.
-  selectors.forEach(s => {
-    document.querySelectorAll(s).forEach(renumber);
-  });
+  if (!skipRenumbering) {
+    // Renumbering of the TOC and section headers.
+    selectors.forEach(s => {
+      document.querySelectorAll(s).forEach(renumber);
+    });
+  }
 
   // Fill the small toc if it's on the page
   document.getElementById('small_toc')?.replaceWith(buildSmallTOC());
