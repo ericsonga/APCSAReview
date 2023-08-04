@@ -442,9 +442,9 @@ of the method. The calling method must then do something useful with that value.
         {
             private double radius;
 
-            public Circle()
+            public Circle(double r)
             {
-                radius = 10;
+                radius = r;
             }
 
             public double getArea()
@@ -457,7 +457,7 @@ of the method. The calling method must then do something useful with that value.
 
    .. code-block:: java
 
-        Circle c = new Circle();
+        Circle c = new Circle(10);
         System.out.println(c.getArea());
 
    What is printed as a result of executing the code segment? (If you get stuck, try this |visualization1| to see this code in action.)
@@ -486,15 +486,15 @@ of the method. The calling method must then do something useful with that value.
             private int width;
             private int height;
 
-            public Rectangle()
+            public Rectangle(int w, int h)
             {
-                width = 10;
-                height = 15;
+                width = w;
+                height = h;
             }
 
-            public void resize()
+            public void resize(int amt)
             {
-                width += 5;
+                width += amt;
             }
 
             public int getArea()
@@ -508,8 +508,8 @@ of the method. The calling method must then do something useful with that value.
 
    .. code-block:: java
 
-        Rectangle r = new Rectangle();
-        r.resize();
+        Rectangle r = new Rectangle(10, 15);
+        r.resize(5);
         System.out.println(r.getArea());
 
 
