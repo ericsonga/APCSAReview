@@ -367,7 +367,7 @@ Here are some examples of using getters on the ``Turtle`` object ``yertle``.
 Methods with Arguments and a Return Value
 -----------------------------------------
 
-Since getters take no arguments all they can do is return a value based on the
+Since getters take no arguments, all they can do is return a value based on the
 current state of the object. But often it’s useful to have methods that compute
 values based on both the current state of the object and some arguments.
 
@@ -407,6 +407,115 @@ of the method. The calling method must then do something useful with that value.
 
 |Exercise| **Check your understanding**
 
+.. |visualization1| raw:: html
+
+   <a href="https://pythontutor.com/render.html#code=public%20class%20Circle%0A%7B%0A%20%20%20%20private%20double%20radius%3B%0A%0A%20%20%20%20public%20Circle%28%29%0A%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20radius%20%3D%2010%3B%0A%20%20%20%20%7D%0A%0A%20%20%20%20public%20double%20getArea%28%29%0A%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20return%203.14159%20*%20radius%20*%20radius%3B%0A%20%20%20%20%7D%0A%0A%20%20%20%20public%20static%20void%20main%28String%5B%5D%20args%29%20%7B%0A%20%20%20%20%20%20%20%20Circle%20c%20%3D%20new%20Circle%28%29%3B%0A%20%20%20%20%20%20%20%20System.out.println%28c.getArea%28%29%29%3B%0A%20%20%20%20%7D%0A%7D&cumulative=false&curInstr=0&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=java&rawInputLstJSON=%5B%5D&textReferences=false" target="_blank" style="text-decoration:underline">visualization</a>
+
+.. |visualization2| raw:: html
+
+   <a href="https://pythontutor.com/render.html#code=public%20class%20Rectangle%0A%7B%0A%20%20%20%20private%20int%20width%3B%0A%20%20%20%20private%20int%20height%3B%0A%0A%20%20%20%20public%20Rectangle%28%29%0A%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20width%20%3D%2010%3B%0A%20%20%20%20%20%20%20%20height%20%3D%2015%3B%0A%20%20%20%20%7D%0A%0A%20%20%20%20public%20void%20resize%28%29%0A%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20width%20%2B%3D%205%3B%0A%20%20%20%20%7D%0A%0A%20%20%20%20public%20int%20getArea%28%29%0A%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20return%20width%20*%20height%3B%0A%20%20%20%20%7D%0A%0A%20%20%20%20public%20static%20void%20main%28String%5B%5D%20args%29%0A%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20Rectangle%20r%20%3D%20new%20Rectangle%28%29%3B%0A%20%20%20%20%20%20%20%20r.resize%28%29%3B%0A%20%20%20%20%20%20%20%20System.out.println%28r.getArea%28%29%29%3B%0A%20%20%20%20%7D%0A%7D&cumulative=false&curInstr=0&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=java&rawInputLstJSON=%5B%5D&textReferences=false" target="_blank" style="text-decoration:underline">visualization</a>
+
+.. |visualization3| raw:: html
+
+   <a href="http://www.pythontutor.com/visualize.html#code=public%20class%20MethodTrace%20%0A%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20public%20int%20square%28int%20x%29%0A%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20return%20x*x%3B%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20public%20int%20divide%28int%20x,%20int%20y%29%0A%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20return%20x/y%3B%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20public%20static%20void%20main%28String%5B%5D%20args%29%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20MethodTrace%20traceObj%20%3D%20new%20MethodTrace%28%29%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20System.out.println%28%20traceObj.square%282%29%20%2B%20traceObj.divide%286,2%29%20%29%3B%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%7D&cumulative=false&curInstr=16&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=java&rawInputLstJSON=%5B%5D&textReferences=false" target="_blank" style="text-decoration:underline">visualization</a>
+
+
+.. mchoice:: traceCircleArea
+   :practice: T
+   :answer_a: 0
+   :answer_b: 314.159
+   :answer_c: c.getArea()
+   :answer_d: The code will not compile.
+   :answer_e: 100.0
+   :correct: b
+   :feedback_a: First, call the constructor, then call getArea().
+   :feedback_b: Correct! getArea() returns 3.14159 * radius * radius, where radius is set to 10 by the constructor.
+   :feedback_c: c.getArea() is a method call, not a value.
+   :feedback_d: The code does compile.
+   :feedback_e: Don't forget to multiply by 3.14159.
+
+   Consider the following class definition.
+
+   .. code-block:: java
+
+        public class Circle
+        {
+            private double radius;
+
+            public Circle()
+            {
+                radius = 10;
+            }
+
+            public double getArea()
+            {
+                return 3.14159 * radius * radius;
+            }
+        }
+
+   Assume that the following code segment appears in a main method.
+
+   .. code-block:: java
+
+        Circle c = new Circle();
+        System.out.println(c.getArea());
+
+   What is printed as a result of executing the code segment? (If you get stuck, try this |visualization1| to see this code in action.)
+
+
+.. mchoice:: traceRectangleArea
+   :practice: T
+   :answer_a: 150
+   :answer_b: 150.0
+   :answer_c: 225
+   :answer_d: 255.0
+   :answer_e: 0
+   :correct: c
+   :feedback_a: Note that the method resize() is called before getArea().
+   :feedback_b: Note that the method resize() is called before getArea().
+   :feedback_c: Correct! resize() increases the width by 5, so the area is 15 * 15 = 225.
+   :feedback_d: Note that getArea() returns an int
+   :feedback_e: Note that the constructor initializes width and height.
+
+   Consider the following class definition.
+
+   .. code-block:: java
+
+        public class Rectangle
+        {
+            private int width;
+            private int height;
+
+            public Rectangle()
+            {
+                width = 10;
+                height = 15;
+            }
+
+            public void resize()
+            {
+                width += 5;
+            }
+
+            public int getArea()
+            {
+                return width * height;
+            }
+        }
+
+
+   Assume that the following code segment appears in a main method.
+
+   .. code-block:: java
+
+        Rectangle r = new Rectangle();
+        r.resize();
+        System.out.println(r.getArea());
+
+
+   What is printed as a result of executing the code segment? (If you get stuck, try this |visualization2| to see this code in action.)
+
+
 .. mchoice:: traceReturnMethods
    :practice: T
    :answer_a: 5
@@ -421,7 +530,7 @@ of the method. The calling method must then do something useful with that value.
    :feedback_d: Make sure you square(2) and add the results before printing it out.
    :feedback_e: Try the code in an active code window.
 
-   What does the following code print out?
+   What does the following code print out? (If you get stuck, try this |visualization3| to see this code in action.)
 
    .. code-block:: java
 
@@ -444,11 +553,8 @@ of the method. The calling method must then do something useful with that value.
           }
       }
 
-.. |visualization| raw:: html
 
-   <a href="http://www.pythontutor.com/visualize.html#code=public%20class%20MethodTrace%20%0A%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20public%20int%20square%28int%20x%29%0A%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20return%20x*x%3B%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20public%20int%20divide%28int%20x,%20int%20y%29%0A%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20return%20x/y%3B%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20public%20static%20void%20main%28String%5B%5D%20args%29%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20MethodTrace%20traceObj%20%3D%20new%20MethodTrace%28%29%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20System.out.println%28%20traceObj.square%282%29%20%2B%20traceObj.divide%286,2%29%20%29%3B%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%7D&cumulative=false&curInstr=16&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=java&rawInputLstJSON=%5B%5D&textReferences=false" target="_blank" style="text-decoration:underline">visualization</a>
 
-Try this |visualization| to see this code in action.
 
 |Groupwork| Programming Challenge : Turtle Distances
 ----------------------------------------------------
