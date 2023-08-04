@@ -409,11 +409,11 @@ of the method. The calling method must then do something useful with that value.
 
 .. |visualization1| raw:: html
 
-   <a href="https://pythontutor.com/render.html#code=public%20class%20Circle%0A%7B%0A%20%20%20%20private%20double%20radius%3B%0A%0A%20%20%20%20public%20Circle%28%29%0A%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20radius%20%3D%2010%3B%0A%20%20%20%20%7D%0A%0A%20%20%20%20public%20double%20getArea%28%29%0A%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20return%203.14159%20*%20radius%20*%20radius%3B%0A%20%20%20%20%7D%0A%0A%20%20%20%20public%20static%20void%20main%28String%5B%5D%20args%29%20%7B%0A%20%20%20%20%20%20%20%20Circle%20c%20%3D%20new%20Circle%28%29%3B%0A%20%20%20%20%20%20%20%20System.out.println%28c.getArea%28%29%29%3B%0A%20%20%20%20%7D%0A%7D&cumulative=false&curInstr=0&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=java&rawInputLstJSON=%5B%5D&textReferences=false" target="_blank" style="text-decoration:underline">visualization</a>
+   <a href="https://pythontutor.com/visualize.html#code=public%20class%20Circle%0A%7B%0A%20%20%20%20private%20double%20radius%3B%0A%0A%20%20%20%20public%20Circle%28double%20r%29%0A%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20radius%20%3D%20r%3B%0A%20%20%20%20%7D%0A%0A%20%20%20%20public%20double%20getArea%28%29%0A%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20return%203.14159%20*%20radius%20*%20radius%3B%0A%20%20%20%20%7D%0A%0A%20%20%20%20public%20static%20void%20main%28String%5B%5D%20args%29%20%7B%0A%20%20%20%20%20%20%20%20Circle%20c%20%3D%20new%20Circle%2810%29%3B%0A%20%20%20%20%20%20%20%20System.out.println%28c.getArea%28%29%29%3B%0A%20%20%20%20%7D%0A%7D&cumulative=false&heapPrimitives=nevernest&mode=edit&origin=opt-frontend.js&py=java&rawInputLstJSON=%5B%5D&textReferences=false" target="_blank" style="text-decoration:underline">visualization</a>
 
 .. |visualization2| raw:: html
 
-   <a href="https://pythontutor.com/render.html#code=public%20class%20Rectangle%0A%7B%0A%20%20%20%20private%20int%20width%3B%0A%20%20%20%20private%20int%20height%3B%0A%0A%20%20%20%20public%20Rectangle%28%29%0A%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20width%20%3D%2010%3B%0A%20%20%20%20%20%20%20%20height%20%3D%2015%3B%0A%20%20%20%20%7D%0A%0A%20%20%20%20public%20void%20resize%28%29%0A%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20width%20%2B%3D%205%3B%0A%20%20%20%20%7D%0A%0A%20%20%20%20public%20int%20getArea%28%29%0A%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20return%20width%20*%20height%3B%0A%20%20%20%20%7D%0A%0A%20%20%20%20public%20static%20void%20main%28String%5B%5D%20args%29%0A%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20Rectangle%20r%20%3D%20new%20Rectangle%28%29%3B%0A%20%20%20%20%20%20%20%20r.resize%28%29%3B%0A%20%20%20%20%20%20%20%20System.out.println%28r.getArea%28%29%29%3B%0A%20%20%20%20%7D%0A%7D&cumulative=false&curInstr=0&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=java&rawInputLstJSON=%5B%5D&textReferences=false" target="_blank" style="text-decoration:underline">visualization</a>
+   <a href="https://pythontutor.com/render.html#code=public%20class%20Rectangle%0A%7B%0A%20%20%20%20private%20int%20width%3B%0A%20%20%20%20private%20int%20height%3B%0A%0A%20%20%20%20public%20Rectangle%28int%20w,%20int%20h%29%0A%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20width%20%3D%20w%3B%0A%20%20%20%20%20%20%20%20height%20%3D%20h%3B%0A%20%20%20%20%7D%0A%0A%20%20%20%20public%20void%20resize%28%29%0A%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20width%20%2B%3D%205%3B%0A%20%20%20%20%7D%0A%0A%20%20%20%20public%20int%20getArea%28%29%0A%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20return%20width%20*%20height%3B%0A%20%20%20%20%7D%0A%0A%20%20%20%20public%20static%20void%20main%28String%5B%5D%20args%29%0A%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20Rectangle%20r%20%3D%20new%20Rectangle%2810,%2015%29%3B%0A%20%20%20%20%20%20%20%20r.resize%28%29%3B%0A%20%20%20%20%20%20%20%20System.out.println%28r.getArea%28%29%29%3B%0A%20%20%20%20%7D%0A%7D&cumulative=false&curInstr=20&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=java&rawInputLstJSON=%5B%5D&textReferences=false" target="_blank" style="text-decoration:underline">visualization</a>
 
 .. |visualization3| raw:: html
 
@@ -442,9 +442,9 @@ of the method. The calling method must then do something useful with that value.
         {
             private double radius;
 
-            public Circle()
+            public Circle(double r)
             {
-                radius = 10;
+                radius = r;
             }
 
             public double getArea()
@@ -457,7 +457,7 @@ of the method. The calling method must then do something useful with that value.
 
    .. code-block:: java
 
-        Circle c = new Circle();
+        Circle c = new Circle(10);
         System.out.println(c.getArea());
 
    What is printed as a result of executing the code segment? (If you get stuck, try this |visualization1| to see this code in action.)
@@ -486,15 +486,15 @@ of the method. The calling method must then do something useful with that value.
             private int width;
             private int height;
 
-            public Rectangle()
+            public Rectangle(int w, int h)
             {
-                width = 10;
-                height = 15;
+                width = w;
+                height = h;
             }
 
-            public void resize()
+            public void resize(int amt)
             {
-                width += 5;
+                width += amt;
             }
 
             public int getArea()
@@ -508,8 +508,8 @@ of the method. The calling method must then do something useful with that value.
 
    .. code-block:: java
 
-        Rectangle r = new Rectangle();
-        r.resize();
+        Rectangle r = new Rectangle(10, 15);
+        r.resize(5);
         System.out.println(r.getArea());
 
 
@@ -572,6 +572,8 @@ of the method. The calling method must then do something useful with that value.
     :autograde: unittest
     :datafile: turtleClasses.jar
 
+    Use the ``getXPos``, ``getYPos``, and ``getDistance(x,y)`` methods to find yertle's distance from the point (0,0). Add another turtle, move both turtles to different positions, and find the distance between the two turtles.
+    ~~~~
     import java.awt.*;
     import java.util.*;
 
