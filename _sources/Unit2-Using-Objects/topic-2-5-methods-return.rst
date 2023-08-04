@@ -572,6 +572,8 @@ of the method. The calling method must then do something useful with that value.
     :autograde: unittest
     :datafile: turtleClasses.jar
 
+    Use the ``getXPos``, ``getYPos``, and ``getDistance(x,y)`` methods to find yertle's distance from the point (0,0). Add another turtle, move both turtles to different positions, and find the distance between the two turtles.
+    ~~~~
     import java.awt.*;
     import java.util.*;
 
