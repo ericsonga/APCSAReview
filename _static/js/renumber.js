@@ -45,6 +45,7 @@ const selectors = [
   '.toctree-wrapper ul li a',          // Main TOC
   'span.section-number',               // Text in chapters
   'li.dropdown.globaltoc-container a', // Dropdown menu
+  'title',                             // Page title (shows up in browser tab)
 ];
 
 const chapterNum = /^(\d+)(\.| )(.*)$/;
