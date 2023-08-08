@@ -245,12 +245,22 @@ Since these methods calculate and return a value, you need to use that value, fo
 
    public class RunestoneTests extends CodeTestHelper
    {
+       @Test
        public void test1() 
        {
             Object[] args = {10.5, 20.6};
             String output = getMethodOutput("distance", args);
             String expect = "10.1";
             boolean passed = getResults(expect, output, "distance(10.5, 20.6)");
+            assertTrue(passed);
+       }
+       @Test
+       public void test2() 
+       {
+            Object[] args = { -5, 2.4 };
+            String output = getMethodOutput("distance", args);
+            String expect = "7.4";
+            boolean passed = getResults(expect, output, "distance(-5, 2.4)");
             assertTrue(passed);
        }
    }
