@@ -46,7 +46,7 @@ Games would be boring if the same thing happened each time you played the game. 
 to generate different possibilities.  You need to know how to use the ``Math.random()`` method to generate a random number.
 
 There are lots of mathematical methods
-that you might want to use in your programs like ``Math.abs(int)`` which calculates the absolute value of an int argument (which is the value of a number without its sign, for example Math.abs(-4) = 4).
+that you might want to use in your programs like ``Math.abs(int)`` which calculates the absolute value of an int argument (which is the value of a number without its sign, for example ``Math.abs(-4)`` = 4).
 
 These methods are in the **Math** class defined in the java.lang package. These are **static methods** which means you can call them by just using ``ClassName.methodName()`` without creating an object.
 This is why we can just say Math.random() instead of having to define an object of the class Math.
@@ -55,6 +55,208 @@ This is why we can just say Math.random() instead of having to define an object 
 .. note::
 
    **Static methods** (also called class methods) are called using the class name and the dot operator (.) followed by the method name. You do not need to create an object of the class to use them. You can use ClassName.methodName() or just methodName() if they are called from within the same class.
+
+Math Functions
+---------------
+
+.. |AP CSA Reference Sheet| raw:: html
+
+   <a href="https://apstudents.collegeboard.org/ap/pdf/ap-computer-science-a-java-quick-reference_0.pdf" target="_blank">AP CSA Java Quick Reference Sheet</a>
+
+The ``Math`` class ``static`` methods in the AP CSA subset, and listed in the |AP CSA Reference Sheet| which you can use during the AP exam, are below. 
+
+- ``int abs(int)`` : Returns the absolute value of an int value (which is the value of a number without its sign, for example ``Math.abs(-4)`` = 4).
+
+- ``double abs(double)`` : Returns the absolute value of a double value.
+
+- ``double pow(double, double)`` : Returns the value of the first parameter raised to the power of the second parameter.
+
+- ``double sqrt(double)`` :  Returns the positive square root of a double value.
+
+- ``double random()`` :  Returns a double value greater than or equal to 0.0 and less than 1.0 (not including 1.0!).
+
+These Math methods are mathematical functions that compute new values from their arguments. You may be able to guess what ``abs``, ``pow``, and ``sqrt`` do, from their abbreviations. 
+
+``Math.abs`` takes a single argument, either a ``double`` or an
+``int`` and returns a value of the same type which is the absolute value of the
+argument. The absolute value is the positive value of the number without its sign. So:
+
+.. code-block:: java
+
+   Math.abs(45);    // returns 45
+   Math.abs(-45);   // returns 45
+   Math.abs(33.3);  // returns 33.3
+   Math.abs(-33.3); // returns 33.3
+
+``Math.pow`` takes two argument, both ``double``\ s and returns
+a ``double`` which is the first argument raised to the power of the second
+argument.
+
+.. code-block:: java
+
+   Math.pow(2 , 3); // returns 8.0
+   Math.pow(10, 6); // returns 1000000.0
+   Math.pow(2, -3); // returns 0.125
+
+``Math.sqrt`` takes an ``double`` argument and returns a positive ``double`` value which is the square root of the argument. For example, the square root of 9 is 3 because 3 squared is 9.
+
+.. code-block:: java
+
+   Math.sqrt(9); // returns 3.0
+
+Since these methods calculate and return a value, you need to use that value, for example in an assignment statement or in a print statement to see the result.  For example:
+
+.. code-block:: java
+
+   System.out.println("The square root of 9 is " + Math.sqrt(9));
+
+|CodingEx| **Coding Exercise**
+
+.. activecode:: trymath
+   :language: java
+   :autograde: unittest
+
+   Try the Math methods below. Change the code so that it computes the absolute value of -4, the square root of 9, and 3 raised to the power of 2.
+   ~~~~
+   public class TryMath
+   {
+       public static void main(String[] args)
+       {
+           // TODO: Change the code below to compute 
+           //       the absolute value of -4, 
+           //       the square root of 9, 
+           //       and 3 raised to the power of 2.
+           System.out.println( Math.abs(-2) );
+           System.out.println( Math.sqrt(4) );
+           System.out.println( Math.pow(2, 3) );
+       }
+   }
+   ====
+   import static org.junit.Assert.*;
+
+   import org.junit.*;
+
+   import java.io.*;
+
+   public class RunestoneTests extends CodeTestHelper
+   {
+       @Test
+       public void testMain() throws IOException
+       {
+           String output = getMethodOutput("main");
+           String expect = "4\n3\n9\n";
+           boolean passed = getResults(expect, output, "Expected output from main after changing code");
+           assertTrue(passed);
+       }
+   }
+
+|Exercise| **Check Your Understanding**
+
+.. mchoice:: call-sqrt-mc
+
+   Knowing that ``Math.sqrt`` takes a single argument, Which of these are
+   syntactically correct method calls to ``sqrt``?
+
+   - ``Math.sqrt(2)``
+
+     + ✅ This is a simple call to ``Math.sqrt`` with the argument 2.
+
+   - ``Math.sqrt()``
+
+     - ❌ ``Math.sqrt`` takes one argument. This would be a correct call if it took no arguments.
+
+   - ``Math.sqrt(2, 4)``
+
+     - ❌ ``Math.sqrt`` takes one argument. This would be a correct call if it took two arguments.
+
+   - ``Math.sqrt(2 + 3)``
+
+     + ✅ The argument passed to ``Math.sqrt`` is the value of the expression 2 + 3, namely 5.
+
+   - ``Math.sqrt 2``
+
+     - ❌ You must have parentheses around the arguments.
+
+   - ``Math.sqrt(Math.sqrt(2))``
+
+     + ✅ The argument passed to ``Math.sqrt`` is the value of *another* call to
+       ``Math.sqrt`` which is perfectly fine.
+
+
+.. mchoice:: distance-mc
+   :multiple_answers:
+
+   The distance between two numbers is defined as the absolute value of their
+   difference. (There difference is just what you get when you subtract one from
+   the other.) Which of the following are a correct expression to compute the
+   distance between ``a`` and ``b``.
+
+   - ``Math.abs(a - b)``
+
+     + ✅ ``a - b`` gives us the difference and ``Math.abs`` gives us the
+       absolute value of that difference.
+
+   - ``Math.abs(a) - Math.abs(b)``
+
+     - ❌ Consider the distance between -2 and 3. It should be five. What value
+       would this expression produce in that case?
+
+   - ``Math.abs(a + b)``
+
+     - ❌ We need to start with the difference between ``a`` and ``b``, not their sum.
+
+
+|CodingEx| **Coding Exercise**
+
+.. activecode:: distance-abs
+
+   The distance between two numbers, as we discussed in the problem 
+   above, is defined as the absolute value of their difference.
+   (There difference is just what you get when you subtract one from the other.)
+
+   The code below contains a method signature and empty body for a method
+   ``distance`` which is called from ``main``. Fill in the body so it correctly
+   computes the distance between ``a`` and ``b``.
+   ~~~~
+   public class DistanceCalculator
+   {
+
+       public static double distance(double a, double b)
+       {
+           // TODO: calculate the distance from a to b using subtraction and Math.abs.
+           double distance = 0.0; 
+
+           return distance;
+       }
+
+       public static void main(String[] argv)
+       {
+           System.out.println("distance(13.5, 26.2) = " + distance(13.5, 26.2));
+           System.out.println("distance(26.2, 13.5) = " + distance(26.2, 13.5));
+           System.out.println(distance(13.5, 26.2) == distance(13.5, 26.2));
+       }
+   }
+   ====
+   import static org.junit.Assert.*;
+
+   import org.junit.*;
+
+   import java.io.*;
+
+   public class RunestoneTests extends CodeTestHelper
+   {
+       public void test1() 
+       {
+            Object[] args = {10.5, 20.6};
+            String output = getMethodOutput("distance", args);
+            String expect = "10.1";
+            boolean passed = getResults(expect, output, "distance(10.5, 20.6)");
+            assertTrue(passed);
+       }
+   }
+
+Random Numbers
+----------------
 
 The ``Math.random()`` method returns a number greater than or equal to 0.0, and less than 1.0.
 
@@ -227,25 +429,7 @@ Here are some examples that move a random number into a specific range.
    Which of the following statements assigns a random integer between 25 and 60, inclusive, to rn?
 
 
-Other Math functions that you can use are:
 
-
-- int abs(int) : Returns the absolute value of an int value (which is the value of a number without its sign, for example Math.abs(-4) = 4).
-
-- double abs(double) : Returns the absolute value of a double value.
-
-- double pow(double, double) : Returns the value of the first parameter raised to the power of the second parameter.
-
-- double sqrt(double) :  Returns the positive square root of a double value.
-
-- double random() :  Returns a double value greater than or equal to 0.0 and less than 1.0 (not including 1.0!).
-
-
-.. |AP CSA Reference Sheet| raw:: html
-
-   <a href="https://apstudents.collegeboard.org/ap/pdf/ap-computer-science-a-java-quick-reference_0.pdf" target="_blank">AP CSA Java Quick Reference Sheet</a>
-
-These are all listed in the |AP CSA Reference Sheet| that you can use during the exam.
 
 |Groupwork| Programming Challenge : Random Numbers
 --------------------------------------------------
