@@ -277,10 +277,10 @@ Since these methods calculate and return a value, you need to use that value, fo
        @Test
        public void test2() 
        {
-            Object[] args = { -5, 2.4 };
+            Object[] args = { -5.0, 2.4 };
             String output = getMethodOutput("distance", args);
             String expect = "7.4";
-            boolean passed = getResults(expect, output, "distance(-5, 2.4)");
+            boolean passed = getResults(expect, output, "distance(-5.0, 2.4)");
             assertTrue(passed);
        }
    }
