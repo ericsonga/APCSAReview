@@ -180,3 +180,7 @@ div.highlight-java + p,
 .runestone-sphinx td, .runestone-sphinx th {
     padding: 5px;
 }
+
+table.random-recipes tbody tr td:first-child {
+  text-align: left;
+}
