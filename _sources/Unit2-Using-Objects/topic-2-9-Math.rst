@@ -187,7 +187,7 @@ Since these methods calculate and return a value, you need to use that value, fo
    :multiple_answers:
 
    The distance between two numbers is defined as the absolute value of their
-   difference. (There difference is just what you get when you subtract one from
+   difference. (Their difference is just what you get when you subtract one from
    the other.) Which of the following are a correct expression to compute the
    distance between ``a`` and ``b``.
 
