@@ -42,11 +42,10 @@ Using the Math Class
     single: random method
     pair: Math; random method
 
-Games would be boring if the same thing happened each time you played the game.  Games often use random numbers
-to generate different possibilities.  You need to know how to use the ``Math.random()`` method to generate a random number.
+Games would be boring if the same thing happened each time you played the game.  Random numbers can be used in games to generate different outcomes each time the game is played. In Java, the ``Math.random()`` method to is used to generate a random number.
 
-There are lots of mathematical methods
-that you might want to use in your programs like ``Math.abs(int)`` which calculates the absolute value of an int argument (which is the value of a number without its sign, for example ``Math.abs(-4)`` = 4).
+There are lots of mathematical methods in the ``Math`` class
+that you might want to use in your programs, like ``Math.pow(2,3)`` which calculates the 2 to the power of 3 which is 8.
 
 These methods are in the **Math** class defined in the java.lang package. These are **static methods** which means you can call them by just using ``ClassName.methodName()`` without creating an object.
 This is why we can just say Math.random() instead of having to define an object of the class Math.
@@ -56,14 +55,20 @@ This is why we can just say Math.random() instead of having to define an object 
 
    **Static methods** (also called class methods) are called using the class name and the dot operator (.) followed by the method name. You do not need to create an object of the class to use them. You can use ClassName.methodName() or just methodName() if they are called from within the same class.
 
-Math Functions
----------------
+Mathematical Functions
+-----------------------
 
 .. |AP CSA Reference Sheet| raw:: html
 
    <a href="https://apstudents.collegeboard.org/ap/pdf/ap-computer-science-a-java-quick-reference_0.pdf" target="_blank">AP CSA Java Quick Reference Sheet</a>
 
-The ``Math`` class ``static`` methods in the AP CSA subset, and listed in the |AP CSA Reference Sheet| which you can use during the AP exam, are below. 
+.. |Math class Javadocs| raw:: html
+
+   <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Math.html" target="_blank">Math class Javadocs</a>
+
+
+
+The ``Math`` class contains the following methods that are in the AP CSA subset. There are more ``Math`` methods, outside of what you need on the AP exam, that you can find in the |Math class Javadocs|.
 
 - ``int abs(int)`` : Returns the absolute value of an int value (which is the value of a number without its sign, for example ``Math.abs(-4)`` = 4).
 
@@ -75,11 +80,18 @@ The ``Math`` class ``static`` methods in the AP CSA subset, and listed in the |A
 
 - ``double random()`` :  Returns a double value greater than or equal to 0.0 and less than 1.0 (not including 1.0!).
 
+
+.. note::
+
+   All the ``Math`` methods that you may need to use or understand on the AP
+   exam are listed in the |AP CSA Reference Sheet| that you can use during the
+   exam.
+
 These Math methods are mathematical functions that compute new values from their arguments. You may be able to guess what ``abs``, ``pow``, and ``sqrt`` do, from their abbreviations. 
 
 ``Math.abs`` takes a single argument, either a ``double`` or an
 ``int`` and returns a value of the same type which is the absolute value of the
-argument. The absolute value is the positive value of the number without its sign. So:
+argument. The absolute value is the positive value of the number without its sign or its distance from 0. So:
 
 .. code-block:: java
 
@@ -183,13 +195,22 @@ Since these methods calculate and return a value, you need to use that value, fo
        ``Math.sqrt`` which is perfectly fine.
 
 
-.. mchoice:: distance-mc
-   :multiple_answers:
 
-   The distance between two numbers is defined as the absolute value of their
-   difference. (Their difference is just what you get when you subtract one from
-   the other.) Which of the following are a correct expression to compute the
-   distance between ``a`` and ``b``.
+.. mchoice:: distance-mc
+   :multiple_answers:  
+   :random:  
+   
+   The distance between two numbers on the number line is defined as the absolute value of their
+   difference. Their difference is just what you get when you subtract one from
+   the other. For example, the distance from 0 to 3 is 3, the distance from -3 to 0 is 3, and the distance from -3 to 1 is 4. 
+
+   .. image:: Figures/numberline.gif
+      :width: 300
+      :align: center
+      :alt: number line
+   
+   Which of the following are correct expressions to compute the
+   distance between the numbers ``a`` and ``b``. 
 
    - ``Math.abs(a - b)``
 
@@ -210,13 +231,12 @@ Since these methods calculate and return a value, you need to use that value, fo
 
 .. activecode:: distance-abs
 
-   The distance between two numbers, as we discussed in the problem 
+   The distance between two numbers on a number line, as we discussed in the problem 
    above, is defined as the absolute value of their difference.
-   (There difference is just what you get when you subtract one from the other.)
+   Their difference is just what you get when you subtract one from the other.
+   For example, the distance from 0 to 3 is 3, the distance from -3 to 0 is 3, and the distance from -3 to 1 is 4.
 
-   The code below contains a method signature and empty body for a method
-   ``distance`` which is called from ``main``. Fill in the body so it correctly
-   computes the distance between ``a`` and ``b``.
+   Fill in the method ``distance`` below so it correctly computes the distance between two numbers ``a`` and ``b``  using subtraction and Math.abs.
    ~~~~
    public class DistanceCalculator
    {
@@ -268,13 +288,23 @@ Since these methods calculate and return a value, you need to use that value, fo
 Random Numbers
 ----------------
 
-The ``Math.random()`` method returns a number greater than or equal to 0.0, and less than 1.0.
+The ``Math.random()`` method returns a double number greater than or equal to 0.0, and less than 1.0.
+When we talk about ranges of numbers sometimes
+we need to be precise about whether the ends of the range are part of the range.
+For example, ``Math.random`` returns a number between 0 and 1, but does that
+mean it can return exactly 0? Or exactly 1? As it turns out it can return 0 but
+never returns 1.
+
+When we need to be precise about this we’d say that it returns a number between
+0, *inclusive*, and 1, *exclusive*, meaning *include* 0 but *exclude* 1. Lots of
+ranges in Java are expressed this way, as you’ll see later on with an inclusive
+bottom and exclusive top.
 
 .. activecode:: random1
    :language: java
    :autograde: unittest
 
-   Try out the following code.  Run it several times to see what it prints each time.
+   Try the following code.  Run it several times to see what it prints each time.
    ~~~~
    public class Test3
    {
@@ -304,10 +334,81 @@ The ``Math.random()`` method returns a number greater than or equal to 0.0, and 
        }
    }
 
-You can use ``Math.random`` and a cast to integer to return a random integer between some starting and ending value.  The code below will create a random integer from 0 to 9. Remember that casting a double value to integer ``(int)`` will throw away any values after the decimal point.
+Getting a number between 0, inclusive, and 1, exclusive, may not seem all that
+useful. But we can expand the range easily enough. To see how, imagine you had
+less than a dollar to your name and you wanted to be richer—you’d want to find a
+way to **multiply** your money. If you could invest every penny you had in
+something that would multiply your money by 1,000 then instead of having
+somewhere between $0 and $1, then you’d have somewhere between $0 (inclusive—if
+you started with $0) and $1,000 (exclusive, since if you had even a fraction of
+a penny less than $1 multiplying by 1,000 would still leave you just a bit shy
+of $1,000.) If the investment multiplied your original money by a million,
+you’d have between $0 and $1,000,000! (But never *quite* $1,000,000.)
+
+Same trick applies to random numbers. The value ``Math.random`` returns is like
+the initial amount of money in your pocket, always a bit less than $1. If you
+multiply that value by any amount, it will stretch it into the range you want:
 
 |CodingEx| **Coding Exercise**
 
+.. activecode:: random-example-stretched
+   :language: java
+   :autograde: unittest
+
+   Try the following code. Run it several times to see what it prints each
+   time. Did you ever see 0.0? How about 1.0?
+   ~~~~
+   public class StretchedRandom
+   {
+       public static void main(String[] args)
+       {
+           System.out.println(Math.random() * 10);
+           System.out.println(Math.random() * 10);
+       }
+   }
+   ====
+   import static org.junit.Assert.*;
+
+   import org.junit.*;
+
+   import java.io.*;
+
+   public class RunestoneTests extends CodeTestHelper
+   {
+       @Test
+       public void testMain() throws IOException
+       {
+           String output = getMethodOutput("main");
+           String expect = output;
+           boolean passed = getResults(expect, output, "Expected output from main", true);
+           assertTrue(passed);
+       }
+   }
+
+
+You may have noticed that while the numbers generated were always in the range 0
+to 10, all the numbers probably had a lot a digits after the decimal point.
+Often we want a random integer, with nothing after the decimal point. Easy
+enough—casting a ``double`` to an ``int`` will throw away any values
+after the decimal point. For example,
+
+.. code-block:: java
+
+    // rnd is an integer in the range 0-9 (from 0 up to 10).
+    int rnd = (int)(Math.random()*10);  
+
+Finally, what if we want a number in a range that doesn’t start with 0, say a
+number from 1 to 10 (including 10) instead of from 0 to 9 (including 9)? Since
+the size of the two ranges is the same, with ten numbers in each, all we need to
+do is shift from the range we’ve generated into the range we want. In other
+words, add the difference between the two ranges, 1 in this case.    
+
+.. code-block:: java
+    
+    // rnd is an integer in the range 1-10 (including 10).
+    int rnd = (int)(Math.random()*10) + 1; 
+
+|CodingEx| **Coding Exercise**
 
 .. activecode:: randomRange
    :language: java
@@ -369,6 +470,50 @@ Here are some examples that move a random number into a specific range.
     // rnd4 is in the range -10 up to 9 (including 9). The range is doubled (9 - -10 + 1 = 20) and the minimum is -10.
     int rnd4 = (int)(Math.random()*20) - 10;
 
+So the general recipe for generating a random is to first stretch the value from
+``Math.random()`` until it’s in the right size range by multiplying by the size
+of the range. Then if you want an integer value, cast to ``int`` to discard the
+part after the decimal point. Then shift the value up by adding the minimum
+value. The table below shows some applications of that general recipe.
+
+.. rst-class:: random-recipes
+
+   .. list-table:: Random recipes
+      :widths: 70 10 10 10
+      :header-rows: 1
+
+      * - Expression
+        - Minimum (inclusive)
+        - Maximum (exclusive)
+        - Possible values
+      * - ``Math.random()``
+        - 0.0
+        - 1.0
+        - Over 9 quadrillion
+      * - ``Math.random() * 100``
+        - 0.0
+        - 100.0
+        - Over 9 quadrillion
+      * - ``(int)(Math.random() * 100)``
+        - 0
+        - 100
+        - 100
+      * - ``(int)(Math.random() * 50) + 25``
+        - 25
+        - 75
+        - 50
+      * - ``(int)(Math.random() * max)``
+        - 0
+        - max
+        - max
+      * - ``(int)(Math.random() * range) + min``
+        - min
+        - min + range
+        - range
+      * - ``(int)(Math.random() * (max - min)) + min``
+        - min
+        - max
+        - max - min
 
 |Exercise| **Check your understanding**
 
@@ -464,7 +609,7 @@ You may have a combination lock on your locker at school where you have to spin 
     90, 91, 92, 93, 94, 95, 96, 97, 98, 99
     </pre>
 
-Now what about the combination lock for this challenge? It has 3 dials with 0-40 (not including 40) numbers possible on each dial. In general, the formula to use is NumbersPerDial\ :sup:`numberOfDials`. Write this using the **Math.pow()** method in your code and save it into a variable and print out.
+Now what about the combination lock for this challenge? You will need to spin the dial 3 times: once to the right, once to the left, and once to the right to 3 different numbers from 0 up to 40 (not including 40). In general, the formula to use is NumbersPerDial\ :sup:`numberOfDials`. Write this using the **Math.pow()** method in your code and save it into a variable and print out.
 
 
 .. activecode:: challenge2-9-random-math
