@@ -100,6 +100,12 @@ argument. The absolute value is the positive value of the number without its sig
    Math.abs(33.3);  // returns 33.3
    Math.abs(-33.3); // returns 33.3
 
+.. image:: Figures/pow.png
+    :width: 80px
+    :align: left
+    :alt: Pow!
+
+
 ``Math.pow`` takes two argument, both ``double``\ s and returns
 a ``double`` which is the first argument raised to the power of the second
 argument.
@@ -156,7 +162,7 @@ Since these methods calculate and return a value, you need to use that value, fo
        public void testMain() throws IOException
        {
            String output = getMethodOutput("main");
-           String expect = "4\n3\n9\n";
+           String expect = "4\n3.0\n9.0\n";
            boolean passed = getResults(expect, output, "Expected output from main after changing code");
            assertTrue(passed);
        }
@@ -230,6 +236,8 @@ Since these methods calculate and return a value, you need to use that value, fo
 |CodingEx| **Coding Exercise**
 
 .. activecode:: distance-abs
+   :language: java
+   :autograde: unittest
 
    The distance between two numbers on a number line, as we discussed in the problem 
    above, is defined as the absolute value of their difference.
@@ -287,6 +295,11 @@ Since these methods calculate and return a value, you need to use that value, fo
 
 Random Numbers
 ----------------
+
+.. image:: Figures/dice.png
+    :width: 100
+    :align: left
+    :alt: Dice
 
 The ``Math.random()`` method returns a double number greater than or equal to 0.0, and less than 1.0.
 When we talk about ranges of numbers sometimes
