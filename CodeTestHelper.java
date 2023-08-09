@@ -315,7 +315,7 @@ public class CodeTestHelper {
     }
 
     private void recordResult(String expected, String got, String label, boolean passed) {
-        results += formatOutput(String.valueOf(expected), String.valueOf(got), label, passed) + "\n";
+        results += formatOutput(expected, got, label, passed) + "\n";
         assertTrue(passed);
     }
 
