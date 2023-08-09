@@ -210,8 +210,8 @@ Since these methods calculate and return a value, you need to use that value, fo
    difference. Their difference is just what you get when you subtract one from
    the other. For example, the distance from 0 to 3 is 3, the distance from -3 to 0 is 3, and the distance from -3 to 1 is 4. 
 
-   .. image:: Figures/numberline.gif
-      :width: 300
+   .. image:: Figures/number-line.svg
+      :width: 450px
       :align: center
       :alt: number line
    
@@ -297,7 +297,7 @@ Random Numbers
 ----------------
 
 .. image:: Figures/dice.png
-    :width: 100
+    :width: 100px
     :align: left
     :alt: Dice
 
@@ -603,7 +603,7 @@ value. The table below shows some applications of that general recipe.
 --------------------------------------------------
 
 .. image:: Figures/lock.jpg
-    :width: 100
+    :width: 100px
     :align: left
     :alt: lock
 
