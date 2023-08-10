@@ -121,7 +121,17 @@ The constructor that doesn't take any parameters, ``World()``, creates a graphic
     World world2 = new World(300,400); // creates a 300x400 world
 
 .. note::
-   The turtle world does not use the cartesian coordinate system.  The top left corner is (0,0), x increases to the right, and y increases towards the bottom of the page.
+
+   The turtle world does not use the Cartesian coordinate system with (0,0) in
+   in the middle the screen. Instead, (0,0) is at the top left corner of the
+   screen and x increases to the right and y increases towards the bottom of the
+   screen.
+
+   Most computer graphics systems use this coordinate system which is a carry
+   over from before computers could display graphics. When computer displays
+   were text based and mostly made by people using left-to-right, top-to-bottom
+   languages like English, it made sense to have the first character appear at
+   the top left and then count columns to the right and lines down.
 
 .. figure:: Figures/coords.png
     :width: 200px
@@ -779,4 +789,3 @@ AP Practice
                 inTheaters = false;
             }
         }
-
