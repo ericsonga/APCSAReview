@@ -40,6 +40,7 @@ import javax.tools.ToolProvider;
  * @version 3.0.2
  * @since 2023-07-12
  *
+ * @update 3.1.0 - Peter added a new set of `expect` methods.
  * @update 3.0.3 - Peter added a codeDigestChanged method.
  * @update 3.0.2 - Kate fixed the bug that main method only running once created
  * @update 3.0.1 - Kate added code so main method only runs once
