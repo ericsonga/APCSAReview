@@ -4,31 +4,15 @@
    :prefix: 2-1-
    :start: 1
 
-.. |repl| raw:: html
-
-   <a href="https://repl.it" target="_blank" style="text-decoration:underline">repl.it</a>
+|Time45|
 
 .. |repl link| raw:: html
 
-   <a href="https://firewalledreplit.com/@BerylHoffman/Java-Swing-Turtle#Main.java" target="_blank" style="text-decoration:underline">repl.it link</a>
+   <a href="https://firewalledreplit.com/@BerylHoffman/Java-Swing-Turtle#Main.java" target="_blank" style="text-decoration:underline">replit link</a>
 
 .. |github| raw:: html
 
-   <a href="https://github.com/bhoffman0/APCSA-2019/tree/master/_sources/Unit2-Using-Objects/TurtleJavaSwingCode.zip" target="_blank" style="text-decoration:underline">here</a>
-
-.. raw:: html
-
-   <div class="unit-time">
-     <svg xmlns="http://www.w3.org/2000/svg"
-          width="16"
-          height="16"
-          fill="currentColor"
-          class="bi bi-clock"
-          viewBox="0 0 16 16">
-       <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/>
-       <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"/>
-     </svg> Time estimate: 45 min.
-   </div>
+   <a href="https://github.com/bhoffman0/CSAwesome/raw/master/_sources/Unit2-Using-Objects/TurtleJavaSwingCode.zip" target="_blank" style="text-decoration:underline">here</a>
 
 
 Objects - Instances of Classes
