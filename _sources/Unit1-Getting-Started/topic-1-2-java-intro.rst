@@ -110,7 +110,7 @@ You can copy the Java source code shown in this book into a file and save it if 
     :randomize:
     :blockanswer: 0 1 2 3
 
-    Put the blocks in order to create the first line for the ``main`` method. There are extra blocks that you don't need.
+    Drag or click on the blocks you need to move them from the top section into the yellow area to create the first line for the ``main`` method. There are extra blocks that you don't need.
     ~~~~
     --blocks--
     public static
@@ -124,7 +124,7 @@ You can copy the Java source code shown in this book into a file and save it if 
     :randomize:
     :blockanswer: 0 1 2 3 4 5
 
-    Put the blocks in order to create the first line for the ``main`` method. There are extra blocks that you don't need.
+    Drag or click on the blocks you need to move them from the top section into the yellow area to create the first line for the ``main`` method. There are extra blocks that you don't need.
     ~~~~
     --blocks--
     public
@@ -141,7 +141,7 @@ You can copy the Java source code shown in this book into a file and save it if 
     :randomize:
     :blockanswer: 0 1 2 3 4 5 6 7 8
 
-    Put the blocks in order to create the first line for the ``main`` method. There are extra blocks that you don't need.
+    Drag or click on the blocks you need to move them from the top section into the yellow area to create the first line for the ``main`` method. There are extra blocks that you don't need.
     ~~~~
     --blocks--
     public
@@ -236,7 +236,7 @@ Special words—also called **keywords**—such as ``public``, ``class``, and ``
     :randomize:
     :blockanswer: 0 1 2 3 4 5 6 7 8 9 10
 
-    Put the blocks in order to create a Java statement that will print "Hi!". There are extra blocks that you don't need.
+    Drag or click on the blocks you need to move them from the top section into the yellow area to create a Java statement that will print "Hi!". There are extra blocks that you don't need.
     ~~~~
     --blocks--
     System
@@ -257,7 +257,7 @@ Special words—also called **keywords**—such as ``public``, ``class``, and ``
     :randomize:
     :blockanswer: 0 1 2 3 4 5 6 7 8 9 10
 
-    Put the blocks in order to create a Java statement that will print "Bye!". There are extra blocks that you don't need.
+    Drag or click on the blocks you need to move them from the top section into the yellow area to create a Java statement that will print "Bye!". There are extra blocks that you don't need.
     ~~~~
     --blocks--
     System
