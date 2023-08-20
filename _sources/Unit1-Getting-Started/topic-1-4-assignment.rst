@@ -212,23 +212,41 @@ Operators
     pair: operators; equality
     pair: operators; inequality
 
-Java uses the standard mathematical operators for addition (``+``), subtraction (``-``), multiplication (``*``), and division (``/``). Arithmetic expressions can be of type int or double. An arithmetic operation that uses two int values will evaluate to an int value. An arithmetic operation that uses at least one double value will evaluate to a double value.  (You may have noticed that ``+`` was also used to put text together in the input program above -- more on this when we talk about strings.)
+Java uses the standard mathematical operators for addition (``+``), subtraction
+(``-``), and division (``/``). The multiplication operator is written ``*``, as
+it is in most programming languages, since the character sets used until
+relatively recently didn’t have a character for a real multiplication sign,
+``×``, and keyboards still don’t have a key for it. Likewise no ``÷`.
+
+.. note::
+
+   You may be used to using ``^`` for exponentiation, either from a graphing
+   calculator or tools like Desmos. Confusingly ``^`` *is* an operator in Java
+   but it has a completely different meaning than exponentiation and isn’t even
+   exactly an arithmetic operator. However you may recall ``Math.pow`` from Unit
+   √2 that lets us do exponentiation.
+
+Arithmetic expressions can be of type ``int`` or ``double``. An arithmetic
+operation that uses two ``int`` values will evaluate to an ``int`` value. An
+arithmetic operation that uses at least one ``double`` value will evaluate to a
+``double`` value. (You may have noticed that ``+`` was also used to combine
+``String`` and other values into new ``String``\ s. More on this when we talk
+about ``String``\ s more fully in Unit 2.)
 
 Java uses the operator ``==`` to test if the value on the left is equal to the
 value on the right and ``!=`` to test if two items are not equal. Don't get one
-equal sign ``=`` confused with two equal signs ``==``. They mean different
+equal sign ``=`` confused with two equal signs ``==``. They mean very different
 things in Java. One equal sign is used to assign a value to a variable. Two
 equal signs are used to test a variable to see if it is a certain value and that
 returns true or false as you'll see below. Also note that using ``==`` and
 ``!=`` with ``double`` values can produce surprising results. Because ``double``
 values are only an approximation of the real numbers even things that should be
 mathematically equivalent might not be represented by the exactly same
-``double`` value and thus will not be ``==``. For instance write a small program
-that prints the value of ``0.3 == 0.1 + 0.2``; it will be ``false``!
+``double`` value and thus will not be ``==``. To see this for yourself, write a
+line of code below to print the value of the expression ``0.3 == 0.1 + 0.2``; it
+will be ``false``!
 
 |CodingEx| **Coding Exercise:**
-
-
 
 .. activecode:: lcop1
    :language: java
@@ -273,7 +291,11 @@ that prints the value of ``0.3 == 0.1 + 0.2``; it will be ``false``!
 
 .. note::
 
-   When Java sees you doing integer division (or any operation with integers) it assumes you want an integer result so it throws away anything after the decimal point in the answer. If you need a double answer, you should make at least one of the values in the expression a double like 2.0.
+   When Java sees you doing integer division (or any operation with integers) it
+   assumes you want an integer result so it throws away anything after the
+   decimal point in the answer. This is called **truncating division**. If you
+   need a double answer, you should make at least one of the values in the
+   expression a double like 2.0.
 
 
 With division, another thing to watch out for is dividing by 0. An attempt to divide an integer by zero will result in an **ArithmeticException** error message. Try it in one of the active code windows above.
@@ -345,12 +367,14 @@ operator.
 
 .. note::
 
-   Sometimes people, including the teacher in the next video, will call ``%``
-   the **modulo**, or **mod** operator. That is not actually correct though the
-   difference between remainder and modulo only matters when the first operand
-   is negative, so for many uses it doesn’t matter. In some languages, such as
-   Python, however ``%`` actually *is* modulo, not remainder. But not Java. To
-   compute ``a`` *modulo* ``b`` in Java you need to write ``(a % b) + b) % b``.)
+   Sometimes people—including the teacher in the next video—will call ``%`` the
+   **modulo**, or **mod** operator. That is not actually correct though the
+   difference between remainder and modulo only matters when the signs of the
+   operands differ, so for many uses it doesn’t matter. Having ``%`` mean
+   remainder is not unique to Java but in a few languages, such as Python, ``%``
+   actually *is* modulo. To compute ``a`` *modulo* ``b`` in Java, or any other
+   language where ``%`` is the remainder, you need to write ``(a % b) + b) %
+   b``.)
 
 .. |video2| raw:: html
 
