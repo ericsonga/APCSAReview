@@ -352,16 +352,16 @@ If you know that 1/1/2019 was a Tuesday (2) using the firstDayYear method, and y
 
    - firstDayOfYear(2019) + dayOfYear(1,8,2019) - 1 = 2 + 8 - 1 = 9
 
-   But there is no 9th day of week. There are only 7 days of the week. So when we reach a Sunday, we must start back at 0. This is a place where the mod operator % is useful. Note that 9 % 7 = 2 which means that 1/8/2019 is the 2nd day of the week starting at 0.
+   But there is no 9th day of week. There are only 7 days of the week. So when we reach a Sunday, we must start back at 0. This is a place where the remainder operator % is useful. Note that 9 % 7 = 2 which means that 1/8/2019 is the 2nd day of the week starting at 0.
 
 
-The FRQ that involves writing an expression will probably use the **mod operator** (``%``). Remember these tips about when to use the ``%`` operator:
+The FRQ that involves writing an expression will probably use the **remainder operator** (``%``). Remember these tips about when to use the ``%`` operator:
 
-- Use mod whenever you need to wrap around to the front if the value goes over the limit (``num % limit``). For example here for weekdays or for hours and minutes.
+- Use remainder whenever you need to wrap around to the front if the value goes over the limit (``num % limit``). For example here for weekdays or for hours and minutes.
 
-- Use mod to check for odd or even numbers (``num % 2 != 0``) is odd and (``num % 2 == 0``) is even. Actually, you can use it to check if any number is evenly divisible by another (``num1 % num2 == 0``).
+- Use remainder to check for odd or even numbers (``num % 2 != 0``) is odd and (``num % 2 == 0``) is even. Actually, you can use it to check if any number is evenly divisible by another (``num1 % num2 == 0``).
 
-- Use ``%`` to get the last digit from an integer number (``num % 10`` = last digit on right).
+- Use ``%`` to get the last digit from an integer number (``num % 10`` gives the last digit on right).
 
 Try the ``%`` operator below.
 
@@ -430,7 +430,7 @@ Try the ``%`` operator below.
         :feedback_a: This would return 10 but there are only 7 days of the week.
         :feedback_b: This would return 9 but there are only 7 days of the week.
         :feedback_c: Remember that % has precedence so this would return 2 + (8 % 7) = 2 + 1 = 3
-        :feedback_d: Mod 4 does not make sense because there are 7 days of the week.
+        :feedback_d: Remainder 4 does not make sense because there are 7 days of the week.
         :feedback_e: This would return (2 + 8 - 1) % 7 = 2.
 
         Which of the following expressions return the right value for the day of the week (2) for Jan. 8th 2019 given that firstDayOfYear(2019) returns 2 and dayOfYear(1,8,2019) returns 8?

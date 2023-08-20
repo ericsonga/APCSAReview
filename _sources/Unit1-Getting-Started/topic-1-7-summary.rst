@@ -39,7 +39,7 @@ Concept Summary
 - **Casting a Variable** - Changing the type of a variable using *(type) name*.
 - **Operator** - Common mathematical symbols such as ``+`` for addition and ``*`` for multiplication.
 - **Compound assignment or shortcut operators** - Operators like ``x++`` which means ``x = x + 1`` or ``x *=y`` which means ``x = x * y``.
-- **modulo** - The ``%`` operator which returns the remainder from one number divide by another.
+- **remainder** - The ``%`` operator which returns the remainder from one number divided by another.
 - **arithmetic expression** - a sequence of operands and operators that describe a calculation to be performed, for example ``3*(2 + x)``
 - **operator precedence** - some operators are done before others, for example ``*``, ``/``, ``%`` have precedence over ``+`` and ``-``, unless parentheses are used.
 

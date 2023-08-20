@@ -385,7 +385,7 @@ You can add values to an ArrayList by using its **add** method, described in det
 
 This programming challenge is based on the |FRQ 2017| part 1a on the 2017 AP CSA exam. In this question, you are asked to write a constructor for a class called Digits. This constructor takes an integer number as its argument and divides it up into its digits and puts the digits into an ArrayList. For example, new Digits(154) creates an ArrayList with the digits [1, 5, 4].
 
-First, let's discuss how to break up a number into its digits. Try the code below. What happens if you divide an integer by 10? Remember that in integer division the result truncates (cuts off) everything to the right of the decimal point. Which digit can you get by using mod 10 which returns the remainder after dividing by 10? Try a different number and guess what it will print and then run to check.
+First, let's discuss how to break up a number into its digits. Try the code below. What happens if you divide an integer by 10? Remember that in integer division the result truncates (cuts off) everything to the right of the decimal point. Which digit can you get by using ``% 10`` which returns the remainder after dividing by 10? Try a different number and guess what it will print and then run to check.
 
 .. activecode:: divideby10
    :language: java

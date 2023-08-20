@@ -4,7 +4,7 @@
    :prefix: 4-7-
    :start: 1
 
-Group Work - Modulo Operator (%)
+Group Work - Remainder Operator (%)
 ========================================
 
 It is best to use a POGIL approach with the following. In POGIL students work
@@ -14,6 +14,8 @@ This page is based on a POGIL activity from Helen Hu at that site.
 .. index::
   single: modulus
   single: modulo operator
+  single: remainder
+  single: remainder operator
 
 .. activecode:: mod-model-1
    :language: java
@@ -143,7 +145,7 @@ the extras go back to the teacher.
     - :2: Four goes into two zero times with a remainder of 2.
       :.*: What is the remainder when you divide 2 by 4?
 
-Describe the Modulo (%) Operator
+Describe the Remainder (%) Operator
 ---------------------------------
 
 .. shortanswer:: mod-describe-mod-sa
