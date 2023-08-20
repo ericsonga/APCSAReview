@@ -227,9 +227,9 @@ relatively recently didn’t have a character for a real multiplication sign,
    √2 that lets us do exponentiation.
 
 Arithmetic expressions can be of type ``int`` or ``double``. An arithmetic
-operation that uses two ``int`` values will evaluate to an ``int`` value. An
-arithmetic operation that uses at least one ``double`` value will evaluate to a
-``double`` value. (You may have noticed that ``+`` was also used to combine
+expression consisting only of ``int`` values will evaluate to an ``int`` value.
+An arithmetic expression that uses at least one ``double`` value will evaluate
+to a ``double`` value. (You may have noticed that ``+`` was also used to combine
 ``String`` and other values into new ``String``\ s. More on this when we talk
 about ``String``\ s more fully in Unit 2.)
 
