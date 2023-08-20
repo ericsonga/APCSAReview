@@ -226,10 +226,10 @@ to” not “equal to or less than”.
     Drag the boolean expression from the left and drop it on what it is testing on the right.  Click the "Check Me" button to see if you are correct.
 
 
-Testing with mod (%)
+Testing with remainder (%)
 ---------------------
 
-Here are some boolean expressions that are very useful in coding and mod is used in many of them:
+Here are some boolean expressions that are very useful in coding and remainder is used in many of them:
 
 .. code-block:: java
 
@@ -302,18 +302,42 @@ Here are some boolean expressions that are very useful in coding and mod is used
        }
    }
 
-The **modulo** operator has been used quite a bit on the AP CSA exam, so you should be familiar with it.
+The **remainder** operator has been used quite a bit on the AP CSA exam, so you should be familiar with it.
 
-    -  Use it to check for odd or even numbers ``(num % 2 == 1) is odd`` and ``(num % 2 == 0) is even``.  Actually, you can use it to check if any number is evenly divisible by another (``num1 % num2 == 0``)
+- Use it to check for odd or even numbers. If ``num % 2 != 0`` is true, ``num``
+  is odd and if ``num % 2 == 0`` is true then ``num`` is even.
 
-    -  Use it to get the last digit from an integer number (``num % 10 = last digit on right``).
+- You can also use remainder to check if any number is evenly divisible by any
+  other: If ``num1 % num2 == 0`` is true then ``num1`` is evenly divisible by
+  ``num2``.
 
-    -  Use it to get the number of minutes left when you convert to hours (``num % 60``).
+- Use it to get the last digit from an integer number: ``num % 10`` gives us the
+  rightmost digit of ``num``.
 
-    - Use it whenever you have limit in the value, and you need to wrap around to the front if the value goes over the limit (``num % limit``).
+- Use it to get the number of minutes left when you convert a total number of minutes to hours and minutes:
 
+  .. code:: java
 
+     int totalMinutes = 345;
+     int hours = totalMinutes / 60;   // Number of whole hours, i.e. 5
+     int minutes = totalMinutes % 60; // Number of minutes left over, i.e. 45
 
+- Use it whenever you have limit in the value, and you need to wrap around to
+  zero if the value goes over the limit: the value of ``num % limit`` will
+  always be in the range from 0 (inclusive) to ``limit`` (exclusive) as long as
+  ``num`` and ``limit`` are both positive.
+
+.. note::
+
+  A warning: because Java's ``%`` is a remainder operator and not a true
+  mathematical modulo operator (as we discussed briefly in section 1.4) you
+  can’t check if a number is odd with the expression ``num % 2 == 1``.
+
+  That expression will be ``true`` if ``num`` is positive and odd and ``false``
+  when ``num`` is even, both of which are correct. But if ``num`` is negative
+  and odd, its remainder when divided by 2 is -1, not 1 and this expression will
+  evaluate to ``false``. Thus you should always use ``num % 2 != 0`` to check if
+  ``num`` is odd.
 
 
 |Groupwork| Programming Challenge : Prime Numbers POGIL
