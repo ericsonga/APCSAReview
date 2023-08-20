@@ -216,7 +216,7 @@ Java uses the standard mathematical operators for addition (``+``), subtraction
 (``-``), and division (``/``). The multiplication operator is written ``*``, as
 it is in most programming languages, since the character sets used until
 relatively recently didn’t have a character for a real multiplication sign,
-``×``, and keyboards still don’t have a key for it. Likewise no ``÷`.
+``×``, and keyboards still don’t have a key for it. Likewise no ``÷``.
 
 .. note::
 
