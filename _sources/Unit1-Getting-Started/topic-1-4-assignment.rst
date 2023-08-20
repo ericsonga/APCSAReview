@@ -129,7 +129,13 @@ Let's step through the following code in the |Java visualizer| to see the values
 Adding 1 to a Variable
 -------------------------
 
-If you use a variable to keep score you would probably increment it (add one to the current value) whenever score should go up.  You can do this by setting the variable to the current value of the variable plus one (``score = score + 1``) as shown below. The formula looks a little crazy in math class, but it makes sense in coding because the variable on the left is set to the value of the arithmetic expression on the right. So, the score variable is set to the previous value of score plus 1.
+If you use a variable to keep score you would probably increment it (add one to
+the current value) whenever score should go up. You can do this by setting the
+variable to the current value of the variable plus one (``score = score + 1``)
+as shown below. The formula would get you some sideye in math class, but it
+makes sense in coding because it is assigning a new value to the variable on the
+left that comes from evaluating the arithmetic expression on the right. So, the
+score variable is set to the previous value of score plus 1.
 
 .. activecode:: lccv1
    :language: java
@@ -315,10 +321,20 @@ Operators can be used to create compound expressions with more than one operator
        }
    }
 
-The Modulo Operator
---------------------
+The Remainder Operator
+----------------------
 
-The percent sign operator (``%``) is the **mod (modulo)** or **remainder** operator.  The mod operator (``x % y``) returns the remainder after you divide x (first number) by y (second number) so ``5 % 2`` will return 1 since 2 goes into 5 two times with a remainder of 1.  Remember long division when you had to specify how many times one number went into another evenly and the remainder?  That remainder is what is returned by the modulo operator.
+The percent sign operator (``%``) is the **remainder** operator. Like the other
+arithmetic operators is takes two operands. Mathematically it returns the
+remainder after performing an integer division of the first number by the
+second. For instance, ``5 % 2`` evaluates to 1 since 2 goes into 5 two times
+with a remainder of 1.
+
+If you feel like you’ve never heard of such a thing, you need to think back to
+elementary school math. Remember when you first learned long division in
+elementary school and you had to specify how many times one number went into
+another evenly and the remainder? That remainder is what is returned by this
+operator.
 
 .. figure:: Figures/mod-py.png
     :width: 150px
@@ -327,11 +343,20 @@ The percent sign operator (``%``) is the **mod (modulo)** or **remainder** opera
 
     Figure 1: Long division showing the integer result and the remainder
 
+.. note::
+
+   Sometimes people, including the teacher in the next video, will call ``%``
+   the **modulo**, or **mod** operator. That is not actually correct though the
+   difference between remainder and modulo only matters when the first operand
+   is negative, so for many uses it doesn’t matter. In some languages, such as
+   Python, however ``%`` actually *is* modulo, not remainder. But not Java. To
+   compute ``a`` *modulo* ``b`` in Java you need to write ``(a % b) + b) % b``.)
+
 .. |video2| raw:: html
 
    <a href="https://www.youtube.com/watch?v=jp-T9lFISlI&ab_channel=colleenlewis" target="_blank">video</a>
 
-Here is a |video2| about mod.
+Here is a |video2| about remainder, though the teacher calls it mod.
 
 .. youtube:: jp-T9lFISlI
     :width: 700
@@ -386,6 +411,7 @@ Here is a |video2| about mod.
    single: modulo
    single: remainder
    pair: operators; modulo
+   pair: operators; remainder
 
 |Exercise| **Check Your Understanding**
 
@@ -395,8 +421,8 @@ Here is a |video2| about mod.
    :answer_b: 16
    :answer_c: 8
    :correct: c
-   :feedback_a: This would be the result of 158 divided by 10.  modulo gives you the remainder.
-   :feedback_b: modulo gives you the remainder after the division.
+   :feedback_a: This would be the result of 158 divided by 10.  Remainder gives you the remainder.
+   :feedback_b: Remainder gives you the remainder after the division.
    :feedback_c: When you divide 158 by 10 you get a remainder of 8.
 
    What is the result of 158 % 10?
@@ -570,25 +596,35 @@ Your teacher may suggest that you use a Java IDE like |repl| for this challenge 
 Summary
 -------------------
 
-- Arithmetic expressions include expressions of type int and double.
+- Arithmetic expressions include expressions of type ``int`` and ``double``.
 
-- The arithmetic operators consist of ``+``, ``-``, ``*`` , ``/``, and ``%`` (modulo for the remainder in division).
+- The arithmetic operators consist of ``+``, ``-``, ``*`` , ``/``, and ``%``
+  also known as addition, subtraction, multiplication, division, and remainder.
 
-- An arithmetic operation that uses two int values will evaluate to an int value. With integer division, any decimal part in the result will be thrown away.
+- An arithmetic operation that uses two ``int`` values will evaluate to an
+  ``int`` value. With integer division, any decimal part in the result will be
+  thrown away.
 
-- An arithmetic operation that uses at least one double value will evaluate to a double value.
+- An arithmetic operation that uses at least one ``double`` value will evaluate
+  to a ``double`` value.
 
 - Operators can be used to construct compound expressions.
 
-- During evaluation, operands are associated with operators according to **operator precedence** to determine how they are grouped. (``*``, ``/``, ``%`` have precedence over ``+`` and ``-``, unless parentheses are used to group those.)
+- During evaluation, operands are associated with operators according to
+  **operator precedence** to determine how they are grouped. (``*``, ``/``,
+  ``%`` have precedence over ``+`` and ``-``, unless parentheses are used to
+  group those.)
 
-- An attempt to divide an integer by zero will result in an ArithmeticException to occur.
+- An attempt to divide an integer by zero will result in an ``ArithmeticException``.
 
-- The assignment operator (``=``) allows a program to initialize or change the value stored in a variable.  The value of the expression on the right is stored in the variable on the left.
+- The assignment operator (``=``) allows a program to initialize or change the
+  value stored in a variable. The value of the expression on the right is stored
+  in the variable on the left.
 
 - During execution, expressions are evaluated to produce a single value.
 
-- The value of an expression has a type based on the evaluation of the expression.
+- The value of an expression has a type based on the types of the values and
+  operators used in the expression.
 
 AP Practice
 ------------
