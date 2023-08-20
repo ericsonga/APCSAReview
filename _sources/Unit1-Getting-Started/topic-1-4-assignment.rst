@@ -346,17 +346,20 @@ Operators can be used to create compound expressions with more than one operator
 The Remainder Operator
 ----------------------
 
-The percent sign operator (``%``) is the **remainder** operator. Like the other
+The percent sign (``%``) is also an arithmetic operator, though one you may not
+have learned yet in math. It is the **remainder** operator. Like the other
 arithmetic operators is takes two operands. Mathematically it returns the
-remainder after performing an integer division of the first number by the
-second. For instance, ``5 % 2`` evaluates to 1 since 2 goes into 5 two times
+remainder after performing a truncating integer division of the first number by
+the second. For instance, ``5 % 2`` evaluates to 1 since 2 goes into 5 two times
 with a remainder of 1.
 
-If you feel like you’ve never heard of such a thing, you need to think back to
-elementary school math. Remember when you first learned long division in
-elementary school and you had to specify how many times one number went into
-another evenly and the remainder? That remainder is what is returned by this
-operator.
+While you may not have heard of remainder as an operator, think back to
+elementary school math. Remember when you first learned long division, before
+they taught you about decimals, how when you did a long division that didn’t
+divide evenly, you gave the answer as the number of even divisions and the
+remainder. That remainder is what is returned by this operator. In the figures
+below, the remainders are the same values that would be returned by ``2 % 3``
+and ``5 % 2``.
 
 .. figure:: Figures/mod-py.png
     :width: 150px
@@ -367,20 +370,22 @@ operator.
 
 .. note::
 
-   Sometimes people—including the teacher in the next video—will call ``%`` the
-   **modulo**, or **mod** operator. That is not actually correct though the
+   Sometimes people—including Professor Lewis in the next video—will call ``%``
+   the **modulo**, or **mod**, operator. That is not actually correct though the
    difference between remainder and modulo only matters when the signs of the
-   operands differ, so for many uses it doesn’t matter. Having ``%`` mean
-   remainder is not unique to Java but in a few languages, such as Python, ``%``
+   operands differ, so often it doesn’t matter. Having ``%`` mean remainder is
+   quite common in programming languages. In some languages, however, ``%``
    actually *is* modulo. To compute ``a`` *modulo* ``b`` in Java, or any other
-   language where ``%`` is the remainder, you need to write ``(a % b) + b) %
-   b``.)
+   language where ``%`` is remainder, you need to write ``(a % b) + b) % b`` or,
+   better yet, use the method ``Math.floorMod`` from the ``Math`` class. But on
+   the AP exam, all the uses of ``%`` will be ones where this distinction
+   doesn’t matter.
 
 .. |video2| raw:: html
 
    <a href="https://www.youtube.com/watch?v=jp-T9lFISlI&ab_channel=colleenlewis" target="_blank">video</a>
 
-Here is a |video2| about remainder, though the teacher calls it mod.
+Here’s the |video2|.
 
 .. youtube:: jp-T9lFISlI
     :width: 700
