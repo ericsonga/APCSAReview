@@ -9,16 +9,29 @@
 Casting and Ranges of Variables
 ===============================
 
-In Java, **type casting** is used to convert variable values from one type to another. By **casting** we don't mean something to do with fishing, but it is a similar idea to casting a pot in clay.  In Java when you cast you are changing the "shape" (or type) of the variable.
+In Java, **type casting** is used to convert values from one type to another. By
+**casting** we don't mean something to do with fishing, but it is a similar idea
+to casting a bronze, without needing to heat anything to 913 degrees Celsius.
+But like molten bronze is reshaped by melting it and pouring it into a mold, our
+data is reshaped via a **cast** operator. In Java when you cast you are changing
+the "shape" (or type) of the variable.
 
-.. figure:: Figures/casting.jpg
+.. figure:: Figures/bronze-casting.jpg
     :width: 300px
     :figclass: align-center
 
-    Figure 1: Casting a pot in clay.
+    Figure 1: Casting bronze.
 
 
-The casting operators (int) and (double) are used right next to a number or variable to create a temporary value converted to a different data type. For example,  ``(double) 1/3`` will give a double result instead of an int one. Run this code to find how Java handles division and what casting can do to the results. Notice what happens when you divide an int by an int or an int by a double or an int casted to a double divided by an int.
+The **cast operator**, which looks like ``(int)`` and ``(double)`` placed before
+a number, variable, or expression in parentheses, produces a value of the given
+type by converting the value of the originial expression to the new type.
+
+For example, ``(double)1 / 3`` will evaluate to a ``double`` value instead of an
+``int``. Run this code to find how Java handles division and what casting can do
+to the results. Notice what happens when you divide an ``int`` by an ``int`` or
+an ``int`` by a ``double`` or an ``int`` cast to a ``double`` divided by an
+``int``.
 
 .. activecode:: lcct1
    :language: java
@@ -30,10 +43,10 @@ The casting operators (int) and (double) are used right next to a number or vari
    {
        public static void main(String[] args)
        {
-           System.out.println(1 / 3);
-           System.out.println(1.0 / 3);
-           System.out.println(1 / 3.0);
-           System.out.println((double) 1 / 3);
+           System.out.println(1 / 3);          // int divided by int
+           System.out.println(1.0 / 3);        // double divided by int
+           System.out.println(1 / 3.0);        // int divided by double
+           System.out.println((double) 1 / 3); // int cast to double, divided by int
        }
    }
 
@@ -61,22 +74,73 @@ The casting operators (int) and (double) are used right next to a number or vari
        }
    }
 
-Java assumes that if you are doing division with integers that you want an integer result and it will truncate and throw away the part after the decimal point.  But, if you use a mixture of integers (int) and decimal (double) numbers Java will assume that you want a double result. If there is at least one double in the operation, Java will widen the type of the other operand to double too and return the result in a double. If you have integers and you want a double result from some mathematical operation **cast** one of the integers to a double using (double) as shown above.
+When Java divides two ``int``\ s, it produces an ``int`` result by truncatating
+the actual mathematical result, removing anything after the decimal point. Thus
+``9 / 10`` evaluates to ``0``, not ``0.9``. (It also does not evaluate to ``1``;
+truncating is not the same as rounding.)
 
-Values of type double can be rounded to the nearest integer by adding or subtracting .5 and casting with (int) using formulas like the following.
+But in any expression involving a ``double``, the ``double`` is “contagious” and
+will cause the value of that expression to also be a ``double``. Thus the
+expression ``9.0 / 10`` is evaluated as if it had be written ``9.0 / 10.0`` and
+produces the ``double`` value ``0.9``.
+
+Casting an ``int`` to ``double``, as shown in the code above, produces a
+``double`` value which will then causes any expression it is part of to produce
+a ``double``. This is especiallly useful when you have ``int`` variables that
+you want to do non-integer division with:
 
 .. code-block:: java
+
+   int total; // a variable containing the sum of a bunch of ints
+   int count; // the number of ints that went into total
+
+   // Compute the average of the bunch of ints summed into total.
+   double average = (double)total / count;
+
+A conversion from ``int`` to ``double`` is called a **widening conversion**
+because a ``double`` can represent any ``int`` value but not vice versa; thus a
+``double`` is considered a wider data type than an ``int``.
+
+.. note::
+
+   ``int``\ s in Java are always 32-bit signed values which mean they can
+   represent values from :math:`-2^{31}` to :math:`2^{31} - 1`, inclusive, while
+   the range of consecutive interger values that can be reprenested by a double
+   is from :math:`-2^{53}` to :math:`2^{53}`, inclusive. (A ``double`` can also
+   represent much larger values but with limited precision.) you can refer to
+   the minimum and maximum ``int`` values with the constants
+   ``Integer.MIN_VALUE`` and ``Integer.MAX_VALUE``.
+
+Values of type ``double`` in the range that can be represented by an ``int`` can
+be rounded to the nearest ``int`` by adding or subtracting 0.5 and then casting
+the result with ``(int)``:
+
+.. code-block:: java
+
+    double number;    // positive value from somewhere
+    double negNumber; // negative value from somewhere
 
     int nearestInt = (int)(number + 0.5);
     int nearestNegInt = (int)(negNumber – 0.5);
 
-For example, if you divide 5/3 using integer division, Java will truncate 1.67 to 1 to give an int result. However, we usually round up any answer .5 and above. Using the formula above, if we add 1.67 + 0.50, we get 2.17 and then casting it to an int throws away what's after the decimal point, just leaving 2.
+For example, if you divide ``7.0 / 4.0`` you get ``1.75``. If you cast that to
+an ``int``, it will be truncated to ``1``. However if we want to round a
+``double`` rather than truncating it, adding ``0.5`` will produce a number that
+is above the next integer value if the decimal part is greater than ``0.5``, as
+it is here. Then casting *that* value to an ``int`` will truncate down. So in
+this case ``1.75 + 0.5`` gives us ``2.25`` which is then truncated to ``2``. On
+the other hand adding ``0.5`` to the result of evaluating ``5.0 / 4.2``,
+namely``1.25``, only gets us to ``1.75`` which truncates back to ``1`` which is
+the nearest integer to ``1.25``.
 
 .. activecode:: nearestInt
    :language: java
    :autograde: unittest
 
-   Run the code below to see how the formula of adding or subtracting .5 and then casting with (int) rounds a positive or negative double number to the closest int.
+   Run the code below to see how the formula of adding or subtracting .5 and
+   then casting with (int) rounds a positive or negative double number to the
+   closest int.
+
    ~~~~
    public class NearestInt
    {
@@ -621,13 +685,27 @@ languages?
 Summary
 -------------------
 
-- **Type casting** is used to convert variables from one type to another.
-- The casting operators (int) and (double) can be used to create a temporary value converted to a different data type.
-- Casting a double value to an int causes the digits to the right of the decimal point to be truncated (cut off and thrown away).
+- **Type casting** is used to convert value from one type to another.
 
-- Some programming code causes int values to be automatically cast (widened) to double values.
-- Values of type double can be rounded to the nearest integer by (int)(x + 0.5) or (int)(x – 0.5) for negative numbers.
+- The casting operators ``(int)`` and ``(double)`` can be used to create a
+  temporary value converted to a different data type.
 
-- Integer values in Java are represented by values of type int, which are stored using a finite amount (4 bytes) of memory. Therefore, an int value must be in the range from Integer.MIN_VALUE to Integer.MAX_VALUE inclusive.
+- Casting a ``double`` value to an ``int`` causes the digits to the right of the
+  decimal point to be truncated (cut off and thrown away).
 
-- If an expression would evaluate to an int value outside of the allowed range, an integer overflow occurs. This could result in an incorrect value within the allowed range.
+- In expressions involving ``double``\ s, the ``double`` values are contagious,
+  causing ``int``\ s in the expression to be automatically converted to the
+  equivalent ``double`` value so the result of the expression can be computed as
+  a ``double``.
+
+- Values of type ``double`` can be rounded to the nearest integer by (int)(x +
+  0.5) or (int)(x – 0.5) for negative numbers.
+
+- Integer values in Java are represented by values of type ``int``, which are
+  stored using a finite amount (4 bytes) of memory. Therefore, an int value must
+  be in the range from ``Integer.MIN_VALUE`` to ``Integer.MAX_VALUE``,
+  inclusive.
+
+- If an expression would evaluate to an int value outside of the allowed range,
+  an integer overflow occurs. This could result in an incorrect value within the
+  allowed range.
