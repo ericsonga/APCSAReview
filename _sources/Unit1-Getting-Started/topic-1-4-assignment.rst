@@ -129,10 +129,10 @@ Let's step through the following code in the |Java visualizer| to see the values
 Adding 1 to a Variable
 -------------------------
 
-If you use a variable to keep score you would probably increment it (add one to
+If you use a variable to keep score, you would probably increment it (add one to
 the current value) whenever score should go up. You can do this by setting the
 variable to the current value of the variable plus one (``score = score + 1``)
-as shown below. The formula would get you some sideye in math class, but it
+as shown below. The formula would look strange in math class, but it
 makes sense in coding because it is assigning a new value to the variable on the
 left that comes from evaluating the arithmetic expression on the right. So, the
 score variable is set to the previous value of score plus 1.
