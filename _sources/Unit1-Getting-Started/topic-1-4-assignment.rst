@@ -213,18 +213,15 @@ Operators
     pair: operators; inequality
 
 Java uses the standard mathematical operators for addition (``+``), subtraction
-(``-``), and division (``/``). The multiplication operator is written ``*``, as
+(``-``), and division (``/``). The multiplication operator is written as ``*``, as
 it is in most programming languages, since the character sets used until
 relatively recently didn’t have a character for a real multiplication sign,
 ``×``, and keyboards still don’t have a key for it. Likewise no ``÷``.
 
-.. note::
-
-   You may be used to using ``^`` for exponentiation, either from a graphing
-   calculator or tools like Desmos. Confusingly ``^`` *is* an operator in Java
-   but it has a completely different meaning than exponentiation and isn’t even
-   exactly an arithmetic operator. However you may recall ``Math.pow`` from Unit
-   √2 that lets us do exponentiation.
+You may be used to using ``^`` for exponentiation, either from a graphing
+calculator or tools like Desmos. Confusingly ``^`` *is* an operator in Java,
+but it has a completely different meaning than exponentiation and isn’t even
+exactly an arithmetic operator. You will learn how to use the  ``Math.pow`` method to do exponents in Unit 2.
 
 Arithmetic expressions can be of type ``int`` or ``double``. An arithmetic
 expression consisting only of ``int`` values will evaluate to an ``int`` value.
