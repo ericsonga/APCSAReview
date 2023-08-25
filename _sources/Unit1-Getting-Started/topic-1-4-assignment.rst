@@ -343,11 +343,10 @@ Operators can be used to create compound expressions with more than one operator
 The Remainder Operator
 ----------------------
 
-The percent sign (``%``) is also an arithmetic operator, though one you may not
-have learned yet in math. It is the **remainder** operator. Like the other
+The operator ``%`` in Java is the **remainder** operator. Like the other
 arithmetic operators is takes two operands. Mathematically it returns the
-remainder after performing a truncating integer division of the first number by
-the second. For instance, ``5 % 2`` evaluates to 1 since 2 goes into 5 two times
+remainder after dividing the first number by the second, using truncating integer division. 
+For instance, ``5 % 2`` evaluates to 1 since 2 goes into 5 two times
 with a remainder of 1.
 
 While you may not have heard of remainder as an operator, think back to
@@ -365,18 +364,12 @@ and ``5 % 2``.
 
     Figure 1: Long division showing the integer result and the remainder
 
-.. note::
-
-   Sometimes people—including Professor Lewis in the next video—will call ``%``
-   the **modulo**, or **mod**, operator. That is not actually correct though the
-   difference between remainder and modulo only matters when the signs of the
-   operands differ, so often it doesn’t matter. Having ``%`` mean remainder is
-   quite common in programming languages. In some languages, however, ``%``
-   actually *is* modulo. To compute ``a`` *modulo* ``b`` in Java, or any other
-   language where ``%`` is remainder, you need to write ``(a % b) + b) % b`` or,
-   better yet, use the method ``Math.floorMod`` from the ``Math`` class. But on
-   the AP exam, all the uses of ``%`` will be ones where this distinction
-   doesn’t matter.
+Sometimes people—including Professor Lewis in the next video—will call ``%``
+the **modulo**, or **mod**, operator. That is not actually correct though the
+difference between remainder and modulo, which uses Euclidean division instead 
+of truncating integer division, only matters when negative operands are involved 
+and the signs of the operands differ. With positive operands, remainder and mod give the same results. 
+Java does have a method ``Math.floorMod`` in the ``Math`` class if you need to use modulo instead of remainder, but ``%`` is all you need in the AP exam.
 
 .. |video2| raw:: html
 
