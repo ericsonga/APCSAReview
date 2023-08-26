@@ -14,7 +14,7 @@ In this lesson, you will learn about assignment statements and expressions that 
 Assignment Statements
 ---------------------
 
-**Assignment statements** initialize or change the value stored in a variable using the assignment operator =.  An assignment statement always has a single variable on the left hand side. The value of the **expression** (which can contain math operators and other variables) on the right of the = sign is stored in the variable on the left.
+**Assignment statements** initialize or change the value stored in a variable using the assignment operator ``=``.  An assignment statement always has a single variable on the left hand side. The value of the **expression** (which can contain math operators and other variables) on the right of the ``=`` sign is stored in the variable on the left.
 
 
 .. figure:: Figures/assignment.png
@@ -129,7 +129,13 @@ Let's step through the following code in the |Java visualizer| to see the values
 Adding 1 to a Variable
 -------------------------
 
-If you use a variable to keep score you would probably increment it (add one to the current value) whenever score should go up.  You can do this by setting the variable to the current value of the variable plus one (``score = score + 1``) as shown below. The formula looks a little crazy in math class, but it makes sense in coding because the variable on the left is set to the value of the arithmetic expression on the right. So, the score variable is set to the previous value of score plus 1.
+If you use a variable to keep score, you would probably increment it (add one to
+the current value) whenever score should go up. You can do this by setting the
+variable to the current value of the variable plus one (``score = score + 1``)
+as shown below. The formula would look strange in math class, but it
+makes sense in coding because it is assigning a new value to the variable on the
+left that comes from evaluating the arithmetic expression on the right. So, the
+score variable is set to the previous value of score plus 1.
 
 .. activecode:: lccv1
    :language: java
@@ -206,23 +212,38 @@ Operators
     pair: operators; equality
     pair: operators; inequality
 
-Java uses the standard mathematical operators for addition (``+``), subtraction (``-``), multiplication (``*``), and division (``/``). Arithmetic expressions can be of type int or double. An arithmetic operation that uses two int values will evaluate to an int value. An arithmetic operation that uses at least one double value will evaluate to a double value.  (You may have noticed that ``+`` was also used to put text together in the input program above -- more on this when we talk about strings.)
+Java uses the standard mathematical operators for addition (``+``), subtraction
+(``-``), and division (``/``). The multiplication operator is written as ``*``, as
+it is in most programming languages, since the character sets used until
+relatively recently didn’t have a character for a real multiplication sign,
+``×``, and keyboards still don’t have a key for it. Likewise no ``÷``.
+
+You may be used to using ``^`` for exponentiation, either from a graphing
+calculator or tools like Desmos. Confusingly ``^`` *is* an operator in Java,
+but it has a completely different meaning than exponentiation and isn’t even
+exactly an arithmetic operator. You will learn how to use the  ``Math.pow`` method to do exponents in Unit 2.
+
+Arithmetic expressions can be of type ``int`` or ``double``. An arithmetic
+expression consisting only of ``int`` values will evaluate to an ``int`` value.
+An arithmetic expression that uses at least one ``double`` value will evaluate
+to a ``double`` value. (You may have noticed that ``+`` was also used to combine
+``String`` and other values into new ``String``\ s. More on this when we talk
+about ``String``\ s more fully in Unit 2.)
 
 Java uses the operator ``==`` to test if the value on the left is equal to the
 value on the right and ``!=`` to test if two items are not equal. Don't get one
-equal sign ``=`` confused with two equal signs ``==``. They mean different
+equal sign ``=`` confused with two equal signs ``==``. They mean very different
 things in Java. One equal sign is used to assign a value to a variable. Two
 equal signs are used to test a variable to see if it is a certain value and that
 returns true or false as you'll see below. Also note that using ``==`` and
 ``!=`` with ``double`` values can produce surprising results. Because ``double``
 values are only an approximation of the real numbers even things that should be
 mathematically equivalent might not be represented by the exactly same
-``double`` value and thus will not be ``==``. For instance write a small program
-that prints the value of ``0.3 == 0.1 + 0.2``; it will be ``false``!
+``double`` value and thus will not be ``==``. To see this for yourself, write a
+line of code below to print the value of the expression ``0.3 == 0.1 + 0.2``; it
+will be ``false``!
 
 |CodingEx| **Coding Exercise:**
-
-
 
 .. activecode:: lcop1
    :language: java
@@ -267,7 +288,11 @@ that prints the value of ``0.3 == 0.1 + 0.2``; it will be ``false``!
 
 .. note::
 
-   When Java sees you doing integer division (or any operation with integers) it assumes you want an integer result so it throws away anything after the decimal point in the answer. If you need a double answer, you should make at least one of the values in the expression a double like 2.0.
+   When Java sees you doing integer division (or any operation with integers) it
+   assumes you want an integer result so it throws away anything after the
+   decimal point in the answer. This is called **truncating division**. If you
+   need a double answer, you should make at least one of the values in the
+   expression a double like 2.0.
 
 
 With division, another thing to watch out for is dividing by 0. An attempt to divide an integer by zero will result in an **ArithmeticException** error message. Try it in one of the active code windows above.
@@ -315,10 +340,22 @@ Operators can be used to create compound expressions with more than one operator
        }
    }
 
-The Modulo Operator
---------------------
+The Remainder Operator
+----------------------
 
-The percent sign operator (``%``) is the **mod (modulo)** or **remainder** operator.  The mod operator (``x % y``) returns the remainder after you divide x (first number) by y (second number) so ``5 % 2`` will return 1 since 2 goes into 5 two times with a remainder of 1.  Remember long division when you had to specify how many times one number went into another evenly and the remainder?  That remainder is what is returned by the modulo operator.
+The operator ``%`` in Java is the **remainder** operator. Like the other
+arithmetic operators is takes two operands. Mathematically it returns the
+remainder after dividing the first number by the second, using truncating integer division. 
+For instance, ``5 % 2`` evaluates to 1 since 2 goes into 5 two times
+with a remainder of 1.
+
+While you may not have heard of remainder as an operator, think back to
+elementary school math. Remember when you first learned long division, before
+they taught you about decimals, how when you did a long division that didn’t
+divide evenly, you gave the answer as the number of even divisions and the
+remainder. That remainder is what is returned by this operator. In the figures
+below, the remainders are the same values that would be returned by ``2 % 3``
+and ``5 % 2``.
 
 .. figure:: Figures/mod-py.png
     :width: 150px
@@ -327,11 +364,18 @@ The percent sign operator (``%``) is the **mod (modulo)** or **remainder** opera
 
     Figure 1: Long division showing the integer result and the remainder
 
+Sometimes people—including Professor Lewis in the next video—will call ``%``
+the **modulo**, or **mod**, operator. That is not actually correct though the
+difference between remainder and modulo, which uses Euclidean division instead 
+of truncating integer division, only matters when negative operands are involved 
+and the signs of the operands differ. With positive operands, remainder and mod give the same results. 
+Java does have a method ``Math.floorMod`` in the ``Math`` class if you need to use modulo instead of remainder, but ``%`` is all you need in the AP exam.
+
 .. |video2| raw:: html
 
    <a href="https://www.youtube.com/watch?v=jp-T9lFISlI&ab_channel=colleenlewis" target="_blank">video</a>
 
-Here is a |video2| about mod.
+Here’s the |video2|.
 
 .. youtube:: jp-T9lFISlI
     :width: 700
@@ -386,6 +430,7 @@ Here is a |video2| about mod.
    single: modulo
    single: remainder
    pair: operators; modulo
+   pair: operators; remainder
 
 |Exercise| **Check Your Understanding**
 
@@ -395,8 +440,8 @@ Here is a |video2| about mod.
    :answer_b: 16
    :answer_c: 8
    :correct: c
-   :feedback_a: This would be the result of 158 divided by 10.  modulo gives you the remainder.
-   :feedback_b: modulo gives you the remainder after the division.
+   :feedback_a: This would be the result of 158 divided by 10.  % gives you the remainder.
+   :feedback_b: % gives you the remainder after the division.
    :feedback_c: When you divide 158 by 10 you get a remainder of 8.
 
    What is the result of 158 % 10?
@@ -570,25 +615,35 @@ Your teacher may suggest that you use a Java IDE like |repl| for this challenge 
 Summary
 -------------------
 
-- Arithmetic expressions include expressions of type int and double.
+- Arithmetic expressions include expressions of type ``int`` and ``double``.
 
-- The arithmetic operators consist of ``+``, ``-``, ``*`` , ``/``, and ``%`` (modulo for the remainder in division).
+- The arithmetic operators consist of ``+``, ``-``, ``*`` , ``/``, and ``%``
+  also known as addition, subtraction, multiplication, division, and remainder.
 
-- An arithmetic operation that uses two int values will evaluate to an int value. With integer division, any decimal part in the result will be thrown away.
+- An arithmetic operation that uses two ``int`` values will evaluate to an
+  ``int`` value. With integer division, any decimal part in the result will be
+  thrown away.
 
-- An arithmetic operation that uses at least one double value will evaluate to a double value.
+- An arithmetic operation that uses at least one ``double`` value will evaluate
+  to a ``double`` value.
 
 - Operators can be used to construct compound expressions.
 
-- During evaluation, operands are associated with operators according to **operator precedence** to determine how they are grouped. (``*``, ``/``, ``%`` have precedence over ``+`` and ``-``, unless parentheses are used to group those.)
+- During evaluation, operands are associated with operators according to
+  **operator precedence** to determine how they are grouped. (``*``, ``/``,
+  ``%`` have precedence over ``+`` and ``-``, unless parentheses are used to
+  group those.)
 
-- An attempt to divide an integer by zero will result in an ArithmeticException to occur.
+- An attempt to divide an integer by zero will result in an ``ArithmeticException``.
 
-- The assignment operator (``=``) allows a program to initialize or change the value stored in a variable.  The value of the expression on the right is stored in the variable on the left.
+- The assignment operator (``=``) allows a program to initialize or change the
+  value stored in a variable. The value of the expression on the right is stored
+  in the variable on the left.
 
 - During execution, expressions are evaluated to produce a single value.
 
-- The value of an expression has a type based on the evaluation of the expression.
+- The value of an expression has a type based on the types of the values and
+  operators used in the expression.
 
 AP Practice
 ------------
