@@ -985,12 +985,12 @@ Coding Practice
               {
                   public static void main(String[] args)
                   {
-                      // Your code should declare the variables below
-                      //   and initialize or calculate their values:
-                      //   numGallons (the number of gallons left in the tank given the values above), 
-                      //   milesPerGallon (the miles per gallon given above for this car), 
-                      //   and miles (the number of miles you can drive calculated from the other variables)
-                      // and print out miles
+                      // Your code should declare the variables 
+                      //  numGallons, milesPerGallon, and miles, and
+                      // calculate numGallons (the number of gallons left in the tank given the values above), 
+                      // initialize milesPerGallon (the miles per gallon given above for this car), 
+                      // calculate miles (the number of miles you can drive calculated from the other variables)
+                      // and print out miles.
 
                   }
               }
@@ -1075,9 +1075,11 @@ Coding Practice
               {
                   public static void main(String[] args)
                   {
-                      // Your code should use the variables
-                      // secondsInDay and secondsInThreeDays
-                      // and print out secondsInThreeDays
+                      // Your code should declare the variables 
+                      // secondsInDay and secondsInThreeDays and
+                      // initialize or calculate secondsInDay 
+                      // and calculate secondsInThreeDays using secondsInDay
+                      // and print out secondsInThreeDays.
 
                   }
               }
@@ -1105,9 +1107,9 @@ Coding Practice
                   public void testFormulaMiles() throws IOException
                   {
                       String target1 =
-                              removeSpaces("secondsInThreeDays = secondsInDay * 3;");
+                              removeSpaces("secondsInDay * 3;");
                       String target2 =
-                              removeSpaces("secondsInThreeDays = 3 * secondsInDay;");
+                              removeSpaces("3 * secondsInDay;");
                       String code = removeSpaces(getCode());
                       boolean passed1 = code.contains(target1);
                       boolean passed2 = code.contains(target2);
@@ -1168,7 +1170,9 @@ Coding Practice
                   public static void main(String[] args)
                   {
                       // Your code should use the variables
-                      // money, pricePerWing, numWings
+                      // money, pricePerWing, numWings, and
+                      // initialize money and pricePerWing using the values above, 
+                      // and calculate numWings using money and pricePerWing and type casting to int
                       // and print out numWings
 
                   }
