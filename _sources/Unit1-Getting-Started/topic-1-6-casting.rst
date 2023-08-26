@@ -6,15 +6,15 @@
 
 |Time45|
 
-Casting and Ranges of Variables
-===============================
+Casting and Ranges of Values
+============================
 
 In Java, **type casting** is used to convert values from one type to another. By
 **casting** we don't mean something to do with fishing, but it is a similar idea
 to casting a bronze, without needing to heat anything to 913 degrees Celsius.
 But like molten bronze is reshaped by melting it and pouring it into a mold, our
 data is reshaped via a **cast** operator. In Java when you cast you are changing
-the "shape" (or type) of the variable.
+the "shape" (or type) of the value.
 
 .. figure:: Figures/bronze-casting.jpg
     :width: 300px
@@ -24,10 +24,11 @@ the "shape" (or type) of the variable.
 
 
 The **cast operator**, which looks like ``(int)`` and ``(double)`` placed before
-a number, variable, or expression in parentheses, produces a value of the given
-type by converting the value of the originial expression to the new type.
+any expression: a literal a number, a variable, or more complex expression in
+parentheses, produces a value of the given type by converting the value of the
+originial expression to the new type.
 
-For example, ``(double)1 / 3`` will evaluate to a ``double`` value instead of an
+For example, ``(double) 1 / 3`` will evaluate to a ``double`` value instead of an
 ``int``. Run this code to find how Java handles division and what casting can do
 to the results. Notice what happens when you divide an ``int`` by an ``int`` or
 an ``int`` by a ``double`` or an ``int`` cast to a ``double`` divided by an
@@ -107,7 +108,7 @@ because a ``double`` can represent any ``int`` value but not vice versa; thus a
    represent values from :math:`-2^{31}` to :math:`2^{31} - 1`, inclusive, while
    the range of consecutive interger values that can be reprenested by a double
    is from :math:`-2^{53}` to :math:`2^{53}`, inclusive. (A ``double`` can also
-   represent much larger values but with limited precision.) you can refer to
+   represent much larger values but with limited precision.) You can refer to
    the minimum and maximum ``int`` values with the constants
    ``Integer.MIN_VALUE`` and ``Integer.MAX_VALUE``.
 
@@ -129,9 +130,9 @@ an ``int``, it will be truncated to ``1``. However if we want to round a
 is above the next integer value if the decimal part is greater than ``0.5``, as
 it is here. Then casting *that* value to an ``int`` will truncate down. So in
 this case ``1.75 + 0.5`` gives us ``2.25`` which is then truncated to ``2``. On
-the other hand adding ``0.5`` to the result of evaluating ``5.0 / 4.2``,
-namely``1.25``, only gets us to ``1.75`` which truncates back to ``1`` which is
-the nearest integer to ``1.25``.
+the other hand adding ``0.5`` to the result of evaluating ``5.0 / 4.2``, namely
+``1.25``, only gets us to ``1.75`` which truncates back to ``1`` which is the
+nearest integer to ``1.25``.
 
 .. activecode:: nearestInt
    :language: java
@@ -189,7 +190,11 @@ the nearest integer to ``1.25``.
 
 What happens to repeating decimal numbers like 3.333333...?  Java limits the number of digits you can save for any ``double`` number to about 14-15 digits. You should be aware that the accuracy of any calculation on a computer is limited by the fact that computers can only hold a limited number of digits.
 
-For example, int values are stored in 4 bytes of memory. There is an Integer.MAX_VALUE defined as 2147483647 and an Integer.MIN_VALUE defined as -2147483648. If you try to store any number larger or smaller than these numbers in an int variable, it will result in an **integer overflow** where an incorrect value could be stored. Try it below.
+For example, int values are stored in 4 bytes of memory. There is an
+``Integer.MAX_VALUE`` defined as 2147483647 and an ``Integer.MIN_VALUE`` defined
+as -2147483648. If you try to store any number larger or smaller than these
+numbers in an int variable, it will result in an **integer overflow** where an
+incorrect value could be stored. Try it below.
 
 .. activecode:: overfl
    :language: java
