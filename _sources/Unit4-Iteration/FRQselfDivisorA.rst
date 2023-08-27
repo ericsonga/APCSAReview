@@ -132,7 +132,7 @@ Click to reveal hints and problems to lead you to the solution or skip ahead to 
 
    So we need to loop through all the digits in the number one at a time and test if the current digit is 0 and if so return false.  Otherwise we need to test if the passed number is evenly divisible (0 remainder) by the current digit.  If it isn't we return false.  If we have looped through all the digits and not found a problem return true.
 
-   How can we loop through all the digits in a number?  We can use x % 10 to get the rightmost digit from a number and x / 10 to remove the rightmost digit from a number.  We can also use the mod operator (%) to test if the number is evenly divisible by the current digit.  Run the example code below to see how this works.
+   How can we loop through all the digits in a number?  We can use x % 10 to get the rightmost digit from a number and x / 10 to remove the rightmost digit from a number.  We can also use the remainder operator (%) to test if the number is evenly divisible by the current digit.  Run the example code below to see how this works.
 
    .. activecode:: lcfrsda4
        :language: java

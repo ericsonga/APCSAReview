@@ -4,7 +4,7 @@
    :prefix: 4-7-
    :start: 1
 
-Group Work - Modulo Operator (%)
+Group Work - Remainder Operator (%)
 ========================================
 
 It is best to use a POGIL approach with the following. In POGIL students work
@@ -14,6 +14,8 @@ This page is based on a POGIL activity from Helen Hu at that site.
 .. index::
   single: modulus
   single: modulo operator
+  single: remainder
+  single: remainder operator
 
 .. activecode:: mod-model-1
    :language: java
@@ -51,8 +53,8 @@ Look at the expressions in the code above and the output.  Then answer the follo
     - :20: Four goes into twenty 5 times with a remainder of 0.
       :.*: Which next number larger than 16 is evenly divisible by 4 (num % 4 returns 0)?
 
-Going Beyond Mod 4
------------------------
+Going Beyond Remainder 4
+-------------------------
 
 .. fillintheblank:: mod-return-zero-mod-five
 
@@ -143,7 +145,7 @@ the extras go back to the teacher.
     - :2: Four goes into two zero times with a remainder of 2.
       :.*: What is the remainder when you divide 2 by 4?
 
-Describe the Modulo (%) Operator
+Describe the Remainder (%) Operator
 ---------------------------------
 
 .. shortanswer:: mod-describe-mod-sa
