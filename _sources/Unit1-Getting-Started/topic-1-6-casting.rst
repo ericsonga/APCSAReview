@@ -82,7 +82,7 @@ truncating is not the same as rounding!
 
 But in any expression involving a ``double``, the ``double`` is “contagious” and
 will cause the value of that expression to also be a ``double``. Thus the
-expression ``9.0 / 10`` is evaluated as if it had be written ``9.0 / 10.0`` and
+expression ``9.0 / 10`` is evaluated as if it had been written ``9.0 / 10.0`` and
 produces the ``double`` value ``0.9``.
 
 Casting an ``int`` to ``double``, as shown in the code above, produces a
