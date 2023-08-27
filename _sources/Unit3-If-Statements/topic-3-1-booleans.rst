@@ -227,7 +227,7 @@ to” not “equal to or less than”.
 
 
 Testing with remainder (%)
----------------------
+---------------------------
 
 Here are some boolean expressions that are very useful in coding and remainder is used in many of them:
 

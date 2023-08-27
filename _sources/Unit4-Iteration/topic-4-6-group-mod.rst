@@ -54,7 +54,7 @@ Look at the expressions in the code above and the output.  Then answer the follo
       :.*: Which next number larger than 16 is evenly divisible by 4 (num % 4 returns 0)?
 
 Going Beyond Remainder 4
------------------------
+-------------------------
 
 .. fillintheblank:: mod-return-zero-mod-five
 
