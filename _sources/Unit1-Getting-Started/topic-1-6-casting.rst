@@ -20,13 +20,13 @@ the "shape" (or type) of the value.
     :width: 300px
     :figclass: align-center
 
-    Figure 1: Casting bronze.
+    Figure 1: Bronze casting changes the shape of the metal. 
 
 
 The **cast operator**, which looks like ``(int)`` and ``(double)`` placed before
-any expression: a literal a number, a variable, or more complex expression in
-parentheses, produces a value of the given type by converting the value of the
-originial expression to the new type.
+any expression (a literal, a number, a variable, or more complex expression in
+parentheses) produces a value of the given type by converting the value of the
+original expression to the new type.
 
 For example, ``(double) 1 / 3`` will evaluate to a ``double`` value instead of an
 ``int``. Run this code to find how Java handles division and what casting can do
@@ -75,10 +75,10 @@ an ``int`` by a ``double`` or an ``int`` cast to a ``double`` divided by an
        }
    }
 
-When Java divides two ``int``\ s, it produces an ``int`` result by truncatating
+When Java divides two ``int``\ s, it produces an ``int`` result by truncating
 the actual mathematical result, removing anything after the decimal point. Thus
-``9 / 10`` evaluates to ``0``, not ``0.9``. (It also does not evaluate to ``1``;
-truncating is not the same as rounding.)
+``9 / 10`` evaluates to ``0``, not ``0.9``. It also does not evaluate to ``1``;
+truncating is not the same as rounding!
 
 But in any expression involving a ``double``, the ``double`` is “contagious” and
 will cause the value of that expression to also be a ``double``. Thus the
@@ -87,7 +87,7 @@ produces the ``double`` value ``0.9``.
 
 Casting an ``int`` to ``double``, as shown in the code above, produces a
 ``double`` value which will then causes any expression it is part of to produce
-a ``double``. This is especiallly useful when you have ``int`` variables that
+a ``double``. This is especially useful when you have ``int`` variables that
 you want to do non-integer division with:
 
 .. code-block:: java
@@ -96,7 +96,7 @@ you want to do non-integer division with:
    int count; // the number of ints that went into total
 
    // Compute the average of the bunch of ints summed into total.
-   double average = (double)total / count;
+   double average = (double) total / count;
 
 A conversion from ``int`` to ``double`` is called a **widening conversion**
 because a ``double`` can represent any ``int`` value but not vice versa; thus a
@@ -106,7 +106,7 @@ because a ``double`` can represent any ``int`` value but not vice versa; thus a
 
    ``int``\ s in Java are always 32-bit signed values which mean they can
    represent values from :math:`-2^{31}` to :math:`2^{31} - 1`, inclusive, while
-   the range of consecutive interger values that can be reprenested by a double
+   the range of consecutive integer values that can be represented by a double
    is from :math:`-2^{53}` to :math:`2^{53}`, inclusive. (A ``double`` can also
    represent much larger values but with limited precision.) You can refer to
    the minimum and maximum ``int`` values with the constants
@@ -572,7 +572,7 @@ This would be a good project to work together in pairs, and switch drivers (who 
 
 .. |repl| raw:: html
 
-   <a href="https://repl.it" target="_blank">repl.it</a>
+   <a href="https://replit.com" target="_blank">replit</a>
 
 
 .. |Scanner| raw:: html
@@ -633,9 +633,9 @@ Java code that casts numbers to ``char``; for many codepoints that will work but
 not on more recently added codepoints including, critically those for Emoji. 😞
 So better to use ``Character.toString`` and ignore ``char``.)
 
-Try the following program which prints out an English “A”, a |Chinese
-character|, and an |emoji|. Then look up other characters at this |Unicode
-Lookup| site and change the code to print them out. (Use the Dec column in site
+Try the following program which prints out an English “A”, a 
+|Chinese character|, and an |emoji|. Then look up other characters at this 
+|Unicode Lookup| site and change the code to print them out. (Use the Dec column in site
 to get the decimal number.) Can you print out letters from 3 different
 languages?
 
