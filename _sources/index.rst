@@ -12,19 +12,18 @@ CSAwesome is a College Board endorsed curriculum for AP Computer Science A, an i
 
 To make sure the site saves your answers on questions, please click on the person icon at the top to register or login to your Runestone course. As you complete lessons, click the "Mark as completed" button at the bottom. Enjoy the journey!
 
-.. ATTENTION high school women, genderqueer, and non-binary technologists:
-.. Apply now until Oct. 20th for the **NCWIT Award for Aspirations in Computing** to be recognized for all that you do (or want to do)
-.. in technology. Visit http://www.aspirations.org/AiCHSAward for details. #NCWITAiC23
+.. |flyer| raw:: html
+
+   <a href="https://drive.google.com/file/d/11MDPfpb3sjzfCR-6zeUe79WNgBbfZbqN/view?usp=sharing" target="_blank" style="text-decoration:underline">flyer</a>
+
+
+ATTENTION high school women of color taking AP CSA or CSP: if you identify as female and as Black, Hispanic/Latina, and/or Native American, apply to participate in **Sisters Rise Up**. The goal of Sisters Rise Up is to help you succeed in your AP Computer Science course and on the exam. They offer one-hour help sessions several times a week and once a month special help sessions often with guest speakers from computing.  If you enroll in Sisters Rise Up and send in your AP CS exam score by the end of August, you will be sent a gift card for $100. See the |flyer| and apply at https://tinyurl.com/55z7tyb9.
+
+ATTENTION high school women, genderqueer, and non-binary technologists: Apply Sept. 1st until Oct. 20th for the **NCWIT Award for Aspirations in Computing** to be recognized for all that you do (or want to do) in technology. Visit http://www.aspirations.org/AiCHSAward for details. 
 
 .. ATTENTION high school seniors: apply for the https://www.amazonfutureengineer.com/scholarships for college scholarships and Amazon summer internships for students with financial need.
 
 .. Apply for the  ACM Cutler-Bell Scholarship https://csteachers.org/page/csta-acm-cutler-bell-prize until Jan. 27th.
-
-.. ATTENTION high school women of color taking AP CSA or CSP: if you identify as a woman/girl and as Black, Hispanic/Latina, and/or Native American
-.. you can participate in **Sisters Rise Up**. The goal of Sisters Rise Up is to help you succeed in your Advanced Placement Computer Science course and on the exam.
-.. It offers remote help sessions run by undergraduate students from the University of Michigan.
-.. You can express interest in the program by filling at the form at https://forms.gle/4516SWpPrgnGPi55A.
-
 
 
 .. raw:: html
