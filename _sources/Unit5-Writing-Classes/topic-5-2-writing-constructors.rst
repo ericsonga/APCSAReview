@@ -163,7 +163,7 @@ values themselves.
         :click-incorrect:private String last;:endclick:
 
         :click-correct:public Name(String theFirst, String theLast):endclick:
-        :click-incorrect:{:endclick:
+        :click-correct:{:endclick:
             :click-correct:first = theFirst;:endclick:
             :click-correct:last = theLast;:endclick:
         :click-correct:}:endclick:

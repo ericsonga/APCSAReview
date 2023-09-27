@@ -381,12 +381,12 @@ on the object ``p1``.
         :click-incorrect:}:endclick:
 
         :click-correct:public void setFirst(String theFirst):endclick:
-        :click-incorrect:{:endclick:
+        :click-correct:{:endclick:
             :click-correct:first = theFirst;:endclick:
         :click-correct:}:endclick:
 
         :click-correct:public void setLast(String theLast):endclick:
-        :click-incorrect:{:endclick:
+        :click-correct:{:endclick:
             :click-correct:last = theLast;:endclick:
         :click-correct:}:endclick:
 

@@ -65,7 +65,7 @@ The image below shows these 3 levels of scope.
         :click-incorrect:private String first;:endclick:
         :click-incorrect:public String last;:endclick:
 
-        :click-correct:public Name(String theFirst, String theLast):endclick:
+        :click-incorrect:public Name(String theFirst, String theLast):endclick:
         :click-incorrect:{:endclick:
             :click-correct:String firstName = theFirst;:endclick:
             :click-incorrect:first = firstName;:endclick:
