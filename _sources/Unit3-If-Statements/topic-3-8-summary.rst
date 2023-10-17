@@ -70,7 +70,7 @@ For more practice, see this |Quizlet|.
 Common Mistakes
 ---------------
 
-  - Using ``=`` instead of ``==`` in ``if``'s. Remember that ``=`` is used to assign values and ``==`` is used to test. ``if``s always use ``==``.
+  - Using ``=`` instead of ``==`` in ``if``\ s. Remember that ``=`` is used to assign values and ``==`` is used to test. ``if``\ s always use ``==``.
 
   - Putting a ``;`` at the end of ``if (test);``. Remember that the ``if`` statement ends after ``if (test) statement;`` Or better yet, always use curly braces ``if (test) { statements; }``.
 
