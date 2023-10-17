@@ -550,7 +550,7 @@ Summary
 
 - Logical operators ``!`` (not), ``&&`` (and), and ``||`` (or) are used with Boolean values.
 
-- ``A && B`` is ``true` if both ``A`` and ``B`` are ``true``.
+- ``A && B`` is ``true`` if both ``A`` and ``B`` are ``true``.
 
 - ``A || B`` is ``true`` if either ``A`` or ``B`` (or both) are ``true``.
 
