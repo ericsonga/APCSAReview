@@ -620,61 +620,62 @@ Now what about the combination lock for this challenge? You will need to spin th
 
    ====
    import static org.junit.Assert.*;
-
    import org.junit.*;
-
    import java.io.*;
-
-   public class RunestoneTests extends CodeTestHelper
-   {
+   
+   public class RunestoneTests extends CodeTestHelper {
        @Test
-       public void test1()
-       {
+       public void test1() {
            String output = getMethodOutput("main");
            String[] lines = output.split("\\s+");
-
+   
            boolean passed = lines.length >= 2;
-
-           passed =
-                   getResults(
-                           "2+ lines of output",
-                           lines.length + " lines of output",
-                           "Expected output",
-                           passed);
+   
+           passed = getResults(
+                   "2+ lines of output",
+                   lines.length + " lines of output",
+                   "Expected output",
+                   passed);
            assertTrue(passed);
        }
-
+   
        @Test
-       public void test2()
-       {
+       public void test2() {
            String output = getMethodOutput("main");
            boolean passed = output.contains("64000");
-           passed = getResults("true", "" + passed, "Prints 40^3", passed);
+           passed = getResults("true", "" + passed, "Prints result of 40^3", passed);
            assertTrue(passed);
        }
-
+   
        @Test
-       public void test3()
-       {
-           String code = getCode();
-           int num = countOccurences(code, "(int)(Math.random()*40");
-
+       public void test3() {
+           String[] code = getCode().split("\n");
+           String expected = "Possible answers:\n(int) (Math.random() * 40)\n(int) (40 * Math.random())";
+           String actual = "";
+           int num = 0;
+   
+           for (int i = 0; i < code.length; i++) {
+               if (code[i].contains("Math.random()") && code[i].contains("40")) {
+                   actual += code[i].trim() + "\n";
+                   if (code[i].contains("(int)"))
+                       num++;
+               }
+           }
+   
            boolean passed = num >= 3;
-           passed =
-                   getResults(
-                           "3",
-                           "" + num,
-                           "Calls to Math.random() for a random number from 0 up to 40",
-                           passed);
+           passed = getResults(
+                   expected,
+                   actual,
+                   "Creates 3 random numbers from 0 to 40 (not inclusive)",
+                   passed);
            assertTrue(passed);
        }
-
+   
        @Test
-       public void test4()
-       {
+       public void test4() {
            String code = getCode();
            int num = countOccurences(code, "Math.pow(");
-
+   
            boolean passed = num >= 1;
            passed = getResults("1 or more", "" + num, "Calls to Math.pow(...)", passed);
            assertTrue(passed);
