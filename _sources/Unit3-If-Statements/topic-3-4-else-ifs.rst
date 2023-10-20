@@ -230,40 +230,78 @@ Here is a flowchart for a conditional with 3 options like in the code above.
    ====
    // Test Code for Lesson 3.4 - lccbIfDebug
    import static org.junit.Assert.*;
-
+   import org.junit.After;
+   import org.junit.Before;
    import org.junit.Test;
-
+   
    import java.io.*;
-
-   public class RunestoneTests extends CodeTestHelper
-   {
+   
+   public class RunestoneTests extends CodeTestHelper {
+       public RunestoneTests() {
+           super("IfDebug");
+       }
+   
        @Test
-       public void testMainCorrectOutput() throws IOException
-       {
-           String output = getMethodOutput("main");
-           String expected = "A\n";
-           boolean passed = getResults(expected, output, "Expected output from main");
+       public void testCodeContainsFourElses() {
+           String code = getCode();
+           int expectedElseCount = 4;
+           int actualElseCount = countOccurences(code, "else");
+   
+           boolean passed = getResults("" + expectedElseCount, "" + actualElseCount, "Expected number of else's");
+           assertTrue(passed);
+   
+       }
+   
+       private int[] grades = { 100, 95, 83, 79, 65, 50 };
+       String[] outs = { "A", "A", "B", "C", "D", "F" };
+   
+       @Test
+       public void testGrades0() throws Exception {
+           changeAndTestCode(0);
+       }
+       
+       @Test
+       public void testGrades1() throws Exception {
+           changeAndTestCode(1);
+       }
+   
+       @Test
+       public void testGrades2() throws Exception {
+           changeAndTestCode(2);
+       }
+   
+       @Test
+       public void testGrades3() throws Exception {
+           changeAndTestCode(3);
+       }
+   
+       @Test
+       public void testGrades4() throws Exception {
+           changeAndTestCode(4);
+       }
+   
+       @Test
+       public void testGrades5() throws Exception {
+           changeAndTestCode(5);        
+       }
+   
+       public void changeAndTestCode(int i) throws Exception {
+           String output = getOutputChangedCode(grades[i]);
+   
+           String expected = outs[i];
+           boolean passed = output.contains(expected);
+           getResults(expected, output, "Checking output for grade = " + grades[i], passed);
            assertTrue(passed);
        }
-
-       @Test
-       public void testCodeContainsFourElses()
-       {
-           String code = getCode();
-           String[] tokens = code.split("\\s+");
-
-           int expectedElseCount = 4;
-           int actualElseCount = 0;
-           for (int i = 0; i < tokens.length; i++)
-           {
-               if (tokens[i].equals("else"))
-               {
-                   actualElseCount++;
-               }
-           }
-           boolean passed =
-                   getResults(expectedElseCount, actualElseCount, "Expected number of else's");
-           assertTrue(passed);
+   
+       public String getOutputChangedCode(int newVal) throws Exception {
+           String className = "Test" + newVal;
+   
+           String program = getCode();
+           program = program.replace("IfDebug", className).replace("public class", "class");
+           program = program.replaceAll("int score\\s*=\\s*\\d+", "int score = " + newVal);
+   
+           return getMethodOutputChangedCode(program, className, "main");
        }
    }
 
