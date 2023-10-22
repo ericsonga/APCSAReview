@@ -68,12 +68,11 @@ For more practice, see this |Quizlet|.
 Common Mistakes
 -----------------
 
-  -  Forgetting to change the thing you are testing in a ``while`` loop and ending up with an infinite loop.
+-  Forgetting to change the thing you are testing in a ``while`` loop and ending up with an infinite loop.
 
-  -  Getting the start and end conditions wrong on the ``for`` loop. This will often result in you getting an **out of bounds error**.  An **out of bounds** error occurs when you try to access past the end of a string.
+-  Getting the start and end conditions wrong on the ``for`` loop. This will often result in you getting an **out of bounds error**.  An **out of bounds** error occurs when you try to access past the end of a string.
 
-  -  Jumping out of a loop too early by using one or more return statements inside of the loop.
-
+-  Jumping out of a loop too early by using one or more return statements inside of the loop.
 
 Here is an example of a while loop that doesn't ever change the value in the loop so it never ends.  If you run it refresh the page to stop it.  Fix it.
 
@@ -221,4 +220,3 @@ Here is an example of jumping out of a loop too early.  The code below is intend
            assertTrue(passed);
        }
    }
-
