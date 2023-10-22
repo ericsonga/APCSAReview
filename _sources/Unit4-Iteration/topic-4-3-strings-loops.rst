@@ -193,13 +193,13 @@ For Loops: Reverse String
 --------------------------
 
 
-For-loops can also be used to process strings, especially in situations where you know you will visit every character.
+``for`` loops can also be used to process strings, especially in situations where you know you will visit every character.
 
 .. note::
 
-    While loops are often used with strings when you are looking for a certain character or substring in a string and do not know how many times the loop needs to run. For loops are used when you know you want to visit every character.
+    ``while`` loops are often used with strings when you are looking for a certain character or substring in a string and do not know how many times the loop needs to run. ``for`` loops are used when you know you want to visit every character.
 
-For loops with strings usually start at 0 and use the string's length() for the ending condition to step through the string character by character.
+``for`` loops with strings usually start at 0 and use the string's length() for the ending condition to step through the string character by character.
 
 .. code-block:: java
 
