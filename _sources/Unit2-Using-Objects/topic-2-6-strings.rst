@@ -99,7 +99,7 @@ In both cases an object of the ``String`` class will be created in memory and th
    :language: java
    :autograde: unittest
 
-   Here is an active code sample that creates two greeting strings: one using a string literal and the other using new and the String constructor. Change the code to add 2 new strings called firstname and lastname, one using a string literal and the other using new, and print them out with the greetings.
+   Here is an active code sample that creates two greeting strings: one using a string literal and the other using new and the String constructor. Change the code to add 2 new strings called firstName and lastName, one using a string literal and the other using new, and print them out with the greetings.
    ~~~~
    public class StringTest
    {
