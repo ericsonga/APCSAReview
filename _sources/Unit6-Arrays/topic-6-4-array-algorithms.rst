@@ -72,7 +72,9 @@ Here are two common array traversal loops that can be used for these algorithms:
            for (int val : values)
            {
                if (val < min) // found a new min!
-               min = val;
+               {
+                   min = val;
+               }
            }
            System.out.println("Min is " + min);
        }
@@ -217,4 +219,3 @@ We encourage you to work in pairs or groups to tackle the following challenging 
    soundB.rst
    numberCubeA.rst
    numberCubeB.rst
-
