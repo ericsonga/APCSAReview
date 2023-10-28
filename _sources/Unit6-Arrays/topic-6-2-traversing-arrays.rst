@@ -329,7 +329,7 @@ You don't have to loop through an array from the front to the back.  You can loo
        {
            for (int index = values.length - 1; index >= 0; index--)
            {
-               if (values[index] < target) 
+               if (values[index] < target)
                {
                   return index;
                }
@@ -450,7 +450,7 @@ You don't have to loop through an array from the front to the back.  You can loo
    :feedback_c: Since the method loops from the back towards the front -15 is the last value in the array that is less than -13 and it is at index 1.
    :feedback_d: No, the method correctly starts the index at values.length - 1 and continues as long as i is greater than or equal to 0.
 
-   Given the following code segment (which is identical to the method above) what will be returned when you execute: getIndexOfLastElementSmallerThanTarget(values,-13);
+   Given the following code segment (which is identical to the method above) what will be returned when you execute: ``getIndexOfLastElementSmallerThanTarget(values,-13)``;
 
    .. code-block:: java
 
@@ -478,7 +478,7 @@ You don't have to loop through an array from the front to the back.  You can loo
    :feedback_c: Check the starting index.   Is it correct?
    :feedback_d: You can not start the index at the length of the array.  You must start at the length of the array minus one.  This is a common mistake.
 
-   Given the following code segment (which is identical to the method above) what will be returned when you execute: getIndexOfLastElementSmallerThanTarget(values, 7);
+   Given the following code segment (which is not quite identical to the method above) what will be returned when you execute: ``getIndexOfLastElementSmallerThanTarget(values, 7)``;
 
    .. code-block:: java
 
@@ -1072,7 +1072,7 @@ This challenge includes a dictionary file of 10,000 English words which is read 
 
 1. Write a ``print10`` method that prints out the first 10 words of the dictionary array. Do not print out the whole array of 10,000 words!
 2. Write a ``spellcheck`` method that takes a word as a parameter and returns true if it is in the dictionary array. It should return false if it is not found (When can you tell that you have not found a word in the dictionary?). Test your code below by changing the word sent to the spellcheck() method in main. This algorithm is called a **linear search** where we step through the array one element at a time (here the dictionary one word at a time) looking for a certain element.
-3. Optional Challenge: Write a method ``printStartsWith(String)`` that prints out the words that start with a ``String`` of letters in the ``dictionary`` array. Your method should take a parameter for the ``firstLetters`` as a ``String``. You could use the Java String |startsWith()| method here if you'd like to, or use ``indexOf`` to see if the ``firstLetters`` is at index 0 of the string. This is not autograded.  
+3. Optional Challenge: Write a method ``printStartsWith(String)`` that prints out the words that start with a ``String`` of letters in the ``dictionary`` array. Your method should take a parameter for the ``firstLetters`` as a ``String``. You could use the Java String |startsWith()| method here if you'd like to, or use ``indexOf`` to see if the ``firstLetters`` is at index 0 of the string. This is not autograded.
 
 .. datafile:: dictionary.txt
    :fromfile: ../../_static/dictionary10K.txt
