@@ -384,7 +384,7 @@ Here is a flowchart for a conditional with 3 options like in the code above.
 
 .. |walkthrough| raw:: html
 
-   <a href="http://www.sierrahelp.com/Walkthroughs/AdventureWalkthrough.html#in" target="_blank" style="text-decoration:underline">walkthrough</a>
+   <a href="https://adventuregamers.com/walkthrough/full/colossal-cave" target="_blank" style="text-decoration:underline">walkthrough</a>
 
 .. |repl link| raw:: html
 
