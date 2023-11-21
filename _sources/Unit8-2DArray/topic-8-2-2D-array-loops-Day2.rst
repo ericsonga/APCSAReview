@@ -512,8 +512,8 @@ You can test the methods in the active code below or in this |replit project| or
         }
 
         /* Add new methods here.
-           keepOnlyBlue() method sets the blue values at all pixels to zero.
-           switchColors() method swaps the color values of pixels.
+           keepOnlyBlue() method sets the red and green values at all pixels to zero.
+           switchColors() method switches colors, for example the red values with green values, etc.
         */
 
         /* Main method for testing

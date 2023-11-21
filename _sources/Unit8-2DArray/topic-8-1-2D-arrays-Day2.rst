@@ -97,7 +97,7 @@ Try the code below. Did it print what you expected?  When you print a two dimens
       public void test2()
       {
           String code = getCode();
-          String expected = "new String [4][2]";
+          String expected = "new String[4][2]";
 
           boolean passed = code.contains(expected);
 
