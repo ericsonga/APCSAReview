@@ -338,7 +338,7 @@ You can use beach.jpg or one of the other images seen at the bottom of this less
         }
 
         /*
-           keepOnlyBlue() method sets the blue values at all pixels to zero.
+           keepOnlyBlue() method sets the red and green values at all pixels to zero.
 
            Add new method here and call it from main.
         */
