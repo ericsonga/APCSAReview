@@ -19,11 +19,11 @@ To make sure the site saves your answers on questions, please click on the perso
 
 ATTENTION high school women of color taking AP CSA or CSP: if you identify as female and as Black, Hispanic/Latina, and/or Native American, apply to participate in **Sisters Rise Up**. The goal of Sisters Rise Up is to help you succeed in your AP Computer Science course and on the exam. They offer one-hour help sessions several times a week and once a month special help sessions often with guest speakers from computing.  If you enroll in Sisters Rise Up and send in your AP CS exam score by the end of August, you will be sent a gift card for $100. See the |flyer| and apply at https://tinyurl.com/55z7tyb9.
 
-ATTENTION high school women, genderqueer, and non-binary technologists: Apply Sept. 1st until Oct. 20th for the **NCWIT Award for Aspirations in Computing** to be recognized for all that you do (or want to do) in technology. Visit http://www.aspirations.org/AiCHSAward for details. 
+.. ATTENTION high school women, genderqueer, and non-binary technologists: Apply Sept. 1st until Oct. 20th for the **NCWIT Award for Aspirations in Computing** to be recognized for all that you do (or want to do) in technology. Visit http://www.aspirations.org/AiCHSAward for details. 
 
-.. ATTENTION high school seniors: apply for the https://www.amazonfutureengineer.com/scholarships for college scholarships and Amazon summer internships for students with financial need.
+ATTENTION high school seniors: apply for the https://www.amazonfutureengineer.com/scholarships until Dec. 15th for college scholarships and Amazon summer internships for students with financial need.
 
-.. Apply for the  ACM Cutler-Bell Scholarship https://csteachers.org/page/csta-acm-cutler-bell-prize until Jan. 27th.
+Apply for the  ACM Cutler-Bell Scholarship https://csteachers.org/awards/cutlerbell/ until Jan. 19th.
 
 **CSAwesome Units:**
 
@@ -101,7 +101,7 @@ Index
 
 If you see errors or bugs, please report them with this |errors form|. If you are a teacher who is interested in CSAwesome PDs or community, please fill out this |interest form| and join the |teaching CSAwesome group| which will give you access to lesson plans at |csawesome|.
 
-(last revised 8/25/2023)
+(last revised 11/22/2023)
 
 © Copyright 2014-2023 Barb Ericson, Univ. Michigan; 2019-2023 Beryl Hoffman,
 Elms College; 2023 Peter Seibel, Berkeley High School. All rights reserved.
