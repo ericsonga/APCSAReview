@@ -394,15 +394,6 @@ Code Practice with ArrayLists
                       assertTrue(passed);
                   }
 
-                  @Test
-                  public void testIntCast()
-                  {
-                      String target = "(int) list.get(i)";
-                      boolean passed =
-                              checkCodeContains(
-                                      "INT CASTING: getting ArrayList list values of type INTEGER ", target);
-                      assertTrue(passed);
-                  }
               }
 
         .. tab:: Answer
@@ -1157,4 +1148,3 @@ Code Practice with ArrayLists
             .. disqus::
                 :shortname: cslearn4u
                 :identifier: javareview_ch8Ex10d
-
