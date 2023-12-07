@@ -398,7 +398,7 @@ Code Practice with ArrayLists
 
         .. tab:: Answer
 
-           In line 7, ArrayLists do not have a length property; instead, call the ``size()`` method to find out how long an ArrayList is..
+           In line 7, ArrayLists do not have a length property; instead, call the ``size()`` method to find out how long an ArrayList is.
 
            .. activecode::  ch8Ex4a
               :language: java
