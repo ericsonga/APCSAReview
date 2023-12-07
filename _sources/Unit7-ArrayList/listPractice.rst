@@ -394,20 +394,11 @@ Code Practice with ArrayLists
                       assertTrue(passed);
                   }
 
-                  @Test
-                  public void testIntCast()
-                  {
-                      String target = "(int) list.get(i)";
-                      boolean passed =
-                              checkCodeContains(
-                                      "INT CASTING: getting ArrayList list values of type INTEGER ", target);
-                      assertTrue(passed);
-                  }
               }
 
         .. tab:: Answer
 
-           In line 7, ArrayLists do not have a length property; instead, call the ``size()`` method to find out how long an ArrayList is.  In line 9, there must be an ``(int)`` cast to the get() method since ``values`` holds Integers.
+           In line 7, ArrayLists do not have a length property; instead, call the ``size()`` method to find out how long an ArrayList is.
 
            .. activecode::  ch8Ex4a
               :language: java
@@ -423,7 +414,7 @@ Code Practice with ArrayLists
                   {
                       for (int i = 0; i < list.size(); i++)
                       {
-                          if ((int) list.get(i) % 2 == 0)
+                          if (list.get(i) % 2 == 0)
                           {
                               System.out.print(list.get(i) + ", ");
                           }
@@ -1157,4 +1148,3 @@ Code Practice with ArrayLists
             .. disqus::
                 :shortname: cslearn4u
                 :identifier: javareview_ch8Ex10d
-
