@@ -178,7 +178,7 @@ While Loop
 ----------------------
 
 The example below demonstrates a ``while`` loop and an object-oriented approach
-where the list is a field of the current object and you use an object method
+where the list is a field of the current object and you use an instance method
 rather than a class (static) method to loop through the list.
 
 |CodingEx| **Coding Exercise**
@@ -197,9 +197,9 @@ rather than a class (static) method to loop through the list.
    {
       private ArrayList<String> nameList;
 
-      public ListWorker(ArrayList<String> theNames)
+      public ListWorker(ArrayList<String> nameList)
       {
-          nameList = theNames;
+          this.nameList = nameList;
       }
 
       public boolean removeName(String name)
@@ -762,11 +762,16 @@ the words array and then uncomment the call to ``numMatches``.
 Summary
 -----------
 
-- ``ArrayList``\ s can be traversed with an enhanced ``for`` loop, a ``while`` loop, or a regular ``for`` loop using an index.
+- ``ArrayList``\ s can be traversed with an enhanced ``for`` loop, a ``while``
+  loop, or a regular ``for`` loop using an index.
 
-- Deleting elements during a traversal of an ``ArrayList`` requires using special techniques to avoid skipping elements, since ``remove`` moves all the elements down.
+- Deleting elements during a traversal of an ``ArrayList`` requires using
+  special techniques to avoid skipping elements, since ``remove`` moves all the
+  elements above the removed index down.
 
-- Since the indices for an ``ArrayList`` start at 0 and end at the number of elements − 1, accessing an index value outside of this range will result in an ``IndexOutOfBoundsException`` being thrown.
+- Since the indices for an ``ArrayList`` start at 0 and end at the number of
+  elements − 1, accessing an index value outside of this range will result in an
+  ``IndexOutOfBoundsException`` being thrown.
 
 - Changing the size of an ``ArrayList`` while traversing it using an enhanced
   ``for`` loop can result in a ``ConcurrentModificationException`` being thrown.
