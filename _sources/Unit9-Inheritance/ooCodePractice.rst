@@ -1052,7 +1052,7 @@ Code Practice with Object Oriented Concepts
               :language: java
               :autograde: unittest
 
-              Override the compareTo method so that it returns a postive number if the current Person is older than the passed other and a negative number if they are younger. If their age is the same then return the compareTo result on the names.
+              Override the compareTo method so that it returns a positive number if the current Person is older than the passed other and a negative number if they are younger. If their age is the same then return the compareTo result on the names.
               ~~~~
               public class Person implements Comparable<Person>
               {
