@@ -680,7 +680,7 @@ In this challenge, you will create a guide to different countries using arrays.
 
              boolean passed =
                      getResults(
-                             "5 x String[]", arrays + " x String[]", "Did you declare 4 String arrays?");
+                             "5 x String[]", arrays + " x String[]", "Did you declare 4 String arrays? (the 5th one is main's arg)");
              assertTrue(passed);
          }
      }

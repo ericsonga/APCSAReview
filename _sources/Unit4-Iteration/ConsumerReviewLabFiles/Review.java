@@ -33,7 +33,7 @@ public class Review {
     }
   
   
-  //read in the positive adjectives in postiveAdjectives.txt
+  //read in the positive adjectives in positiveAdjectives.txt
      try {
       Scanner input = new Scanner(new File("positiveAdjectives.txt"));
       while(input.hasNextLine()){

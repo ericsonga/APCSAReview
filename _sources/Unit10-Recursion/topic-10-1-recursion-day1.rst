@@ -252,9 +252,9 @@ Every recursive method must have at least one **base case** which halts the recu
    :answer_b: 1
    :answer_c: Both 0 and 1
    :correct: c
-   :feedback_a: This method also stops for another value of n.
-   :feedback_b: This method also stops for another value of n.
-   :feedback_c: This method stops calling itself when n is either 0 or 1.
+   :feedback_a: This method also stops for another value of bunnies.
+   :feedback_b: This method also stops for another value of bunnies.
+   :feedback_c: This method stops calling itself when bunnies is either 0 or 1.
 
    What is/are the values of the variable bunnies when this method stops calling itself (when it reaches the base case)?
 

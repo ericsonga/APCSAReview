@@ -325,7 +325,7 @@ look at what’s involved.
 
 We'll write a class ``Word`` which represents a word in a particular language.
 We want two ``Word`` objects to be considered ``equals`` if and only if they are
-spelled the same `and` come from the same languag. The latter requirement is
+spelled the same `and` come from the same language. The latter requirement is
 because sometimes different languages have words that are spelled the same but
 with different meanings such as “pie” which in English is a tasty baked treat
 and in Spanish is what we call a “foot” in English.

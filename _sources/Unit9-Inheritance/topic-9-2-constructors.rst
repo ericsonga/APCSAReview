@@ -278,13 +278,17 @@ constructors.
 2. Add a ``Square`` constructor with 1 argument for a side that calls ``Rectangle``\ ‘s constructor with 2 arguments using ``super``.
 3. Uncomment the objects in the ``main`` method to test drawing the squares.
 4. Add an ``area`` method to ``Rectangle`` that computes the area of the rectangle. Does it work for ``Square``\ s too? Test it.
-5. Add another subclass called ``LongRectangle`` which inherits from ``Rectangle`` but has the additional condition that the length is always 2 x the width. Write constructors for it and test it out.
+5. Add another subclass called ``LongRectangle`` which inherits from ``Rectangle`` but has the additional condition that the length is always 2 x the width. Write constructors for it and test it out. Do not make it public (because only 1 class per file can be public).
 
 .. activecode:: challenge-9-2-Square-Rectangle
   :language: java
   :autograde: unittest
 
-  Create a Square class that inherits from Rectangle.
+  1. Make the class ``Square`` below inherit from ``Rectangle``. 
+  2. Add a ``Square`` constructor with 1 argument for a side that calls ``Rectangle``\ ‘s constructor with 2 arguments using ``super``.
+  3. Uncomment the objects in the ``main`` method to test drawing the squares.
+  4. Add an ``area`` method to ``Rectangle`` that computes the area of the rectangle. Does it work for ``Square``\ s too? Test it.
+  5. Add another subclass called ``LongRectangle`` which inherits from ``Rectangle`` but has the additional condition that the length is always 2 x the width. Write constructors for it and test it out. Do not make it public (because only 1 class per file can be public).
   ~~~~
   class Rectangle
   {
@@ -335,6 +339,7 @@ constructors.
   }
 
     // 5. Define the LongRectangle class here
+    //    Do not make it public because only 1 class with main can be public in 1 file.
 
   ====
   import static org.junit.Assert.*;
