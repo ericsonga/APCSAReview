@@ -570,7 +570,7 @@ Look at the ``StudentList`` example above for help.
     }
 
 .. figure:: Figures/wordpairs.png
-    :width: 180px
+    :width: 190px
     :align: left
     :figclass: align-center
 
@@ -592,7 +592,7 @@ Here is the pseudocode for the constructor method.
 
   - Loop through the rest of the word array starting from index ``i + 1`` for the second word in the word pair (for loop from index ``j = i + 1`` to ``length``)
 
-    - Add the new ``WordPair`` formed from the ``i``th word and the ``j``th word to the ``allPairs`` ``ArrayList``.
+    - Add the new ``WordPair`` formed from the ``i``\ th word and the ``j``\ th word to the ``allPairs`` ``ArrayList``.
 
 .. activecode:: challenge-7-3-WordPairs
    :language: java
