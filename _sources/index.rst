@@ -103,7 +103,7 @@ If you see errors or bugs, please report them with this |errors form|. If you ar
 
 (last revised 1/6/2024)
 
-© Copyright 2014-2023 Barb Ericson, Univ. Michigan; 2019-2023 Beryl Hoffman,
-Elms College; 2023 Peter Seibel, Berkeley High School. All rights reserved.
+© Copyright 2014-2024 Barb Ericson, Univ. Michigan; 2019-2024 Beryl Hoffman,
+Elms College; 2023-2024 Peter Seibel, Berkeley High School. All rights reserved.
 
 Created using `Runestone  <http://runestone.academy>`_.
