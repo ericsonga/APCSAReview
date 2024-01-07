@@ -6,10 +6,12 @@
 
 |Time90|
 
-Traversing ArrayLists with Loops
+Traversing ``ArrayList``\ s with Loops
 ================================
 
-While loops, for loops, and enhanced for each loops can all be used to traverse an ArrayList just like an array.
+``ArrayList``\ s can be traversed with ``while`` loops and both regular and
+enhanced ``for`` loops much the same way we use those constructs to loop over an
+array.
 
 Enhanced For Each Loop
 ----------------------
@@ -17,11 +19,19 @@ Enhanced For Each Loop
 .. index::
    pair: list; for-each loop
 
-You can use a enhanced for-each loop to traverse through all of the items in a list, just like you do with an array as shown in the main method below.
+You can use a enhanced ``for`` loop to traverse all of the items in an
+``ArrayList``, just like you do with an array when you only care about the
+values in the list and not their indices. An example is shown in the ``main``
+method below.
+
+Note however that you can’t use the enhanced ``for`` loop if you want to add or
+remove elements while traversing an ``ArrayList``. If an ``ArrayList`` is
+modified, such as by calling the ``add`` or ``remove`` methods, while it is
+being looped over, it will cause the loop to throw a
+``ConcurrentModificationException``. If you need to modify an ``ArrayList``
+while looping over it, you’ll need to use a regular ``while`` or ``for`` loop.
 
 |CodingEx| **Coding Exercise**
-
-
 
 .. activecode:: listForEachLoop
    :language: java
@@ -96,19 +106,28 @@ You can use a enhanced for-each loop to traverse through all of the items in a l
 For Loop
 ----------------------
 
-You can also use a ``while`` or ``for`` loop to process list elements using the index. The ArrayList index starts at 0 just like arrays, but instead of using the square brackets [] to access elements, you  use the ``get(index)`` to get the value at the index and ``set(index,value)`` to set the element at an index to a new value.
-If you try to use an index that is outside of the range of 0 to the number of elements − 1 in an ArrayList, your code will throw an **ArrayIndexOutOfBoundsException**, just like in arrays.
+You can also use a ``while`` loop or a regular ``for`` loop to process list
+elements accessed using an index. ``ArrayList`` indices starts at 0 just like
+array indices, but instead of using the index operator ``[]`` to access
+elements, you use the ``get(index)`` method to get the value at the index and
+``set(index,value)`` to set the element at an index to a new value.
+
+If you try to use an index that is outside of the range of 0 to the number of
+elements − 1 in an ArrayList, your code will throw an
+``IndexOutOfBoundsException``, similar to the ``ArrayIndexOutOfBoundsException``
+thrown if you use the index operator on an array with an index out of bounds for
+that array.
 
 |CodingEx| **Coding Exercise**
-
-
 
 .. activecode:: listForLoop
    :language: java
    :autograde: unittest
    :practice: T
 
-   The following code will throw an ArrayIndexOutOfBoundsException. Can you fix it?
+   The following code will throw an ``IndexOutOfBoundsException``. Can you fix
+   it?
+
    ~~~~
    import java.util.*;
 
@@ -158,7 +177,9 @@ If you try to use an index that is outside of the range of 0 to the number of el
 While Loop
 ----------------------
 
-The example below demonstrates a while loop and an object-oriented approach where the list is a field of the current object and you use an object method rather than a class (static) method to loop through the list.
+The example below demonstrates a ``while`` loop and an object-oriented approach
+where the list is a field of the current object and you use an instance method
+rather than a class (static) method to loop through the list.
 
 |CodingEx| **Coding Exercise**
 
@@ -176,9 +197,9 @@ The example below demonstrates a while loop and an object-oriented approach wher
    {
       private ArrayList<String> nameList;
 
-      public ListWorker(ArrayList<String> theNames)
+      public ListWorker(ArrayList<String> nameList)
       {
-          nameList = theNames;
+          this.nameList = nameList;
       }
 
       public boolean removeName(String name)
@@ -192,7 +213,10 @@ The example below demonstrates a while loop and an object-oriented approach wher
                   nameList.remove(index);
                   found =    // true or false?
               }
-              else index++;
+              else
+              {
+                  index++;
+              }
           }
           return found;
        }
@@ -230,9 +254,16 @@ The example below demonstrates a while loop and an object-oriented approach wher
        }
    }
 
-Be careful when you remove items from a list as you loop through it.  Remember that removing an item from a list will shift the remaining items to the left.   Notice that the method above only increments the current index if an item was not removed from the list.  If you increment the index in all cases you will miss checking some of the elements since the rest of the items shift left when you remove one.
-
-Do not use the enhanced for each loop if you want to add or remove elements when traversing a list because it will throw a **ConcurrentModificationException** error. Since for each loops do not use an index, you cannot do this special case of incrementing only if it is changed. So if you are going to add or remove items or you need the index, use a regular for-loop or a while loop.
+Be careful when you remove items from a list as you loop through it. Notice how
+the method above only increments the index if an item was not removed from the
+list. This is because removing an item from a list will shift the remaining
+items to the left and if you increment the index in all cases you will skip the
+elements immediately after each element you remove. To see why, consider that
+those elements will be shifted into the position of the just removed element and
+if you increment the index, it will move to the next position, skipping the
+element that used to be at that position. Leaving the index unchanged after a
+remove allows the shifted-down element to be processed on the next time through
+the loop.
 
 |Exercise| **Check your understanding**
 
@@ -341,7 +372,9 @@ ArrayList of Student Objects
 
 |CodingEx| **Coding Exercise**
 
-You can put any kind of Objects into an ArrayList. For example, here is an ArrayList of Students. Although the print statement works here, you may want a nicer printout.
+You can put any kind of objects into an ``ArrayList``. For example, here is an
+``ArrayList`` of ``Student``\ s. Although the print statement works here, you
+may want a nicer printout.
 
 .. activecode:: StudentList
   :language: java
@@ -372,11 +405,11 @@ You can put any kind of Objects into an ArrayList. For example, here is an Array
       private String email;
       private int id;
 
-      public Student(String initName, String initEmail, int initId)
+      public Student(String name, String email, int id)
       {
-          name = initName;
-          email = initEmail;
-          id = initId;
+          this.name = name;
+          this.email = email;
+          this.id = id;
       }
 
       // toString() method
@@ -421,9 +454,10 @@ You can put any kind of Objects into an ArrayList. For example, here is an Array
 
 
 
-This challenge is based on the |2018 Free Response Question #2 WordPair|. We encourage you to work in pairs on this challenge.
+This challenge is based on the |2018 Free Response Question #2 WordPair|. We
+encourage you to work in pairs on this challenge.
 
-You are given a class called WordPair that can store pairs of words.
+You are given a class called ``WordPair`` that can store pairs of words.
 
 .. code-block:: java
 
@@ -432,10 +466,10 @@ You are given a class called WordPair that can store pairs of words.
         private String word1;
         private String word2;
 
-        public WordPair(String w1, String w2)
+        public WordPair(String word1, String word2)
         {
-            word1 = w1;
-            word2 = w2;
+            this.word1 = word1;
+            this.word2 = word2;
         }
 
         public String getFirst()
@@ -454,7 +488,8 @@ You are given a class called WordPair that can store pairs of words.
         }
     }
 
-First, see if you can create an ArrayList of WordPair Objects below. Look at the StudentList example above for help.
+First, see if you can create an ``ArrayList`` of ``WordPair`` objects below.
+Look at the ``StudentList`` example above for help.
 
 .. activecode:: ArrayListWordPair1
    :language: java
@@ -481,10 +516,10 @@ First, see if you can create an ArrayList of WordPair Objects below. Look at the
        private String word1;
        private String word2;
 
-       public WordPair(String w1, String w2)
+       public WordPair(String word1, String word2)
        {
-           word1 = w1;
-           word2 = w2;
+           this.word1 = word1;
+           this.word2 = word2;
        }
 
        public String getFirst()
@@ -535,26 +570,38 @@ First, see if you can create an ArrayList of WordPair Objects below. Look at the
     }
 
 .. figure:: Figures/wordpairs.png
-    :width: 200px
+    :width: 180px
     :align: left
     :figclass: align-center
 
-In this FRQ, you are given an array of words and you will create pairs of them by taking the first word and pairing it with all the other words, then taking the second word and pairing it with all but the first one, and so on. For example, if the word array is ["Hi", "there", "Tyler", "Sam"], this figure shows how the word pairs are formed.
+In this FRQ, you are given an array of words and you will create pairs of them
+by taking the first word and pairing it with all the other words, then taking
+the second word and pairing it with all but the first one, and so on. For
+example, if the word array is ["Hi", "there", "Tyler", "Sam"], this figure shows
+how the word pairs are formed.
 
-In the class WordPairsList below, you will write the constructor which takes the array of words and pairs them up as shown in the figure. You will need nested loops to pair each element with the rest of the elements in the list. Here is the pseudocode.
+In the class ``WordPairsList`` below, you will write the constructor which takes
+the array of words and pairs them up as shown in the figure. You will need
+nested loops to pair each element with the rest of the elements in the list.
 
-    - Initialize the allPairs list to an empty ArrayList of WordPair objects.
-    - Loop through the words array for the first word in the word pair (for loop from index i = 0 to length-1)
+Here is the pseudocode for the constructor method.
 
-      - Loop through the rest of the word array starting from index i+1 for the second word in the word pair (for loop from index j = i+1 to length)
+- Initialize the ``allPairs`` list to an empty ``ArrayList`` of ``WordPair`` objects.
 
-        - Add the new WordPair formed from the ith word and the jth word to the allPairs ArrayList.
+- Loop through the ``words`` array for the first word in the word pair (for loop from index ``i = 0`` to ``length-1``)
+
+  - Loop through the rest of the word array starting from index ``i + 1`` for the second word in the word pair (for loop from index ``j = i + 1`` to ``length``)
+
+    - Add the new ``WordPair`` formed from the ``i``th word and the ``j``th word to the ``allPairs`` ``ArrayList``.
 
 .. activecode:: challenge-7-3-WordPairs
    :language: java
    :autograde: unittest
 
-   FRQ WordPairs Challenge: Complete the constructor for WordPairsList below which will add pairs of words from a given array to the ArrayList. Then, complete the method numMatches().
+   FRQ WordPairs Challenge: Complete the constructor for ``WordPairsList`` below
+   which will add pairs of words from a given array to the ``ArrayList``. Then,
+   complete the method ``numMatches()`` as described below this exercise.
+
    ~~~~
    import java.util.*;
 
@@ -598,10 +645,10 @@ In the class WordPairsList below, you will write the constructor which takes the
        private String word1;
        private String word2;
 
-       public WordPair(String w1, String w2)
+       public WordPair(String word1, String word2)
        {
-           word1 = w1;
-           word2 = w2;
+           this.word1 = word1;
+           this.word2 = word2;
        }
 
        public String getFirst()
@@ -697,18 +744,36 @@ In the class WordPairsList below, you will write the constructor which takes the
         }
     }
 
-In the next part of the FRQ challenge, you are asked to write a method called ``numMatches`` that counts and returns the number of pairs where the first word is the same as the second word. For example, if the word array is ``["hi","bye","hi"]``, the pairs generated would be ``["hi","bye"]``, ``["hi","hi"]``, and ``["bye","hi"]``. In the second pair ``["hi","hi"]``, the first word is the same as the second word, so ``numMatches`` would return 1.
+In the next part of the FRQ challenge, you are asked to write a method called
+``numMatches`` that counts and returns the number of pairs where the first word
+is the same as the second word. For example, if the word array is
+``["hi","bye","hi"]``, the pairs generated would be ``["hi","bye"]``,
+``["hi","hi"]``, and ``["bye","hi"]``. In the second pair ``["hi","hi"]``, the
+first word is the same as the second word, so ``numMatches`` would return 1.
 
-For this method, you will need a loop that goes through the ``ArrayList`` ``allPairs`` and for each ``WordPair`` in ``allPairs``, it checks to see if its first word (using the ``getFirst`` method) equals the second word (using the ``getSecond`` method). If there is a match, it increments a counter which it returns at the end of the method. To test this method, add another "there" into the words array and then uncomment the call to ``numMatches``.
+For this method, you will need a loop that goes through the ``ArrayList``
+``allPairs`` and for each ``WordPair`` in ``allPairs``, it checks to see if its
+first word (using the ``getFirst`` method) equals the second word (using the
+``getSecond`` method). If there is a match, it increments a counter which it
+returns at the end of the method. To test this method, add another "there" into
+the words array and then uncomment the call to ``numMatches``.
+
 
 Summary
 -----------
 
-- ArrayLists can be traversed with an enhanced for each loop, or a while or for loop using an index.
+- ``ArrayList``\ s can be traversed with an enhanced ``for`` loop, a ``while``
+  loop, or a regular ``for`` loop using an index.
 
+- Deleting elements during a traversal of an ``ArrayList`` requires using
+  special techniques to avoid skipping elements, since ``remove`` moves all the
+  elements above the removed index down.
 
-- Deleting elements during a traversal of an ArrayList requires using special techniques to avoid skipping elements, since remove moves all the elements down.
+- Since the indices for an ``ArrayList`` start at 0 and end at the number of
+  elements − 1, accessing an index value outside of this range will result in an
+  ``IndexOutOfBoundsException`` being thrown.
 
-- Since the indices for an ArrayList start at 0 and end at the number of elements − 1, accessing an index value outside of this range will result in an ArrayIndexOutOfBoundsException being thrown.
-
-- Changing the size of an ArrayList while traversing it using an enhanced for loop can result in a ConcurrentModificationException being thrown. Therefore, when using an enhanced for loop to traverse an ArrayList, you should not add or remove elements.
+- Changing the size of an ``ArrayList`` while traversing it using an enhanced
+  ``for`` loop can result in a ``ConcurrentModificationException`` being thrown.
+  Therefore, when using an enhanced ``for`` loop to traverse an ``ArrayList``,
+  you should not ``add`` or ``remove`` elements.
