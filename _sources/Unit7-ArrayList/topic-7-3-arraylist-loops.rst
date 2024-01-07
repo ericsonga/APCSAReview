@@ -570,7 +570,7 @@ Look at the ``StudentList`` example above for help.
     }
 
 .. figure:: Figures/wordpairs.png
-    :width: 200px
+    :width: 180px
     :align: left
     :figclass: align-center
 
@@ -583,7 +583,8 @@ how the word pairs are formed.
 In the class ``WordPairsList`` below, you will write the constructor which takes
 the array of words and pairs them up as shown in the figure. You will need
 nested loops to pair each element with the rest of the elements in the list.
-Here is the pseudocode.
+
+Here is the pseudocode for the constructor method.
 
 - Initialize the ``allPairs`` list to an empty ``ArrayList`` of ``WordPair`` objects.
 
@@ -591,7 +592,7 @@ Here is the pseudocode.
 
   - Loop through the rest of the word array starting from index ``i + 1`` for the second word in the word pair (for loop from index ``j = i + 1`` to ``length``)
 
-    - Add the new ``WordPair`` formed from the *i*th word and the *j*th word to the ``allPairs`` ``ArrayList``.
+    - Add the new ``WordPair`` formed from the ``i``th word and the ``j``th word to the ``allPairs`` ``ArrayList``.
 
 .. activecode:: challenge-7-3-WordPairs
    :language: java
