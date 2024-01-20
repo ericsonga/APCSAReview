@@ -23,7 +23,7 @@ ATTENTION high school women of color taking AP CSA or CSP: if you identify as fe
 
 .. ATTENTION high school seniors: apply for the https://www.amazonfutureengineer.com/scholarships until Dec. 15th for college scholarships and Amazon summer internships for students with financial need.
 
-Apply for the  ACM Cutler-Bell Scholarship https://csteachers.org/awards/cutlerbell/ until Jan. 19th.
+.. Apply for the  ACM Cutler-Bell Scholarship https://csteachers.org/awards/cutlerbell/ until Jan. 19th.
 
 **CSAwesome Units:**
 
