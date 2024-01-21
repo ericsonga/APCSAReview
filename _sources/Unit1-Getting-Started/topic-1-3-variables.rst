@@ -54,16 +54,18 @@ Data Types
 
 There are two types of variables in Java: **primitive variables** that hold primitive types and **object or reference variables** that hold a reference to an object of a class.  A reference is a way to find the object (like a UPS tracking number helps you find your package).  The primitive types on the Advanced Placement Computer Science A exam are:
 
-- ``int`` which can represent integers, i.e. numbers with no fractional part such as 3, 0, -76, and 20393.
+- ``int`` which can represent integers, i.e. numbers with no fractional part
+  such as 3, 0, -76, and 20393.
 
-- ``double`` which can represent non-integer numbers like 6.3 -0.9, and 60293.93032.
-  Computer people call these “floating point” numbers because the decimal point
-  “floats” relative to the magnitude of the number, similar to the way it does
-  in scientific notation like :math:`6.5 ✕ 10^8`. The name ``double`` comes from
-  the fact that ``double``\s are represented using 64 bits, double the 32 bits
-  used for the type ``float`` which used to be the normal size floating point
-  number when most computers did math in units of 32-bits. (``float`` is rarely
-  used these days and is not part of the AP curriculum.)
+- ``double`` which can represent non-integer numbers like 6.3 -0.9, and
+  60293.93032. Computer people call these “floating point” numbers because the
+  decimal point “floats” relative to the magnitude of the number, similar to the
+  way it does in scientific notation like :math:`6.5 ✕ 10^8`. The name
+  ``double`` comes from the fact that ``double``\s are represented using 64
+  bits, double the 32 bits used for the type ``float`` which used to be the
+  normal size floating point number when most computers did math in units of
+  32-bits. (``float`` is rarely used these days and is not part of the AP
+  curriculum.)
 
 - ``boolean`` which can represent only two values: ``true`` and ``false``. (The
   data type is named for `George Boole
