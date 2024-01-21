@@ -54,7 +54,7 @@ Data Types
 
 There are two types of variables in Java: **primitive variables** that hold primitive types and **object or reference variables** that hold a reference to an object of a class.  A reference is a way to find the object (like a UPS tracking number helps you find your package).  The primitive types on the Advanced Placement Computer Science A exam are:
 
-- ``int`` which represent integers, i.e. whole numbers like 3, -76, 20393.
+- ``int`` which represent integers, i.e. numbers like 3, 0, -76, 20393.
 
 - ``double`` which represent non-integer numbers like 6.3 -0.9, and 60293.93032.
   Computer people call these “floating point” numbers because the decimal point
