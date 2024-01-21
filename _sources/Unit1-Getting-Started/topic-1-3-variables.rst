@@ -54,20 +54,15 @@ Data Types
 
 There are two types of variables in Java: **primitive variables** that hold primitive types and **object or reference variables** that hold a reference to an object of a class.  A reference is a way to find the object (like a UPS tracking number helps you find your package).  The primitive types on the Advanced Placement Computer Science A exam are:
 
-    -  int - which store integers (numbers like 3, -76, 20393)
+    -  **int** - which stores integers (numbers like 3, -76, 0, 20393 with no decimal or fractional parts).
 
-    -  double - which store floating point numbers (decimal numbers like 6.3 -0.9, and 60293.93032)
+    -  **double** - which stores double precision floating point numbers (decimal numbers like 6.3, -0.9, and 60293.93032). Floating point refers to the decimal point which "floats" or moves around in the decimal number. The type ``double`` is named after the fact that it holds double the number of bits as the type ``float``(which is not used as often). 
 
-    -  boolean - which store Boolean values (either true or false).
+    -  **boolean** - which stores boolean values (either `true` or `false` values). The type `boolean` is named after `George Bool <https://en.wikipedia.org/wiki/George_Boole>`_, the inventor of Boolean algebra. 
 
 **String** is one of the object types on the exam and is the name of a class in Java.  A *string* object has a sequence of characters enclosed in a pair of double quotes - like "Hello".  You will learn more about ``String`` objects in Unit 2.
 
-
-.. note::
-
-   Some languages use 0 to represent false and 1 to represent true, but Java uses the keywords ``true`` and ``false`` in boolean variables.
-
-A type is a set of values (a domain) and a set of operations on them. For example, you can do addition with int's and double's but not with booleans and Strings.
+A type is a set of values (a domain) and a set of operations on them. For example, you can do addition operations with ints and doubles but not with booleans and Strings.
 
 |Exercise| **Check your understanding**
 
