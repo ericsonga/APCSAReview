@@ -56,7 +56,7 @@ There are two types of variables in Java: **primitive variables** that hold prim
 
     -  **int** - which stores integers (numbers like 3, -76, 0, 20393 with no decimal or fractional parts).
 
-    -  **double** - which stores double precision floating point numbers (decimal numbers like 6.3, -0.9, and 60293.93032). Floating point refers to the decimal point which "floats" or moves around in the decimal number. The type ``double`` is named after the fact that it holds double the number of bits as the type ``float``(which is not used as often). 
+    -  **double** - which stores double precision floating point numbers (decimal numbers like 6.3, -0.9, and 60293.93032). Floating point refers to the decimal point which "floats" or moves around in the decimal number. The type ``double`` is named after the fact that it holds double the number of bits as the type ``float`` (which is not used as often). 
 
     -  **boolean** - which stores boolean values (either `true` or `false` values). The type `boolean` is named after `George Bool <https://en.wikipedia.org/wiki/George_Boole>`_, the inventor of Boolean algebra. 
 
