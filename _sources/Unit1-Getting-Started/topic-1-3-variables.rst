@@ -54,15 +54,31 @@ Data Types
 
 There are two types of variables in Java: **primitive variables** that hold primitive types and **object or reference variables** that hold a reference to an object of a class.  A reference is a way to find the object (like a UPS tracking number helps you find your package).  The primitive types on the Advanced Placement Computer Science A exam are:
 
-    -  **int** - which stores integers (numbers like 3, -76, 0, 20393 with no decimal or fractional parts).
+- ``int`` which can represent integers, i.e. numbers with no fractional part
+  such as 3, 0, -76, and 20393.
 
-    -  **double** - which stores double precision floating point numbers (decimal numbers like 6.3, -0.9, and 60293.93032). Floating point refers to the decimal point which "floats" or moves around in the decimal number. The type ``double`` is named after the fact that it holds double the number of bits as the type ``float`` (which is not used as often). 
+- ``double`` which can represent non-integer numbers like 6.3 -0.9, and
+  60293.93032. Computer people call these “floating point” numbers because the
+  decimal point “floats” relative to the magnitude of the number, similar to the
+  way it does in scientific notation like :math:`6.5 ✕ 10^8`. The name
+  ``double`` comes from the fact that ``double``\s are represented using 64
+  bits, double the 32 bits used for the type ``float`` which used to be the
+  normal size floating point number when most computers did math in units of
+  32-bits. (``float`` is rarely used these days and is not part of the AP
+  curriculum.)
 
-    -  **boolean** - which stores boolean values (either `true` or `false` values). The type `boolean` is named after `George Bool <https://en.wikipedia.org/wiki/George_Boole>`_, the inventor of Boolean algebra. 
+- ``boolean`` which can represent only two values: ``true`` and ``false``. (The
+  data type is named for `George Boole
+  <https://en.wikipedia.org/wiki/George_Boole>`_, a 19th century English
+  mathematician who invented Boolean algebra, a system for dealing with
+  statements made up of only true and false values.)
 
-**String** is one of the object types on the exam and is the name of a class in Java.  A *string* object has a sequence of characters enclosed in a pair of double quotes - like "Hello".  You will learn more about ``String`` objects in Unit 2.
+``String`` is one of the object types on the exam and is the name of a class in
+Java. A ``String`` is written in a Java program as a sequence of characters
+enclosed in a pair of double quotes - like ``"Hello"``. You will learn more
+about ``String`` objects in Unit 2.
 
-A type is a set of values (a domain) and a set of operations on them. For example, you can do addition operations with ints and doubles but not with booleans and Strings.
+A type is a set of values (a domain) and a set of operations on them. For example, you can do addition operations with ``int``\s and ``double``\s but not with ``boolean``\s and ``String``\s.
 
 |Exercise| **Check your understanding**
 
