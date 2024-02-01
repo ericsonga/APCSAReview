@@ -52,12 +52,12 @@ from it.
    ``ArrayList``.
 
 .. mchoice:: qloopList
-   :answer_a: A list will always use less memory than an array.
-   :answer_b: A list can store objects, but arrays can only store primitive types.
-   :answer_c: A list has faster access to the last element than an array.
-   :answer_d: A list resizes itself as necessary as items are added, but an array does not.
+   :answer_a: An ArrayList will always use less memory than an array.
+   :answer_b: An ArrayList can store objects, but arrays can only store primitive types.
+   :answer_c: An ArrayList has faster access to the last element than an array.
+   :answer_d: An ArrayList resizes itself as necessary as items are added, but an array does not.
    :correct: d
-   :feedback_a: No, an ArrayList grows as needed so it will typically be bigger than the data you put it in. If you try to add more data and the array is full, it usually doubles in size.
+   :feedback_a: No, An ArrayList grows as needed and is typically bigger than the data put into it. If the underlying array in an ArrayList is full when adding in new data, it usually doubles in size.
    :feedback_b: No, you can have an array of objects.
    :feedback_c: No, an ArrayList is implemented using an array so it has the same access time to any index as an array does.
    :feedback_d: An ArrayList is really a dynamic array (one that can grow or shrink as needed).
