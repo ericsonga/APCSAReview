@@ -753,7 +753,10 @@ Code Practice with ArrayLists
                           {
                               list.remove(count);
                           }
-                          count++;
+                          else 
+                          {
+                              count++;
+                          }
                       }
                   }
 

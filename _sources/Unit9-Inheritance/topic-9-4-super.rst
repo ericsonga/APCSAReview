@@ -223,8 +223,8 @@ The ``Customer`` class below keeps track of the names and addresses of customers
            System.out.println(c);
 
            // Uncomment these to test OnlineCustomer
-           // OnlineCustomer c2 = new OnlineCustomer("Jasper Smith", "456 High St.,
-           // Anytown, USA", "jsmith456@gmail.com");
+           // OnlineCustomer c2 = new OnlineCustomer("Jasper Smith", 
+           //       "456 High St., Anytown, USA", "jsmith456@gmail.com");
            // System.out.println(c2);
        }
    }
