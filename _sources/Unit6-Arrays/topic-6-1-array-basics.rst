@@ -355,7 +355,7 @@ Watch the following |video4| which shows a physical model of Java memory setting
 
 .. fillintheblank:: array-access1
 
-    Fill in the blank with code to access the cars array.
+    Fill in the blank with code to access the cars array. NOTE: The semicolon is provided for you after the box.
 
 
    String[] cars = {"Honda", "Volvo", "BMW"};
@@ -369,7 +369,7 @@ Watch the following |video4| which shows a physical model of Java memory setting
 
 .. fillintheblank:: array-access2
 
-    Fill in the blank with code to access the cars array.  NOTE: The semicolon is provided for you after the box.
+    Fill in the blank with code to access the cars array.  
 
    String[] cars = {"Honda", "Volvo", "BMW"};
 
