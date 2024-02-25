@@ -351,7 +351,7 @@ Inherited Get/Set Methods
 
 Inheritance means that an object of the child class automatically includes the instance variables and methods defined in the parent class.  But if the inherited instance variables are private, which they should be, the child class can not directly access the them using dot notation.  The child class can use public **accessors** (also called getters or get methods) which are methods that get instance variable values and public **mutators**  (also called modifier methods or setters or set methods) which set their values.
 
-For example, if a parent class has a private instance variable, ``name``, then the parent will often provides a public ``getName`` method and a public ``setName`` method as shown below.
+For example, if a parent class has a private instance variable, ``name``, then the parent will often provide a public ``getName`` method and a public ``setName`` method as shown below.
 
 
 .. activecode:: InheritedGetSet
