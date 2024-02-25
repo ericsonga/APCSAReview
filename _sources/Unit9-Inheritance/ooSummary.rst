@@ -103,6 +103,18 @@ For more practice, see this |Quizlet|.
 
 Common Mistakes
 ===============
-  -  Using inheritance (is a kind of) when you should use association (has a).  A school has classes, it is not a type of class.  A high school is a kind of school.
-  -  Using an instance variable for a type of class instead of subclasses.  If you ever find yourself creating conditionals based on the type of object use subclasses instead.
-  -  Copying code instead of creating a subclass or pulling out a common superclass.  If you ever find yourself copying object attributes or methods try creating a subclass instead or pull out a common superclass.
+
+- Using inheritance (is-a) when you should use association (has-a). A school has
+  classes; it is not a type of class. A high school is a kind of school.
+
+- Using an instance variable for a type of class instead of subclasses. If you
+  ever find yourself creating conditionals based on the type of object use
+  subclasses instead.
+
+- Creating a subclass just because you want to share methods defined in another
+  class. If you find yourself copying instance variables or methods from one
+  class to another that may be a sign that the classes are related—if there’s an
+  is-a relationship between the two classes than you may want to use inheritance
+  and that will allow you to use methods defined in the parent class on
+  instances of the child class. But don’t create an inheritance relationship
+  just to share code.
