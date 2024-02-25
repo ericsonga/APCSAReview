@@ -38,8 +38,8 @@ Concept Summary
 - **superclass** - A parent class is also called a superclass.
 - **declared type** - The type that was used in the declaration.  ``List aList = new ArrayList()`` has a declared type of ``List``.  This is used at compile time to check that the object has the methods that are being used in the code.
 - **run-time type** - The type of the class that created the object. ``List aList = new ArrayList()`` has a run-time type of ``ArrayList``.  This is used at run-time to find the method to execute.
-- **overrides** - A child class can have the same method signature (method name and parameter list) as a parent class. Since methods are resolved starting with the class that created the object, that method will be called instead of the inherited parent method, so the child method overrides the parent method.
-- **overload** - At least two methods with the same name but different parameter lists.  The parameter lists can differ by the number of parameters and/or the types.
+- **overrides** - A method in a child class can have the same method signature (method name and parameter list) as a method in the parent class. Since methods are resolved starting with the class that created the object, that method will be called instead of the inherited parent method, so the child method overrides the parent method.
+- **overload** - Two or more methods with the same name but different parameter lists are said to be overloaded. The parameter lists can differ by the number or types of parameters.
 - **getter** - A method that returns the value of an instance variable in an object.
 - **setter** - A method that sets the value of am instance variable in an object.
 - **accessor** - Another name for a getter method - one that returns the value of a instance variable.
@@ -49,9 +49,20 @@ Concept Summary
 Java Keyword Summary
 =========================
 
-- **extends** - Used to specify the parent class to inherit from.  It is followed by the name of the parent class, like this: ``public class ChildName extends ParentName``.  If no ``extends`` keyword is used in the class declaration, then the class will automatically inherit from the ``Object`` class.
-- **static** - Keyword used to indicate that a instance variable or method is part of the class and not part of each object created by the class.
-- **super** - Keyword used to call a method in a parent class.  This is useful if a child class overrides an inherited method, but still wants to call it.
+- **extends** - Used to specify the parent class to inherit from. It is followed
+  by the name of the parent class, like this: ``public class ChildName extends
+  ParentName``. If no ``extends`` keyword is used in the class declaration, then
+  the class will automatically inherit from the ``Object`` class.
+
+- **static** - Keyword used to indicate that a instance variable or method is
+  part of the class and not part of each object created by the class.
+
+- **super** - Keyword used two ways. First, within a constructor, to invoke the
+  code from a parent class constructor other than the no-args constructor.
+  Second, within an instance method, as a variable to refer to the same object
+  as ``this`` in order to call a method from a parent class. This is useful if a
+  child class overrides an inherited method, but still wants to call the
+  inherited method.
 
 Vocabulary Practice
 =======================
