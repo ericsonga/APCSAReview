@@ -19,8 +19,15 @@ If you have multiple subclasses that inherit from a superclass, you can form an 
     Figure 1: An Inheritance Hierarchy of Shapes
 
 
-One of the main reasons to use an inheritance hierarchy is that the
-instance variables and methods from a superclass are inherited and can be used in a subclass without rewriting or copying code.
+One of the main reasons to use an inheritance hierarchy is that all the classes
+in the hierarchy can be treated as instances of the top type in the hierarchy.
+This is called **polymorphism** and we'll discuss it in more detail in the next
+section.
+
+Inheritance can also reduce code duplication since common behaviors can be
+defined in methods in a superclass and inherited by all their subclasses. But
+you should never use inheritance just to reuse code if there isn't a true “is-a”
+relationship between the subclass and the superclass.
 
 .. shortanswer:: hierarchy1
    :optional:
@@ -44,7 +51,10 @@ A superclass reference variable can hold an object of that superclass or of any 
     Shape s2 = new Rectangle();
     Shape s3 = new Square();
 
-Notice that the opposite is not true. You cannot declare a variable of the subclass and put in a superclass object. For example, a Square reference cannot hold a Shape object because not all Shapes are Squares. The code below will give an "Incompatible types: Shape cannot be converted to Square" error (although you could use a type-cast to get it to be a (Square)).
+Notice that the opposite is not true. You cannot declare a variable of the
+subclass and put in a superclass object. For example, a Square reference cannot
+hold a Shape object because not all Shapes are Squares. The code below will give
+an "Incompatible types: Shape cannot be converted to Square" error.
 
 .. code-block:: java
 

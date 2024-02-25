@@ -220,7 +220,11 @@ In the example below the ``greet(String who)`` method overloads the ``greet()`` 
 
 .. note::
 
-   To overload a method the method must have the same name, but the parameter list must be different in some way.  It can have a different number of parameters, different types of parameters, and/or a different order for the parameter types.  The return type can also be different.
+   To overload a method the method must have the same name, but the parameter
+   list must be different in some way. It can have a different number of
+   parameters, different types of parameters, and/or a different order for the
+   parameter types. The return type can also be different but you can't have two
+   methods that differ only in their return type.
 
 |Exercise| **Check your understanding**
 
@@ -345,9 +349,9 @@ Inherited Get/Set Methods
 .. index::
     pair: inheritance; access to private fields
 
-Inheritance means that an object of the child class automatically includes the object instance variables and methods defined in the parent class.  But, if the inherited instance variables are private, which they should be, the child class can not directly access the them using dot notation.  The child class can use public **accessors** (also called getters or get methods) which are methods that get instance variable values and public **mutators**  (also called modifier methods or setters or set methods) which set their values.
+Inheritance means that an object of the child class automatically includes the instance variables and methods defined in the parent class.  But if the inherited instance variables are private, which they should be, the child class can not directly access the them using dot notation.  The child class can use public **accessors** (also called getters or get methods) which are methods that get instance variable values and public **mutators**  (also called modifier methods or setters or set methods) which set their values.
 
-For example, if a parent has a private instance variables, ``name``, then the parent typically provides a public ``getName`` method and a public ``setName`` method as shown below.  In the ``setName`` method below, the code checks if the passed string is null before it sets it and returns true if the set was successful or false otherwise.  The ``Employee`` class inherits the ``name`` field but must use the public method ``getName`` and ``setName`` to access it.
+For example, if a parent class has a private instance variable, ``name``, then the parent will often provide a public ``getName`` method and a public ``setName`` method as shown below.
 
 
 .. activecode:: InheritedGetSet
@@ -365,14 +369,9 @@ For example, if a parent has a private instance variables, ``name``, then the pa
           return name;
       }
 
-      public boolean setName(String theNewName)
+      public void setName(String name)
       {
-          if (theNewName != null)
-          {
-              this.name = theNewName;
-              return true;
-          }
-          return false;
+          this.name = name;
       }
   }
 
@@ -542,9 +541,9 @@ The following Pet class keeps track of a pet's name and type and has a construct
    }
 
    // Complete the Dog class
-   class Dog 
+   class Dog
    {
-   
+
    }
 
    // Add a Cat class
