@@ -220,7 +220,11 @@ In the example below the ``greet(String who)`` method overloads the ``greet()`` 
 
 .. note::
 
-   To overload a method the method must have the same name, but the parameter list must be different in some way.  It can have a different number of parameters, different types of parameters, and/or a different order for the parameter types.  The return type can also be different.
+   To overload a method the method must have the same name, but the parameter
+   list must be different in some way. It can have a different number of
+   parameters, different types of parameters, and/or a different order for the
+   parameter types. The return type can also be different but you can't have two
+   methods that differ only in their return type.
 
 |Exercise| **Check your understanding**
 
@@ -542,9 +546,9 @@ The following Pet class keeps track of a pet's name and type and has a construct
    }
 
    // Complete the Dog class
-   class Dog 
+   class Dog
    {
-   
+
    }
 
    // Add a Cat class
