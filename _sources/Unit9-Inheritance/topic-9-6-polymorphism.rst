@@ -541,3 +541,5 @@ Summary
 - At compile time, methods in or inherited by the **declared type** determine the correctness of a non-static method call.
 
 - At run-time, the method in the **actual object type** is executed for a non-static method call. This is called **polymorphism**.
+
+- For static methods, *only* the declared type is used to determine what method to execute.
