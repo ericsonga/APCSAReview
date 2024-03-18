@@ -145,14 +145,22 @@ Summary
 
 - A recursive method is a method that calls itself.
 
-- Recursive methods contain at least one base case, which halts the recursion, and at least one recursive call.
+- Recursive methods that don't recurse infinitely must contain at least one base
+  case when the method can return an answer immediately.
 
-- Each recursive call has its own set of local variables, including the formal parameters.
+- Each recursive call, like any method call, has its own set of local variables,
+  including its parameters.
 
-- Parameter values capture the progress of a recursive process, much like loop control variable values capture the progress of a loop.
+- Parameter values capture the progress of a recursive process, much like loop
+  variable values capture the progress of a loop.
 
-- Any recursive solution can be replicated through the use of an iterative approach.
+- Any iterative procedure can be implemented with recursion but may run into
+  limitations on how deep the call stack can get.
+
+- Some recursive procedures can only be translated into iterative code by using
+  extra data structures to keep track of information that is implicit in the
+  structure of recursive calls in recursive code.
 
 - Writing recursive program code is outside the scope of the course and AP Exam.
 
-- Recursion can be used to traverse String, array, and ArrayList objects.
+- Recursion can be used to traverse ``String``\ s, arrays, and ``ArrayList``\ s.

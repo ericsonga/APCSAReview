@@ -12,7 +12,7 @@ What is Recursion? (Day 1)
 
 .. index::
     single: recursion
-    pair: recursion; defintion
+    pair: recursion; definition
 
 **Recursion** is when a method calls itself. See the example method below.
 
@@ -29,7 +29,12 @@ What is Recursion? (Day 1)
     single: infinite recursion
     pair: recursion; infinite
 
-This method will print out "This is the method that never ends!" and then call itself, which will print out the message again, and then call itself, and so on.  This is called **infinite recursion**, which is a recursion that never ends.  Of course, this particular method is not very useful.
+This method will print out "This is the method that never ends!" and then call
+itself, which will print out the message again, and then call itself, and so on.
+This is called **infinite recursion**, which is a recursion that never ends. Of
+course, this particular method is not very useful. (Actually, in practice it
+*will* end, crashing with a ``StackOverFlowError`` because there is a limit on how
+many times you can recurse.)
 
 |Exercise| **Check your Understanding**
 
@@ -92,9 +97,27 @@ Why use Recursion?
     single: fractal
     pair: recursion; purpose
 
-Recursion is most useful when it is used to solve problems where the structure of the problem repeats.  For example, what if you wanted to find out how much space a folder on your computers uses?  You could add up the sizes of all the files in that folder, but folders can also contain subfolders.  So you will have to repeat the procedure (method) for each subfolder.  Each subfolder can also contain subfolders.
+Recursion is most useful for solving problems where the structure of the problem
+allows it to be broken into smaller, but similar problems, whose solutions can
+be combined into the solution to the original problem.
 
-Recursion can also be used to create fractals.  A simple example is Sierpinski's triangle in which you subdivide a triangle into 4 new triangles as shown below.  You can then do the some procedure with each new triangle except the center one.
+For example, suppose you wanted to find out how much space a folder on your
+computer uses? Well, if you knew how much space each of the files and
+sub-folders in that folder used, you could add them up and get the answer.
+Getting the size of a regular file is usually easy, but figuring out how much
+space each sub-folder takes up is the same problem we stared with, just with a
+different folder.
+
+But that’s actually great news because we can use the same procedure to solve
+this smaller problem: find the size of all the files and sub-folders in *it* and
+add them up. Eventually, as we try to get the size more deeply nested folders,
+eventually we'll get to folders that only contain plain files whose sizes we can
+add up and return and eventually we work our way back up to give the answer to
+our question about the original top-most folder.
+
+Recursion can also be used to create fractals. A simple example is Sierpinski's
+triangle in which you subdivide a triangle into 4 new triangles as shown below.
+You can then do the some procedure with each new triangle except the center one.
 
 .. figure:: Figures/triangleSub.png
     :width: 452px
@@ -103,11 +126,21 @@ Recursion can also be used to create fractals.  A simple example is Sierpinski's
 
     Figure 1: A sequence of Sierpinski's triangles
 
-Recursion can also be used to traverse String, array, and ArrayList objects, much like a loop. In fact, any recursive solution could be written with iteration (loops) instead.
+Recursion can also be used to traverse ``String``\ s, arrays, and ``ArrayList``\
+s just like a loop. In fact, any loop—also known as *iterative* code—can be
+written using recursion. However in most languages, including Java, there are
+limitations on how deeply code can recurse which rules out using recursion for
+infinite or even very long loops so we don’t usually use recursion when a simple
+loop will do.
+
+On the other hand, recursion is more powerful than simple loops, especially when
+dealing with branching structures like the file folder example. Tree recursive
+procedures can not always be easily translated into simple loops, at least not
+without using some extra data structures to keep track where you are in the
+tree.
 
 Factorial Method
 =================
-
 
 The following video is also on YouTube at https://youtu.be/V2S_8E_ubBY.  It introduces the concept of recursion and tracing recursion with the factorial method.
 
@@ -132,8 +165,10 @@ See the method `factorial` below that calculates the **factorial** of a number. 
            return n * factorial(n-1);
    }
 
-|Exercise| **Check your understanding**
+You can also play with an an interactive demonstration of the recursive
+factorial computation at https://gigamonkeys.com/misc/factorial/#java.
 
+|Exercise| **Check your understanding**
 
 .. fillintheblank:: recurb2fill
 
@@ -201,11 +236,32 @@ Base Case
     single: base case
     pair: recursion; base case
 
-Every recursive method must have at least one **base case** which halts the recursion. This is usually an if statement that causes the recursion to stop by just giving an answer without needing a recursive method call. You could also think of it as the simplest case where you can give the answer right away. The factorial method has a way to stop the recursion (not call itself).  It stops when n is equal to 0, since it just returns 1. This is the base case.
+Every non-infinite recursive method must have at least one **base case** where
+the method can return an answer without another recursive call. In other words,
+the base case is the smallest possible problem (or problems) that the method
+knows how to solve, the ones it can answer directly without any more recursion.
 
-.. note::
+The base case is often handled by an ``if`` statement that checks for the base
+case and returns directly when the condition for the base case is met.
 
-   The thing that stops a recursive method from calling itself is called the **base case**.  A method can have more than one **base case** (way to stop the recursion).
+In the factorial method, the base case is when the argument is 0 as that is the
+smallest number that the factorial method can handle since factorial isn’t
+defined for negative numbers.
+
+When we recurse through folders on our computer there are two base cases, a
+simple file, whose size we can find out directly, and an empty folder whose size
+is 0 (or maybe some other fixed amount, depending on the operating system). In
+those two cases a method to compute the space used by a file or folder could
+return immediately; in all others it would have to recurse to get the sizes of
+the files and sub-folders it contains and then add them up.
+
+The goal of every recursive call in a recursive method is to shrink the problem
+in some way that gets closer to the base case. You can see that in ``factorial``
+where the recursive call is passing ``n - 1``, one closer to ``0``. If you write
+a recursive method (not required for the AP exam), you should make sure that
+every time you recurse you are shrinking the problem so it is closer to the base
+case—that’s the equivalent in recursion to incrementing your loop variable in a
+``for`` loop.
 
 |Exercise| **Check your understanding**
 
