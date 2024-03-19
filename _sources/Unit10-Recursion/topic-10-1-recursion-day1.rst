@@ -134,10 +134,17 @@ infinite or even very long loops so we don’t usually use recursion when a simp
 loop will do.
 
 On the other hand, recursion is more powerful than simple loops, especially when
-dealing with branching structures like the file folder example. Tree recursive
-procedures can not always be easily translated into simple loops, at least not
-without using some extra data structures to keep track where you are in the
-tree.
+dealing with branching structures like the file folder example. Computer
+scientists call such structures “trees” and they incredibly common in computer
+programs.
+
+Recursive procedures that operate on trees often cannot be easily translated
+into simple loops, at least not without using some extra data structures to keep
+track where you are in the tree. Thus one way to think about recursion is as
+“loops for trees”. If you need to loop over a simple linear structure like a
+``String`` or an array, by all mean use a ``for`` loop. And if you want to
+navigate a 2D array a pair of nested ``for`` loops is the way to go. But if you
+need to traverse a tree structure, recursion should be your go to.
 
 Factorial Method
 =================
