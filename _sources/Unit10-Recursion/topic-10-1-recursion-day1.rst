@@ -165,8 +165,8 @@ See the method `factorial` below that calculates the **factorial** of a number. 
            return n * factorial(n-1);
    }
 
-You can also play with an an interactive demonstration of the recursive
-factorial computation at https://gigamonkeys.com/misc/factorial/#java.
+You can also play with an interactive demonstration of the recursive factorial
+computation at https://gigamonkeys.com/misc/factorial/#java.
 
 |Exercise| **Check your understanding**
 
